@@ -1,0 +1,24 @@
+@import "../vendor/susy/susy";
+@import "../partials/variables";
+@import "../partials/buttons";
+@import "../partials/mixins";
+
+//
+$image-path: '../../../images/';
+
+body {
+  background: $col-white;
+
+}
+
+ul {
+  padding: 2px;
+  li {
+    padding: 5px;
+    font-size: $font-size-middle;
+    color: $col-lightgreen;
+    &:hover {
+      background: $col-lightblue;
+    }
+  }
+}

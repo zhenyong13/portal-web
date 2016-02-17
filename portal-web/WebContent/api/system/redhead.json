@@ -1,0 +1,41 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {"id":1,
+                "isenabled": "isenabled",
+                "reddoccode": 1,
+                "reddocname": "模版一一",
+                "creator": "creator",
+                "createtime": "2015-08-03",
+                "reddoctype": "reddoctype",
+                "reddoctypename": "reddoctypename",
+                "filecode": "temp2009.doc"
+            },
+            {"id":11,
+                "isenabled": "1",
+                "reddoccode": 1,
+                "reddocname": "模版一二",
+                "creator": "123",
+                "createtime": "2015-08-03",
+                "reddoctype": "weqreqw",
+                "reddoctypename": "UCP_ROLETYPE",
+                "filecode": "temp2008.doc"
+            },
+            {
+            "id":121,
+                "isenabled": "1",
+                "reddoccode": 1,
+                "reddocname": "模版一三",
+                "creator": "123",
+                "createtime": "2015-08-03",
+                "reddoctype": "weqreqw",
+                "reddoctypename": "weqreqw",
+                "filecode": "temp2010.doc"
+            }
+             
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

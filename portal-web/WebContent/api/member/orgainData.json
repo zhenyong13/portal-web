@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": 1,
+    "usercode": "1111",
+    "username": "jahon",
+    "orgcode": "",
+    "orgname": "",
+    "sex": 1,
+    "userrank": "",
+    "userlevel": "",
+    "positionlevel": 1,
+    "mobileno": "",
+    "officephone": "",
+    "email": "jahon_88@163.com",
+    "imnumber": "",
+    "address": "",
+    "updatetime": "2015-05-20 14:00",
+    "avatar": "",
+    "userdesc": ""
+  },
+  "msg": "",
+  "rc": 1
+}
+

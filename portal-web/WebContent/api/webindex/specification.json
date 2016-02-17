@@ -1,0 +1,81 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "template":"synergism",
+        "rows": [
+            {
+                "name": "公司规章",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "公司制度",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "人力管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "经营管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "项目管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_7.png",
+                "targeturl": "",
+                "target": ""
+            },
+             {
+                "name": "总包管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_4.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "合同管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "财务管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_5.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "档案管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "知识管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_13.png",
+                "targeturl": "",
+                "target": ""
+            }
+             
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

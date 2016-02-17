@@ -1,0 +1,229 @@
+<div class="process-forms dialog-item active">
+    <div class="forms-option">
+        <a class="btn btn-sm j_entityslider-toggle js_back" data-id="new" userid="4522889269382076526">
+            <i class="icon-back iconfont"></i>返回
+        </a>
+
+        <a class="btn btn-success btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-fasong iconfont"></i>发送
+        </a>
+
+        <a class="btn btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-pass iconfont"></i>传阅
+        </a>
+
+        <a class="btn btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-liucheng iconfont"></i>流程图
+        </a>
+
+        <a class="btn btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-star iconfont"></i>关注
+        </a>
+
+        <a class="btn btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-bell iconfont"></i>提醒
+        </a>
+
+        <a class="btn btn-sm j_entityslider-toggle" data-id="new" userid="4522889269382076526">
+            <i class="icon-dayin iconfont"></i>打印
+        </a>
+
+        <div class="fr">
+            <span class="name">张山</span>
+            <span class="date">2015-5-20</span>
+        </div>
+    </div>
+
+    <div class="forms-body-wrap jscroll">
+        <div class="forms-body">
+            <aside class="timeline">
+
+                <dl class="tl-dl">
+                    <dt class="tl-dt">办理过程</dt>
+                    <dd class="tl-dd">
+                        <ul class="people-list">
+                        	{{#each userList}}
+	                            <li class="process-user" assignee="{{assignee}}">
+	                                <img src="{{pictureurl}}">{{stepname}}
+	                            </li>
+                            {{/each}}
+                        </ul>
+                    </dd>
+                </dl>
+
+
+            </aside>
+            <div class="forms-content">
+                <div class="form-category-hd"><h4 id="cate-name"><span class="js_categoryname">来文信息</span></h4></div>
+                <div class="form-category-bd">
+                    <div class="entity-info clearfix">
+
+                        <div class="control-group col-5">
+                            <label class="control-label">来文单位：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">来文编号：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">来文经办人：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">联系方式：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">紧急程度：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-category-hd"><h4 id="cate-name"><span class="js_categoryname">收文填写</span></h4></div>
+                <div class="form-category-bd">
+                    <div class="entity-info clearfix">
+
+                        <div class="control-group col-10">
+                            <label class="control-label">标题：</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">相关项目：</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">送相关部门：</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="control-group col-10">
+                            <label class="control-label">收文顺序号：</label>
+                            <div class="controls">
+                                <select class="form-control">
+                                    <option value="1">一号线项目</option>
+                                    <option value="2">二号线项目</option>
+                                    <option value="5">五号线项目</option>
+                                </select>
+                                -2015-
+                                <select class="form-control">
+                                    <option value="1">1号</option>
+                                    <option value="2">2号</option>
+                                    <option value="5">3号</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group col-5">
+                            <label class="control-label">收文日期：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control date">
+                            </div>
+                        </div>
+                        <div class="control-group col-5">
+                            <label class="control-label">处理时限：</label>
+                            <div class="controls">
+                                <input type="text"  class="form-control date" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-category-hd"><h4 id="cate-name"><span class="js_categoryname">文档信息</span></h4></div>
+                <div class="form-category-bd">
+                    <div class="entity-info clearfix">
+
+                        <div class="control-group col-12">
+                            <label class="control-label">正文摘要：</label>
+                            <div class="controls">
+                                <textarea type="text" class="form-control" ></textarea>
+                            </div>
+                        </div>
+
+                        <div class="control-group col-12">
+                            <label class="control-label">正文：</label>
+                            <div class="controls">
+
+                                <input type="file" class="file" data-show-preview="false" >
+
+                            </div>
+                        </div>
+
+                        <div class="control-group col-12">
+                            <label class="control-label">附件：</label>
+                            <div class="controls">
+                                <!--<input type="text" class="form-control" >-->
+
+                                <input type="file" class="file" data-show-preview="false">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-category-hd"><h4 id="cate-name"><span class="js_categoryname">流转处理</span></h4></div>
+                <div class="form-category-bd">
+                    <div class="entity-info clearfix">
+
+                        <div class="control-group col-10">
+                            <label class="control-label">公文便签：</label>
+                            <div class="controls">
+                                <input type="text" class="form-control" >
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+     .btn-file input[type='file'] {
+        position: absolute;
+        top: 0;
+        right: 0;
+         width: 100%;
+         height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 12px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        cursor: inherit;
+        display: block;
+        background: none;
+         box-sizing: border-box;
+    }
+</style>

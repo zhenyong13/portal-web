@@ -1,0 +1,108 @@
+<div class="process-forms dialog-item active">
+	<div class="forms-option">
+		<div style="float: left;" class="buttons_view">
+		</div>
+		<div class="fr" style="float: right;">
+			<div class="btn-group switch-tab changeModel" style="display:none;">
+				<a class="btn btn-sm" data-model="1" title="精简模式"><i class="icon-reorder"></i></a>
+				<a class="btn btn-sm active" data-model="2" title="普通模式"><i class="icon-th-large"></i></a>
+				<input id="cur_process_taskcode" type="hidden" value="{{taskcode}}">
+				<input id="cur_process_code" type="hidden" value="{{processcode}}">
+			</div>
+			<span class="name">{{myinfo.username}}</span> <span>{{currentdate}}</span>
+		</div>
+	</div>
+   
+	<div class="forms-body-wrap jscroll">
+	    <div id="TipsBox"><i></i><span></span></div>
+		<div class="forms-body processform">
+			{{#if showtimeline}}
+			    
+				<aside class="timeline">
+				<dl class="tl-dl jscroll" style="position: absolute;width:187px;height:100%;border-right:1px solid #d1d1d1;background:rgb(230, 229, 229);">
+					<dt class="tl-dt">办理过程</dt>
+					<dd class="tl-dd">
+						<ul class="people-list " style="left: -62px;">
+							{{#each persons.rows}}
+								<li class="li_position process-user" assignee="{{processinstcode}}" stepcode={{taskcode}}>
+									<div class="processTime"><i></i>{{#dateformat handleinfo.createtime "MM/dd HH:mm"}}{{/dateformat}}</div>
+									{{#if userinfo.avatarcode}}
+										 <img src="{{../../baseUrl}}{{userinfo.avatarcode}}" style="position:relative;left: 23px;width: 50px;height: 50px;top:6px;border-radius: 25px;">							
+									{{else}}
+										<img src="images/avatar.png" style="position:relative;left: 23px;top:6px;border-radius: 25px;">
+									{{/if}}
+									<div class="create_process_name" style="left: 147px;" title="{{taskname}}">
+										<div>{{taskname}}</div>
+										<div class="hoverTips" style="width: 93px;overflow:hidden;color:#FF8300;"  tips="{{handleinfo.opinion}}">{{#substr handleinfo.opinion 5}}{{/substr}}</div>
+									</div>
+								</li>
+							 {{/each}}
+						</ul>
+					</dd>
+				</dl>
+			</aside>
+			{{/if}}
+			
+			<div class="forms-content forms-padding">
+				<span style="display:none;" id="isread" data-val="false"></span>
+				<div class="dynamicform"></div>
+				{{#if historyshow}}
+					<div class="form-category-hd banli_hd">
+						<div class="entity-info clearfix" >
+						<h4 id="cate-name">
+							<span class="js_categoryname" style="font-size: 15px;">办理过程</span>
+							<i></i>
+						</h4>
+						</div>
+					</div>
+					<div class="flowsheet_tab_padding" id="flowsheet_table">
+							<table class="table table-bordered">
+							<thead>
+								<tr class="change">
+									<th class="flowsheet_tab_th">处理人</th>
+									<th class="flowsheet_tab_th">部门</th>
+									<th class="flowsheet_tab_th">处理步骤</th>
+									<th class="flowsheet_tab_th">送达时间</th>
+									<th class="flowsheet_tab_th">处理时间</th>
+									<th class="flowsheet_tab_th">处理意见</th>
+									<th class="flowsheet_tab_th">职位</th>
+								</tr>
+					 	</thead>
+						<tbody>
+							{{#each activity}}
+								<tr class="flowsheet_tab_color">
+								<td><span>{{assignee.username}}</span></td>
+								<td><span>{{assignee.orgname}}</span></td>
+								<td>{{taskname}}</td>
+								<td><span>{{#if createtime}}{{createtime}}{{else}}<span style="color:red">无</span>{{/if}}</span></td>
+								<td><span>{{#if endtime}}{{endtime}}{{else}}<span style="color:red">未处理</span>{{/if}}</span></td>
+								<td>{{opinion}}</td>
+								<td><span>{{assignee.userrank}}</span></td>
+								</tr>
+							{{/each}}
+						</tbody>
+							</table>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="add_num_template" >
+	<div class="modal-body">
+	<div class="control-group">
+		<div class="controls">
+			<textarea style="width:265px;height:50px;" class="js_zihao_value"></textarea>
+		</div>
+	</div>
+
+
+	<div style="padding:8px;float:right;bottom: 5px;position: relative;">
+		<div class="controls">
+			<a id="pwd-btn-update" class="btn btn-sm btn-primary js_add_num_submit">确定</a><a
+				id="pwd-btn-cancel" class="btn btn-sm">取消</a>
+		</div>
+	</div>
+</div>
+</div>

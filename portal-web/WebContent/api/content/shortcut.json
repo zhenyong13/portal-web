@@ -1,0 +1,59 @@
+{
+    "data": {
+        "total": 4,
+        "pageNo": 1,
+        "pageSize": 10,
+        "rows": [
+            {
+                "createtime": "2015-11-18 20:51:32",
+                "creator": "user-002784",
+                "icon": "images/avatar.png",
+                "id": 1,
+                "ishow": null,
+                "linkd": "#qq",
+                "name": "人力资源系统",
+                "owner": null,
+                "shortcutcode": "shortcutcode-001",
+                "sortorder": 1
+            },
+            {
+                "createtime": "2015-11-18 12:31:45",
+                "creator": "user-002784",
+                "icon": "79dbef61-251b-41f9-bd42-528be3a3366e",
+                "id": 3,
+                "ishow": false,
+                "linkd": "434",
+                "name": "67",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-29e76740-0f43-4cc4-a9c1-be7fb91a5a99",
+                "sortorder": 4
+            },
+            {
+                "createtime": "2015-11-18 12:35:33",
+                "creator": "user-002784",
+                "icon": "4cd0638d-c243-414c-8e46-52c2518167d0",
+                "id": 4,
+                "ishow": false,
+                "linkd": "我v",
+                "name": "支付",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-5bf4eaba-4b4d-45ec-a023-768bcfa3c228",
+                "sortorder": 22
+            },
+            {
+                "createtime": "2015-11-18 15:29:35",
+                "creator": "user-002784",
+                "icon": "7bbe724a-e327-4afa-84be-19f78ffc6a34",
+                "id": 7,
+                "ishow": false,
+                "linkd": "vvvv",
+                "name": "vvv",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-5f884848-5cfd-41d9-9795-4384dfe3e696",
+                "sortorder": 4
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

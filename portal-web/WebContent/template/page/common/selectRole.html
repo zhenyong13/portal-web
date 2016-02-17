@@ -1,0 +1,98 @@
+<div class="modal-content">
+	<div id="userSelector-multi" style="position: relative; padding: 15px; /* max-height: 430px; */ overflow-y: auto;">	
+		<div class="user-wrapper">
+			<div class="selected-container clearfix">
+				<span>已分配：</span>
+				<div class="selected-users">
+					<span id="selectedMember"></span> 
+					<span id="addUserToGroup" class="add-group-user"> 
+					<a id="clearSelectedButton" class="btn btn-sm hide">全部清空</a>
+					</span>
+				</div>
+			</div>
+			<div class="user-container"></div>
+		</div>	 
+		<div class="user-selector-body clearfix">
+			<div id="all-org-users" class="user-selector-body-l pull-left">
+				<div class="e-title">
+					<ul class="e-title-tab fl"><!-- active -->
+						<li id="organization_tab" class="active"><a id="organization-users">组织</a></li>
+					</ul>
+				</div>
+				<!--搜索部门，角色-->
+				<div style="border-bottom: 1px solid #ddd;padding: 2px;">
+					<input type="text" class="form-control js_search_org_class" id="search_class" name="search"/>
+					<i class="icon-search js_icon_search" style="position: relative;right: 26px;top: 3px;cursor: pointer;"></i>
+				</div>
+				<a id="show-first-group" class="hide router"></a>
+				<div id="org-tree" class="org-tree scrollwrapper bg-white" style="height: 250px;">
+					
+				</div>
+			</div>
+			<div id="all-group-users" class="user-selector-body-r">
+				<div class="e-title">
+					<div id="org-user-info" class="">
+						<input id="search_name" type="text" class="form-control" style="margin-top: 13px; position: absolute; line-height: 27px;" placeholder="角色名称">
+						<i id="search_name_by" class="icon-search" style="position: relative; left: 188px; top: 18px;"></i> 
+					</div>
+					
+				</div>
+				<div class="right-panel">
+					<ul class="e-list flow-list">
+						<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+							<span id="selectAll" class="ret_width_5 ret_display  filterSlip_js"><i  id="check-all-role" class="icon-checkbox-unchecked"></i></span>
+							<span class="ret_width_15 ret_display  filterSlip_js">角色编码</span>
+							<span class="ret_width_40 ret_display  filterSlip_js">角色名称</span>
+							<span class="ret_width_10 ret_display  filterSlip_js">角色类型</span>
+							<span class="ret_width_20 ret_display  filterSlip_js">所属组织</span>
+						</li>
+					</ul>
+					<ul id="role-flow-list" class="e-list flow-list demo-list" style="height:225px">
+						<!-- 列表 -->
+					</ul>
+					<!-- 分页 -->
+					<div id="role_pagination" style="margin-top: 3px;" ></div>
+					<!-- 分页 -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<span class="selector-btns" style="float:right;">
+		<a class="btn btn-middle btn-primary j_user_ok">确定</a>
+		<a class="btn btn-middle j_user_cancel">取消</a></span>
+	</div>
+</div>
+
+<!-- 角色列表 -->
+<script id="role-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}" data-code="{{rolecode}}" data-name="{{rolename}}"></i>
+     </span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{rolecode}}&nbsp;</span>
+    <span class="ret_width_40 ret_display ellipsis filterSlip_js" title="{{rolename}}">{{rolename}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{roletype}}&nbsp;</span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js">{{orgcode}}&nbsp;</span>
+</li>
+{{/each}}
+</script>
+<!-- 角色列表 -->
+<script id="role-list-only-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle j_select_one" data-code="{{rolecode}}" data-name="{{rolename}}">
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{rolecode}}&nbsp;</span>
+    <span class="ret_width_40 ret_display ellipsis filterSlip_js" title="{{rolename}}">{{rolename}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{roletype}}&nbsp;</span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js">{{orgcode}}&nbsp;</span>
+</li>
+{{/each}}
+</script>
+
+<!-- 选中的角色 -->
+<script id="user-select-template" type="text/x-handlebars-template">
+<span class="file-show" style="height: 20px;  width: 20px;  margin-right: 3px;">
+<a>{{username}}</a>
+<a code="{{usercode}}" value="{{usercode}}" class="select_x close_file  file_remove_file remove_user" title="删除">×</a>&nbsp;</span>
+</script>

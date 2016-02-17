@@ -1,0 +1,58 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						 
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>红头文模版名称：</label>
+							<div class="controls">
+								<input type="text" id="reddocname" class="form-control required" value="{{reddocname}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">红头文模版类型：</label>
+							<div class="controls">
+								<select id="redheadtype"></select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">是否可用：</label>
+							<div class="controls">
+								<select id="isenabled"></select>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>红头文模版上传：</label>
+							<div class="controls">
+								<button class="btn btn-info" type="button" style="width: 50px; height: 25px;padding: 0;"><i class="icon-upload-alt"></i>上传</button>
+								<input id="cacheturlUpload" data-id="cacheturl" value="{{filecode}}" style="top:8px;  left: 50px;  cursor: pointer; opacity: 0; position: absolute; width: 27%;" type="file" name="fileupload" multiple="multiple"  class="js_fileupload_"/>
+								
+								<span id="feedbackUpload-showfiles" data-code="maindoc" style="display:block;">
+									{{#if filecode}}
+										<span class="file-show" data-name="{{filecode}}" data-code="{{filecode}}" data-isedit="{{editable}}">
+										<a  class="filename_view js_file_view" data-file-id="{{filecode}}" >{{filecode}}</a>
+										<a href="{{../baseUrl}}{{filecode}}" target="_blank" class="file_view fa fa-download"></a>
+										<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+										</span>
+									{{/if}}
+								</span>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

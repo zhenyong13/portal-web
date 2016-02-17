@@ -1,0 +1,23 @@
+{
+    "data": {
+        "usercode": "002644",
+        "total": 20,
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": "1",
+                "title": "未读1",
+                "createtime": "2015-11-02"
+            },
+            {
+                "id": "1",
+                "title": "未读2",
+                "createtime": "2015-11-02"
+            }
+
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

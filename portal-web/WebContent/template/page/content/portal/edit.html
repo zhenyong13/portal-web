@@ -1,0 +1,83 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+					
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>显示位置：</label>
+							<div class="controls">
+								<select id="sid">
+									<option value="1" {{#ifCond sid "==" "1"}}selected{{/ifCond}}>左侧</option>
+									<option value="2" {{#ifCond sid "==" "2"}}selected{{/ifCond}}>中间</option>
+									<option value="3" {{#ifCond sid "==" "3"}}selected{{/ifCond}}>右侧</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>序号：</label>
+							<div class="controls">
+								 <input type="text" id="seqno" class="form-control required number" value="{{seqno}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块编码：</label>
+							<div class="controls">
+								<input type="text" id="columncode" class="form-control required" value="{{columncode}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块名称：</label>
+							<div class="controls">
+								<input type="text" id="columnname" class="form-control required" value="{{columnname}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模版编码：</label>
+							<div class="controls">
+								<input type="text" id="templatecode" class="form-control required" value="{{templatecode}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>模块链接地址：</label>
+							<div class="controls">
+								<input type="text" id="columnurl" class="form-control required" style="width: 85% !important" value="{{columnurl}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">询条件：</label>
+							<div class="controls">
+								<textarea id="condition" class="form-control" style="width: 85%;height: 50px;">{{condition}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">排序字段：</label>
+							<div class="controls">
+								<textarea id="columnsort" class="form-control" style="width: 85%;height: 50px;">{{columnsort}}</textarea>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>更多链接地址：</label>
+							<div class="controls">
+								<input type="text" id="moreurl" class="form-control required" style="width: 85% !important" value="{{moreurl}}"/>
+							</div>
+						</div>
+						
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

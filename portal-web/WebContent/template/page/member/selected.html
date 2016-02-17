@@ -1,0 +1,6 @@
+{{#each nodes}}
+<span class="file-show" style="margin-right:3px;" data-code="{{id}}" data-name="{{name}}">
+<a id="n_{{id}}"  data-code="{{id}}" data-name="{{name}}" {{#if ../orgext}}style="color:green;"{{/if}}>{{name}}</a> 
+<a class="close_file js_close_dept file_remove_file" title="删除">×</a>
+</span>
+{{/each}}

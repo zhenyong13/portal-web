@@ -1,0 +1,108 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 补签主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">委托人：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba;margin-top:8px">
+					<div class="remind-user">
+						<input id="delegate_man" data-code="" type="text" class="control-input typeahead search" value=""
+							data-entity="employee" data-multi="true" style="width:205px;height:30px" placeholder="委托人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">被委托人：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba;margin-top:8px">
+					<div class="remind-user">
+						<input id="delegated_man" data-code="" type="text" class="control-input typeahead search" value=""
+							data-entity="employee" data-multi="true" style="width:205px;height:30px" placeholder="被委托人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">事项类型：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+                <select id="depute_type" class="form-control">
+                </select>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button_">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle js-adddepute"><i class="icon-plus-thin glyphicon">新增</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="module-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning j_entityslider-toggle" id="module-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle js-back-depute"> <i class="fa fa-trash-o">回收所有权限</i></a></li>
+		<!-- <li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="module-export"> <i class="fa fa-arrow-down">导出</i></a></li> -->
+	</ul> 
+</div>
+<!-- 列表 -->
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+				<span class="ret_width_5 ret_display  filterSlip_js"><i id="check-all-module" class="icon-checkbox-unchecked"></i></span>
+	            <span class="ret_width_10  filterSlip_js js_sort sorting" data-col="delegate">委托人</span>
+	            <span class="ret_width_10  filterSlip_js js_sort sorting" data-col="delegated">被委托人</span>
+	            <span class="ret_width_10  filterSlip_js js_sort sorting" data-col="bustype">事项类型</span>
+	            <span class="ret_width_35  filterSlip_js">委托事项</span>
+	            <span class="ret_width_10  filterSlip_js js_sort sorting" data-col="starttime">开始日期</span>
+	            <span class="ret_width_10  filterSlip_js js_sort sorting" data-col="endtime">结束日期</span>
+	            <span class="ret_width_10  filterSlip_js" style="float: right;">操作</span>
+			</li>
+		</ul>
+		<ul id="deputeList" class="e-list flow-list demo-list">
+			<!-- 列表 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="depute_pagination" style=" margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+
+
+<script id="show-list-template" type="text/x-handlebars-template">
+{{#each showList}}
+<li>
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+	<span class="ret_width_10 ellipsis filterSlip_js">{{delegate}}</span>
+	<span class="ret_width_10 ellipsis filterSlip_js user-item" user-id="{{delegated}}" title="{{delegated}}">{{delegated}}</span>
+	<span class="ret_width_10 ellipsis filterSlip_js">{{bustype}}</span>
+	<span class="ret_width_35 ellipsis filterSlip_js">{{busitem}}</span>
+	<span class="ret_width_10 ellipsis filterSlip_js">{{dateformat starttime 'yyyy-MM-dd'}}</span>
+	<span class="ret_width_10 ellipsis filterSlip_js">{{dateformat endtime 'yyyy-MM-dd'}}</span>
+	<span class="ret_width_10 ellipsis filterSlip_js" style="float: right;">
+	<a class="fa fa-eye js_module_view" data-tid="{{id}}" title="明细"></a>
+	<a class="fa fa-pencil ret_color_a" title="编辑" data-tid="{{id}}"></a>&nbsp;
+	<a class="icon-trash" title="删除" data-tid="{{id}}"></a></span>
+</li>
+{{/each}}
+</script>
+
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script>

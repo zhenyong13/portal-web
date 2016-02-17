@@ -1,0 +1,16 @@
+﻿{
+    "data": {
+        "typecode": "1",
+                "id": 1,
+                "typename": "dictname",
+                "feeclass": "dictstate",
+                "creator": "呆要",
+                "updator": "呆要",
+                "createtime": "123123",
+                "updatetime": "2013",
+                "sortorder": 1,
+                "description": "122"
+    },
+    "msg": "success",
+    "rc": 1
+}

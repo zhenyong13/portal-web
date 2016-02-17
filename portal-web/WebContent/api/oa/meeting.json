@@ -1,0 +1,72 @@
+{
+    "data": {
+        "total": null,
+        "usercode": "user-002784",
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "memo": "11111111",
+                "attendernames": "11111",
+                "meettopic": "11111",
+                "usetimebegin": "08:00",
+                "booker": "user-002784",
+                "usetimeend": "09:00",
+                "bookcode": "meetingbooking-c91aaaa6-d6b2-4d16-bbb7-755ba41ccf63",
+                "meetingdate": "2015-12-10",
+                "id": 75,
+                "roomname": "一号会议室",
+                "bookdept": "信息中心",
+                "weekname": null,
+                "attendnum": 111,
+                "meetcode": "meeting-d77df8bb-2d5b-45ca-9528-dcc887184ef7",
+                "roomcode": "meetingroom-1b9cf183-ad61-4790-b63a-1a2a099ea42b",
+                "bookername": "蔡万里",
+                "meetname": "111111",
+                "attenders": ""
+            },
+            {
+                "memo": "11111111",
+                "attendernames": "1111111",
+                "meettopic": "22222",
+                "usetimebegin": "08:30",
+                "booker": "user-002784",
+                "usetimeend": "10:00",
+                "bookcode": "meetingbooking-436c3faf-f036-4197-87cd-3df669a412bc",
+                "meetingdate": "2015-12-10",
+                "id": 76,
+                "roomname": "一号会议室",
+                "bookdept": "信息中心",
+                "weekname": null,
+                "attendnum": 111,
+                "meetcode": "meeting-0d45437a-c53c-41f2-bd12-e71f103a8863",
+                "roomcode": "meetingroom-1b9cf183-ad61-4790-b63a-1a2a099ea42b",
+                "bookername": "蔡万里",
+                "meetname": "2222",
+                "attenders": ""
+            },
+            {
+                "memo": null,
+                "attendernames": null,
+                "meettopic": null,
+                "usetimebegin": null,
+                "booker": null,
+                "usetimeend": null,
+                "bookcode": null,
+                "meetingdate": null,
+                "id": null,
+                "roomname": "二号会议室",
+                "bookdept": null,
+                "weekname": null,
+                "attendnum": null,
+                "meetcode": null,
+                "roomcode": "meetingroom-be7be54e-6962-40cd-8044-c4dd0947fc06",
+                "bookername": null,
+                "meetname": null,
+                "attenders": null
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

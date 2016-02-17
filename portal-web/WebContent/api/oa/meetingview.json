@@ -1,0 +1,39 @@
+{
+    "data": {
+        "total": 1,
+        "pageNo": 0,
+        "pageSize": 0,
+        "rows": [
+            {
+                "attendernames": "1111111",
+                "attenders": "",
+                "attendnum": 111,
+                "bookcode": "meetingbooking-436c3faf-f036-4197-87cd-3df669a412bc",
+                "bookdept": "信息中心",
+                "booker": "user-002784",
+                "bookername": "蔡万里",
+                "booktime": "2015-12-10",
+                "cancelreason": null,
+                "canceltime": null,
+                "id": 72,
+                "iscancel": "not",
+                "loopperiod": "",
+                "looptype": "SpecifiedDate",
+                "meetcode": "meeting-0d45437a-c53c-41f2-bd12-e71f103a8863",
+                "meetname": "2222",
+                "meettopic": "22222",
+                "memo": "11111111",
+                "perioddatebegin": "2015-12-10",
+                "perioddateend": "2015-12-10",
+                "publishnotice": null,
+                "roomcode": "meetingroom-1b9cf183-ad61-4790-b63a-1a2a099ea42b",
+                "roomname": "一号会议室",
+                "usetimebegin": "08:30",
+                "usetimeend": "10:00",
+                "usetimetype": "TimeSlot"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

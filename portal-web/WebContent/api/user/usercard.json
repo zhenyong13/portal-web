@@ -1,0 +1,43 @@
+﻿{
+    "data": {
+        "projectnum": 5,
+        "logintime": "2015-07-05 12:01:42",
+        "reportnum": 5,
+        "state": "在线",
+        "data": {
+            "total": 1,
+            "rows": [
+                {
+                    "userlevel": "初级",
+                    "sex": "male",
+                    "workno": "234124324",
+                    "usercode": "user-001090",
+                    "updatetime": "2015-07-04 22:26:00",
+                    "positionlevel": "助理",
+                    "avatarcode": null,
+                    "password": "3156960f08369aa1b5bb64e2dfb331d65930fc8c",
+                    "mobileno": "13826176037",
+                    "id": 87,
+                    "ikeynumber": null,
+                    "orgcode": "org-1474",
+                    "username": "吴岚",
+                    "userrank": "信息管理助理",
+                    "userdesc": null,
+                    "address": null,
+                    "email": "wulan@dtsjy.com",
+                    "officephone": "86670616",
+                    "validatecode": "85d67cb1-e294-4190-b7e8-b65d5f5b4086",
+                    "orgname": null,
+                    "leader": null,
+                    "imnumber": null
+                }
+            ]
+        },
+        "processnum": 3,
+        "msg": "success",
+        "customernum": 3,
+        "rc": 1
+    },
+    "msg": "success",
+    "rc": 1
+}

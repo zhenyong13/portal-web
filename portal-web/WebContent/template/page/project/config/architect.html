@@ -1,0 +1,59 @@
+﻿<div class="middle_list jscroll">
+	<div class="middle_list_title">
+    	 <div style="border-bottom: 1px solid #ddd;padding: 2px;">
+					<input type="text" class="form-control js_search_org_class" style="width: 63%" id="search_profess" name="search" placeholder="按编码，名称筛选"/>
+					<i class="icon-search js_icon_search left-20" style="/* position: relative;right: 26px;top: 3px; */cursor: pointer;"></i>
+					<a  class="btn btn-sm btn-success" id="module-add" title="新建项目架构"><i class="icon-plus-thin glyphicon">新增</i></a>
+		 </div>
+    </div>
+    <div id="left-role-list" class="middle_list_main" style="max-height: 470px; width: 278px;  margin-top: 20px;">
+    	<ul id="project_role_list">
+        	<!-- <li><a id="midde_list_now">新建项目架构</a></li> -->
+           
+        </ul>
+    
+    </div>
+</div>
+<div id="module_form" style="width: 100%;  height: 100%;  margin-left: 280px;background-color: white;" class="jscroll">
+<div class="add-project-banner"><span class="add-project-newproject">新建项目架构</span>
+		<a class="btn btn-sm btn-default js-cancel-role" style="float:right;margin-left: 5px;">取消</a>
+		<a class="btn btn-sm btn-warning hide" id="module-del" style="float:right;"> <i class="fa fa-trash-o">删除</i></a>
+		<a class="btn btn-sm btn-primary js-save-role" style="float:right;">保存</a>
+	</div>
+<div class="entity-info" style="  float: left;  margin-top: 30px;">
+	<div class="control-group col-12" style="padding-left: 50px;">
+		<div class="controls" style="float:left;">
+		    <label class="control-label"><span class="red">*</span>项目架构名称：</label>
+			<input type="text" id="architectname" placeholder="输入项目架构名称" class="form-control required">
+			<input type="hidden" id="architectcode" />
+			<input type="hidden" id="tid" />
+		</div>
+		
+		<div class="controls">
+		    <label class="control-label"><span class="red">*</span>架构类型：</label>
+			<select id="category" class="form-control required"></select>
+		</div>
+	</div>
+
+	<div class="control-group col-12" style="padding-left: 50px;">
+		<div class="controls">
+		     <label class="control-label"><span class="red">*</span>状态：</label>
+			<select id="tstatus" class="form-control required"></select>
+		</div>
+	</div>
+	<div id="projectarctect" class="control-group col-12"  style="  padding-top: 20px;  padding-left: 150px;">
+			
+	</div>
+</div>
+<!-- <div style="float: left;  margin-left: 158px;  margin-top: 15px;">
+<a class="btn btn-sm btn-primary js-save-role">保存</a><a class="btn btn-sm btn-default js-cancel-role">取消</a>
+</div> -->
+
+</div>
+	
+<!-- 项目架构配置列表 -->
+<script id="architect-list-template" type="text/x-handlebars-template">
+{{#each data}}
+	 <li><a style="background-image: url(images/architect.png) ;background-repeat:no-repeat;  background-position: 30px 10px;" data-code="{{templatecode}}" data-id="{{id}}" data-category="{{category}}" data-status="{{status}}" data-orgcode="{{orgcode}}">{{templatename}}</a></li> 
+{{/each}}
+</script>

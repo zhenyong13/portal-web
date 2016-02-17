@@ -1,0 +1,40 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "cachetcode": "cachetcode",
+                "id": 1,
+                "cachetname": "cachetname",
+                "creator": "creator",
+                "createtime": "2015-08-03",
+                "cachetmanager": "cachetmanager",
+                "orgcode": "orgcode",
+                "cacheturl": "1ewrwrwe"
+            },
+            {
+                "cachetcode": "1",
+                "id": 1,
+                "cachetname": "1212",
+                "creator": "123",
+                "createtime": "2015-08-03",
+                "cachetmanager": "weqreqw",
+                "orgcode": "UCP_ROLETYPE",
+                "cacheturl": "1"
+            },
+            {
+                "cachetcode": "1",
+                "id": 1,
+                "cachetname": "1212",
+                "creator": "123",
+                "createtime": "2015-08-03",
+                "cachetmanager": "weqreqw",
+                "orgcode": "weqreqw",
+                "cacheturl": "1"
+            }
+             
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

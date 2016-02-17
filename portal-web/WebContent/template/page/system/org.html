@@ -1,0 +1,94 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 补签主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">组织编号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_org_code" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">组织名称：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_org_name" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">组织类型：</li>
+		<li class="toolkit-item">
+			<div class="controls search_select">
+				<select id="module_org_type" class="form-control">
+				</select>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">父组织：</li>
+		<li class="toolkit-item">
+			<div class="controls" style="width:225px;">
+				 <input type="text" id="parentname" class="form-control qt_p" value="" readonly="readonly" style="float:left;"/>
+				 <input type="hidden" id="parentcode" value=""/>
+				 <a class="icon-search js_search_org" style="  position: relative;  float: left;  top: 9px;  left: -19px;"></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle" id="org-add"><i class="icon-plus-thin glyphicon">新增</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="module-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning btn-warning j_entityslider-toggle" id="org-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="org-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<!-- 列表 -->
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+			<!-- <span class="ret_width_5 ret_display" style="margin-top: 11px;">
+			<i class="icon-checkbox-unchecked"></i></span> --> 
+				<span class="ret_width_5 ret_display  filterSlip_js"><i  id="check-all-org" class="icon-checkbox-unchecked"></i></span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="orgcode">组织编码</span>
+				<span class="ret_width_20 ret_display  filterSlip_js js_sort sorting" data-col="orgname">组织名称</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="orgtype">组织类型</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="orglevel">组织级别</span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="parentcode">父组织编码</span>
+				<span class="ret_width_5 ret_display  filterSlip_js" style="float: right;width: 10%;">操作</span>
+			</li>
+		</ul>
+		<ul id="org-flow-list" class="e-list flow-list demo-list">
+			<!-- 列表 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="org_pagination" style=" margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+
+
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{orgcode}}&nbsp;</span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js" title="{{orgname}}">{{orgname}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{orgtype}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{orglevel}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{parentcode}}&nbsp;</span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js" style="float: right;width: 10%;" title="">
+		 <a class="fa fa-eye js_org_view" data-tid="{{id}}" title="明细"></a>
+		 <a class="fa fa-pencil js_org_edit" data-tid="{{id}}" title="编辑"></a>
+		 <a class="fa fa-trash-o js_org_del" data-tid="{{id}}" title="删除"></a>
+	</span>
+</li>
+{{/each}}
+</script>
+
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script>

@@ -1,0 +1,130 @@
+<!-- 出差查询 -->
+<div  id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_" style="height: 50px;">
+		<li class="toolkit-item toolkit-title">时间：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input id="start_end_time" type="text" readonly="readonly" class="form-control" style="width: 200px;" placeholder="2015-09-02" />
+			</div>
+		</li>
+		<li class="toolkit-item searchorg">
+			<input id="workflow-keywords" style="width: 200px;" name="workflowsearch" class="form-control" type="text" placeholder="分公司名称">
+			<i id="query_search" class="icon-search left-20" title="分公司名称"></i>
+		</li>
+		
+	</ul>
+	<ul style="position: relative;right: 0px;float: right;z-index: 11;">
+		<li  id="syncDataShow" class="toolkit-item hide">
+			<span id="toSyncData" class="ret_display fl" style="background:url(images/sign/foot_2.png) no-repeat scroll 50% 50%;color: #fff;height:32px;width:83px;text-align: center;line-height: 32px; cursor: pointer;">同步数据</span>
+		</li>
+		<li class="toolkit-item toolkit-title"><label>我院总出差人数：</label></li>
+		<li class="toolkit-item">
+			<div id="alloutman" class="controls" style="background:url(images/sign/top_1.png) no-repeat scroll 50% 50%;color: #fff;width: 92px;height: 32px;text-align: center;line-height: 32px;">
+				500人
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title"><label>我院出差总天数：</label></li>
+		<li class="toolkit-item">
+			<div id="alloutday" class="controls" style="background:url( images/sign/top_2.png) no-repeat scroll 50% 50%;color: #fff;width: 92px;height: 32px;text-align: center;line-height: 32px;">
+				900天
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+<!-- 出差详情 -->
+<div class="ebox1 flows" style="margin-top: 3px;margin-bottom:25px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix" style="background: #F6F6F6;">
+				<span class="ret_width_20 ret_display ellipsis" data-col="orgcode">分公司名称</span>
+				<span class="ret_width_20 ret_display ellipsis">统计时间</span>
+				<span class="ret_width_10 ret_display ellipsis">部门总人数</span>
+				<span class="ret_width_10 ret_display ellipsis">我部出差人数</span>
+				<span class="ret_width_10 ret_display ellipsis">我部出差天数</span>
+				<span class="ret_width_15 ret_display ellipsis">到我部出差人数</span>
+				<span class="ret_width_15 ret_display ellipsis">到我部出差天数</span>
+			</li>
+		</ul>
+		<ul id="attach_list" class="e-list flow-list attend-statis-list">
+			<!-- 列表内容 -->
+		</ul>
+		
+		<!-- 合计 -->
+		<ul  class="e-list flow-list demo-list">
+			<li  class="workflow clearfix" style="background: #F6F6F6;">
+				<span class="ret_width_20 ret_display ellipsis"><label>合计</label></span>
+				<span class="ret_width_20 ret_display ellipsis" style="height: 22px;"></span>
+				<span id="orgtotalusernum" class="ret_width_10 ret_display ellipsis" style="background:url(images/sign/middle_1.png) no-repeat scroll 50% 50%;color: #fff;">800</span>
+				<span id="myorgtravelusernum" class="ret_width_10 ret_display ellipsis" style="background:url(images/sign/middle_2.png) no-repeat scroll 50% 50%;color: #fff;">500</span>
+				<span id="myorgusertraveldays" class="ret_width_10 ret_display ellipsis" style="background:url(images/sign/middle_4.png) no-repeat scroll 50% 50%;color: #fff;">300</span>
+				<span id="tomyorgtravelusernum" class="ret_width_15 ret_display ellipsis" style="background:url(images/sign/middle_3.png) no-repeat scroll 50% 50%;color: #fff;">500</span>
+				<span id="tomyorgusertraveldays" class="ret_width_15 ret_display ellipsis" style="background:url(images/sign/middle_5.png) no-repeat scroll 50% 50%;color: #fff;">300</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class="flows"style="height:230px;">
+	<div class="p_statistics_title">
+		<p>统计部门：<label id="myDept">北京分院</label></p>
+		<p>统计时间：<span id="myDeptDate">2015-09</span></p>
+	</div>
+	<div class="p_statistics">
+		<span style="float:left;width:30%;background:url(images/sign/big_1.png) no-repeat;height: 162px;width: 162px;margin:10px;">
+			<h6 id="myDeptNum" class="sta_count_fool">600</h6>我部总出差人数
+		</span>
+		<span style="float:left;width:30%;background:url(images/sign/big_2.png) no-repeat;height: 162px;width: 162px;margin:10px;">
+			<h6 id="myDeptDay" class="sta_count_fool">600</h6>我部总出差天数
+		</span>
+	</div>
+	<div class="sta_count_right" style="margin-left: 7%; margin-top: 3%;">
+		<div style="height: 40px; line-height: 30px;color: #1898C5;">
+			<span class="ret_display fl">到我部出差总人数：</span>
+			<span id="toMyDeptNum" class="ret_display fl" style="background:url(images/sign/foot_1.png) no-repeat scroll 50% 50%;color: #fff;height:32px;width:83px;text-align: center;line-height: 32px;">300人</span>
+		</div>
+		<div style="height: 40px; line-height: 30px;color: #1898C5;">
+			<span class="ret_display fl">到我部出差总天数：</span>
+			<span id="toMyDeptDay" class="ret_display fl" style="background:url(images/sign/foot_2.png) no-repeat scroll 50% 50%;color: #fff;height:32px;width:83px;text-align: center;line-height: 32px;">1000天</span>
+		</div>
+	</div>
+	
+</div>
+
+<!-- <div class="flows">
+	<div id="syncDataShow" style="height: 40px; line-height: 30px;color: #1898C5;  margin-top: 20px; margin-left: 2% ;display: none">
+			<span id="toSyncData" class="ret_display fl" style="background:url(images/sign/foot_2.png) no-repeat scroll 50% 50%;color: #fff;height:32px;width:83px;text-align: center;line-height: 32px; cursor: pointer;">同步数据</span>
+			<span class="fl" style="color:black;">&nbsp;同步数据范围：</span>
+			<input id="syncTime" type="text" readonly="readonly" class="form-control" style="width: 400px;" placeholder="" />
+		</div>
+
+</div> -->
+
+
+
+
+
+<!-- 列表 -->
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each staticlist}}
+<li class="workflow clearfix" data-orgcode="{{orgcode}}">
+    <span class="ret_width_20 ret_display ellipsis js_deptstatis" style="color:#3F71F2;" data-orgcode="{{orgcode}}">{{orgname}}</span>
+    <span class="ret_width_20 ret_display ellipsis">{{statisticdate}}</span>
+    <span class="ret_width_10 ret_display ellipsis">{{orgtotalusernum}}</span>
+    <span class="ret_width_10 ret_display ellipsis js-traveldetail" data-traveltype="mydept" data-orgcode="{{orgcode}}" style="color:#3F71F2;">{{myorgtravelusernum}}</span>
+    <span class="ret_width_10 ret_display ellipsis">{{myorgusertraveldays}}</span>
+    <span class="ret_width_15 ret_display ellipsis js-traveldetail" data-traveltype="tomydept" data-orgcode="{{orgcode}}"  style="color:#3F71F2;">{{tomyorgtravelusernum}}</span>
+    <span class="ret_width_15 ret_display ellipsis">{{tomyorgusertraveldays}}</span>
+</li>
+{{/each}}
+</script>
+
+
+
+
+ 
+
+

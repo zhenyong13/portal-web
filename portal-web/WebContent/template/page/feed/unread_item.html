@@ -1,0 +1,512 @@
+<div id="main" class="main main-narrow j_main">
+	<div class="col-7 j_matters">
+		<div class="e-title">
+			<h5 class="ellipsis watched hide">
+				<i class="imgcon img-watched"></i><span>关注事项</span> <a></a>
+			</h5>
+			<h5 class="ellipsis newitem hide">
+				<i class="imgcon img-newitem"></i><span>未读事项</span> <a></a>
+			</h5>
+			<h5 class="ellipsis newcomment hide">
+				<i class="imgcon img-newcomment"></i><span>新反馈事项</span> <a></a>
+			</h5>
+			<h5 class="ellipsis unfinish hide">
+				<i class="imgcon img-unfinish"></i><span
+					title="是指 本人负责和参与并有结束日期的未完成任务和目标、以及待办流程">未完成事项</span><a
+					class="hint ellipsis" title="是指 本人负责和参与并有结束日期的未完成任务和目标、以及待办流程">是指
+					本人负责和参与并有结束日期的未完成任务和目标、以及待办流程</a>
+			</h5>
+			<h5 class="ellipsis newfinish hide">
+				<i class="imgcon img-newfinish"></i><span
+					title="是指 本人创建/负责/参与的完成任务和目标、以及结束流程">新完成事项</span> <a
+					class="hint ellipsis" title="是指 本人创建/负责/参与的完成任务和目标、以及结束流程">是指
+					本人创建/负责/参与的完成任务和目标、以及结束流程</a>
+			</h5>
+			<h5 class="ellipsis atme hide">
+				<i class="imgcon img-at"></i><span>@我的事项</span> <a></a>
+			</h5>
+		</div>
+		<div class="j_center">
+			<div id="search-group" class="toolkit toolkit-bar">
+				<ul class="toolkit-list fl">
+					<li class="toolkit-item divider sn"><i id="check-all"
+						class="icon-checkbox-unchecked"></i></li>
+					<li class="toolkit-item toolkit-item-tab active"><a
+						class="router group all filterSlip_js" data-module="all"
+						href="/feed/newcomment/all">全部(<i>1</i>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab hide"><a
+						class="router group task filterSlip_js" data-module="task"
+						href="/feed/newcomment/task">任务(<i>0</i>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab hide"><a
+						class="router group document filterSlip_js" data-module="document"
+						href="/feed/newcomment/document">文档(<i>0</i>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab hide"><a
+						class="router group customer filterSlip_js" data-module="customer"
+						href="/feed/newcomment/customer">客户(<i>0</i>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab hide"><a
+						class="router group workflow filterSlip_js" data-module="workflow"
+						href="/feed/newcomment/workflow">流程(<i>0</i>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab"><a
+						class="router group mainline filterSlip_js" data-module="mainline"
+						href="/feed/newcomment/mainline" style="display: block;">目标(<i>1</i>)
+					</a></li>
+					<li class="toolkit-item search"><input id="search-keywords"
+						class="form-control hide" type="text" name="searchsearch"
+						placeholder="搜索" style="display: none; width: 20px;"><i
+						class="icon-search" title="搜索"></i></li>
+					<li class="toolkit-item sn hide"><a class="group"><i
+							id="no-finished" class="icon-checkbox-unchecked"></i>不含已完成</a></li>
+				</ul>
+				<!-- <ul class="toolkit-list fr">
+					<li id="batch-option" class="toolkit-item"><div
+							class="btn-group dropdown dropdown-menu-toggle">
+							<a class="dropdown-toggle btn btn-sm btn-square"><i
+								class="icon-th-list glyphicon"></i>批量</a>
+							<ul class="dropdown-menu dropdown-menu-right border-dropdown">
+								<li><a class="search-watchs">批量关注</a></li>
+								<li></li>
+								<li id=""><a class="search-share typeahead-search"
+									data-entity="employee" data-multi="true" style="width: 60px">批量共享</a></li>
+								<li><a class="search-read">批量已读</a></li>
+							</ul>
+						</div></li>
+				</ul> -->
+			</div>
+			<div id="search-result"
+				class="bg-white mCustomScrollbar _mCS_8 mCS_no_scrollbar"
+				style="height: 309px;">
+				<div id="mCSB_8"
+					class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside"
+					tabindex="0">
+					<div id="mCSB_8_container"
+						class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+						style="position: relative; top: 0px; left: 0px;" dir="ltr">
+						<div>
+							<ul id="search-result-list" class="e-list">
+								<li id="4523313854022708919"
+									class="result-li router j_clickRead j_entityslider-toggle"
+									data-module="mainline" data-id="4523313854022708919"><span
+									class="sn">1</span><span class="checkbox" module="mainline"><i
+										class="icon-checkbox-unchecked"></i></span><span class="module">[目标]</span><span
+									class="title ellipsis" title="目标">目标</span>
+								<div class="right">
+										<span class="comment-count">(2)</span><span
+											class="user ellipsis"></span><span class="date">2015-06-01</span>
+									</div>
+									<div class="shortcut">
+										<span class="watch" watched="true"
+											targetid="4523313854022708919" module="mainline">取消关注</span><span
+											class="finish hide" targetid="4523313854022708919">标记完成</span><span
+											class="share  selector-toggle" data-entity="employee"
+											data-multi="true" module="mainline"
+											targetid="4523313854022708919">共享</span><a
+											class="router link"
+											href="/mainline/link/4523312868403470340/4523313854022708919"><i
+											class="icon-chevron-right"></i>相关事项 </a>
+									</div></li>
+							</ul>
+						</div>
+						<div id="resultlist-loading" class="loading_small hide">
+							<span>正在加载数据，请稍后...</span>
+						</div>
+						<div class="hide no-result">无相关数据</div>
+						<div class="hide center-more">更多...</div>
+						<div class="hide">
+							<li id="result-clone"
+								class="result-li router j_clickRead j_entityslider-toggle"
+								data-module="" data-id=""><span class="sn"></span><span
+								class="checkbox"><i class="icon-checkbox-unchecked"></i></span><span
+								class="module"></span><span class="title ellipsis"></span>
+							<div class="right">
+									<span class="comment-count"></span><span class="user ellipsis"></span><span
+										class="date"></span>
+								</div>
+								<div class="shortcut">
+									<span class="watch">关注</span><span class="finish hide">标记完成</span><span
+										class="share  selector-toggle" data-entity="employee"
+										data-multi="true">共享</span><a class="router link hide"><i
+										class="icon-chevron-right"></i>相关事项 </a>
+								</div></li>
+						</div>
+					</div>
+					<div id="mCSB_8_scrollbar_vertical"
+						class="mCSB_scrollTools mCSB_8_scrollbar mCS-darkblue mCSB_scrollTools_vertical"
+						style="display: none;">
+						<div class="mCSB_draggerContainer">
+							<div id="mCSB_8_dragger_vertical" class="mCSB_dragger"
+								style="position: absolute; min-height: 30px; height: 0px; top: 0px;"
+								oncontextmenu="return false;">
+								<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+							</div>
+							<div class="mCSB_draggerRail"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-5 j_feeds">
+		<div class="j_right-title e-title">
+			<div>
+				<h5>
+					<i></i><span class="feedback-title">未读反馈评论</span>
+				</h5>
+			</div>
+		</div>
+		<div id="feedback">
+			<div class="toolkit toolkit-bar">
+				<ul class="toolkit-list j_nav other pull-left">
+					<li class="toolkit-item toolkit-item-tab j_toolkit-item task"><a>任务(<span
+							class="count">0</span>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab j_toolkit-item document"><a>文档(<span
+							class="count">0</span>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab j_toolkit-item customer"><a>客户(<span
+							class="count">0</span>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab j_toolkit-item workflow"><a>流程(<span
+							class="count">0</span>)
+					</a></li>
+					<li
+						class="toolkit-item toolkit-item-tab j_toolkit-item mainline active"><a>目标(<span
+							class="count">2</span>)
+					</a></li>
+					<li class="toolkit-item toolkit-item-tab j_toolkit-item blog hide"><a>日报(<span
+							class="count">0</span>)
+					</a></li>
+					<li
+						class="toolkit-item toolkit-item-tab j_toolkit-item unreadother hide"><a>未读反馈(<span
+							class="count">0</span>)
+					</a></li>
+				</ul>
+				<ul class="toolkit-list feedback-option fr">
+					<li class="toolkit-item nav3 fr mark-all-readed"><a
+						class="btn btn-sm btn-link" title="全部标记为已阅">全部已阅</a></li>
+					<li class="toolkit-item nav3 fr feedback-search"><a
+						class="btn btn-sm btn-link">搜索</a></li>
+					<li class="toolkit-item fr feedback-search-keyword hide"><input
+						type="text" maxlength="20" class="form-control control-input"
+						placeholder="请输入关键字…"></li>
+				</ul>
+			</div>
+			<div id="feedback-container"
+				class="bg-white scrollwrapper mCustomScrollbar _mCS_9 mCS_no_scrollbar"
+				style="height: 179px;">
+				<div id="mCSB_9"
+					class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside"
+					tabindex="0">
+					<div id="mCSB_9_container"
+						class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+						style="position: relative; top: 0px; left: 0px;" dir="ltr">
+						<div id="feedback-clone" class="feedback-box hide">
+							<div class="commentor">
+								<a class="usercard-toggle"></a>
+							</div>
+							<div class="name ellipsis">
+								<a class="j_name"></a>
+							</div>
+							<div class="module-name"></div>
+							<div class="feedback-content"></div>
+							<div class="feedback-attachment entity-container attachment"
+								undeleteable="true"></div>
+							<div class="parent-comment-body hide">
+								<a class="parent-username usercard-toggle"></a><span
+									class="parent-content ellipsis"></span>
+							</div>
+							<div class="feedback-bottom">
+								<span class="comment-date"></span><a
+									class="comment-comment hide">回复</a><a class="transmit hide">转任务</a><a
+									class="readed hide" title="点击标记为已阅">已阅</a>
+							</div>
+						</div>
+						<div id="feedback-target-clone" class="feedback-target-box hide">
+							<div class="title">
+								<div class="module-name"></div>
+								<div class="name ellipsis">
+									<a></a>
+								</div>
+								<a class="readed hide" title="点击标记为已阅">已阅</a>
+							</div>
+							<div class="target-feedbacks"></div>
+						</div>
+						<div id="feedbackList-loading" class="loading_small hide">
+							<span>正在加载数据，请稍后...</span>
+						</div>
+						<div id="feedback-target-4523313854022708919"
+							class="feedback-target-box">
+							<div class="title">
+								<div class="module-name">目标 :</div>
+								<div class="name ellipsis">
+									<a title="目标" class="j_entityslider-toggle editable"
+										data-id="4523313854022708919" data-module="mainline"
+										data-value="4523313854022708919">目标</a>
+								</div>
+								<a class="readed" title="点击标记为已阅">已阅</a>
+							</div>
+							<div class="target-feedbacks">
+								<div id="6993313919259843149" class="feedback-box">
+									<div class="commentor">
+										<a class="usercard-toggle" userid="4523312831837269379">zhanghs</a>
+									</div>
+									<div class="name ellipsis">
+										<a class="j_name" id="feedback4523313854022708919"></a>
+									</div>
+									<div class="module-name"></div>
+									<div class="feedback-content">dd</div>
+									<div class="feedback-attachment entity-container attachment"
+										undeleteable="true" undeletable="true"></div>
+									<div class="parent-comment-body hide">
+										<a class="parent-username usercard-toggle"></a><span
+											class="parent-content ellipsis"></span>
+									</div>
+									<div class="feedback-bottom">
+										<span class="comment-date">2015-06-01 14:13:13</span><a
+											class="comment-comment hide">回复</a><a class="transmit hide">转任务</a><a
+											class="readed hide" title="点击标记为已阅">已阅</a>
+									</div>
+									<div class="replay-box clearfix" style="display: none;">
+										<div class="comment-comment-hearder">
+											回复<a class="comment-comment-username usercard-toggle"
+												userid="4523312831837269379">@zhanghs: </a>
+										</div>
+										<div class="content-div">
+											<textarea id="at-comment-content" rows="3"
+												class="comment-comment-content form-control bluebox"
+												v-maxlength="2000"></textarea>
+										</div>
+										<div class="comment-comment-btn-div">
+											<a class="btn-replay btn btn-sm">回复</a><a
+												class="replay-cancel btn btn-sm">取消</a><span
+												class="commentComment-bottom hide">当前已回复 <a
+												class="commentComment-count"></a> 次，<span
+												class="commentComment-history-extend"><span>展开</span><a
+													class="commentComment-history-extend-icon"></a></span><span
+												class="commentComment-history-collapse hide"><span>收起</span><a
+													class="commentComment-history-collapse-icon icon"></a></span></span>
+										</div>
+										<div class="commentComment-commented hide">
+											<div class="commentComment-commented-more hide">更多</div>
+										</div>
+										<div id="commentScrollPosition"></div>
+									</div>
+									<div class="transmit-box clearfix" style="display: none;">
+										<div class="transmit-tab">
+											<span>转发到任务协作</span><span class="transmit-parent-commenter"
+												data-entity="4523312868403470340">@wuzy: </span><a
+												class="icon-pencil commentreplay-share selector-toggle"
+												data-entity="employee"></a><span
+												class="transmitDuedate-label">到期日：</span><input
+												name="transmitDuedate" type="text"
+												class="datepicker form-control textinput transmitDuedate">
+										</div>
+										<div class="transmit-parent-content hide">dd</div>
+										<div class="transmit-content-div">
+											<textarea rows="3"
+												class="transmit-content bluebox form-control"
+												v-maxlength="2000"></textarea>
+										</div>
+										<div class="transmit-btn-div">
+											<a class="transmit-btn btn btn-sm">转发</a><a
+												class="transmit-cancel btn btn-sm">取消</a><span
+												class="transmit-bottom hide">当前已转发 <a
+												class="transmit-count"></a> 次，<span
+												class="transmit-history-extend">展开<a
+													class="transmit-history-extend-icon"></a></span><span
+												class="transmit-history-collapse hide">收起<a
+													class="transmit-history-collapse-icon"></a></span></span>
+										</div>
+										<div class="transmit-transmited hide">
+											<div class="transmit-transmited-more hide">更多</div>
+										</div>
+										<div id="transmitScrollPosition"></div>
+									</div>
+								</div>
+								<div id="6993313918540643137" class="feedback-box">
+									<div class="commentor">
+										<a class="usercard-toggle" userid="4523312831837269379">zhanghs</a>
+									</div>
+									<div class="name ellipsis">
+										<a class="j_name" id="feedback4523313854022708919"></a>
+									</div>
+									<div class="module-name"></div>
+									<div class="feedback-content">fff</div>
+									<div class="feedback-attachment entity-container attachment"
+										undeleteable="true" undeletable="true"></div>
+									<div class="parent-comment-body hide">
+										<a class="parent-username usercard-toggle"></a><span
+											class="parent-content ellipsis"></span>
+									</div>
+									<div class="feedback-bottom">
+										<span class="comment-date">2015-06-01 14:13:05</span><a
+											class="comment-comment hide">回复</a><a class="transmit hide">转任务</a><a
+											class="readed hide" title="点击标记为已阅">已阅</a>
+									</div>
+									<div class="replay-box clearfix" style="display: none;">
+										<div class="comment-comment-hearder">
+											回复<a class="comment-comment-username usercard-toggle"
+												userid="4523312831837269379">@zhanghs: </a>
+										</div>
+										<div class="content-div">
+											<textarea id="at-comment-content" rows="3"
+												class="comment-comment-content form-control bluebox"
+												v-maxlength="2000"></textarea>
+										</div>
+										<div class="comment-comment-btn-div">
+											<a class="btn-replay btn btn-sm">回复</a><a
+												class="replay-cancel btn btn-sm">取消</a><span
+												class="commentComment-bottom hide">当前已回复 <a
+												class="commentComment-count"></a> 次，<span
+												class="commentComment-history-extend"><span>展开</span><a
+													class="commentComment-history-extend-icon"></a></span><span
+												class="commentComment-history-collapse hide"><span>收起</span><a
+													class="commentComment-history-collapse-icon icon"></a></span></span>
+										</div>
+										<div class="commentComment-commented hide">
+											<div class="commentComment-commented-more hide">更多</div>
+										</div>
+										<div id="commentScrollPosition"></div>
+									</div>
+									<div class="transmit-box clearfix" style="display: none;">
+										<div class="transmit-tab">
+											<span>转发到任务协作</span><span class="transmit-parent-commenter"
+												data-entity="4523312868403470340">@wuzy: </span><a
+												class="icon-pencil commentreplay-share selector-toggle"
+												data-entity="employee"></a><span
+												class="transmitDuedate-label">到期日：</span><input
+												name="transmitDuedate" type="text"
+												class="datepicker form-control textinput transmitDuedate">
+										</div>
+										<div class="transmit-parent-content hide">fff</div>
+										<div class="transmit-content-div">
+											<textarea rows="3"
+												class="transmit-content bluebox form-control"
+												v-maxlength="2000"></textarea>
+										</div>
+										<div class="transmit-btn-div">
+											<a class="transmit-btn btn btn-sm">转发</a><a
+												class="transmit-cancel btn btn-sm">取消</a><span
+												class="transmit-bottom hide">当前已转发 <a
+												class="transmit-count"></a> 次，<span
+												class="transmit-history-extend">展开<a
+													class="transmit-history-extend-icon"></a></span><span
+												class="transmit-history-collapse hide">收起<a
+													class="transmit-history-collapse-icon"></a></span></span>
+										</div>
+										<div class="transmit-transmited hide">
+											<div class="transmit-transmited-more hide">更多</div>
+										</div>
+										<div id="transmitScrollPosition"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="feedback-more hide">更多...</div>
+					</div>
+					<div id="mCSB_9_scrollbar_vertical"
+						class="mCSB_scrollTools mCSB_9_scrollbar mCS-darkblue mCSB_scrollTools_vertical"
+						style="display: none;">
+						<div class="mCSB_draggerContainer">
+							<div id="mCSB_9_dragger_vertical" class="mCSB_dragger"
+								style="position: absolute; min-height: 30px; height: 0px; top: 0px;"
+								oncontextmenu="return false;">
+								<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+							</div>
+							<div class="mCSB_draggerRail"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="entityModal" class="taskcalendar-modal modal fade"
+				tabindex="-1" role="dialog" aria-labelledby="entityModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-body"></div>
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="at-comment-part" class="controls hide"
+			style="position: absolute; left: 35px; top: 28px;"></div>
+		<div id="at-commentreplay-part" class="controls hide"
+			style="position: absolute; left: 45px; top: 235px;"></div>
+		<div class="hide">
+			<div id="comment-comment-clone" class="replay-box clearfix">
+				<div class="comment-comment-hearder">
+					回复<a class="comment-comment-username usercard-toggle" userid=""></a>
+				</div>
+				<div class="content-div">
+					<textarea id="at-comment-content" rows="3"
+						class="comment-comment-content form-control bluebox"
+						v-maxlength="2000"></textarea>
+				</div>
+				<div class="comment-comment-btn-div">
+					<a class="btn-replay btn btn-sm">回复</a><a
+						class="replay-cancel btn btn-sm">取消</a><span
+						class="commentComment-bottom hide">当前已回复 <a
+						class="commentComment-count"></a> 次，<span
+						class="commentComment-history-extend"><span>展开</span><a
+							class="commentComment-history-extend-icon"></a></span><span
+						class="commentComment-history-collapse hide"><span>收起</span><a
+							class="commentComment-history-collapse-icon icon"></a></span></span>
+				</div>
+				<div class="commentComment-commented hide">
+					<div class="commentComment-commented-more hide">更多</div>
+				</div>
+				<div id="commentScrollPosition"></div>
+			</div>
+			<div id="transmit-clone" class="transmit-box clearfix">
+				<div class="transmit-tab">
+					<span>转发到任务协作</span><span class="transmit-parent-commenter"></span><a
+						class="icon-pencil commentreplay-share selector-toggle"
+						data-entity="employee"></a><span class="transmitDuedate-label">到期日：</span><input
+						name="transmitDuedate" type="text"
+						class="datepicker form-control textinput transmitDuedate">
+				</div>
+				<div class="transmit-parent-content hide"></div>
+				<div class="transmit-content-div">
+					<textarea rows="3" class="transmit-content bluebox form-control"
+						v-maxlength="2000"></textarea>
+				</div>
+				<div class="transmit-btn-div">
+					<a class="transmit-btn btn btn-sm">转发</a><a
+						class="transmit-cancel btn btn-sm">取消</a><span
+						class="transmit-bottom hide">当前已转发 <a
+						class="transmit-count"></a> 次，<span
+						class="transmit-history-extend">展开<a
+							class="transmit-history-extend-icon"></a></span><span
+						class="transmit-history-collapse hide">收起<a
+							class="transmit-history-collapse-icon"></a></span></span>
+				</div>
+				<div class="transmit-transmited hide">
+					<div class="transmit-transmited-more hide">更多</div>
+				</div>
+				<div id="transmitScrollPosition"></div>
+			</div>
+			<div id="comment-commented-clone"
+				class="comment-commented-box clearfix">
+				<div class="comment-commented-header">
+					<a class="comment-commented-user router" href="javascript:void(0);"></a><span
+						class="comment-commented-cal"></span>
+				</div>
+				<div class="comment-commented-content"></div>
+			</div>
+			<div id="transmited-clone" class="transmited-box clearfix">
+				<div class="transmited-header">
+					<a class="transmited-user router" href="javascript:void(0);"></a><span
+						class="transmited-cal"></span>
+				</div>
+				<div class="transmited-content"></div>
+			</div>
+		</div>
+	</div>
+</div>

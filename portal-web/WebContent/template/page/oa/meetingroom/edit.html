@@ -1,0 +1,55 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+					{{#if id}}
+						<div class="control-group col-12">
+							<label class="control-label">会议室编码：</label>
+							<div class="controls">
+								 <input type="text" id="roomcode" class="form-control" value="{{roomcode}}" />
+								 <input type="hidden" id="tid" class="form-control" value="{{id}}" />
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-12">
+							<label class="control-label">会议室名称：</label>
+							<div class="controls">
+								 <input type="text" id="roomname" class="form-control" value="{{roomname}}" />
+							</div>
+						</div>
+						  
+						<div class="control-group col-12">
+							<label class="control-label">位置：</label>
+							<div class="controls">
+								<input type="text" id="position" class="form-control required"  value="{{position}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">容纳人数：</label>
+							<div class="controls">
+								<input type="text" id="capacity" class="form-control required number" value="{{capacity}}" />
+							</div>
+						</div>
+						 
+						<div class="control-group col-12">
+							<label class="control-label">备注：</label>
+							<div class="controls">
+								<textarea id="memo" class="form-control"  style="width:400px;">{{memo}}</textarea>
+							</div>
+						</div>
+						 
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

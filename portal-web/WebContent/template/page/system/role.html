@@ -1,0 +1,96 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">角色编号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_role_code" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">角色名称：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_role_name" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">类型：</li>
+		<li class="toolkit-item">
+			<div class="controls search_select">
+				<select id="module_role_type" class="form-control" style="width: 140px;">
+				</select>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">所属组织：</li>
+		<li class="toolkit-item">
+			<div class="controls" style="width: 245px;">
+				 <input type="text" id="parentname" class="form-control qt_p" style="float: left;" value="" readonly="readonly"/>
+				 <input type="hidden" id="parentcode" value=""/>
+				 <a class="icon-search js_search_operate" style="position: relative;left: -20px;  bottom: 4px;"></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle" id="role-add"><i class="icon-plus-thin glyphicon">新增</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="role-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning j_entityslider-toggle" id="role-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="role-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<!-- 列表 -->
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+				<span class="ret_width_5 ret_display  filterSlip_js"><i  id="check-all-role" class="icon-checkbox-unchecked"></i></span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="rolecode">角色编码</span>
+				<span class="ret_width_20 ret_display  filterSlip_js js_sort sorting" data-col="rolename">角色名称</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="roletype">角色类型</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="orgcode">所属组织</span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="rolestate">角色状态</span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="createtime">创建时间</span>
+				<span class="ret_width_10 ret_display  filterSlip_js">&nbsp;&nbsp;操作</span>
+			</li>
+		</ul>
+		<ul id="role-flow-list" class="e-list flow-list demo-list">
+			<!-- 列表 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="role_pagination" style="margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+<div id="entitySlider" class="j_stretchBox stretch-box"></div>
+
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{rolecode}}&nbsp;</span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js">{{rolename}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{roletype}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{orgcode}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{rolestate}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{createtime}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" style="float: right;" title="">
+		<a class="fa fa-eye js_role_view" data-tid="{{id}}" title="明细"></a>
+		<a class="fa fa-pencil js_role_edit" data-tid="{{id}}" title="编辑"></a>
+		<a class="fa fa-trash-o js_role_del" data-tid="{{id}}" title="删除"></a>
+		<a class="fa fa-unlock js_role_perm" data-tid="{{rolecode}}" title="角色授权"></a>
+		<a class="fa fa-user js_user_role" data-tid="{{rolecode}}" data-name="{{rolename}}" title="所属用户"></a>
+	</span>
+</li>
+{{/each}}
+</script>
+
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script>

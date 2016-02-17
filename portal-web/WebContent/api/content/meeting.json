@@ -1,0 +1,42 @@
+{
+    "data": {
+        "usercode": "002644", 
+        "total":20,
+	 	"pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": 1, 
+                "source": "来源", 
+                "title": "百度", 
+                "publisher": "百度", 
+                "img": "webwxgetmsgimg-4.jpg", 
+                "content": "内容webwxgetmsgimg-4.jpg", 
+                "createtime": "2015-11-02", 
+                "creator": "百度", 
+                "showing": "enable", 
+                "newstype": 2, 
+                "status": "created", 
+                "topshow": "true", 
+                "statusname": "创建"
+            }  ,
+            {
+                "id": 1, 
+                "source": "来源", 
+                "title": "百度", 
+                "publisher": "百度", 
+                "img": "webwxgetmsgimg-4.jpg", 
+                "content": "内容webwxgetmsgimg-4.jpg", 
+                "createtime": "2015-11-02", 
+                "creator": "百度", 
+                "showing": "enable", 
+                "newstype": 2, 
+                "status": "created", 
+                "topshow": "true", 
+                "statusname": "创建"
+            }  
+        ]
+    }, 
+    "msg": "", 
+    "rc": 1
+}

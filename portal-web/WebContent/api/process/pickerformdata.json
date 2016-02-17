@@ -1,0 +1,157 @@
+{
+    "data": {
+        "formdata": {
+            "assestcode": {
+                "region": "搜索条件",
+                "cols": 5,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "资产编码",
+                "value": [],
+                "code": "assestcode",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "searchtype": "EqualTo",
+                    "issearchfield": true
+                }
+            },
+            "brand": {
+                "region": "搜索条件",
+                "cols": 5,
+                "isshow": true,
+                "itemorder": 2,
+                "name": "品牌",
+                "value": [],
+                "code": "brand",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "searchtype": "Like",
+                    "issearchfield": true
+                }
+            },
+            "submit_field": {
+                "region": "搜索条件",
+                "cols": 2,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "查询",
+                "value": [],
+                "code": "submit_field",
+                "type": "searchbtn",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "issearchsubmit": true,
+                    "tableid": "assestsList",
+                    "event": "js-picker-freshtable",
+                    "queryurl": "api/process/refreshtable.json",
+                    "issearchfield": true
+                }
+            },
+            "assestsList": {
+                "region": "查询结果",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "资产列表",
+                "value": [
+                    {
+                        "thead": [
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "checkbox",
+                                    "ispk": true,
+                                    "editable": true
+                                },
+                                "name": "产品编码",
+                                "key": "assestcode"
+                            },
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "ispkname": true,
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "产品名称",
+                                "key": "assestname"
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "品牌",
+                                "key": "brand"
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "型号",
+                                "key": "model"
+                            },
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "单位",
+                                "key": "unit"
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "上次入库单价",
+                                "key": "price"
+                            }
+                        ],
+                        "tbody": []
+                    }
+                ],
+                "code": "assestsList",
+                "type": "tablelist",
+                "required": true,
+                "editable": true,
+                "regionorder": 2,
+                "custom": {
+                    "total": "",
+                    "pageNo": 1,
+                    "querycondition": [
+                        {
+                            "v1": "enable",
+                            "operate": "EqualTo",
+                            "key": "isenabled"
+                        }
+                    ],
+                    "pageSize": 10,
+                    "tr_event": "js-table-tr-checkbox-click",
+                    "ispagination": true
+                }
+            }
+        }
+    },
+    "msg": "success",
+    "rc": 1
+}

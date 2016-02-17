@@ -1,0 +1,85 @@
+{
+    "data": {
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "handleinfo": {
+                    "createtime": "2015-10-09 14:27:55",
+                    "result": "pass",
+                    "opinion": "【下一环节-拟稿】系统自动发起流程",
+                    "attachments": []
+                },
+                "processinstcode": "e91ddf45-3d17-48f2-8dd0-adca20857ee3",
+                "taskcode": "task-713f73a9-7418-4621-97b2-91b7f4d432e7",
+                "taskname": "开始[启动流程]",
+                "userinfo": {
+                    "address": "",
+                    "avatarcode": "cd7a79d9-eb41-4713-a7cd-c9b91eb13205",
+                    "email": "likun@dtsjy.com",
+                    "extorgcode": "org-158",
+                    "id": 1112,
+                    "imnumber": null,
+                    "isenabled": "enable",
+                    "leader": "user-002784",
+                    "mobileno": "13828415760",
+                    "officephone": "89898989",
+                    "orgcode": "org-158",
+                    "orgname": "信息中心",
+                    "pinyin": "lizuo",
+                    "positionlevel": "普通员工",
+                    "residentaddresscode": "28",
+                    "sex": "男",
+                    "signfilecode": null,
+                    "updatetime": "2015-08-14 09:06:37",
+                    "usercode": "user-002940",
+                    "userdesc": null,
+                    "userlevel": "无",
+                    "username": "李锟",
+                    "userrank": "初级办事员",
+                    "workno": "002940"
+                }
+            },
+            {
+                "handleinfo": {
+                    "createtime": "2015-10-09 14:27:55",
+                    "result": "pass",
+                    "opinion": "【下一环节-室主任或部门领导审批】系统自动完成任务",
+                    "attachments": []
+                },
+                "processinstcode": "e91ddf45-3d17-48f2-8dd0-adca20857ee3",
+                "taskcode": "task-ed3b4fbb-83da-468b-8c5b-c396d44aeb78",
+                "taskname": "拟稿",
+                "userinfo": {
+                    "address": "",
+                    "avatarcode": "cd7a79d9-eb41-4713-a7cd-c9b91eb13205",
+                    "email": "likun@dtsjy.com",
+                    "extorgcode": "org-158",
+                    "id": 1112,
+                    "imnumber": null,
+                    "isenabled": "enable",
+                    "leader": "user-002784",
+                    "mobileno": "13828415760",
+                    "officephone": "89898989",
+                    "orgcode": "org-158",
+                    "orgname": "信息中心",
+                    "pinyin": "lizuo",
+                    "positionlevel": "普通员工",
+                    "residentaddresscode": "28",
+                    "sex": "男",
+                    "signfilecode": null,
+                    "updatetime": "2015-08-14 09:06:37",
+                    "usercode": "user-002940",
+                    "userdesc": null,
+                    "userlevel": "无",
+                    "username": "李锟",
+                    "userrank": "初级办事员",
+                    "workno": "002940"
+                }
+            }
+        ],
+        "total": null
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,825 @@
+{
+    "data": {
+        "buttons": [
+            "commit",
+            "save",
+            "diagram"
+        ],
+        "candidatesteps": [
+            {
+                "handleinfo": {
+                    "nextuser": [
+                        {
+                            "name": "张宋",
+                            "code": "user-001308",
+                            "pcode": "org-141"
+                        }
+                    ],
+                    "opinion": null,
+                    "result": null,
+                    "setasfrequence": false,
+                    "transition": "flow2-部长审批"
+                },
+                "selectedvalues": [
+                    {
+                        "$ref": "$.data.candidatesteps[0].handleinfo.nextuser[0]"
+                    }
+                ],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "api/member/role.json?model={\"processcode\":\"e9c2b561-642d-465d-b527-20a8210c694a\",\"dataclass\":\"role-\",\"stepcode\":\"acd7a4d0-4a69-4558-8859-9f1f57d1f066\",\"roletype\":[\"flowrole\",\"commonrole\"]}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            },
+                            "objtype": "role-"
+                        }
+                    ],
+                    "selecttype": "radio"
+                },
+                "transition": {
+                    "transitionname": "部长审批",
+                    "transitionid": "flow2-部长审批"
+                }
+            },
+            {
+                "handleinfo": null,
+                "selectedvalues": [],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "api/member/role.json?model={\"processcode\":\"e9c2b561-642d-465d-b527-20a8210c694a\",\"dataclass\":\"role-\",\"stepcode\":\"11509a62-bc72-4bfb-bb0a-bb72d44bfd37\",\"roletype\":[\"flowrole\",\"commonrole\"]}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            },
+                            "objtype": "role-"
+                        }
+                    ],
+                    "selecttype": "radio"
+                },
+                "transition": {
+                    "transitionname": "项目负责人审批",
+                    "transitionid": "flow4-项目负责人审批"
+                }
+            }
+        ],
+        "formdata": {
+            "number": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "单据编号",
+                "value": [],
+                "code": "number",
+                "type": "text",
+                "required": false,
+                "editable": false,
+                "regionorder": 1
+            },
+            "date": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 4,
+                "name": "日期",
+                "value": [
+                    {
+                        "name": "日期",
+                        "code": "2015-12-13"
+                    }
+                ],
+                "code": "date",
+                "type": "date",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "title": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 7,
+                "name": "标题",
+                "value": [],
+                "code": "title",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "width": "80%"
+                }
+            },
+            "projectinfocode": {
+                "region": "本部流程",
+                "cols": 11,
+                "isshow": true,
+                "itemorder": 11,
+                "name": "项目编号",
+                "value": [],
+                "code": "projectinfocode",
+                "type": "text",
+                "required": false,
+                "editable": false,
+                "regionorder": 1
+            },
+            "selectproject": {
+                "region": "本部流程",
+                "cols": 1,
+                "isshow": true,
+                "itemorder": 12,
+                "name": null,
+                "value": [],
+                "code": "selectproject",
+                "type": "picker",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "pickerlabel": "选择项目",
+                    "event": "js-open-picker",
+                    "pikcerfloat": "left",
+                    "pickerform": {
+                        "template": "picker-list-template",
+                        "formcode": "form-e50c36f9-bdef-41fe-8b6f-45610d2ff880",
+                        "datamapping": [
+                            {
+                                "dest": "projectinfocode",
+                                "src": "projectinfocode"
+                            },
+                            {
+                                "dest": "managername",
+                                "src": "managername"
+                            }
+                        ],
+                        "refreshfun": "showrefreshform",
+                        "selecttype": "radio"
+                    }
+                }
+            },
+            "managername": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 13,
+                "name": "项目负责人",
+                "value": [],
+                "code": "managername",
+                "type": "text",
+                "required": false,
+                "editable": false,
+                "regionorder": 1
+            },
+            "applicationdepartment": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 19,
+                "name": "申请部门",
+                "value": [
+                    {
+                        "name": "申请部门",
+                        "code": "信息中心"
+                    }
+                ],
+                "code": "applicationdepartment",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "managers": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 21,
+                "name": "经办人",
+                "value": [
+                    {
+                        "name": "经办人",
+                        "code": "蔡万里（002784）"
+                    }
+                ],
+                "code": "managers",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "officephone": {
+                "region": "本部流程",
+                "cols": 8,
+                "isshow": true,
+                "itemorder": 23,
+                "name": "联系电话",
+                "value": [
+                    {
+                        "name": "联系电话",
+                        "code": "86767676"
+                    }
+                ],
+                "code": "officephone",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "meetingtype": {
+                "region": "本部流程",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 24,
+                "name": "会议类型",
+                "value": [
+                    {
+                        "selected": false,
+                        "clzz": "labelauty3-checked",
+                        "name": "审查会议",
+                        "code": "checkmeeting"
+                    },
+                    {
+                        "selected": false,
+                        "clzz": "labelauty2-checked",
+                        "name": "非审查会议",
+                        "code": "notcheckmeeting"
+                    }
+                ],
+                "code": "meetingtype",
+                "type": "radio",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "isstyle": false,
+                    "isnewline": false
+                }
+            },
+            "conferencelevel": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 25,
+                "name": "会议级别",
+                "value": [
+                    {
+                        "selected": false,
+                        "clzz": "labelauty-checked",
+                        "name": "一类会议（全国性重要大型会议）",
+                        "code": "onelevelmeeting"
+                    },
+                    {
+                        "selected": false,
+                        "clzz": "labelauty2-checked",
+                        "name": "二类会议（地区或行业中小型会议）",
+                        "code": "twolevelmeeting"
+                    },
+                    {
+                        "selected": false,
+                        "clzz": "labelauty3-checked",
+                        "name": "三类会议（公司内部会议，含广州地铁总公司）",
+                        "code": "threelevelmeeting"
+                    }
+                ],
+                "code": "conferencelevel",
+                "type": "radio",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "isstyle": false,
+                    "isnewline": true
+                }
+            },
+            "meetingplace": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 26,
+                "name": "会议地点",
+                "value": [],
+                "code": "meetingplace",
+                "type": "textarea",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "conferencecontent": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 30,
+                "name": "会议内容",
+                "value": [],
+                "code": "conferencecontent",
+                "type": "textarea",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "meetingtime": {
+                "region": "本部流程",
+                "cols": 10,
+                "isshow": true,
+                "itemorder": 31,
+                "name": "会议时间",
+                "value": [
+                    {
+                        "endtime": {
+                            "value": "2015-12-13",
+                            "code": "endtime"
+                        },
+                        "starttime": {
+                            "value": "2015-12-13",
+                            "code": "starttime"
+                        },
+                        "sumday": {
+                            "name": "",
+                            "value": 1,
+                            "code": "sumday"
+                        }
+                    }
+                ],
+                "code": "meetingtime",
+                "type": "multidate",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "conferencenumber": {
+                "region": "本部流程",
+                "cols": 8,
+                "isshow": true,
+                "itemorder": 33,
+                "name": "会议人数",
+                "value": [],
+                "code": "conferencenumber",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "relateid": {
+                "region": "本部流程",
+                "cols": 11,
+                "isshow": true,
+                "itemorder": 35,
+                "name": "关联的会议申请单号",
+                "value": [],
+                "code": "relateid",
+                "type": "text",
+                "required": false,
+                "editable": false,
+                "regionorder": 1
+            },
+            "relatefeeapply": {
+                "region": "本部流程",
+                "cols": 1,
+                "isshow": true,
+                "itemorder": 37,
+                "name": null,
+                "value": [],
+                "code": "relatefeeapply",
+                "type": "picker",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "pickerlabel": "选择申请单",
+                    "event": "js-open-picker",
+                    "pickerform": {
+                        "template": "picker-list-template",
+                        "formcode": "form-ac7f5feb-33a7-40bf-8025-fb09b4a36af9",
+                        "dataurl": "rest/wfs/processinst/formdata",
+                        "datamodel": {
+                            "queryCondition": [
+                                {
+                                    "v1": "",
+                                    "operate": "",
+                                    "key": ""
+                                }
+                            ],
+                            "tid": "id"
+                        },
+                        "datamapping": [
+                            {
+                                "dest": "relateid",
+                                "src": "title"
+                            },
+                            {
+                                "dest": "projectinfocode",
+                                "src": "projectinfocode"
+                            },
+                            {
+                                "dest": "managername",
+                                "src": "managername"
+                            },
+                            {
+                                "dest": "otherremarks",
+                                "src": "otherremarks"
+                            },
+                            {
+                                "dest": "conferencenumber",
+                                "src": "conferencenumber"
+                            },
+                            {
+                                "dest": "meetingplace",
+                                "src": "meetingplace"
+                            },
+                            {
+                                "dest": "meetingtime",
+                                "src": "meetingtime"
+                            },
+                            {
+                                "dest": "feeitemtype",
+                                "src": "feeitemtype"
+                            },
+                            {
+                                "dest": "docnumber",
+                                "src": "number"
+                            }
+                        ],
+                        "refreshfun": "showrefreshform",
+                        "selecttype": "radio"
+                    },
+                    "pickerfloat": "left"
+                }
+            },
+            "selectfeetype": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 42,
+                "name": "选择费用类型",
+                "value": [],
+                "code": "selectfeetype",
+                "type": "picker",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "pickerlabel": "选择费用类型",
+                    "event": "js-open-picker",
+                    "pickerform": {
+                        "template": "picker-xtype-template",
+                        "formcode": "form-3566a4af-8da9-4ac8-8f5b-a92be84a6a00",
+                        "tableid": "feeitemtype",
+                        "datamapping": [
+                            {
+                                "dest": "feeitem",
+                                "src": "feeitem"
+                            },
+                            {
+                                "dest": "feeitemname",
+                                "src": "feeitemname"
+                            }
+                        ],
+                        "refreshfun": "showrefreshtable",
+                        "selecttype": "checkbox"
+                    }
+                }
+            },
+            "feeitemtype": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 47,
+                "name": "费用清单",
+                "value": [
+                    {
+                        "thead": [
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "ispk": true,
+                                    "editable": false
+                                },
+                                "name": "费用编码",
+                                "key": "feeitem",
+                                "custom": {}
+                            },
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "label",
+                                    "editable": false
+                                },
+                                "name": "费用类型",
+                                "key": "feeitemname",
+                                "custom": {}
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "text",
+                                    "editable": true
+                                },
+                                "name": "批准金额（元）",
+                                "operators": [
+                                    {
+                                        "event": "js-calculate-hj"
+                                    }
+                                ],
+                                "key": "finance",
+                                "custom": {
+                                    "precision": 2,
+                                    "symbol": "￥",
+                                    "thousand": "，",
+                                    "decimal": "."
+                                }
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "text",
+                                    "editable": true
+                                },
+                                "name": "申请报销金额（元）",
+                                "operators": [
+                                    {
+                                        "event": "js-calculate-hj"
+                                    }
+                                ],
+                                "key": "applyexpensemoney",
+                                "custom": {
+                                    "precision": 2,
+                                    "symbol": "￥",
+                                    "thousand": "，",
+                                    "decimal": "."
+                                }
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "value": "",
+                                    "type": "text",
+                                    "editable": false
+                                },
+                                "name": "财务校准金额（元）",
+                                "operators": [
+                                    {
+                                        "event": "js-calculate-hj"
+                                    }
+                                ],
+                                "key": "financeadjustmoney",
+                                "custom": {
+                                    "precision": 2,
+                                    "symbol": "￥",
+                                    "thousand": "，",
+                                    "decimal": "."
+                                }
+                            },
+                            {
+                                "cols": 2,
+                                "name": "操作",
+                                "operators": [
+                                    {
+                                        "title": "删除",
+                                        "event": "js-calculate-del",
+                                        "clzz": "fa fa-trash-o"
+                                    }
+                                ],
+                                "key": "operate_col"
+                            }
+                        ],
+                        "tbody": []
+                    }
+                ],
+                "code": "feeitemtype",
+                "type": "tablelist",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "hassum": {
+                        "sumcols": [
+                            {
+                                "key": "finance"
+                            },
+                            {
+                                "key": "applyexpensemoney"
+                            },
+                            {
+                                "key": "financeadjustmoney"
+                            }
+                        ],
+                        "name": "合计"
+                    }
+                }
+            },
+            "add_pay_way": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 49,
+                "name": "添加支付",
+                "value": [],
+                "code": "add_pay_way",
+                "type": "btn",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "pickerlabel": "添加支付",
+                    "tableid": "pay_type_list",
+                    "event": "js-btn-addtr"
+                }
+            },
+            "pay_type_list": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 50,
+                "name": "支付列表",
+                "value": [
+                    {
+                        "thead": [
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "ispkname": false,
+                                    "value": [
+                                        {
+                                            "name": "现金",
+                                            "code": "xj"
+                                        },
+                                        {
+                                            "name": "转账",
+                                            "code": "zz"
+                                        },
+                                        {
+                                            "name": "支票",
+                                            "code": "zp"
+                                        },
+                                        {
+                                            "name": "冲账",
+                                            "code": "cz"
+                                        }
+                                    ],
+                                    "type": "select",
+                                    "ispk": false,
+                                    "editable": true
+                                },
+                                "name": "借支类型",
+                                "key": "pay_type",
+                                "custom": {}
+                            },
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "ispkname": false,
+                                    "value": "",
+                                    "type": "text",
+                                    "editable": true
+                                },
+                                "name": "收款单位/个人",
+                                "key": "receiveparty",
+                                "custom": {}
+                            },
+                            {
+                                "cols": 2,
+                                "contentconfig": {
+                                    "ispkname": false,
+                                    "value": "",
+                                    "type": "text",
+                                    "ispk": false,
+                                    "editable": true
+                                },
+                                "name": "开户行/账号",
+                                "key": "type",
+                                "custom": {}
+                            },
+                            {
+                                "cols": 3,
+                                "contentconfig": {
+                                    "ispkname": false,
+                                    "value": "",
+                                    "type": "text",
+                                    "editable": true
+                                },
+                                "name": "金额（元）",
+                                "operators": [
+                                    {
+                                        "event": "js-calculate-hj"
+                                    }
+                                ],
+                                "key": "collection_unit",
+                                "custom": {
+                                    "precision": 2,
+                                    "symbol": "￥",
+                                    "thousand": "，",
+                                    "decimal": "."
+                                }
+                            },
+                            {
+                                "cols": 2,
+                                "name": "操作",
+                                "operators": [
+                                    {
+                                        "title": "删除",
+                                        "event": "js-calculate-del",
+                                        "clzz": "fa fa-trash-o"
+                                    }
+                                ],
+                                "key": "operate_col"
+                            }
+                        ],
+                        "tbody": []
+                    }
+                ],
+                "code": "pay_type_list",
+                "type": "tablelist",
+                "required": true,
+                "editable": true,
+                "regionorder": 1,
+                "custom": {
+                    "hassum": {
+                        "sumcols": [
+                            {
+                                "key": "collection_unit"
+                            }
+                        ],
+                        "name": "合计"
+                    }
+                }
+            },
+            "otherremarks": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 60,
+                "name": "其他费用说明/备注",
+                "value": [],
+                "code": "otherremarks",
+                "type": "textarea",
+                "required": false,
+                "editable": true,
+                "regionorder": 1
+            },
+            "czyy": {
+                "region": "本部流程",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 65,
+                "name": "超支原因",
+                "value": [],
+                "code": "czyy",
+                "type": "textarea",
+                "required": false,
+                "editable": true,
+                "regionorder": 1
+            },
+            "opinions": {
+                "region": "流程意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "流程意见",
+                "value": [],
+                "code": "opinions",
+                "type": "taskhandle",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "attachment": {
+                "region": "文档信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 68,
+                "name": "附件",
+                "value": [],
+                "code": "attachment",
+                "type": "fileupload",
+                "required": true,
+                "editable": true,
+                "regionorder": 3
+            }
+        },
+        "formurl": "receiveform",
+        "handleinfo": null,
+        "opinion": {
+            "isshow": true,
+            "name": "流程意见",
+            "required": false,
+            "editable": true
+        },
+        "printformdata": {},
+        "printformurl": "",
+        "result": null,
+        "shownextstep": true
+    },
+    "msg": "success",
+    "rc": 1
+}

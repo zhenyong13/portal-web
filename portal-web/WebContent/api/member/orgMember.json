@@ -1,0 +1,23 @@
+{
+    "data": {
+        "pageSize": 10, 
+        "pageNo": 2, 
+        "total": 100, 
+        "rows": [
+            {
+                "id": 1, 
+                "groupcode": "", 
+                "groupname": "", 
+                "grouptype": "", 
+                "groupdesc": "", 
+                "orgcode": "ooowqoqweo", 
+                "orgname": "基本原理", 
+                "creator": "", 
+                "creatorname": "", 
+                "creatortime": ""
+            }
+        ], 
+        "msg": "", 
+        "rc": 1
+    }
+}

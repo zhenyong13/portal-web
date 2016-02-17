@@ -1,0 +1,14 @@
+﻿{
+    "data": {
+         
+                "id": 1,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+             
+    },
+    "msg": "success",
+    "rc": 1
+}

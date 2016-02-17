@@ -1,0 +1,20 @@
+﻿{
+    "data": {
+        "rows": [
+            {
+                "id": 1,
+                "typecode": "201506",
+                "typename": "公文类",
+                "parentcode": ""
+            },
+            {
+                "id": 1,
+                "typecode": "2015306",
+                "typename": "类",
+                "parentcode": ""
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

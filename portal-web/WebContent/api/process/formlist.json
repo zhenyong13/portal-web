@@ -1,0 +1,16 @@
+{
+    "data": {
+        "rows": [
+            {
+             "formcode":"001",
+             "formname":"发文"
+            },
+            {
+             "formcode":"002",
+             "formname":"收文"
+            }
+        ]
+    }, 
+    "msg": "", 
+    "rc": 1
+}

@@ -1,0 +1,25 @@
+{
+    "data": {
+        "managername": "",
+        "title": "[test]-分布费用申请测试",
+        "managers": "邓显威（001627）",
+        "officephone": "86667487",
+        "docnumber": "",
+        "projectinfocode": "",
+        "attachment": [],
+        "feeitemtype": [
+            {
+                "amount": "3000",
+                "feeitem": "9",
+                "memoinfo": "",
+                "finance": "3000",
+                "feeitemname": "其他汽车费"
+            }
+        ],
+        "date": "2015-09-16",
+        "reasonsforapplication": "分院车辆紧张，派遣人员无员工地铁卡，且有些工地无地铁到达，需坐公车或打的是。",
+        "applydepartment": "岩土分院监测组"
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,143 @@
+﻿{
+    "data": {
+        "total": 20,
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": 14,
+                "foldercode": "123",
+                "foldername": "文件来人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 51,
+                "foldercode": "1234",
+                "foldername": "文来人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 16,
+                "foldercode": "1235",
+                "foldername": "文件来",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 61,
+                "foldercode": "1236",
+                "foldername": "件来人",
+                "parentcode": "123",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 17,
+                "foldercode": "1235",
+                "foldername": "来人",
+                "parentcode": "1234",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 10,
+                "foldercode": "123qweqwe225",
+                "foldername": "来柘城人",
+                "parentcode": "1234",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 9,
+                "foldercode": "12sdf3qweqwe5",
+                "foldername": "来村柘城人",
+                "parentcode": "1234",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 9,
+                "foldercode": "12sdf3qweqwe5",
+                "foldername": "来村柘城人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 9,
+                "foldercode": "12sdf3qweqwe5",
+                "foldername": "来村柘城人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 9,
+                "foldercode": "12sdf3qweqwe5",
+                "foldername": "来村柘城人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            },
+            {
+                "id": 9,
+                "foldercode": "12sdf3qweqwe5",
+                "foldername": "来村柘城人",
+                "parentcode": "-1",
+                "editable": true,
+                "folderdesc": "描述",
+                "folderpath": "D:/shopWork/mdboss/propppp",
+                "creator": "jaja",
+                "createtime": "jaja",
+                "updator": "haja"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

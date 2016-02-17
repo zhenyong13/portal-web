@@ -1,0 +1,58 @@
+﻿	<div class="forms-body-wrap jscroll" style="top:0px;">
+	<div class="forms-body">
+	<div class="forms-content exportform">
+			<div style="margin:10px;">
+			<div style="background-color: #ebfafa;">
+				<div style="border-bottom: 1px solid #eee;line-height: 30px;color:#006fb4;">带<span style="color:red;">*</span>号为必填项</div>
+				<div style="border-bottom: 1px solid #eee;line-height: 30px;color:#006fb4;">提示：每页记录基数为{{pagesize}}，一次最多能导出{{maxpages}}页（即：{{total}}条记录），超过此标准请分批导出数据；</div>
+			</div>
+			<div class="form-category-bd">
+				<div class="entity-info clearfix">
+					<div class="control-group control_export col-12">
+						<div class="controls  js_select_filetype" style="margin-left:0px;float:right;">
+							<span><a for="txt11" class="btn btn-sm">文本格式</a><input type="radio" name="filetype" style="display:none;" value="txtout" id="txt11"/></span>
+							<span><a for="excel11" class="btn btn-sm btn-primary">excel格式</a><input type="radio" name="filetype" style="display:none;" checked="checked" value="excelout" id="excel11"/></span>
+							<span><a for="excelxml11" class="btn btn-sm">多表excel格式</a><input type="radio" name="filetype" style="display:none;" value="xmlexcel" id="excelxml11"/></span>
+							<input type="hidden" id="sid" value="{{sid}}" />
+						</div>
+						<label class="control-label" style="float: right;">导出文件类型：</label>
+					</div>
+				</div>
+				</div>
+				{{#each voconfigs}}
+				<div class="form-category-bd table_info" style="  border: 1px solid #1898C5;margin-bottom:10px;padding-top:0px;">
+				<div class="entity-info clearfix">
+					<div class="control-group control_export col-12" style="font-weight: bold;background-color: #1898C5;color:#fff;">
+							<div class="controls" style="margin-left:0px;">
+							{{sheetname}}
+							<input type="hidden" id="voname{{@index}}" value="{{voname}}" />
+							</div>
+					</div>
+				</div>
+				<div class="entity-info clearfix">
+					<div class="control-group control_export col-4">
+							<div class="controls" style="margin-left:0px;">符合条件的总记录数：<span style="color:red;">{{countinfo}}</span></div>
+					</div>
+					<div class="control-group control_export col-8 js_allexport" style="display:none;">
+						<div class="controls" style="margin-left:0px;"><input type="checkbox" id="allexport{{@index}}"/>导出全量数据</div>
+					</div>
+					<div class="control-group control_export col-4 js_startindex">
+						<div class="controls" style="margin-left:0px;">起始页码：<input type="text" class="form-control required" style="width: 60px;height: 23px;" id="startindex{{@index}}"/><span style="color:red;margin-left: 6px;">*</span></div>
+					</div>
+					<div class="control-group control_export col-4 js_endindex">
+						<div class="controls" style="margin-left:0px;">终止页码：<input type="text" class="form-control required" style="width: 60px;height: 23px;" id="endindex{{@index}}"/><span style="color:red;margin-left: 6px;">*</span></div>
+					</div>
+				</div>
+				<div class="entity-info clearfix">
+					<div class="control-group control_export col-12">
+							<div class="controls" style="margin-left:0px;"><span style="margin-right:10px;">请选择导出的字段</span><input type="checkbox" class="js_alloperate" checked name="alloperate" value="{{@index}}"/><span style="color:#006fb4;">选中或清除所有的字段</span></div>
+					</div>
+					{{#recordHandler fields @index}}{{/recordHandler}}
+				</div>
+				</div>
+				{{/each}}
+			<div style="float:right;margin-top:10px;margin-bottom:10px;"><a class="btn btn-sm btn-primary js_export_submit">提交</a><a class="btn btn-sm js_export_cancel">取消</a></div>
+			</div>
+	</div>
+	</div>
+	</div>

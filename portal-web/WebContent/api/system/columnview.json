@@ -1,0 +1,17 @@
+﻿{
+    "data": {
+        
+                "dbname": "1",
+                "id": 1,
+                "columnname": "1212",
+                "columncname": "123",
+                "tablename": "2015-08-03",
+                "memo": "weqreqw",
+                 "rulejson": "rulejson",
+                "vofieldname": "weqreqw",
+                "columntype": "weqreqw",
+                "isuniqcode": "1"
+    },
+    "msg": "success",
+    "rc": 1
+}

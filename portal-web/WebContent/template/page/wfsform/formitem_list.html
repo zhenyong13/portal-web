@@ -1,0 +1,32 @@
+
+{{#each data}}
+	<tr class="flowsheet_tab_color" id="{{formcode}}">
+	<td><input type="checkbox" name="form_items"  value="{{id}}"></td>
+	<td>{{itemcode}}</td>
+	<td>{{itemname}}</td>
+	<td>{{itemorder}}</td>
+	<td>{{regionorder}}</td>
+	<td>{{regioncode}}</td>
+	<td>{{#ifCond required "==" "1"}}是{{else}}否{{/ifCond}}</td>
+	<td>{{#ifCond isshow "==" "1"}}是{{else}}否{{/ifCond}}</td>
+	<td>{{#ifCond editable "==" "1"}}是{{else}}否{{/ifCond}}</td>
+	<td>{{valuetype }}</td>
+	<td>
+	{{#ifCond scope "==" "global"}}流程范围{{/ifCond}}
+	{{#ifCond scope "==" "local"}}任务范围{{/ifCond}}
+	</td>
+	<td>
+		<span title="复制" style="cursor:pointer;" data-id="{{id}}" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_copy_step_info">
+		<i class="fa fa-files-o fa-1_4x"></i>
+		</span>
+		&nbsp;
+		<span title="编辑" style="cursor:pointer;" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_set_step_info">
+		<i class="fa fa-edit fa-1_4x"></i>
+		</span>
+		&nbsp;
+		<span title="删除" style="cursor:pointer;margin-right: 10px;" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_set_step_handler">
+		<i class="fa fa-times"></i>
+		</span>
+	</td></tr>
+{{/each}}
+

@@ -1,0 +1,33 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "feetype": "1",
+                "id": 1,
+                "itemname": "dictname",
+                "itemcode": "dictstatsdfdsfe",
+                "creator": "呆要",
+                "updator": "呆要",
+                "createtime": "123123",
+                "updatetime": "2013",
+                "sortorder": 1,
+                "description": "122"
+            },
+            {
+                "feetype": "12",
+                "id": 3,
+                "itemname": "dictname33333",
+                "itemcode": "dictstate33333333",
+                "creator": "呆要",
+                "updator": "呆要",
+                "createtime": "123123",
+                "updatetime": "2013",
+                "sortorder": 3,
+                "description": "11111111111122"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

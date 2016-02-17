@@ -1,0 +1,32 @@
+﻿{
+    "data": {
+        "total": 1345,
+         "columncode": "workflow",
+                "templatecode": "workflow",
+        "rows": [
+            {
+                "name": "人力资源",
+                "id": 1,
+                "imgurl": "images/dateway/lc_1.jpg",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "财务管理",
+                "id": 1,
+                "imgurl": "images/dateway/lc_2.jpg",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "办公管理",
+                "id": 1,
+                "imgurl": "images/dateway/lc_3.jpg",
+                "targeturl": "",
+                "target": ""
+            } 
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

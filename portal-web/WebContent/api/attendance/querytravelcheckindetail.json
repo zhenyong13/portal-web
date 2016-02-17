@@ -1,0 +1,54 @@
+﻿{
+    "data": {
+        "total": null,
+        "avatarcode":"22",
+        "signinmonth": "2015-06",
+        "orgcode": "1474",
+        "username": null,
+        "usercode": "002644",
+        "orgname": null,
+        "pageNo": 1,
+        "positionlevel": null,
+        "pageSize": 20,
+        "rows": [
+            {
+                "detail": [
+                    {
+                        "signinaddress": "工地施工监督",
+                        "signintime": "2015-06-06 15:32:09",
+                        "daytype": "weekend",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-06",
+                "datetype": "weekend"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "南昌分院",
+                        "signintime": "2015-06-05 15:29:58",
+                        "daytype": "workday",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-05",
+                "datetype": "workday"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "广州塔工地",
+                        "signintime": "2015-06-03 17:56:25",
+                        "daytype": "holiday",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-03",
+                "datetype": "holiday"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,73 @@
+<!-- 补签主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">起止时间：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input id="usercode_sub" type="hidden" value=""> 
+				<input id="start_time" type="hidden" class="form-control" style="width: 140px;" placeholder="开始时间"> 
+				<input id="end_time" type="hidden" class="form-control" style="width: 140px;" placeholder="结束时间" />
+				<input id="start_end_time" type="text" readonly="readonly" class="form-control" style="width: 180px;" placeholder="起止时间" />
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">人员编号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="query_usercode" class="form-control" style="width: 140px;" placeholder="人员编码"/>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">姓名：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="query_username" class="form-control" style="width: 140px;" placeholder="姓名"/>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">签到地点：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="signin_address" class="form-control" style="width: 140px;" placeholder="签到地点"/>
+			</div>
+		</li>
+		
+		
+		<li class="toolkit-item toolkit-title j_catalog_name">部门：</li>
+		<li class="toolkit-item">
+			<div class="controls" style="width: 185px;  padding-top: 4px;">
+				 <input type="text" id="parentname" class="form-control qt_p" style="float: left; width: 145px !important;" value="" readonly="readonly"/>
+				 <input type="hidden" id="parentcode" value=""/>
+				 <a class="icon-search js_search_operate" style="position: relative;left: -20px;  bottom: 4px;"></a>
+			</div>
+		</li>
+		
+	</ul>
+</div>
+
+<!-- 我的   待审批   已审批 -->
+<div class="toolkit clearfix ">
+	
+	<ul>
+		<li class="toolkit-item fr"><a
+			class="btn btn-sm j_entityslider-toggle js_export "> <i class="icon-pass iconfont">导出</i></a></li>
+	</ul> 
+</div>
+<div class="ebox1 flows" style="margin-top: 3px;margin-bottom:25px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;">
+				<span class="ret_width_5 ret_display ellipsis filterSlip_js">ID</span>
+				<span class="ret_width_5 ret_display ellipsis filterSlip_js js_sort sorting" data-col="username">姓名</span>
+				<span class="ret_width_15 ret_display ellipsis filterSlip_js js_sort sorting" data-col="orgname">部门</span>
+				<span class="ret_width_12 ret_display ellipsis filterSlip_js js_sort sorting" data-col="signintime">签到时间</span>
+				<span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="signintype">签到类型</span>
+				<span class="ret_width_30 ret_display ellipsis filterSlip_js js_sort sorting" data-col="resigninorgcode">签到地点</span>
+				<span class="ret_width_20 ret_display ellipsis filterSlip_js js_sort sorting" data-col="reason">补签原因</span>
+			</li>
+		</ul>
+		<ul id="attach_list" class="e-list flow-list demo-list">
+			<!-- 列表内容 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="query_pagination" style=" margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div>

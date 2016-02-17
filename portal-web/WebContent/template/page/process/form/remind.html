@@ -1,0 +1,77 @@
+<div id="remind-div" class="remind sbox-white filterSlip_js"
+	style="left: 430px; top: 177px;">
+	<textarea id="remind-textarea" class="form-control" name="comment"
+		rows="3">请帮忙尽快处理下流程，谢谢！</textarea>
+	<div class="control-group ">
+		<label class="control-label" style="float: left" title="提醒给">提醒给：</label>
+		<div id="task" class="controls hide">
+			<label class="checkbox-inline"><input type="checkbox"
+				name="manager" checked="" value="taskManager">负责人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="participants" value="taskParticipants">参与人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="creater" value="taskCreater">创建人</label>
+		</div>
+		<div id="mainline" class="controls hide">
+			<label class="checkbox-inline"><input type="checkbox"
+				name="manager" checked="" value="mainlineManager">负责人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="participants" value="mainlineParticipants">参与人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="creater" value="mainlineCreater">创建人</label>
+		</div>
+		<div id="document" class="controls hide">
+			<label class="checkbox-inline"><input type="checkbox"
+				name="share" checked="" value="documentShare">共享人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="manager" value="documentManager">负责人</label><label
+				class="checkbox-inline"><input type="checkbox"
+				name="creater" value="documentCreater">创建人</label>
+		</div>
+		<div id="customer" class="controls hide">
+			<label class="checkbox-inline"><input type="checkbox"
+				name="manager" checked="" value="customerManager">客户经理</label><label
+				class="checkbox-inline"><input type="checkbox" name="share"
+				value="customerShare">共享人</label><label class="checkbox-inline"><input
+				type="checkbox" name="creater" value="customerCreater">创建人</label>
+		</div>
+		<div id="workflow" class="controls">
+			<label class="checkbox-inline">
+			<input type="checkbox" id="currentmanager" name="currentmanager" checked="" value="assignee">当前办理人</label>
+			<label class="checkbox-inline">
+			<input type="checkbox" id="allmanager" name="allmanager" value="processusers">所有办理人</label>
+			<label class="checkbox-inline">
+			<input type="checkbox" id="creater" name="creater" value="starter">发起人</label>
+			<label class="checkbox-inline">
+			 <select id="alarmway" class="form-control"></select>
+			</label>
+		</div>
+	</div>
+	<div id="other-employee" class="control-group clearfix">
+		<label class="control-label" style="float: left" title="其他人">其他人：</label>
+		<span class="control-btn btn btn-sm" style="float:left;"><a class="icon-plus"></a></span>
+		<div class="typeahead-wrapper hide">
+			<div class="remind-user">
+				<input type="text" class="control-input typeahead search"
+					data-entity="employee" data-multi="true" placeholder="输入姓名">
+				<div id="typeahead-div" class="tt-suggestion border-dropdown">
+					<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+					<div id="searchList">
+						 
+					</div>
+				</div>
+				<a class="btn typeahead-search" data-entity="employee"
+					data-multi="true"><i class="icon-search"></i></a>
+			</div>
+		</div>
+		
+		<div id="remindlist" class="entity-container">
+		</div>
+		
+	</div>
+	<div class="control-group pull-right">
+		<a id="remind-submit" class="btn btn-primary btn-sm">提交</a>
+		<a id="remind-cancle" class="btn btn-sm">取消</a>
+	</div>
+</div>
+

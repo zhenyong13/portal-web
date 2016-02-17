@@ -1,0 +1,483 @@
+
+
+<div class="process-forms" style="height:100%;overflow:auto;">
+	<div style="height:50px;" class="noprint">
+		<span style="float:right; line-height: 50px;width:200px;"><a href="javascript:window.print()" target="_self">打印预览</a></span>
+	</div>
+	<div>
+		<div class="forms-body" style="width: 80%;margin: 0 auto;">
+			<div class="forms-content" style="overflow:auto;">
+				<div>
+					<div style="text-align: center;margin-bottom: 15px;" ><h1 style="font-size:32px;" id="printform_title"></h1></div>
+					<div class="dynamicform"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="taskhandle-template" type="text/x-handlebars-template">
+	
+</script>
+<!--style="{{#ifCond @index "==" "0"}}border-top: 1px solid;{{/ifCond}}" -->
+<script id="region-template" type="text/x-handlebars-template">
+<div  style="border-top: 1px solid;border-left: 1px solid;border-right: 1px solid; margin:10px;">
+	{{#each this}}
+	{{#if region}}
+		<div class="entity-info clearfix js_region{{regionorder}}">
+		</div>
+	{{/if}}
+{{/each}}
+</div>
+</script>
+<script id="checkbox-template" type="text/x-handlebars-template">
+	{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}"  {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+<ul class="dowebok controls3">
+		{{#each value}}
+			<li>
+				<span><input type="checkbox" name="{{../code}}" {{#if ../editable}}{{else}}disabled{{/if}} {{#if selected}}checked="checked"{{/if}} value="{{code}}"/>{{name}}</span>
+			</li>
+		{{/each}}
+<ul>
+</div>
+</div>
+{{/if}}
+</script>
+<script id="title-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}}" style="border-bottom: 1px solid;" data-col="{{cols}}">
+		<h1 class="{{#if custom.clzz}}{{custom.clzz}}{{else}}title-print-default{{/if}}">{{name}}</h1>
+	</div>
+{{/if}}
+</script>
+
+<script id="input-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"  {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		{{#if custom.title}}<div>{{#outputhtml custom.title}}{{/outputhtml}}</div>{{/if}}
+		{{#if name}}
+			<label class="control-label">{{name}}</label>
+		{{/if}}
+		<div class="controls">
+				{{#each value}}
+					<span class="show_val" style="top:0px;">{{code}}</span>
+					<input type="hidden" id="{{../code}}" value="{{code}}"/>
+				{{/each}}
+		</div>
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="date-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+				{{#each value}}
+					<input type="hidden" id="{{../code}}" value="{{code}}"/>
+					<span class="show_val">{{code}}</span>
+				{{/each}}
+		</div>
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="select-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+				<select class="form-control " id="{{code}}" style="display:none;">
+				<option value="">请选择</option>
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+				</select>
+				<span class="show_val">
+					{{#each value}}
+						{{#if selected}}{{name}}{{/if}}
+					{{/each}}
+				</span>			
+			
+		</div>
+	</div>
+{{else}}
+{{#each value}}
+	{{#if selected}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/if}}
+{{/each}}
+{{/if}}
+</script>
+
+<script id="radio-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="{{#if curcol}}print-border-end{{else}}print-border{{/if}} col-{{cols}}" {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+<ul class="dowebok controls3">
+{{#if editable}}
+	{{#each value}}
+			<li>
+				<input type="radio" name="{{../../../code}}" value="{{code}}" {{#if selected}}checked="checked"{{/if}}>
+				<span>{{name}}</span>
+			 </li>	
+	{{/each}}
+{{else}}
+{{#each value}}
+	<li>
+		<input type="radio" name="{{../../../code}}" disabled value="{{code}}" {{#if selected}}checked="checked"{{/if}}>
+		<span>{{name}}</span>
+	 </li>	
+{{/each}}
+{{/if}}
+</ul>
+</div>
+</div>
+{{/if}}
+</script>
+
+<script id="multidate-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="{{#if curcol}}print-border-end{{else}}print-border{{/if}} col-{{cols}}" data-col="{{cols}}" {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+				{{#each value}}
+					<span class="show_val" data-type="label">{{multidate}}</span>
+					{{#if issumday}}&nbsp;&nbsp;<span class="show_val">共{{sumday}}天</span>{{/if}}
+					<input type="hidden" id="{{../code}}" value="{{multidate}}"/><input type="hidden" id="{{../code}}-sumday" value="{{sumday}}"/>
+				{{/each}}
+		</div>
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="multiselect-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+				<select class="form-control" id="{{../code}}" style="display:none;" multi="multi" multiple>
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+				</select>
+				<span class="show_val">
+					{{#each value}}
+						{{#if selected}}{{name}}{{/if}}
+					{{/each}}
+				</span>						
+		</div>
+	</div>
+{{else}}
+	<select class="form-control " id="{{code}}" multiple style="width:200px;display:none;">
+	{{#each value}}
+		<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+	{{/each}}
+	</select>
+{{/if}}
+</script>
+<script id="selectorgs-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}} id="{{code}}">
+		<label class="control-label" style="float: left" title="{{name}}">{{name}}</label>
+		<div class="controls">
+			<span class="{{code}}-showorgs">
+			{{#each value}}
+			<span class="file-show" style="margin-right:3px;">
+				 <a data-id="{{code}}" data-edit="{{editable}}" data-name="{{name}}">{{name}}</a>
+			</span>
+			{{/each}}
+			</span>
+	   </div>
+	</div>
+{{else}}
+	<span class="{{code}}-showorgs" style="display:none;">
+		{{#each value}}
+			<span class="file-show" style="margin-right:3px;">
+				<a data-id="{{code}}" data-edit="{{editable}}" data-name="{{name}}">{{name}}</a>
+			</span>
+		{{/each}}
+	</span>
+{{/if}}
+</script>
+
+<script id="fileupload-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} noprint {{#if curcol}}print-border-end{{else}}print-border{{/if}}"  {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+	<span id="{{code}}-showfiles" style="display:block;">
+	{{#each value }}
+		<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="{{editable}}">{{name}}
+	{{/each}}
+	</span>
+</div>
+</div>
+{{/if}}
+</script>
+
+<script id="fileshow-template" type="text/x-handlebars-template">
+{{#each files}}
+<span class="file-show" data-code="{{code}}"  data-name="{{name}}" data-isedit="{{editable}}">
+	<a  class="filename_view js_file_view" data-file-id="{{code}}" >{{name}}</a>
+	<a href="{{../../baseUrl}}{{code}}" target="_blank" class="file_view fa fa-download"></a>
+	<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+</span>
+{{/each}}
+</script>
+
+
+<script id="memoshow-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<label class="control-label">{{name}}</label>
+	<ul class="form-list clearfix js_memolist" id="{{code}}-showmemo">
+		{{#each value}}
+			<li class="js_formitemsli" style="width:32%" data-index="{{code.usercode}}{{@index}}">
+				<div class="form-list-box js_formListBox">
+					<div class="content">
+						<span id="form-number" class="serial">
+						<img src="{{#if code.avatarcode}}{{../../baseUrl}}{{code.avatarcode}}{{else}}images/avatar.png{{/if}}">
+						</span>
+						<h4 id="form-title" class="title router ellipsis filterSlip_js js_formtitle" href="" title="{{code.username}}">{{code.username}}</h4>
+						<p id="form-describe" class="ellipsis nodescription" style="white-space: inherit;height:48px;color: #444;word-wrap: break-word;">{{code.content}}</p>
+					</div>
+				</div>
+			</li>
+		{{/each}}
+	 </ul>
+</div>
+{{/if}}
+</script>
+
+<script id="serialcode-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+<span class="show_val">
+{{#each value}}
+		<select class="form-control" id="{{serial.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each serial.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 <input type="hidden" id="{{year.code}}" value="{{year.value}}"></input>
+		<select class="form-control" id="{{num.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each num.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 {{#each serial.value}}
+			{{#if selected}}{{name}}{{/if}}
+		{{/each}}
+		({{year.value}})
+		{{#each num.value}}
+			{{#if selected}}{{name}}{{/if}}
+		{{/each}}
+{{/each}}
+</span>
+	</div>
+</div>
+{{else}}
+	{{#each value}}
+		<select class="form-control" id="{{serial.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each serial.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 <input type="hidden" id="{{year.code}}" value="{{year.value}}"></input>
+		<select class="form-control" id="{{num.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each num.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="textarea-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"  {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+	{{#if custom.title}}<div>{{#outputhtml custom.title}}{{/outputhtml}}</div>{{/if}}
+	{{#if name}}<label class="control-label">{{name}}</label>{{/if}}
+	<div class="controls">
+		{{#each value}}
+			<span class="show_val">{{code}}</span>
+			<input type="hidden" id="{{../code}}" value="{{code}}" />
+		{{/each}}
+	</div>
+</div>
+	{{else}}
+	{{#each value}}
+			<input type="hidden" id="{{../code}}" value="{{code}}"></input>
+	{{/each}}
+{{/if}}
+</script>
+<script id="selectperon-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"   {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+		<span class="{{code}}-showperson">
+			{{#each value}}
+					<span class="file-show" style="margin-right:3px;">
+					 	<a data-id="{{code}}" data-editable="{{editable}}" data-name="{{name}}">{{name}}</a>
+					 {{#if editable}}
+						 <a class="close_file js_common_delperson file_remove_file" title="删除">×</a>
+					 {{/if}}
+				   </span>
+			 {{/each}}
+		</span>
+	</div>
+</div>
+{{/if}}
+</script>
+
+<script id="selectperon-show-template" type="text/x-handlebars-template">
+{{#each persons}}
+	<span class="file-show" style="margin-right:3px;">
+ 		<a data-id="{{code}}" data-editable="{{editable}}" data-name="{{name}}">{{name}}</a>
+		<a class="close_file file_remove_file" title="删除">×</a>
+ 	</span>
+{{/each}}
+</script>
+
+<script id="dealopinion-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" data-col="{{cols}}"  {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+		<label class="control-label">{{name}}</label>
+		<div class="controls" style="margin-left: 100px;">
+				{{#each value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+							<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+							<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+						{{#if result}}
+								{{result.name}}：
+								{{#each result.value}}
+									{{#if result.editable}}
+										<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+									{{else}}
+										<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+									{{/if}}
+								{{/each}}	
+						{{/if}}	
+					</div>
+				{{/each}}
+		</div>
+	</div>
+{{/if}}
+</script>
+<script id="dealprocess-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	{{#if value}}
+	<table class="table table-bordered noprint" style="margin-top:10px;">
+		<thead>
+			<tr class="change">
+				{{#each value.thead}}<th colspan="{{cols}}">{{name}}</th>{{/each}}
+			</tr>
+		</thead>
+		<tbody>
+			{{#each value.tbody}}
+				<tr>
+					{{#each this}}
+						<td colspan="{{cols}}">{{val}}</td>
+					{{/each}}
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+{{/if}}
+{{/if}}
+</script>
+
+<script id="tablelist-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}}">
+<div style="margin-top: 9px; font-size: 14px;">{{name}}</div>
+<div>
+	<table class="table table-bordered" id="{{code}}" data-config="{{dataconfig}}" style="margin-top:10px;">
+		<thead>
+			<tr class="change">
+				{{#each value}}
+					{{#each thead}}<th colspan="{{cols}}" data-code="{{key}}" >{{name}}</th>{{/each}}
+				{{/each}}
+			</tr>
+		</thead>
+		<tbody>
+			{{#each value}}
+			{{#each tbody}}
+				<tr class="{{../../custom.tr_event}}">
+					{{#each record}}
+							<td colspan="{{cols}}" data-val="{{val}}" {{#if ispk}}ispk="true"{{/if}} {{#if ispkname}}ispkname="true"{{/if}}>
+								{{val}}
+							</td>
+					{{/each}}
+				</tr>
+			{{/each}}
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+	{{#each value}}
+	{{#if ispagination}}
+		<div id="table_query_pagination" style="float: right; padding-right: 10px; margin-top: 3px;width:100%;">
+		</div>	
+	{{/if}}
+	{{/each}}
+</div>
+{{/if}}
+</script>
+
+<script id="simpleselectperson-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="col-{{cols}} {{#if curcol}}print-border-end{{else}}print-border{{/if}}" {{#if beforecol}}beforecol="{{beforecol}}" beforewidth="{{beforewidth}}" {{/if}} {{#if curcol}}curcol="{{curcol}}"{{/if}}>
+	<label class="control-label">{{name}}</label>
+		<div class="controls remind-user">
+				{{#each value}}
+					<span class="show_val" data-type="label">{{code}}</span>
+					<input type="hidden" id="{{../code}}" value="{{code}}"/>
+				{{/each}}
+		</div>	
+</div>
+{{/if}}
+</script>
+<!-- picker按钮 -->
+<script id="picker-template" type="text/x-handlebars-template">
+	{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		{{#if name}}
+			<label class="control-label">{{name}}</label>
+		{{/if}}
+		<div class="controls">
+			{{#each value}}
+				<a name="{{code}}" {{#if ../editable}}{{else}}disabled{{/if}} style='{{#if ../custom.pickerfloat}}float:{{../../custom.pickerfloat}}{{/if}}' data-title="{{../custom.pickerlabel}}" data-custom="{{../customstr}}" class="btn btn-info btn-sm picker-btn {{#if ../../custom.event}}{{../../custom.event}}{{/if}}">{{../custom.pickerlabel}}</a>
+			{{/each}}
+		</div>
+	</div>
+	{{/if}}
+</script>
+
+

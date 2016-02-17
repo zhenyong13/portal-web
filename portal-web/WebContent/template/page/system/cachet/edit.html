@@ -1,0 +1,79 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+				<input type="hidden" id="creator" value="{{creator}}"/>
+				<input type="hidden" id="createtime" value="{{createtime}}"/>
+					<div class="entity-info clearfix">
+						{{#if cachetcode}}
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>公章编码：</label>
+							<div class="controls">
+								<input type="text" id="cachetcode" readonly class="form-control required"  value="{{cachetcode}}"/>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>公章名称：</label>
+							<div class="controls">
+								<input type="text" id="cachetname" class="form-control required" value="{{cachetname}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+								<input type="hidden" id="uuid" class="form-control" value="{{uuid}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>所属组织：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control required" value="{{#if orgname}}{{orgname}}{{else}}{{orgcode}}{{/if}}" readonly="readonly"/>
+								 <input type="hidden" id="parentcode" value="{{orgcode}}"/>
+								 <input type="hidden" id="cachetmanager" value="{{cachetmanager}}"/>
+								 <input type="hidden" id="cacheturl" value="{{cacheturl}}"/>
+								 <a class="icon-search js_search_dept" style="position: relative;position: relative;left: -20px;"></a>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">管理员：</label>
+							<div class="controls">
+								<input type="hidden" id="userleader" class="form-control" value="{{userleader}}"/>
+								<div class="typeahead-wrapper" style="border: 0px solid #a3adba">
+									<div class="remind-user">
+										<input id="leader_man" data-code="" type="text" class="control-input typeahead search" value="{{cachetmanagername}}"
+											data-entity="employee" data-multi="true" style="width:205px;height:30px" placeholder="输入姓名">
+										<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+											<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+											<div id="searchListL" class="userselectlist">
+												 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">公章上传：</label>
+							<div class="controls">
+								<button class="btn btn-info" type="button" style="width: 50px; height: 25px;padding: 0;"><i class="icon-upload-alt"></i>上传</button>
+								<input id="cacheturlUpload" data-id="cacheturl" style="top:8px;  left: 50px;  cursor: pointer; opacity: 0; position: absolute; width: 27%;" type="file" name="fileupload" multiple="multiple"  class="js_fileupload_"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">公章预览：</label>
+							<div class="controls">
+								<img id="cacheturlimg" style="height: 50px;  width: 50px; margin-left: 10px;  border-radius: 50%;" src="{{#if cacheturl}}{{baseurl}}{{cacheturl}}{{else}}images/avatar.png{{/if}}">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

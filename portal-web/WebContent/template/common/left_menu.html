@@ -1,0 +1,25 @@
+<a class="j_rightViewCtrl view-r-switch graph" title="隐藏"></a>
+<ul id="leftMenuGroup" class="menu-group" style="margin-bottom: 80px">
+	{{#each modulelist}}
+	{{#if childs}}
+    <li>
+        <div class="menu-head" style="cursor: pointer;" data-dir="down"><i class="menu-icon {{iconclass}}"></i>{{modulename}}</div>
+        <ul class="menu-group-sub j_all_flowMenu">
+        	{{#each childs}}
+		     <li class="{{#ifCond ../../../type "==" modulecode}}active{{/ifCond}}" data-href="#{{moduleuri}}">
+			    <a>
+			        <span class="j_type-name">{{modulename}}</span>
+			    </a>
+		    </li>
+		    {{/each}}
+		</ul>
+	</li>
+	{{else}}
+	<li class="j_forms {{#ifCond ../../type "==" modulecode}}active{{/ifCond}}">
+		 <a data-type="forms" data-href="#{{moduleuri}}">
+		   <div class="menu-head menu-head-link"><i class="menu-icon {{iconclass}}"></i>{{modulename}}</div>
+		 </a>
+	</li>
+	{{/if}}
+	{{/each}}
+</ul>

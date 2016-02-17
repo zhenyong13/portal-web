@@ -1,0 +1,43 @@
+{
+	"data":{
+      "assignee":"",
+      "type":"",
+	  "taskstatus":"",
+      "pageSize":10,
+      "pageNo":2,
+      "total":100,
+      "rows":[
+          {
+            "id":"1",
+            "issuecode":"rwer234231",
+            "issuelevel":"1",
+            "issuetype":"1",
+            "status":"1",
+            "title":"请假234234条",
+            "content":"测试数据请假条1",
+            "creator":"sdf",
+            "createtime":"2015-04-21 13:11:13",
+            "closetime":"2015-08-28 21:20:59",
+            "closer":"sdf",
+            "filecodes":"[{\"code\":\"code\",\"name\":\"name\",\"editable\":false}]"
+          },
+           {
+            "id":"2",
+            "issuecode":"sdfsdf1",
+            "issuelevel":"1",
+            "issuetype":"1",
+            "status":"1",
+            "title":"请假条23423423432423423",
+            "content":"测试数据请假条1",
+            "creator":"sdf",
+            "createtime":"2015-04-21",
+            "closetime":"2015-04-21",
+            "closer":"sdf",
+            "filecodes":"[{\"code\":\"code\",\"name\":\"name\",\"editable\":false}]"
+          }
+        ]
+
+    },
+	"msg":"",
+	"rc":"1"
+}

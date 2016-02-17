@@ -1,0 +1,74 @@
+{
+    "data": {
+        "assignee": "",
+        "type": "",
+        "taskstatus": "",
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 100,
+        "rows": [
+        	{
+                "orgcode": "0123",
+                "orgname": "专业1",
+                "parentcode": "-1",
+                "orgtype": "p",
+                "status": "",
+                "orglevel": "1",
+                "usercodes":["李厚霖","佣兵","枯地"],
+                "sortorder": 3
+            },
+            {
+                "orgcode": "123",
+                "orgname": "专业1",
+                "parentcode": "0123",
+                "orgtype": "p",
+                "status": "",
+                "orglevel": "1",
+                "usercodes":["user-002785","佣兵","枯地"],
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1234",
+                "orgname": "专业2",
+                "parentcode": "0123",
+                "orgtype": "p",
+                "status": "",
+                "orglevel": "1",
+                "usercodes":["在要","要兵","有地"],
+                "sortorder": 3
+            },
+            {
+                "orgcode": "123f",
+                "orgname": "角色3",
+                "parentcode": "123",
+                "orgtype": "r",
+                "usercodes":["在要11","要兵000","有地33"],
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1s23",
+                "orgname": "角色12",
+                "parentcode": "1234",
+                "usercodes":["人人","林要","地城"],
+                "orgtype": "r",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1s223",
+                "orgname": "角色22",
+                "parentcode": "0123",
+                "orgtype": "r",
+                "status": "",
+                "usercodes":["在人","上上","一一"],
+                "orglevel": "1",
+                "sortorder": 3
+            }
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

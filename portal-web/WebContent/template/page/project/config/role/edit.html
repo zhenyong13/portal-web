@@ -1,0 +1,54 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form_role" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						{{#if rolecode}}
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>角色编码：</label>
+							<div class="controls">
+								<input type="text" id="rolecode" class="form-control required"  value="{{rolecode}}"/>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>角色名称：</label>
+							<div class="controls">
+								<input type="text" id="rolename" class="form-control required" value="{{rolename}}" placeholder="输入角色名称"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>角色类型：</label>
+							<div class="controls">
+								<select id="roletype" class="required"></select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>状态：</label>
+							<div class="controls">
+								<select id="status" class="required"></select>
+							</div>
+						</div>
+						 
+						<!-- <div class="control-group col-12">
+							<label class="control-label">描述：</label>
+							<div class="controls">
+								<textarea id="roledesc" style="  width: 400px;"></textarea>
+							</div>
+						</div> -->
+						 
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

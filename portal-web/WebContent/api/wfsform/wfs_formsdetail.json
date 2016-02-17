@@ -1,0 +1,16 @@
+{
+    "data": {
+        "formcode": "form-0fdf4c35-2cac-4114-b166-1e664ca3f616",
+        "formdesc": "会议通知收文-启动表单",
+        "formname": "会议通知收文-启动表单",
+        "formtype": "e5f19e62-80cd-4699-9799-64329299b4d2",
+        "id": 45,
+        "isenabled": "receiveform",
+        "seqno": 1,
+        "url": "receiveform",
+        "sortorder": 2,
+        "watched": false
+    },
+    "msg": "success",
+    "rc": 1
+}

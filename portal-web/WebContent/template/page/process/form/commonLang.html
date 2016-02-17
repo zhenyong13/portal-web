@@ -1,0 +1,20 @@
+
+<div style="padding-left: 12px;">
+<div>您可以设定5个常用语在表单中显示</div>
+<div><a style="background: #e6e6e6;display: block;width: 100px;  text-align: center;  margin-bottom: 3px;" class="js_set_common">5个常用语设定</a></div>
+<div style=" height: 200px;">
+<div style="width:238px;border: 1px solid #a9a9a9;border-right:0px;  height: 200px;  overflow: auto;float:left;">
+<ul style="list-style: none;padding: 1px;">
+	{{#each commonLangs}}
+	<li id="{{id}}"><input type="checkbox" {{#ifCond state "==" "1"}}checked="checked"{{/ifCond}} value="{{id}}" data-content="{{content}}"  name="normal"/><span class="js_common_content" style="cursor:pointer;" data-content="{{content}}">{{title}}</span><span class="js_delete_common" style="float: right;padding-right: 15px" data-id="{{id}}"><i class="icon-remove"></i></span></li>
+	{{/each}}
+</ul>
+</div>
+<div style="width: 238px;float:left;">
+<textarea type="text" id="normalcontent" style="  width: 238px;  height: 200px;margin:0px;padding:0px;"></textarea>
+</div>
+</div>
+<div style="clear:both;">
+<input type="text" id="newCommonLang" style="height:27px;width:331px;" /> <a class="btn btn-default btn-sm js_add_common" style="margin-top: -2px;">新增常用语</a><a class="btn btn-default btn-sm js_submit_common" style="margin-top: -2px;">确定</a>
+</div>
+</div>

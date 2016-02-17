@@ -1,0 +1,139 @@
+
+	<div id="profileContainer">
+		<div class="main main-narrow j_main jscroll">
+			<div id="user-container" class="user-container bg-white pt-20">
+				<div id="user-info" class="scrollwrapper form-horizontal entity-info user-info mCustomScrollbar _mCS_7" >
+					<div id="mCSB_7" class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside" tabindex="0">
+						<div id="mCSB_7_container" class="mCSB_container" style="position: relative; top: 0; left: 0;" dir="ltr">
+
+							<div class="control-group">
+								<label class="control-label">账号：</label>
+
+								<div class="controls accounts_js">
+									<span class="controls-text">{{userInfo.usercode}}</span> 
+									<span class="ml-10"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">姓 名：</label>
+								<div class="controls">
+									<input type="hidden" id="employee-id" name="id" value="{{userInfo.id}}"> 
+									<input type="hidden" id="employee-usercode" name="usercode" value="{{userInfo.usercode}}"> 
+									<input type="text" placeholder="姓名" id="employee-username" class="form-control" name="username" v-maxlength="10" value="{{userInfo.username}}">
+									&nbsp;<span id="employee-username-" style="color:red"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">邮箱：</label>
+								<div class="controls">
+									<input type="text" placeholder="邮箱" id="employee-email" name="email" class="form-control bluebox" v-name="email" value="{{userInfo.email}}">
+									&nbsp;<span id="employee-email-" style="color:red"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">手 机：</label>
+
+								<div class="controls">
+									<input type="text" placeholder="手机号码" id="employee-mobile" name="mobile" class="form-control bluebox" v-name="mobile" value="{{userInfo.mobileno}}">
+									&nbsp;<span id="employee-mobile-" style="color:red"></span>
+								</div>
+							</div>
+							<div id="passwd-btn" class="control-group">
+								<label class="control-label" for="inputPassword">密码：</label>
+
+								<div class="controls">
+									<a id="btn-changePwd" class="btn btn-sm btn-primary pwd-toggle"
+										type="changePwd" userid="{{userInfo.id}}"><i
+										class="icon-pencil"></i> 修改密码 </a> <a id="btn-resetPwd"
+										class="btn btn-sm btn-primary pwd-toggle hide" type="resetPwd"
+										userid="{{userInfo.id}}"><i class="icon-pencil"></i> 重置密码
+									</a>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">性 别：</label>
+
+								<div class="controls">
+									<!-- <label class="radio-inline"> <input type="radio"
+										name="sex" {{#ifCond userInfo.sex "==" "male"}}checked{{/ifCond}} value="male">男
+									</label> <label class="radio-inline"> <input type="radio"
+										name="sex" {{#ifCond userInfo.sex "==" "female"}}checked{{/ifCond}} value="female">女
+									</label> -->
+									<select id="employee-sex" class="form-control">
+										<option {{#ifCond userInfo.sex "==" "male"}}selected{{/ifCond}} value="male">男</option>
+										<option {{#ifCond userInfo.sex "==" "female"}}selected{{/ifCond}} value="female">女</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label">电 话：</label>
+
+								<div class="controls">
+									<input type="text" id="employee-telephone" name="telephone"
+										class="form-control bluebox" v-maxlength="50"
+										value="{{userInfo.officephone}}" placeholder="办公电话">
+								</div>
+							</div>
+							<div id="user-info-noAcl" class="">
+								<div id="department-div" class="control-group">
+									<label class="control-label">部 门：</label>
+
+									<div class="controls">
+										<p>{{userInfo.orgname}}</p>
+									</div>
+								</div>
+								<div id="rank-div" class="control-group">
+									<label class="control-label">职 级：</label>
+
+									<div class="controls">
+										{{userInfo.positionlevel}}
+										<!-- <span class="controls-text  user">职员</span><span
+											class="controls-text  manager hide">经理</span><span
+											class="controls-text  boss hide">领导</span> -->
+									</div>
+								</div>
+								<div id="superior-div" class="control-group">
+									<label class="control-label">职位：</label>
+
+									<div class="controls">
+										<p>{{userInfo.userlevel}}</p>
+									</div>
+								</div>
+								<div id="other-superior-div" class="control-group">
+									<label class="control-label">职务：</label>
+
+									<div class="controls">
+										<p>{{userInfo.userrank}}</p>
+									</div>
+								</div>
+								<div id="other-superior-div" class="control-group">
+									<label class="control-label">联系地址：</label>
+
+									<div class="controls">
+										<input type="text" id="employee-address" name="telephone" style="width:250px"
+										class="form-control bluebox"  value="{{userInfo.address}}" placeholder="联系地址">
+									</div>
+								</div>
+
+								<div class="control-group">
+									<label class="control-label">用户简介：</label>
+									<div class="controls">
+										<textarea class="form-control bluebox" style="width:600px;height:100px" rows="3"  id="employee-userdesc">{{userInfo.userdesc}}</textarea>
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label">&nbsp;</label>
+									<div class="controls">
+										<a id="employee-update" class="btn btn-sm btn-primary"
+											propertyname="normal">保存</a>
+									</div>
+								</div>
+							</div>
+							 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

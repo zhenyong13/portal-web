@@ -1,0 +1,46 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "id": 1,
+                "dbname": "dbname",
+                "columnname": "columnname",
+                "columncname": "columncname",
+                "tablename": "2015-08-03",
+                "memo": "memo",
+                "vofieldname": "vofieldname",
+                "columntype": "weqreqw",
+                "rulejson": "rulejson",
+                "isuniqcode": "1ewrwrwe"
+            },
+            {
+                "dbname": "1",
+                "id": 1,
+                "columnname": "1212",
+                "columncname": "123",
+                "tablename": "2015-08-03",
+                "memo": "weqreqw",
+                "vofieldname": "UCP_ROLETYPE",
+                "columntype": "weqreqw",
+                 "rulejson": "rulejson",
+                "isuniqcode": "1"
+            },
+            {
+                "dbname": "1",
+                "id": 1,
+                "columnname": "1212",
+                "columncname": "123",
+                "tablename": "2015-08-03",
+                "memo": "weqreqw",
+                 "rulejson": "rulejson",
+                "vofieldname": "weqreqw",
+                "columntype": "weqreqw",
+                "isuniqcode": "1"
+            }
+             
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

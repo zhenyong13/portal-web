@@ -1,0 +1,21 @@
+﻿{
+    "data": {
+        "usercode": "002644",
+        "rows": [
+            {
+                "usercode": "user-002644",
+                "username": "小曾",
+                "traveladdress": "北京分院",
+                "traveldays": 2
+            },
+            {
+                "usercode": "user-002784",
+                "username": "小蔡",
+                "traveladdress": "长沙分院",
+                "traveldays": 10
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

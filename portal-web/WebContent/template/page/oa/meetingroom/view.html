@@ -1,0 +1,52 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+					{{#if id}}
+						<div class="control-group col-12">
+							<label class="control-label">会议室编码：</label>
+							<div class="controls">
+								 <span class="show_val">{{roomcode}}</span>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-12">
+							<label class="control-label">会议室名称：</label>
+							<div class="controls">
+								 <span class="show_val">{{roomname}}</span>
+							</div>
+						</div>
+						  
+						<div class="control-group col-12">
+							<label class="control-label">位置：</label>
+							<div class="controls">
+								<span class="show_val">{{position}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">容纳人数：</label>
+							<div class="controls">
+								<span class="show_val">{{capacity}}</span>
+							</div>
+						</div>
+						 
+						<div class="control-group col-12">
+							<label class="control-label">备注：</label>
+							<div class="controls">
+							    <span class="show_val">{{memo}}</span>
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,66 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">姓名：</label>
+							<div class="controls">
+								<input type="text" id="name" class="form-control" value="{{name}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">性别：</label>
+							<div class="controls">
+								<input type="text" id="sex" class="form-control" value="{{sex}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">项目：</label>
+							<div class="controls">
+								<select id="select">
+									<option value="1">项目1</option>
+									<option value="2">项目2</option>
+									<option value="3">项目3</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">人员选择：</label>
+							<div class="controls">
+								<a class="icon-plus js_select_person" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a>
+								<span class="selected_person_show"></span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">部门：</label>
+							<div class="controls">
+								<a class="icon-plus js_search_dept" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a>
+								<span class="selected_dept_show"></span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">多选项目：</label>
+							<div class="controls">
+								<select id="select" multiple="multiple">
+									<option value="1">项目1</option>
+									<option value="2">项目2</option>
+									<option value="3">项目3</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a><a
+							id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

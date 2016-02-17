@@ -1,0 +1,122 @@
+{
+    "data": {
+        "usercode": "002644",
+        "modulecode": "module-001",
+        "modulename": "模块名称",
+        "picturecode": [
+            "images/dateway/banner_1.jpg",
+            "images/dateway/banner_2.jpg",
+            "images/dateway/banner_3.jpg",
+            "images/dateway/banner_4.jpg"
+        ],
+        "rows": [
+            {
+                "id": 1,
+                "seqno": 1,
+                "columncode": "synergism",
+                "templatecode": "synergism",
+                "columnname": "协同办公",
+                "columntype": "affiche",
+                "sid": "1",
+                "isshowpicture": "yes",
+                "columnurl": "api/webindex/synergism.json",
+                "relateorgcode": "",
+                "columnsort": "createtime desc",
+                "relateprojectcode": "",
+                "moreurl":"#"
+            },{
+                "seqno": 3,
+                "columncode": "friendlylink",
+                "templatecode": "friendlylink",
+                "columnname": "友情链接",
+                "columntype": "news",
+                "sid": 1,
+                "isshowpicture": "yes",
+                "columnurl": "api/webindex/friendlylink.json",
+                "relateorgcode": "",
+                "columnsort": "createtime desc",
+                "relateprojectcode": "",
+                "moreurl":"#"
+            },{
+                "seqno": 4,
+                "columncode": "newscenter",
+                "templatecode": "newscenter",
+                "columnname": "新闻中心",
+                "columntype": "emp",
+                "columnsort": "createtime desc",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/newscenter.json",
+                "relateorgcode": "",
+                "relateprojectcode": "",
+                "moreurl":"#"
+            },{
+                "seqno": 4,
+                "columncode": "todoitems",
+                "templatecode": "todoitems",
+                "columnname": "待办事项",
+                "columntype": "emp",
+                "columnsort": "createtime desc",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/process/queryMyTaskTodo.json",
+                "relateorgcode": "",
+                "relateprojectcode": "",
+                "moreurl":"#process"
+            },{
+                "seqno": 4,
+                "columncode": "todoemail",
+                "templatecode": "todoemail",
+                "columnname": "未读邮件",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/todoemail.json",
+                "relateorgcode": "",
+                "relateprojectcode": "",
+                "columnsort": "createtime desc",
+                "moreurl":"#m/unreadmail/list"
+            },{
+                "seqno": 4,
+                "columncode": "noticelist",
+                "templatecode": "noticelist",
+                "columnname": "通知公告",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/noticelist.json",
+                "relateorgcode": "",
+                "relateprojectcode": "",
+                "moreurl":"#noticemore"
+            },{
+                "seqno": 4,
+                "columncode": "meetinglist",
+                "columnname": "会议公告",
+                 "templatecode": "meetinglist",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "columnsort": "createtime desc",
+                "sid": 3,
+                "columnurl": "api/webindex/meetinglist.json",
+                "relateorgcode": "",
+                "relateprojectcode": "",
+                "moreurl":"#meetingmore"
+            },{
+                "seqno": 4,
+                "columncode": "birthdaylist",
+                 "templatecode": "birthdaylist",
+                "columnname": "生日祝福",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/birthdaylist.json",
+                "relateorgcode": "",
+                "columnsort": "createtime desc",
+                "relateprojectcode": "",
+                "moreurl":"#m/birthday"
+            } 
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

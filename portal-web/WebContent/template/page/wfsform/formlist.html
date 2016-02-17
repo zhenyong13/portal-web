@@ -1,0 +1,50 @@
+    <div id="custom-category"></div>
+    <div id="other-category">
+        <div class="js_formcategory js_other" style="margin-bottom: 110px">
+            <ul class="form-list clearfix j_formlist">
+                {{#if formlist.length}}
+                {{#each formlist}}
+                <li class="js_formitemsli {{#ifCond isenabled "==" "enable"}}enabled{{else}}disabled{{/ifCond}}">
+                    <div class="form-list-box js_formListBox">
+                        <div class="content">
+                            <span id="form-number" class="serial">{{addOne @index}}</span>
+                            <h4 id="form-title" data-formtypecode="{{../formtypecode}}"  title="{{formname}}">{{formname}}</h4>
+
+                            <p id="form-describe" class="ellipsis nodescription" title="{{formdesc}}">{{formdesc}}</p></div>
+                        {{#ifCond isenabled "==" "enable"}}
+                        <div class="btn-group js_previewbtn">
+                            <a class="btn btn-sm js_changeFormStatus" status="disabled" data-id="{{formcode}}" data-code="{{formcode}}">停用</a>
+                            <div class="btn-group dropdown dropdown-menu-toggle">
+                                <a class="dropdown-toggle btn btn-sm">更多<i class="caret ml-3"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-right border-dropdown">
+                                    <li><a class="js_formPreview" data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}">配置</a></li>
+                                    <li><a class="js_editForm"  data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}"  data-order="{{sortorder}}" data-eable="{{isenabled}}">编辑</a></li>
+                                    <li><a class="js_copyForm"  data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}">复制</a></li>
+                                    <li><a class="js_deleteForm" data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}">删除</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {{else}}
+                        <div class="btn-group js_btn-group">
+                            <a class="btn btn-sm js_changeFormStatus" status="enable" data-id="{{id}}" data-code="{{formcode}}">启用</a>
+                            <div class="btn-group dropdown dropdown-menu-toggle">
+                                <a class="dropdown-toggle btn btn-sm">更多<i class="caret ml-3"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-right border-dropdown">
+                                    <li><a class="js_formPreview" data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}">配置</a></li>
+                                    <li><a class="js_editForm" data-id="{{formcode}}"  data-name="{{formname}}" data-code="{{formcode}}">编辑</a></li>
+                                    <li><a class="js_deleteForm" data-id="{{formcode}}" data-name="{{formname}}" data-code="{{formcode}}">删除</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {{/ifCond}}
+                    </div>
+                </li>
+                {{/each}}
+                {{else}}
+                <li class="js_formitemsli">
+                    <span class="empty">此分类下没有可使用的公文</span>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>

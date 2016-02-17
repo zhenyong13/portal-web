@@ -1,0 +1,105 @@
+         <div class="forms-body">
+            <div class="forms-content">
+                <div class="form-category-bd">
+                    <div class="entity-info clearfix">
+                    
+                    	<div class="pro_heider_img control-group col-3" style="border: 1px solid #E3E3E3;margin-right: 10px;">
+                           {{#if userinfo.avatarcode}}
+							<img src="{{baseUrl}}{{userinfo.avatarcode}}">
+                           {{else}}
+                            <img src="images/avatar.png">
+                           {{/if}}
+                        </div>
+                    	
+                        <div class="control-group col-3">
+                            <label style="float: left;">姓名：</label>
+                            <div>
+                                {{userinfo.username}}
+                            </div>
+                        </div>
+
+                        <div class="control-group col-3">
+                            <label style="float: left;">性别：</label>
+                            <div>
+                                 {{userinfo.sex}}
+                            </div>
+                        </div>
+
+                        <div class="control-group col-3">
+                            <label style="float: left;">工号：</label>
+                            <div class="controls">
+                                 {{userinfo.workno}}
+                            </div>
+                        </div>
+                        <div class="control-group col-3">
+                            <label style="float: left;">部门：</label>
+                            <div class="controls">
+                                 {{userinfo.orgname}}
+                            </div>
+                        </div>
+
+                        <div class="control-group col-3">
+                            <label style="float: left;">职位：</label>
+                            <div>
+                               {{userinfo.userrank}}
+                            </div>
+                        </div>
+                        <div class="control-group col-3">
+                            <label style="float: left;">办公电话：</label>
+                            <div>
+                               {{userinfo.officephone}}
+                            </div>
+                        </div>
+                        <div class="control-group col-3">
+                            <label style="float: left;">手机：</label>
+                            <div>
+                               {{userinfo.mobileno}}
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label style="float: left;">邮箱：</label>
+                            <div>
+                               {{userinfo.email}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pro_tex_div form-category-hd">
+                <h4 id="cate-name" style="border: 0px none;"><span class="js_categoryname">流程意见：</span></h4>
+                
+                <!-- 
+                <span class="title ellipsis filterSlip_js" title="院收文测试1" data-type="all-todo" lang="100" data-taskname="院收文测试1" data-processname="院收文1" data-id="1111" data-taskcode="100" data-processtype="" data-processcode="1111" data-module="showProcess">【<span class="process-font-weight">院收文1</span>-院收文测试1】</span>
+                 -->
+                
+                </div>
+                <div class="control-group col-12">
+                    <div class="controls">
+                    	<div class="pro_lcyj_div">
+							<div class="control-group col-12">
+							    <div class="controls" style="float: left;word-break: break-all;">
+							        {{handleinfo.opinion}}
+							    </div>
+							</div>
+                   		</div>
+                    </div>
+                </div>
+                
+                <div class="control-group col-12">
+					<div>附件：</div>
+					{{#each handleinfo.attachments}}
+						<span class="file-show">
+							<a data-fcode="{{filecode}}" class="filename_view js_file_view"  data-file-id="{{filecode}}" >{{filename}}</a>
+							<a href="{{../baseUrl}}{{filecode}}" class="file_view fa fa-download" target="_blank"></a>
+						</span>
+					{{/each}}
+				</div>
+				
+                <div class="pro_tim_div">
+                	<span class="pro_tim">处理时间：{{handleinfo.createtime}}</span>
+                	{{#if rdata.data.canEditTaskForm}}<span class="js-show-process" style="float: right; color: #5EABD8;cursor: pointer;margin-left: 5px;" data-type="all-todo" data-taskname="{{rdata.data.taskname}}" data-id="{{rdata.processinstcode}}" data-taskcode="{{rdata.taskcode}}" data-processcode="{{rdata.taskcode}}" data-view="false"><i class="fa fa-eye"></i>查看表单</span>{{/if}}
+                	{{#if handleinfo.canmoveback}}<span class="pro_back"><i class="pro_ioc_img icon-map-marker"></i>回退到该环节</span>{{/if}}
+                </div>
+            </div>
+        </div>
+ 

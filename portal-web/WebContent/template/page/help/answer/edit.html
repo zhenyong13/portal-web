@@ -1,0 +1,69 @@
+<!-- <div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5>新增</h5></div> -->
+<div class="process-forms">
+	<div class="jscroll">
+		<div id="backedit_div" class="forms-body" style="max-height: 540px;">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">反馈人：</label>
+							<div class="controls">
+								<span class="show_val">{{creator}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">反馈时间：</label>
+							<div class="controls">
+								<span class="show_val">{{createtime}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">标题：</label>
+							<div class="controls">
+								<span class="show_val">{{title}}</span>
+								<input type="hidden" id="uuid" class="form-control" value="{{uuid}}"/>
+								<input type="hidden" id="issuecode" class="form-control" value="{{issuecode}}"/>
+							</div>
+						</div>
+						  
+						<!-- <div class="control-group col-12">
+							<label class="control-label">附件：</label>
+							<div class="controls">
+							<div class="upload-btn-wrap acl-hide html5">
+								<a class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+									<i class="icon-upload-alt"></i> 上传附件
+								</a>
+								<span id="feedbackUpload-showfiles" data-code="maindoc" style="display:block;"></span>
+								<span id="{{random}}-showfiles" data-code="{{code}}" style="display:block;">
+									{{#each value }}
+										<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="{{editable}}"><a href="{{../../baseUrl}}{{code}}" class="filename_view" target="_blank">{{name}}</a><i class="file_view fa fa-search-plus js_file_view"  data-file-id="{{code}}"></i>
+										{{#if editable}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/if}}
+										</span>
+									{{/each}}
+								</span>
+							</div>
+							<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="feedbackUpload" name="maindoc" class="js_file_upload" accept="" multiple="multiple"/>
+							</div>
+						</div> -->
+
+						<div class="control-group col-12">
+							<label class="control-label">反馈描述：</label>
+						</div>
+						<!--  -->
+						<div id="feedbackContent" class="control-group col-12">
+							
+							 <script id="feedbackEditor_{{uuid}}" type="text/plain"></script>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

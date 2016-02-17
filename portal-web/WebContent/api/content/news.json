@@ -1,0 +1,39 @@
+{
+    "data": {
+        "usercode": "002644",
+        "total": 20,
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": "1",
+                "title": "新闻1",
+                "source": "新华社",
+                "publisher": "张三",
+                "createtime": "2015-11-02",
+                "newstype":"1",
+                "topshow": true,
+                "newscode": "newscode-001",
+                "attachment": [
+                    "code1"
+                ]
+            },
+            {
+                "id": "1",
+                "title": "x",
+                "newstype":"1",
+                "source": "",
+                "publisher": "cc",
+                "createtime": "x",
+                "topshow": true,
+                "newscode": "newscode-002",
+                "attachment": [
+                    "code1"
+                ]
+            }
+
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

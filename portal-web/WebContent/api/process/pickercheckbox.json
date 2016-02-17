@@ -1,0 +1,36 @@
+{
+    "data": {
+        "formdata": {
+		    "projectcode":{
+				"region": "多选框",
+			    "isshow": true,
+			    "itemorder": 9,
+			    "name": "多选控件",
+			    "value":[
+						{
+							"feetype":"1",
+							"feetypename":"办公费",
+							"feeitem":"1",
+							"feeitemname":"办公用品",
+							"itemorder":"1",
+							"typeorder":"1"
+						}
+					],
+			    "code": "project",
+			    "type": "checkboxlist",
+			    "required": true,
+			    "editable": true,
+			    "regionorder": 2,
+			    "cols":12
+				custom:{
+					"iconclzz":""
+					"title":"费用类型"
+				}
+			}
+        },
+        "formurl": "sendProcess",
+        "handleinfo": null
+    },
+    "msg": "success",
+    "rc": 1
+}

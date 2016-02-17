@@ -1,0 +1,20 @@
+{
+    "data": {
+       "id": 1,
+                "seqno": 1,
+                "columncode": "synergism",
+                "templatecode": "synergism",
+                "columnname": "协同办公",
+                "columntype": "affiche",
+                "sid": "1",
+                "isshowpicture": "yes",
+                "columnurl": "api/webindex/synergism.json",
+                "condition": "api/webindex/synergism.json",
+                "relateorgcode": "",
+                "columnsort": "createtime desc",
+                "relateprojectcode": "",
+                "moreurl":"#"
+    },
+    "msg": "",
+    "rc": 1
+}

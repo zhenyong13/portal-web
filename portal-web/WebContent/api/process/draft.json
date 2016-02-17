@@ -1,0 +1,494 @@
+{
+    "data": {
+        "buttons": [
+            "commit",
+            "save",
+            "diagram",
+            "delete"
+        ],
+        "candidatesteps": [
+            {
+                "selectedvalues": [
+                    {
+                        "name": "曾文驱",
+                        "pcode": "org-158",
+                        "code": "user-002644"
+                    }
+                ],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "组织",
+                            "datatype": "tree",
+                            "dataurl": "api/member/orgs.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}",
+                            "fieldmapping": {
+                                "id": "orgcode",
+                                "name": "orgname",
+                                "pid": "parentcode"
+                            }
+                        },
+                        {
+                            "dataclass": "项目",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"project-\"}",
+                            "fieldmapping": {
+                                "id": "projectcode",
+                                "name": "projectname"
+                            }
+                        },
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"role-\"}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            }
+                        },
+                        {
+                            "dataclass": "群组",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"group-\"}",
+                            "fieldmapping": {
+                                "id": "groupcode",
+                                "name": "groupname"
+                            }
+                        }
+                    ],
+                    "selecttype": "checkbox"
+                },
+                "transition": {
+                    "selected": true,
+                    "transitionname": "拟办",
+                    "transitionid": "flow2-拟办"
+                }
+            },
+            {
+                "selectedvalues": [],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "组织",
+                            "datatype": "tree",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}",
+                            "fieldmapping": {
+                                "id": "orgcode",
+                                "name": "orgname",
+                                "pid": "parentcode"
+                            }
+                        },
+                        {
+                            "dataclass": "项目",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"project-\"}",
+                            "fieldmapping": {
+                                "id": "projectcode",
+                                "name": "projectname"
+                            }
+                        },
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"role-\"}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            }
+                        },
+                        {
+                            "dataclass": "群组",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"usercode\":\"user-002784\",\"dataclass\":\"group-\"}",
+                            "fieldmapping": {
+                                "id": "groupcode",
+                                "name": "groupname"
+                            }
+                        }
+                    ],
+                    "selecttype": "checkbox"
+                },
+                "transition": {
+                    "transitionname": "相关部门会签",
+                    "transitionid": "flow5-相关部门会签"
+                }
+            }
+        ],
+        "formdata": {
+            "comorg": {
+                "region": "来文信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "来文单位",
+                "value": [
+                    {
+                        "name": "来文单位",
+                        "code": "wwww"
+                    }
+                ],
+                "code": "comorg",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "comdocno": {
+                "region": "来文信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 2,
+                "name": "来文编号",
+                "value": [
+                    {
+                        "name": "来文编号",
+                        "code": "wwwww"
+                    }
+                ],
+                "code": "comdocno",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "comopr": {
+                "region": "来文信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "来文经办人",
+                "value": [
+                    {
+                        "name": "来文经办人",
+                        "code": "wwwww"
+                    }
+                ],
+                "code": "comopr",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "urgency": {
+                "region": "来文信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 5,
+                "name": "急缓程度",
+                "value": [
+                    {
+                        "selected": false,
+                        "clzz": "labelauty3-checked",
+                        "name": "一般",
+                        "code": "general"
+                    },
+                    {
+                        "selected": true,
+                        "clzz": "labelauty2-checked",
+                        "name": "急",
+                        "code": "worry"
+                    },
+                    {
+                        "selected": false,
+                        "clzz": "labelauty-checked",
+                        "name": "紧急",
+                        "code": "urgent"
+                    }
+                ],
+                "code": "urgency",
+                "type": "radio",
+                "required": true,
+                "editable": true,
+                "regionorder": 1
+            },
+            "title": {
+                "region": "收文填写",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 6,
+                "name": "标题",
+                "value": [
+                    {
+                        "name": "标题",
+                        "code": "wwwwww"
+                    }
+                ],
+                "code": "title",
+                "type": "text",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "projectcodes": {
+                "region": "收文填写",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 7,
+                "name": "相关项目",
+                "value": [
+                    {
+                        "selected": true,
+                        "name": "一号线项目",
+                        "code": "project-one"
+                    }
+                ],
+                "code": "projectcodes",
+                "type": "multiselect",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "sendrelatedep": {
+                "region": "收文填写",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 8,
+                "name": "送相关部门",
+                "value": [
+                    {
+                        "name": "财务部",
+                        "code": "org-102",
+                        "editable": true
+                    }
+                ],
+                "code": "sendrelatedep",
+                "type": "orgpicker",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "serialcode": {
+                "region": "收文填写",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 9,
+                "name": "收文顺序号",
+                "value": [
+                    {
+                        "num": {
+                            "value": [
+                                {
+                                    "selected": true,
+                                    "name": 1,
+                                    "code": 1
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 2,
+                                    "code": 2
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 3,
+                                    "code": 3
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 4,
+                                    "code": 4
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 5,
+                                    "code": 5
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 6,
+                                    "code": 6
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 7,
+                                    "code": 7
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 8,
+                                    "code": 8
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 9,
+                                    "code": 9
+                                },
+                                {
+                                    "selected": false,
+                                    "name": 10,
+                                    "code": 10
+                                }
+                            ],
+                            "code": "num"
+                        },
+                        "year": {
+                            "value": "2015",
+                            "code": "year"
+                        },
+                        "serial": {
+                            "value": [
+                                {
+                                    "selected": true,
+                                    "name": "一号线项目",
+                                    "prop": "serial",
+                                    "code": "一号线项目"
+                                }
+                            ],
+                            "code": "serial"
+                        },
+                        "btn_addserial": {
+                            "isshow": true,
+                            "code": "添加字号"
+                        }
+                    }
+                ],
+                "code": "serialcode",
+                "type": "serial",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "recdocdate": {
+                "region": "收文填写",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 13,
+                "name": "收文日期",
+                "value": [
+                    {
+                        "name": "收文日期",
+                        "code": "2015-08-14"
+                    }
+                ],
+                "code": "recdocdate",
+                "type": "date",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "durdate": {
+                "region": "收文填写",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 13,
+                "name": "处理时限",
+                "value": [
+                    {
+                        "name": "处理时限",
+                        "code": "2015-08-20"
+                    }
+                ],
+                "code": "durdate",
+                "type": "date",
+                "required": true,
+                "editable": true,
+                "regionorder": 2
+            },
+            "maincontent": {
+                "region": "文档信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 14,
+                "name": "正文摘要",
+                "value": [
+                    {
+                        "name": "正文摘要",
+                        "code": "dsfsafsdfds"
+                    }
+                ],
+                "code": "maincontent",
+                "type": "textarea",
+                "required": true,
+                "editable": true,
+                "regionorder": 3
+            },
+            "maindoc": {
+                "region": "文档信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 15,
+                "name": "正文",
+                "value": [
+                    {
+                        "name": "消息推送系统.pdf",
+                        "code": "b24493c5-c3ce-4cf1-9ac7-f5d6d6a62a29",
+                        "editable": true
+                    }
+                ],
+                "code": "maindoc",
+                "type": "fileupload",
+                "required": true,
+                "editable": true,
+                "regionorder": 3
+            },
+            "attaches": {
+                "region": "文档信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 16,
+                "name": "附件",
+                "value": [],
+                "code": "attaches",
+                "type": "fileupload",
+                "required": true,
+                "editable": true,
+                "regionorder": 3
+            },
+            "memo": {
+                "region": "便签",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 17,
+                "name": "公文便签",
+                "value": [
+                    {
+                        "name": "公文便签",
+                        "code": {
+                            "createtime": "2015-08-14 14:14:46",
+                            "content": "testt",
+                            "username": "蔡万里",
+                            "usercode": "user-002784",
+                            "avatarcode": "",
+                            "editable": true
+                        }
+                    }
+                ],
+                "code": "memo",
+                "type": "memo",
+                "required": true,
+                "editable": true,
+                "regionorder": 4
+            }
+        },
+        "formurl": "receiveform",
+        "handleinfo": {
+            "nextuser": [
+                {
+                    "name": "曾文驱",
+                    "pcode": "org-158",
+                    "code": "user-002644"
+                }
+            ],
+            "opinion": "",
+            "result": null,
+            "setasfrequence": false,
+            "transition": "flow2-拟办"
+        },
+        "opinion": {
+            "isshow": true,
+            "name": "流程意见",
+            "value": "",
+            "required": false,
+            "valuesource": "",
+            "editable": true
+        },
+        "result": {
+            "isshow": false,
+            "name": "",
+            "required": false,
+            "valuesource": "",
+            "editable": true
+        },
+        "shownextstep": true
+    },
+    "msg": "success",
+    "rc": 1
+}

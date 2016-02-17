@@ -1,0 +1,16 @@
+{{#each data.rows}}
+<li  class="workflow clearfix filterSlip_js j_entityslider-toggle" >
+<!-- <span class="ret_width_5 ret_display"><i class="icon-checkbox-unchecked"></i></span> -->
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{usercode}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{username}}&nbsp;</span>
+<span class="ret_width_15 ret_display ellipsis filterSlip_js" title="{{orgname}}">{{orgname}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{positionlevel}}">{{positionlevel}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{signinmonth}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{signinnum}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{notsigninnum}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js">{{resigninnum}}&nbsp;</span>
+<span class="ret_width_10 ret_display ellipsis filterSlip_js js_statis_detail" 
+data-orgcode="{{orgcode}}" data-orgname="{{orgname}}" 
+data-usercode="{{usercode}}" data-username="{{username}}" data-signinmonth="{{signinmonth}}"><i class="fa fa-eye" title="签到明细"></i></span>
+</li>
+{{/each}}

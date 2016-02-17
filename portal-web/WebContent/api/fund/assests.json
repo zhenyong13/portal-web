@@ -1,0 +1,45 @@
+{
+	"data":{
+      "assignee":"",
+      "type":"",
+	  "taskstatus":"",
+      "pageSize":10,
+      "pageNo":2,
+      "total":100,
+      "rows":[
+          {
+            "id":"1",
+            "assestcode":"rwer234231",
+            "assestname":"1",
+            "assesttype":"1",
+            "isenabled":"1",
+            "brand":"请假234234条",
+            "unit":"测试数据请假条1",
+            "storagenum":"sdf",
+            "specification":"2015-04-21 13:11:13",
+            "model":"2015-08-28 21:20:59",
+            "serialno":"sdf",
+            "price":213,
+            "filecodes":"[{\"code\":\"code\",\"name\":\"name\",\"editable\":false}]"
+          },
+           {
+            "id":"2",
+            "assestcode":"sdfsdf1",
+            "assestname":"1",
+            "assesttype":"1",
+            "isenabled":"1",
+             "price":213,
+            "brand":"请假条23423423432423423",
+            "unit":"测试数据请假条1",
+            "storagenum":"sdf",
+            "specification":"2015-04-21",
+            "model":"2015-04-21",
+            "serialno":"sdf",
+            "filecodes":"[{\"code\":\"code\",\"name\":\"name\",\"editable\":false}]"
+          }
+        ]
+
+    },
+	"msg":"",
+	"rc":"1"
+}

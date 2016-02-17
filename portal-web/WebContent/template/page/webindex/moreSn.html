@@ -1,0 +1,21 @@
+<div class="cooperative-work-div" id="moreSn">
+
+</div>
+
+
+
+<!-- 协同办公 -->
+<script id="synergism-template" type="text/x-handlebars-template">
+<div class="moreSn_inr">
+		{{#each columnList.rows}}
+			<div class="cooperative-img-div {{#if isClose}}grey{{/if}}">
+				<a href="{{link}}">
+				<span class="cooperative-img-span">
+					<img alt="{{name}}" src="{{../baseUrl}}download?filecode={{icon}}">
+				</span>
+				<span style="padding-left: 10px;padding-top: 3px;display: inline-block;">{{name}}</span>
+				</a>
+		</div>
+		{{/each}}
+</div>
+</script>

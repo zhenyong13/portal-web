@@ -1,0 +1,12 @@
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+    <span class="ret_width_5 ret_display filterSlip_js">{{name}}</span>
+    <span class="ret_width_5 ret_display  filterSlip_js">{{sex}}</span>
+    <span class="ret_width_5 ret_display  filterSlip_js" style="float: right;width: 10%;" title="">
+		 <a class="fa fa-eye js_view" data-tid="{{id}}" title="明细"></a><a class="fa fa-pencil js_edit" data-tid="{{id}}" title="编辑"></a><a class="fa fa-trash-o js_del" data-tid="{{id}}" title="删除"></a>
+	</span>
+</li>
+{{/each}}

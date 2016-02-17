@@ -1,0 +1,107 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">流程编码：</label>
+							<div class="controls">
+								<input type="text" id="processcode" class="form-control required" value="{{processcode}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程名称：</label>
+							<div class="controls">
+								<input type="text" id="processname" class="form-control required" value="{{processname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程key：</label>
+							<div class="controls">
+								 <input type="text" id="processkey" class="form-control " value="{{processkey}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">应用编码：</label>
+							<div class="controls">
+								 <input type="text" id="appcode" class="form-control" value="{{appcode}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;"></span>是否可用：</label>
+							<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="isenabled" {{#if isenabled}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-00111" style="display: none;">
+										<label for="labelauty1009-00111">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if isenabled}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="isenabled" {{#if isenabled}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-10122" style="display: none;">
+										<label for="labelauty1009-10122">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#if isenabled}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label">流程类型：</label>
+							<div class="controls">
+								<select id="processtype" class="form-control">
+									<option value="1">是</option>
+									<option value="2">否</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">业务编码：</label>
+							<div class="controls">
+								<input type="text" id="bussinesscode" class="form-control" value="{{bussinesscode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">序号：</label>
+							<div class="controls">
+								<input type="text" id="sortorder" class="form-control number" value="{{sortorder}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">相关项目：</label>
+							<div class="controls">
+								<input type="text" id="projectcode" class="form-control" value="{{projectcode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程图文件编码：</label>
+							<div class="controls">
+								<input type="text" id="diagramcode" class="form-control" value="{{diagramcode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">activity标识：</label>
+							<div class="controls">
+								<input type="text" id="activiticode" class="form-control" value="{{activiticode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">流程描述：</label>
+							<div class="controls">
+								<textarea class="form-control" style="width:600px;height:50px" id="processdesc">{{processdesc}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

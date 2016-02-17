@@ -1,0 +1,17 @@
+<!-- 补签列表 -->
+{{#each this}}
+<li  class="workflow clearfix filterSlip_js j_entityslider-toggle">
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{addOne @index}}</span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{username}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js" title="{{orgname}}">{{orgname}}&nbsp;</span>
+    <span class="ret_width_12 ret_display ellipsis filterSlip_js">{{signintime}}&nbsp;</span>
+     <span class="ret_width_10 ret_display ellipsis filterSlip_js"> {{signintypename}} &nbsp; </span>
+    <span class="ret_width_30 ret_display ellipsis filterSlip_js" title="{{#if deviceaddressname}}【工作地】{{deviceaddressname}}{{else}}{{#if resignincityname}}【补签地】{{resignincityname}}{{else}}{{#if resigninotherplace}}【其他补签地】{{resigninotherplace}}{{/if}}{{/if}}{{/if}}">
+    {{#if deviceaddressname}}【工作地】{{deviceaddressname}}{{else}}
+    	{{#if resignincityname}}【补签地】{{resignincityname}}{{else}}{{#if resigninotherplace}}【其他补签地】{{resigninotherplace}}{{/if}}{{/if}}
+    {{/if}}&nbsp;
+    </span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js" title="{{reason}}">{{reason}}&nbsp; </span>
+</li>
+{{/each}}
+

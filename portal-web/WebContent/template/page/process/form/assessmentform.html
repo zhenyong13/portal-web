@@ -1,0 +1,165 @@
+<div class="process-forms dialog-item active">
+	<div class="forms-option">
+		<div style="float: left;" class="buttons_view">
+		</div>
+		<div class="fr" style="float: right;">
+			<span class="name">{{myinfo.username}}</span> <span>{{currentdate}}</span>
+		</div>
+	</div>
+
+	<div class="forms-body-wrap jscroll">
+		<div class="forms-body processform">
+			<aside class="timeline">
+				<dl class="tl-dl jscroll" style="position: absolute;width:187px;height:100%;">
+					<dt class="tl-dt">办理过程</dt>
+					<dd class="tl-dd">
+						<ul class="people-list " style="left: -52px;">
+							{{#each persons.rows}}
+								<li class="li_position process-user" assignee="{{processinstcode}}" stepcode={{taskcode}}>
+									{{#if userinfo.avatarcode}}
+										 <img src="{{../../baseUrl}}{{userinfo.avatarcode}}" style="position:relative;left: 23px;width: 50px;height: 50px;">							
+									{{else}}
+										<img src="images/avatar.png" style="position:relative;left: 23px;">
+									{{/if}}
+									<span class="create_process_name" style="left: 127px;" title="{{taskname}}">{{taskname}}<br/> {{#dateformat handleinfo.createtime "MM/dd HH:mm"}}{{/dateformat}}</span>
+								</li>
+							 {{/each}}
+						</ul>
+					</dd>
+				</dl>
+
+			</aside>
+			<div class="forms-content forms-padding">
+				<span style="display:none;" id="isread" data-val="false"></span>
+				<div class="form-category-bd flowOpinion" style="display:none;">
+					<div class="entity-info clearfix">
+						{{#if processdefLoad.data.result}}
+						{{#if processdefLoad.data.result.isshow}}
+						<div class="control-group col-12 js-result-isshow">
+							<label class="control-label">{{processdefLoad.data.result.name}}：</label>
+							<div class="controls">
+							<ul class="dowebok controls">
+							{{#each processdefLoad.data.result.valuesource}}
+								{{#if ../processdefLoad.data.result.editable}}
+									<li>
+										<input type="radio" name="result" value="{{../code}}" class="labelauty" {{#if ../selected}}checked="checked"{{/if}} id="labelauty{{../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../pageId}}-{{@index}}">
+										{{#if ../selected}}
+											<span data-clzz="{{../clzz}}" class="{{#radio_selected ../clzz}}{{/radio_selected}} js_commonradio">{{../name}}</span>
+											{{else}}
+											<span data-clzz="{{../clzz}}" class="labelauty-unchecked js_commonradio">{{../name}}</span>
+										{{/if}}
+										</label>
+									</li>
+								{{else}}
+								<!-- 非编辑 -->
+									{{#if ../selected}}
+									<li>
+										<input type="radio" name="result"  value="{{code}}" class="labelauty" checked="checked" id="labelauty{{../../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../../pageId}}-{{@index}}">
+												<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}}">{{name}}</span>
+										</label>
+									</li>
+									{{/if}}
+								{{/if}}
+							{{/each}}
+							</ul>
+							</div>
+						</div>
+						{{/if}}
+						{{/if}}
+						
+						<!-- end result -->
+						<!-- shownextstep -->
+						{{#if processdefLoad.data.shownextstep}}
+						<!-- 处理意思见 -->
+						{{#if processdefLoad.data.opinion.isshow}}
+						<div class="control-group col-12">
+							<div>{{processdefLoad.data.opinion.name}}：<input type="checkbox"  id="setCommonLang" placeholder="必填" {{#if processdefLoad.data.handleinfo.setasfrequence}}checked="checked"{{/if}} />设定为常用语<a style="float:right;" class="js_more_normal">更多&gt;&gt;</a>
+							<span class="js_common_show" style="float:right;">{{#each commonoption  }}
+							<a class="js_span_common" style="margin-right:5px;" data-content="{{content}}" title="{{content}}">{{title}}</a>
+							{{/each}}</span>
+							</div>
+							<div class="controls"  id="common_opinion">
+							   {{#if processdefLoad.data.opinion.editable}}
+								<textarea id="opinion" class="form-control {{#if processdefLoad.data.opinion.required}}required{{/if}}" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="opinion" class="form-control" readonly="readonly" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+							<!-- 已阅 -->
+							<div class="controls hide"  id="read_opinion"  style="display: none;">
+							   {{#if processdefLoad.data.opinion.editable}}
+									<textarea id="readopinion" class="form-control" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="readopinion" class="form-control" readonly="readonly">{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+						</div>
+						{{/if}}
+						<!-- 处理意思见 -->
+						<div class="control-group col-12 js_ishide js-handlediv">
+							<label class="control-label">下一环节：</label>
+							<div class="controls">
+							 <ul class="dowebok controls">
+								{{#each processdefLoad.data.candidatesteps}}
+									<li>
+										<input type="radio" name="transition" value="{{transition.transitionid}}" data-name="{{transition.transitionname}}"   {{#if transition.selected}} checked="checked"{{/if}} class="labelauty required next-step" id="next-step-{{@index}}{{../pageId}}" style="display: none;">
+										<label for="next-step-{{@index}}{{../pageId}}">
+											{{#if transition.selected}}
+												<span class="next-step-checked js_step_sel">{{transition.transitionname}}</span>
+											{{else}}
+												<span class="next-step-unchecked js_step_sel">{{transition.transitionname}}</span>
+											{{/if}}
+										</label>
+									</li>
+								{{/each}}
+							</ul>
+						  </div>
+						</div>
+
+						<div class="control-group col-12 js_ishide">
+							<label class="control-label">下一处理人：</label>
+							<div class="controls">
+								<a class="icon-plus js_next_user">添加下一处理人员</a>
+								<span id="selected_next_handler">
+									{{#each processdefLoad.data.candidatesteps}}
+										{{#each selectedvalues}}
+										<span class="file-show" style="margin-right:3px;">
+										  <a  real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}</a>
+										  <a class="close_file js_close_dept file_remove_file" title="删除">×</a>
+										</span>
+											<!-- <a class="form_tag" real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}<button type="button" class="close js_close_dept" title="删除">×</button></a> -->
+										{{/each}}
+									{{/each}}
+								</span>
+							</div>
+						</div>
+						
+						{{/if}}
+						<div id="submit-common" class="control-group col-12"><a class="btn btn-success js_submit"  style="float:right;">提交</a></div>
+						<div id="submit-read" class="control-group col-12 hide"><a class="btn btn-success js_read_submit" vel="read" style="float:right;">提交</a></div>
+					</div>
+				</div>
+
+			 </div>
+		</div>
+	</div>
+</div>
+
+<div class="add_num_template" >
+	<div class="modal-body">
+	<div class="control-group">
+		<div class="controls">
+			<textarea style="width:265px;height:50px;" class="js_zihao_value"></textarea>
+		</div>
+	</div>
+	
+	<div style="padding:8px;float:right;bottom: 5px;position: relative;">
+		<div class="controls">
+			<a id="pwd-btn-update" class="btn btn-sm btn-primary js_add_num_submit">确定</a><a
+				id="pwd-btn-cancel" class="btn btn-sm">取消</a>
+		</div>
+	</div>
+</div>
+</div>

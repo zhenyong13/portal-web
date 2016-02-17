@@ -1,0 +1,44 @@
+{
+    "data": {
+        "total": 1,
+        "usercode": "user-002784",
+        "taskstatus": "todo",
+        "pageNo": 1,
+        "pageSize": 20,
+        "type": "mine",
+        "rows": [
+            {
+                "endtime": null,
+                "tasktype": "circularize",
+                "processinstcode": "bc63415c-0e95-4a57-a191-fcf9bb3d395b",
+                "activiticode": "cirularize",
+                "projectcode": null,
+                "stepcode": "1b2d3767-eaf8-495f-a4ad-d2c1441b870e",
+                "watched": false,
+                "creator": "user-002784",
+                "id": 61,
+                "createtime": "2015-11-28 18:31:42",
+                "title": "zzzzzzzzzzzzz",
+                "pretaskcode": "task-156ddc0f-63f8-4cce-a41e-e0e495235dca",
+                "priority": 50,
+                "duedate": null,
+                "alertcount": null,
+                "taskcode": "task-68d99571-cbfb-4022-9d13-650a252b2314",
+                "starttime": "2015-11-28 18:31:42",
+                "assigneename": "蔡万里",
+                "assignee": "user-002784",
+                "formid": null,
+                "processcode": "f973a7e8-6727-42fe-91b7-ecf547f68f02",
+                "claimtime": null,
+                "processname": "院收文",
+                "duration": "7D",
+                "starter": "user-002784",
+                "taskdesc": null,
+                "owner": null,
+                "taskname": "传阅任务[传阅任务[相关部门文件收发员处理]]"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

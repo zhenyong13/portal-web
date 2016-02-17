@@ -1,0 +1,91 @@
+﻿
+        <div class="jscroll-content">
+			<div class="gat_big">
+				<div class="news_all">
+					<div class="com_news form-category-hd">
+						<div class="com_news_til"><span><a class="com_news_til" href="#index">门户首页>></a></span><span><a id="top_menu" class="com_news_til" href="#meetingmore">会议列表</a>>></span><span id="current_title" class="a_color">详情</span></div>
+					 </div>
+				</div>
+				<div>
+					<div id="info_detail" class="mom_title" style="width:100%;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<script id="more-info-detail-template" type="text/x-handlebars-template">
+<table id="mt_tb" width='100%'> 
+
+<tr> 
+<th>会议名称</th> 
+<td colspan="4">{{meetname}}</td> 
+</tr>
+
+<tr> 
+<th>会议议题</th> 
+<td colspan="4">{{meettopic}}</td> 
+</tr>
+
+<tr> 
+<th>会议地点</th> 
+<td>{{meetingplace}}</td> 
+<th>会议日期</th> 
+<td>{{meetdate}}</td> 
+</tr> 
+
+<tr> 
+<th>会议开始时间</th> 
+<td>{{starttime}}</td> 
+<th>会议结束时间</th> 
+<td>{{endtime}}</td> 
+</tr> 
+
+<tr> 
+<th>会议主持人</th> 
+<td>{{booker}}</td> 
+<th>会议联系人</th> 
+<td>{{contacter}}</td> 
+</tr> 
+
+<tr> 
+<th>会议编码</th> 
+<td>{{meetcode}}</td> 
+<th>会议室编码</th> 
+<td>{{roomcode}}</td> 
+</tr> 
+
+<tr> 
+<th>会议联系人电话</th> 
+<td>{{contacterphone}}</td> 
+<th>急缓程度</th> 
+<td>{{urgency}}</td> 
+</tr> 
+
+
+<tr> 
+<th>与会部门</th> 
+<td>{{orgcodes}}</td> 
+<th>状态</th> 
+<td>{{status}}</td> 
+</tr> 
+
+<tr> 
+<th>与会人</th> 
+<td colspan="4">{{attenders}}</td>
+</tr>  
+
+<tr> 
+<th>备注</th> 
+<td colspan="4">{{memo}}</td> 
+</tr> 
+</table> 
+</script>
+
+<style>
+#mt_tb{border-collapse:collapse;border-spacing:0;border-left:1px solid #999;border-top:1px solid #999;} 
+#mt_tb th,#mt_tb td{border-right:1px solid #999;border-bottom:1px solid #999;padding:5px 15px;} 
+#mt_tb th{font-weight:bold;background:#ccc;} 
+#mt_tb td{background:#f9f9f9;}
+</style>

@@ -1,0 +1,47 @@
+<div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5> {{name}}</h5></div>
+<div id="user-container" class="user-container bg-white pt-20">
+    <div style="margin-left:50px;">
+                <div class="control-group">
+                    {{name}}, 当前共【{{#if members.length}}{{members.length}}{{else}}0{{/if}}】费项
+                </div>
+                <div class="control-group hide col-6 feeitem">
+					<label class="control-label">费项编码：</label>
+						<input type="text" id="itemcode" class="form-control required" value="{{typename}}"/>
+				</div>
+                <div class="control-group hide col-6 feeitem">
+					<label class="control-label">费项名称：</label>
+						<input type="hidden" id="itemtid" />
+						<input type="text" id="itemname" class="form-control required" value="{{typename}}"/>
+				</div>
+				 <div class="control-group hide col-6 feeitem">
+					<label class="control-label">序&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+						<input type="text" id="itemsortorder" class="form-control required" value="{{typename}}"/>
+				 </div>
+				 
+				 <div class="control-group hide col-6 feeitem">
+					<label class="control-label">费项描述：</label>
+						<textarea id="itemdesc" class="form-control required"  style="width:258px;height: 30px"></textarea>
+				 </div>
+				 <div class="control-group hide col-12 feeitem" style="padding-left: 530px">
+						<a class="btn btn-sm btn-primary js_feeitem_submit" style="margin-right: 6px;">确定</a>
+						<a class="btn btn-sm js_feeitem_cancel">取消</a>
+				 </div>
+                
+                
+                <!-- list -->
+                <div class="control-group">
+                    <label class="control-label">费项：<a id="addGroupMember" data-code="{{code}}" class="icon-plus" style="height: 20px;  width: 20px;  margin: 5px;" title="添加费项"></a></label>
+                    <div id="user-info" class="scrollwrapper form-horizontal" style="height:400px;margin-left:50px;"> 
+		                    {{#if members.length}}
+			                    {{#each members}}
+		                    <span class="file-show"><a class="js_itemedit" data-id="{{id}}" data-code="{{itemcode}}" data-sortorder="{{sortorder}}" title="{{description}}">{{itemname}}</a>
+							<a  data-code="{{id}}" class="select_x close_file remove_user  file_remove_file" title="删除">×</a>&nbsp;</span>
+							{{/each}}
+							{{else}}
+							 <span id="user-001008" class="file-show">暂无费项</span>
+							{{/if}}
+                    </div>
+             </div>
+   </div>
+</div>

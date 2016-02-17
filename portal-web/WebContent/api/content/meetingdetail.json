@@ -1,0 +1,17 @@
+{
+    "data": {
+        "id": 1,
+        "publisher": 1,
+        "publishername": 1,
+        "creator": 1,
+        "creator": 1,
+        "createtime": "2015-11-02 11:12",
+        "publishtime": "2015-11-02 11:12",
+        "creatorname": 1,
+        "content": "百度",
+        "topshow": "true",
+        "link": "/**/protal-web/"
+    },
+    "msg": "",
+    "rc": 1
+}

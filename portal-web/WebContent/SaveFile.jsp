@@ -1,0 +1,20 @@
+<%@ page language="java" import="java.util.*,com.zhuozhengsoft.pageoffice.*" pageEncoding="utf-8"%>
+<%
+FileSaver fs=new FileSaver(request,response);
+fs.saveToFile(request.getSession().getServletContext().getRealPath("doc/")+"/"+fs.getFileName());
+fs.close();
+%>
+<!DOCTYPE>
+<html>
+  <head>
+    
+    <title>Save File</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+  </head>
+  <body>
+  </body>
+</html>

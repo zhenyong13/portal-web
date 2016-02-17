@@ -1,0 +1,23 @@
+{
+    "data": {
+        "id": 1, 
+        "usercode": "002644", 
+        "username": "Hello W", 
+        "orgcode": "jj", 
+        "orgname": "jj", 
+        "sex": 1, 
+        "userrank": "jj", 
+        "userlevel": "", 
+        "positionlevel": 1, 
+        "mobileno": "18250046950", 
+        "officephone": "090790", 
+        "email": "jahon_88@163.com", 
+        "imnumber": "350809090900000", 
+        "address": "广州天河", 
+        "updatetime": "2015-05-20 14:00", 
+        "avatar": "images/temp/demo.jpg", 
+        "userdesc": ""
+    }, 
+    "msg": "", 
+    "rc": 1
+}

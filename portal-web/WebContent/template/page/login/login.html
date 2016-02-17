@@ -1,0 +1,60 @@
+﻿
+    <header>
+        <img class="logo" src="images/logo.jpg" />
+    </header>
+    <main>
+        <section class="bg"></section>
+        <section class="login-panel">
+            <form id="login-form">
+                <ul class="login-form">
+                    <li class="item">
+                        <label class="name">账&nbsp;号:</label>
+                        <div class="value">
+                            <div class="input-wrap">
+                                <input type="text" id="u-code" value="{{usercode}}" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <label class="name">密&nbsp;码:</label>
+                        <div class="value">
+                            <div class="input-wrap">
+                                <input type="password" id="u-pw" />
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li class="item">
+                            <label class="name">验证码:</label>
+                            <div class="value">
+                                <div class="input-wrap code-input">
+                                    <input type="text" id="v-code" />
+                                </div>
+                                <span class="code">
+                                    <img src="{{validatecodeurl}}" width="108" height="36" />
+                                </span>
+                            </div>
+                        </li> -->
+                    <li class="item buttons">
+                        <label class="name">&nbsp;</label>
+                        <div class="value">
+                            <button type="submit" class="btn-login" id="btn-login">登&nbsp;&nbsp;录</button>
+                            <button type="button" class="btn-forget" id="btn-forget">忘记密码</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div id="forget_tips" class="tips-forget">
+            	<p><img src="images/key_forget.png"/></p>
+            	<p class="key-forget">您好，忘记密码请联系系统管理员</p>
+            	<p class="phone-email-forget"><span>电话：</span><span>020-86660379</span></p>
+            	<p class="phone-email-forget"><span>邮件：</span><span>it@dtsjy.com</span></p>
+            	<img src="images/close_forget.png" class="close-forget" id="close-forget"/>
+            </div>
+        </section>
+    </main>
+    <div style="position:absolute;right:2%;bottom:2%;">
+    	<a href="/portal-web/posetup.exe" target="blank" ><span style="color:red">点击安装文件浏览控件</span></a><b>|</b>
+    	<a href="/downloads/chrome.exe" target="blank"><span style="color:red">点击下载浏览器客户端</span></a>
+    </div>
+
+

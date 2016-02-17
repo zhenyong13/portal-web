@@ -1,0 +1,140 @@
+
+<div class="process-forms" style="height:100%;overflow:auto;">
+	<div style="height:50px;">
+		<span style="float:right; line-height: 50px;width:200px;"><a href="javascript:window.print()" target="_self">打印正文</a><a>预览</a></span>
+	</div>
+	<div>
+		<div class="forms-body">
+			<div class="forms-content">
+				<table class="table" border="0" cellspacing="0">
+				<tr class="title_tr"><td colspan="2">广州地铁设计院有限公司<br/>文件处理单</td></tr>
+				<tr>
+					<td class="table_tr_td" style="border-top: 1px solid;">
+						<label class="table_lable">来 文 单 位：</label>
+						{{comorg}}
+					</td>
+					<td style="border-top: 1px solid;">
+						<label class="table_lable float">急缓程度：</label>
+						{{urgency}}
+					</td>
+				</tr>
+				<tr>
+					<td class="table_tr_td" style="border-top: 1px solid;">
+						<label class="table_lable">来 文 编 号：</label>
+						{{comdocno}}
+					</td>
+					<td style="border-top: 1px solid;">
+						<label class="table_lable float">处理时限：</label>
+						<span  class="table_date">{{durdate}}</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="table_tr_td" style="border-top: 1px solid;">
+						<label class="table_lable">来文经办人：</label>
+						{{comopr}}
+					</td>
+					<td style="border-top: 1px solid;">
+						<label class="table_lable">联系方式：</label>
+						{{mobileno}}
+					</td>
+				</tr>
+				<tr style="height: 70px; line-height: 70px;">
+					<td class="incoming_dispatches_td" style="border-top: 1px solid;padding-top: 25px;">
+						<label class="table_lable">收文顺序号：</label>
+						{{serialcode}}({{year}}){{num}}
+					</td>
+					<td style="border-top: 1px solid;padding-top: 25px;">
+						<label class="table_lable float">收文日期：</label>
+						<span class="table_date">{{recdocdate}}</span>
+					</td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">项 目 信 息：</label>
+						{{#each projectcodes}}
+							{{projectname}}
+						{{/each}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">送相关部门：</label>
+						{{#each sendrelatedep}}
+							{{depname}}
+						{{/each}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</label>
+						{{title}}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="txt_lable">正 文 摘 要：</label>
+						<label class="txt">{{maincontent}}</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">拟 办 意 见：</label>
+						<label class="txt">{{#each draftopinion}}{{dealuser}}{{dealtime}}{{opinion}}<br/>{{/each}}</label>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">领 导 批 示：</label>
+						<label class="txt">{{#each leaderopinion}}{{dealuser}}{{dealtime}}{{opinion}}<br/>{{/each}}</label>
+					</td>
+				</tr>	
+				<tr>
+					<td colspan="2" style="border-top: 1px solid;">
+						<label class="bm_lable">传 阅 意 见：</label>
+						<label class="txt">{{#each passopinion}}{{dealuser}}{{dealtime}}{{opinion}}<br/>{{/each}}</label>
+					</td>
+				</tr>	
+				<tr style="height: 100px;">
+					<td colspan="2" style="border-top: 1px solid;padding-top: 30px;">
+						<label class="bm_lable">部 门 批 办<br/>意&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;见：</label>
+						<label>{{#each depoption}}{{dealuser}}{{dealtime}}{{opinion}}<br/>{{/each}}</label>
+					</td>
+				</tr>	
+				<tr style="height: 100px;">
+					<td colspan="2" style="border-top: 1px solid;padding-top: 30px;">
+						<label class="bm_lable">处 理 结 果：</label>
+						<label>{{#each dealresultopinion}}{{userdepartment}}{{dealuser}}{{dealtime}}{{opinion}}<br/>{{/each}}</label>
+					</td>
+				</tr>
+				<tr style="border-bottom: 1px solid;">
+					<td colspan="2" style="border-top: 1px solid;">
+						<label style="color:#CFCECF;">正文：</label><label style="color:#5298D4;">{{#each maindoc}}{{docname}}{{/each}}</label><br/>
+						<label style="color:#CFCECF;">附件：</label><label style="color:#5298D4;">{{#each attaches}}{{docname}}{{/each}}</label>
+					</td>
+				</tr>
+				</table>
+				
+				<div class="form-category-hd" style="border-bottom: 1px solid rgb(150, 184, 224); margin: 0px;">
+					<h4 id="cate-name" style="border: 0px none;">
+						<span class="process_span js_categoryname">办理过程</span>
+					</h4>
+				</div>
+				<table class="table table-bordered" >
+				<thead>
+					<tr class="change"><th>处理人信息</th><th>时间</th><th>处理意见</th><th>处理步骤</th></tr>
+				</thead>
+				<tbody>
+					{{#each dealprocess}}
+						<tr><td>{{dealusermsg}}</td><td>{{dealtime}}</td><td>{{dealopinion}}</td><td>{{dealstep}}</td></tr>
+					{{/each}}
+				</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</div>
+

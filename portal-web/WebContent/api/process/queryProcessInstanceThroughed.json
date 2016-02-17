@@ -1,0 +1,44 @@
+{
+    "data": {
+        "total": 150, 
+        "pageNo": 1, 
+        "pageSize": 20, 
+        "assignee": "caiwanli", 
+        "type": "throughed", 
+        "rows": [
+            {
+                "endtime": null, 
+                "starttime": null, 
+                "processstatus": "runing", 
+                "updatetime": null, 
+                "updator": null, 
+                "appcode": "1", 
+                "processinstcode": "1111", 
+                "projectcode": "1001", 
+                "activiticode": null, 
+                "urgency": "urgent", 
+                "creator": "002644", 
+                "createtime": "2015-06-23 16:42:59", 
+                "id": 1, 
+                "processcode": "1111", 
+                "processtype": "receivedoc", 
+                "processname": "院收文", 
+                "title": "院收文标题", 
+                "starter": "002644", 
+                "businesscode": "1", 
+                "secret": "generally", 
+                "deptincharge": "xinxizhongxin", 
+                "cursteps": [
+                    {
+                        "taskcode": "100", 
+                        "assigneename": "小猪", 
+                        "assignee": "caiwanli", 
+                        "taskname": "院收文测试1"
+                    }
+                ]
+            }
+        ]
+    }, 
+    "msg": "success", 
+    "rc": 1
+}

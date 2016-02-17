@@ -1,0 +1,35 @@
+{
+    "data": {
+        "todostatisticinfo": [
+            {
+                "orgcode": "org-158",
+                "taskcount": 71,
+                "orgname": "信息中心"
+            },
+            {
+                "orgcode": "org-141",
+                "taskcount": 53,
+                "orgname": "项目管理部"
+            },
+            {
+                "orgcode": "org-10501",
+                "taskcount": 21,
+                "orgname": "综合部党群文秘室"
+            },
+            {
+                "orgcode": "org-102",
+                "taskcount": 18,
+                "orgname": "财务部"
+            },
+            {
+                "orgcode": "org-103",
+                "taskcount": 17,
+                "orgname": "人力资源部"
+            }
+        ],
+        "usercode": "user-002784",
+        "overduestatisticinfo": []
+    },
+    "msg": "success",
+    "rc": 1
+}

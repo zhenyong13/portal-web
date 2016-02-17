@@ -1,0 +1,64 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 补签主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">起止时间：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input id="usercode_sub" type="hidden" value=""> 
+				<input id="start_time" type="hidden" class="form-control" style="width: 140px;" placeholder="开始时间"> 
+				<input id="end_time" type="hidden" class="form-control" style="width: 140px;" placeholder="结束时间">
+				<input id="start_end_time" type="text" readonly="readonly" class="form-control" style="width: 200px;" placeholder="起止时间">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">人员编号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="query_usercode" class="form-control" style="width: 140px;">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">姓名：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="query_username" class="form-control" style="width: 140px;">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">部门：</li>
+		
+	</ul>
+</div>
+
+<div class="toolkit clearfix " style="position: fixed;width: 88%;top: 125px;z-index: 10;background-color: #F6F6F6;">
+	
+	<ul style="position: relative;  right:5%;">
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="batch-update"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="batch-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="data-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom:25px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+			<!-- <span class="ret_width_5 ret_display" style="margin-top: 11px;">
+			<i class="icon-checkbox-unchecked"></i></span> --> 
+				<span class="ret_width_5 ret_display  filterSlip_js"><i  id="check-all" class="icon-checkbox-unchecked"></i></span>
+				<span class="ret_width_5 ret_display  filterSlip_js">姓名</span>
+				<span class="ret_width_5 ret_display  filterSlip_js">性别</span>
+				<span class="ret_width_5 ret_display  filterSlip_js" style="float: right;width: 10%;">操作</span>
+			</li>
+		</ul>
+		<ul id="flow-list" class="e-list flow-list demo-list">
+		</ul>
+		<!-- 分页 -->
+		<div id="query_pagination" style="float: right; padding-right: 10px; margin-top: 3px;" >
+		</div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script>

@@ -1,0 +1,52 @@
+{
+    "data": {
+        "todostatisticinfo": [
+            {
+                "orgcode": "org-158",
+                "username": "蔡万里",
+                "isshow": true,
+                "taskcount": 63,
+                "usercode": "user-002784",
+                "orgname": "信息中心"
+            },
+            {
+                "orgcode": "org-158",
+                "username": "吴岚",
+                "isshow": true,
+                "taskcount": 4,
+                "usercode": "user-001090",
+                "orgname": "信息中心"
+            },
+            {
+                "orgcode": "org-158",
+                "username": "曾文驱",
+                "isshow": true,
+                "taskcount": 2,
+                "usercode": "user-002644",
+                "orgname": "信息中心"
+            },
+            {
+                "orgcode": "org-158",
+                "username": "周焰团",
+                "isshow": true,
+                "taskcount": 2,
+                "usercode": "user-001070",
+                "orgname": "信息中心"
+            },
+            {
+                "orgcode": "org-158",
+                "username": "李锟",
+                "isshow": true,
+                "taskcount": 1,
+                "usercode": "user-002940",
+                "orgname": "信息中心"
+            }
+        ],
+        "orgcode": "org-158",
+        "usercode": "user-002784",
+        "orgname": "信息中心",
+        "overduestatisticinfo": []
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,57 @@
+<div>
+    {{#if processList.length}}
+    <ul id="flow-list" class="e-list flow-list">
+        {{#each processList}}
+        <li data-id="{{processinstcode}}" class="workflow clearfix filterSlip_js j_entityslider-toggle" >
+            <span class="sn">{{addOne @index}}</span>
+            <span class="checkbox">
+                <i class="icon-checkbox-unchecked"></i>
+            </span>
+            <span class="title ellipsis filterSlip_js" title="{{taskname}}" data-type="{{../type}}" lang="{{taskcode}}" data-taskname="{{taskname}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" data-processtype="{{processtype}}" data-processcode="{{processcode}}" data-module="showProcess">【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{else}}-{{curstepname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span>
+
+            <div class="right">
+                <span class="user ellipsis"></span>
+                <span class="comment-count" style="padding-right:3px">{{assigneename}}&nbsp;</span>
+                <span style="padding-right:3px">{{timeformat duration}}&nbsp;</span>
+                <span>{{#if updatetime}}{{updatetime}}{{else}}{{starttime}}{{/if}}</span>
+            </div>
+            <div class="shortcut">
+                <span class="remind-toggle" vel="{{processinstcode}}" data-taskcode={{taskcode}} data-id="{{processinstcode}}">提醒</span>
+                <span class="watch" watched="{{watched}}" taskcode="{{taskcode}}" data-id="{{processinstcode}}" module="workflow">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+                <span class="share selector-toggle" data-entity="employee" data-multi="true" data-id="{{processinstcode}}" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">共享</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    
+    {{#ifCond type "==" "all-todo"}}
+    <div class="j_no_my_workflow no-result_">
+    	暂无待办公文
+    </div>
+    {{/ifCond}}
+    {{#ifCond type "==" "my-todo"}} 
+    <div class="j_no_my_workflow no-result_">
+    	暂无待办公文
+    </div>
+    {{/ifCond}}
+    {{#ifCond type "==" "sub-todo"}} 
+    <div class="j_no_my_workflow no-result_">
+    	暂无下属待办公文
+    </div>
+    {{/ifCond}}
+    
+    
+    	{{#ifCond type "==" "my-todo"}}
+	    <!-- <div id="guide-div" class="guide-div">
+	        <div class="clearfix">您可点击“发起公文”来提交您的公文申请审批；<br>审批公文可以帮助您把日常行政方面的申请直接提交给您的上级或其他同事，<br>方便他们快速审核，同时系统支持可自定义审批过程及人员
+	        </div>
+	        <div class="clearfix">
+	            <a id="guide-customer-create" class="btn j_entityslider-toggle" data-module="creatProcess" data-id="new" userid="4522889269382076526">发起公文</a>
+	        </div>
+	    </div> -->
+		{{/ifCond}}
+    {{/if}}
+</div>
+<div class="hide center-more" style="display: none;">更多...</div>
+<div id="flowlist-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span></div>

@@ -1,0 +1,39 @@
+﻿{
+    "data": {
+            "searchtype": "all",
+            "rows":[
+                {
+                    "type":"process",
+                    "title": "标题",
+                    "processinstcode": "流程实例编码",
+                    "abstract": "摘要",
+                    "files": [
+                        {
+                            "type": "maindoc",
+                            "name": "文件名1",
+                            "fid": "文件id"
+                        },
+                        {
+                            "type": "attachment",    
+                            "name": "文件名2",
+                            "fid": "文件id"
+                        }
+                    ],
+                    "creator": "公文发起人",
+                    "createTime": "创建时间"
+                },
+                {
+                    "type": "file",
+                    "title":"文件名称",
+                    "abstract": "摘要",
+                    "fileid":"文件标识",
+                    "filepath":"文件预览路径",
+                    "creator": "文档创建者",
+                    "createTime": "文档创建时间"
+
+                }
+            ]
+    },
+    "pageNo": 2,
+    "pageSize":20
+}

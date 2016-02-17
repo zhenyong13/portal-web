@@ -1,0 +1,61 @@
+
+<div class="flowsheet_height process-forms jscroll">
+	<div class="forms-body ">
+		<div class="control-group col-12" style="  background-color: #eee;  padding-bottom: 7px;  padding-top: 5px;">
+		<a class="btn btn-primary btn-sm edit-form-item" style="float:right; height: 26px;line-height: 17px;">批量修改</a>&nbsp;
+		<a class="btn btn-success btn-sm add-form-item" style="float:right;margin-right:10px; height: 26px;line-height: 17px;">新增</a></div>
+		<div class="flowsheet_tab_padding">
+			<table class="table table-bordered">
+			<thead>
+				<tr class="change">
+				<th class="flowsheet_tab_th"><input type="checkbox" id="formitemsCheckAll"></th>
+				<th class="flowsheet_tab_th">表单项编码</th>
+				<th class="flowsheet_tab_th">表单项名称</th>
+				<th class="flowsheet_tab_th">项序号</th>
+				<th class="flowsheet_tab_th">组序号</th>
+				<th class="flowsheet_tab_th">分组</th>
+				<th class="flowsheet_tab_th">是否必需</th>
+				<th class="flowsheet_tab_th">是否显示</th>
+				<th class="flowsheet_tab_th">是否可编辑</th>
+				<th class="flowsheet_tab_th">取值方式</th>
+				<th class="flowsheet_tab_th">作用域</th>
+				<th class="flowsheet_tab_th" style="width: 10%;">操作</th>
+				</tr>
+			</thead>
+			<tbody id="formitem-list">
+				{{#each data}}
+					<tr class="flowsheet_tab_color" id="{{formcode}}">
+					<td><input type="checkbox" name="form_items" value="{{id}}"></td>
+					<td>{{itemcode}}</td>
+					<td>{{itemname}}</td>
+					<td>{{itemorder}}</td>
+					<td>{{regionorder}}</td>
+					<td>{{regioncode}}</td>
+					<td>{{#ifCond required "==" "1"}}是{{else}}否{{/ifCond}}</td>
+					<td>{{#ifCond isshow "==" "1"}}是{{else}}否{{/ifCond}}</td>
+					<td>{{#ifCond editable "==" "1"}}是{{else}}否{{/ifCond}}</td>
+					<td>{{valuetype }}</td>
+					<td>
+					{{#ifCond scope "==" "global"}}流程范围{{/ifCond}}
+					{{#ifCond scope "==" "local"}}任务范围{{/ifCond}}
+					</td>
+					<td>
+					<span title="复制" style="cursor:pointer;" data-id="{{id}}" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_copy_step_info">
+					<i class="fa fa-copy fa-1_4x"></i>
+					</span>
+					&nbsp;
+						<span title="编辑" style="cursor:pointer;" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_set_step_info">
+						<i class="fa fa-edit fa-1_4x"></i>
+						</span>
+						&nbsp;
+						<span title="删除" style="cursor:pointer;margin-right: 10px;" data-itemcode="{{itemcode}}" data-formcode="{{formcode}}" class="js_set_step_handler">
+							<i class="fa fa-times"></i>
+							</span>
+						</td></tr>
+					{{/each}}
+				</tbody>
+				</table>
+			</div>
+		</div>
+</div>
+

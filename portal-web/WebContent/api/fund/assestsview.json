@@ -1,0 +1,20 @@
+{
+	"data":{
+       
+            "id":"2",
+            "assestcode":"sdfsdf1",
+            "assestname":"1",
+            "assesttype":"1",
+            "isenabled":"1",
+             "price":213,
+            "brand":"请假条23423423432423423",
+            "unit":"测试数据请假条1",
+            "storagenum":"sdf",
+            "specification":"2015-04-21",
+            "model":"2015-04-21",
+            "serialno":"sdf",
+            "filecodes":"[{\"code\":\"code\",\"name\":\"name\",\"editable\":false}]"
+            },
+	"msg":"",
+	"rc":"1"
+}

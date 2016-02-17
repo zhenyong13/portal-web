@@ -1,0 +1,55 @@
+<div id="j_workflowright" class="col-cell">
+	<div id="workflow-right" class="right-panel">
+		<div class="panel">
+			<div class="panel-body">
+				<div class="workflowchart-wrap h-350" id="roleperm_permmenu">
+				<!-- 设置角色权限 -->
+					<div class="flowsheet_height process-forms jscroll">
+					<div class="forms-body">
+						<div class="user-wrapper">
+							<div class="selected-container clearfix">
+								<span style="float:left;">已选择：</span><span id="permselect"></span>
+							</div>
+						</div>
+		<div class="flowsheet_tab_padding ">
+			<table class="table table-bordered">
+			<thead>
+				<tr class="change">
+				<th class="flowsheet_tab_th"><input type="checkbox" id="formitemsCheckAll"></th>
+				<th class="flowsheet_tab_th">角色编号</th>
+				<th class="flowsheet_tab_th">角色名称</th>
+				<th class="flowsheet_tab_th">角色类型</th>
+				<th class="flowsheet_tab_th">所属组织</th>
+				</tr>
+			</thead>
+			<tbody id="role-list">
+				 
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<!-- 设置角色权限 end -->
+				</div>
+			</div>
+			<div >
+				<span class="selector-btns" style="float:right;  margin-right: 10px;padding-top:5px">
+					<a class="btn btn-middle btn-primary js_selected_dept_ok">确定</a>
+					<a class="btn btn-middle js_selected_dept_cancel">取消</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ----- --> 
+<script id="role-list-template" type="text/x-handlebars-template">
+{{#each data}}
+<tr class="flowsheet_tab_color" id="{{rolecode}}">
+<td><input type="checkbox" name="role_items" value="{{rolecode}}" rn="{{rolename}}"></td>
+<td>{{rolecode}}</td>
+<td>{{rolename}}</td>
+<td>{{roletype}}</td>
+<td>{{orgcode}}</td>
+</tr>
+{{/each}}
+</script>

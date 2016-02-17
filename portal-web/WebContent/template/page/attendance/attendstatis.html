@@ -1,0 +1,59 @@
+<div class="toolkit clearfix">
+                    <ul class="toolkit-list js_toolkit_search">
+                    	<li class="toolkit-item toolkit-title j_catalog_name">起止月份： </li>
+                        <li class="toolkit-item">
+                        	<div class="controls">
+                        		<input id="starttime" type="text" class="form-control date" style="width: 80px;float:left;" placeholder="开始月份"><span style="float:left;">-</span>
+							   <input id="endtime" type="text" class="form-control date"  style="width: 80px;" placeholder="结束月份"/>
+							   <input id="start_end_time" type="hidden" readonly="readonly" class="form-control"  style="width: 200px;" placeholder="起止月份"/>
+							</div>
+                        </li>
+                        <li class="toolkit-item toolkit-title j_catalog_name">人员编号： </li>
+                        <li class="toolkit-item">
+                        	<div class="controls">
+                        		<input type="text" class="form-control" id="usercode" style="width: 140px;"/>
+							</div>
+                        </li>
+                        <li class="toolkit-item toolkit-title j_catalog_name">姓名： </li>
+                        <li class="toolkit-item">
+                        	<div class="controls">
+                        		<input type="text" class="form-control" id="username" style="width: 140px;"/>
+							</div>
+                        </li>
+                        <li class="toolkit-item toolkit-title j_catalog_name">部门：</li>
+						<li class="toolkit-item">
+							<div class="controls" style="width: 220px;">
+								 <input type="text" id="parentname" class="form-control qt_p" style="float: left; width: 205px !important;" value="" readonly="readonly"/>
+								 <input type="hidden" id="parentcode" value=""/>
+								 <a class="icon-search js_search_operate" style="position: relative;left: -20px;  bottom: -4px;"></a>
+							</div>
+						</li>
+                        <li class="toolkit-item search">
+                         <i class="icon-search js_attendance_search" title="搜索"></i></li>
+                    </ul>
+                </div>
+				
+                <div class="ebox1 flows" style="margin-top: 3px;margin-bottom:25px;">
+                	<div>
+					    <ul class="e-list flow-list">
+					        <li  class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;">
+					            <!-- <span class="ret_width_5 ret_display"><i class="icon-checkbox-unchecked"></i></span> -->
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="usercode">人员编号</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="username">姓名</span>
+					            <span class="ret_width_15 ret_display ellipsis filterSlip_js js_sort sorting" data-col="orgname">部门</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="positionlevel">职级</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="signinmonth">月份</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="signinnum">签到次数</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="notsigninnum">未签到次数</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js js_sort sorting" data-col="resigninnum">补签次数</span>
+					            <span class="ret_width_10 ret_display ellipsis filterSlip_js">相关操作</span>
+					        </li>
+					    </ul>
+					    <div id="attendList" class="e-list flow-list attend-list">
+					    
+					    </div>
+					   <div id="statis_pagination" style=" margin-top: 3px;"></div>
+						<div style="margin-top: 20px;"></div>
+						<div id="calendar"></div>
+					</div>
+                </div>

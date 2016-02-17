@@ -1,0 +1,77 @@
+<div class="process-forms dialog-item">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						{{#if id}}
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>角色编码：</label>
+							<div class="controls">
+							<input type="text" id="rolecode" class="form-control required" value="{{rolecode}}"/>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>角色名称：</label>
+							<div class="controls">
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+								<input type="text" id="rolename" class="form-control required" value="{{rolename}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">组织：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control" value=""/>
+								 <input type="hidden" id="parentcode" value="{{parendcode}}"/>
+								 <a class="icon-search js_search_dept" style=" position: relative;left: -20px;cursor: pointer;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>						 
+						 
+						<div class="control-group col-6">
+							<label class="control-label">角色类型：</label>
+							<div class="controls">
+								<select id="roletype" class="form-control">
+									<option value="1" {{#ifCond roletype "==" "1"}}selected{{/ifCond}}>菜单</option>
+									<option value="2" {{#ifCond roletype "==" "2"}}selected{{/ifCond}}>按钮</option>
+									<option value="3" {{#ifCond roletype "==" "3"}}selected{{/ifCond}}>其他</option>
+								</select>
+							</div>
+						</div>
+						 
+						<div class="control-group col-6">
+							<label class="control-label">状态：</label>
+							<div class="controls">
+								<select id="rolestate" class="form-control">
+									<option value="1" {{#ifCond rolestate "==" "1"}}selected{{/ifCond}}>是</option>
+									<option value="2" {{#ifCond rolestate "==" "2"}}selected{{/ifCond}}>否</option>
+								</select>
+							</div>
+						</div>
+						<!-- <div class="control-group col-12">
+							<label class="control-label">角色授权：</label>
+							<div class="controls">
+								<a class="icon-plus js_search_roleperm" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a>
+								<span class="selected_dept_show"></span>
+								<span class="selected_perm_show"></span>
+							</div>
+						</div> -->
+						<div class="control-group col-12">
+							<label class="control-label">角色描述：</label>
+							<div class="controls">
+								<textarea class="form-control" id="roledesc" style="width:600px;height:50px">{{roledesc}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

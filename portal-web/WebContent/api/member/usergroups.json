@@ -1,0 +1,29 @@
+{
+    "data": {
+        "total": 2,
+        "rows": [
+            {
+                "createtime": "2015-07-05 00:55:44",
+                "creator": "002784",
+                "groupcode": "group-3ea55d5a-cc0d-4821-9e49-18b2a9d7338d",
+                "groupdesc": "",
+                "groupname": "新建群组",
+                "grouptype": "custom",
+                "id": 1,
+                "orgcode": null
+            },
+            {
+                "createtime": "2015-07-05 02:11:18",
+                "creator": "user-002784",
+                "groupcode": "group-79406e7a-05d3-43db-854b-becde6b0b30d",
+                "groupdesc": "",
+                "groupname": "test",
+                "grouptype": "custom",
+                "id": 2,
+                "orgcode": null
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

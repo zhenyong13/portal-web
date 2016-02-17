@@ -1,0 +1,214 @@
+        <div class="col-tb jscroll-content">
+            <div id="j_workflowcenter" class="col-cell j_center">
+                <div class="toolkit clearfix">
+                    <ul class="toolkit-list">
+                        <li class="toolkit-item divider sn">
+                        <i id="check-all" class="icon-checkbox-unchecked"></i>
+                        </li>
+                        <li class="toolkit-item toolkit-title j_catalog_name">{{title}}</li>
+                        <li class="toolkit-item">
+                        <input id="workflow-keywords" name="workflowsearch" class="form-control" type="text" placeholder="标题" style="width: 321px;">
+                        <i id="workflow-keywords-search" class="icon-search left-20" title="标题"></i>
+                        </li>
+                        <li class="toolkit-item">
+                        	<div class="controls">
+                        		<input id="usercode_sub" type="hidden" value="">
+                        		<input id="start_time" type="hidden" class="form-control" style="width: 140px;" placeholder="开始时间">
+							   <input id="end_time" type="hidden" class="form-control"  style="width: 140px;" placeholder="结束时间"/>
+							   <input id="start_end_time" type="text" class="form-control"  style="width: 180px;" placeholder="起止时间"/>
+							</div>
+                        </li>
+                        <li class="toolkit-item">
+                            <div class="btn-group dropdown" id="workflow-filter" data-toggle="#workflow-filter-dropdown">
+                                 <a class="btn btn-sm btn-square">筛选 <i class="icon-caret-down"></i></a>
+
+                                <div id="workflow-filter-dropdown" class="dropdown-filter dropdown-div border-dropdown">
+                                	 <div id="filter-div" class="clearfix">
+									   <div class="loading_large" style="display: none;"></div>
+									   <div id="info-div" class="hide" style="display: block;">
+									    <div class="filter-group filter-title">
+										     <span id="employee-type-workflow" class="filter-label">发起人</span>
+										     <span class="filter-input"><input name="username" class="typehead" data-entity="employee" placeholder="搜索人员" /></span>
+									    </div>
+									    <div id="employee-filter" class="filter-group">
+									     	
+									    </div>
+									    
+									    <div id="document" class="filter-group filter-title">
+										     <span class="filter-label">公文</span>
+										     <span class="filter-input"><input name="document" class="typehead" data-entity="document" placeholder="搜索公文类型" /></span>
+									    </div>
+									    <div id="document-filter" class="filter-group mainline-div">
+									    	
+									    </div>
+									    
+									    <div id="project" class="filter-group filter-title">
+										     <span class="filter-label">项目</span>
+										     <span class="filter-input"><input name="project" class="typehead" data-entity="project" placeholder="搜索项目" /></span>
+									    </div>
+									    <div id="project-filter" class="filter-group mainline-div">
+									    	
+									    </div>
+									    <!-- <div id="tag" class="filter-group filter-title tag-div">
+										     <span class="filter-label">标签</span>
+										     <span class="filter-input"><input name="tag" class="typehead" data-entity="tag" placeholder="搜索标签" /></span>
+									    </div> -->
+									    <div id="tag-filter" class="filter-group tag-div">
+									    	
+									    </div>
+									    <div id="btns" class="filter-btns pull-right">
+										     <a class="btn filter-submit btn-sm">确定</a>
+										     <a class="btn filter-cancle btn-sm">取消</a>
+									    </div>
+									   </div>
+									  </div>    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="toolkit-item">
+                            <div class="btn-group dropdown dropdown-menu-toggle">
+                            <a id="workflow-order" class="btn btn-sm btn-square dropdown-toggle">排序
+                            <b class="icon-caret-down"></b></a>
+                                <ul class="dropdown-menu border-dropdown">
+                                   <!--  <li><a class="orderType" data-entity="">默认</a></li> -->
+                                    <li><a class="orderType" data-entity="starter">按发起人</a></li>
+                                    <li><a class="orderType" data-entity="starttime">按发起时间</a></li>
+                                   <!--  <li><a class="orderType" data-entity="claimtime">按接收时间</a></li> -->
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- 
+                        <li class="toolkit-item fr">
+                            <a id="create-process" class="btn btn-success btn-sm j_entityslider-toggle" data-module="creatProcess" data-id="new" userid="">
+                                <i class="icon-plus-thin glyphicon"></i>发起公文（流程）</a>
+                        </li>
+                        
+                        <li class="toolkit-item fr">
+                            <div class="btn-group dropdown dropdown-menu-toggle"><a
+                                    class="btn btn-sm btn-square dropdown-toggle"><i
+                                    class="icon-th-list glyphicon"></i>批量 <i class="icon-caret-down"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-right border-dropdown">
+                                    <li><a class="workflow-watchs">批量关注</a></li>
+                                    <li><a class="workflow-reminds">批量提醒</a></li>
+                                    <li><a class="workflow-share typeahead-search" data-entity="employee"
+                                           data-multi="true">批量共享</a></li>
+                                </ul>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                 {{#ifCond type "==" "all-todo"}}
+                	 <!-- 我的待办公文  start-->
+                	<div >我的待办公文</div>
+                {{/ifCond}}
+                <div id="flowlist-container" class="ebox1 flows" style="margin-top: 3px;margin-bottom:5px;" >
+                	{{#ifCond type "==" "all-todo"}}
+	                    {{{ProcessList type listData.rows}}}
+                	{{/ifCond}}
+                	{{#ifCond type "==" "my-todo"}}
+	                    {{{ProcessList type listData.rows}}}
+                	{{/ifCond}}
+                	{{#ifCond type "==" "sub-todo"}}
+	                    {{{ProcessList type listData.rows}}}
+                	{{/ifCond}}
+                	{{#ifCond type "==" "mycomplete"}}<!-- 我的已办 -->
+                    	{{{ProcessList type listData.rows}}}
+                    {{/ifCond}}
+                	
+                	{{#ifCond type "==" "my-finshed"}}<!-- 我的经办 -->
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                	
+                    
+                	{{#ifCond type "==" "watched"}}
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                	{{#ifCond type "==" "share"}}
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                    
+                	{{#ifCond type "==" "draft"}}
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                    
+                	{{#ifCond type "==" "done"}}
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                    
+                	{{#ifCond type "==" "history"}}
+                    	{{{ProcessWatchedList type listData.rows}}}
+                    {{/ifCond}}
+                </div>
+                   	 <!-- 分页 -->
+                <div id="process_pagination" ></div>
+                
+                
+                {{#ifCond type "==" "all-todo"}}
+                	 <!-- 下属待办公文  start-->
+                	 {{#if suborditnatesTaskTodo.length}}
+                	<div style="margin-top: 25px;">下属待办公文</div>
+	                <div id="flowlist-container-sub" class="ebox1 flows" style="margin-top: 3px;margin-bottom:5px;">
+	                	<div>
+						    <ul id="flow-list" class="e-list flow-list">
+						        {{#each suborditnatesTaskTodo}}
+						        <li data-id="{{processinstcode}}" class="workflow clearfix filterSlip_js j_entityslider-toggle" >
+						            <span class="sn">{{addOne @index}}</span>
+						            <span class="checkbox">
+						                <i class="icon-checkbox-unchecked"></i>
+						            </span>
+						            <span class="title ellipsis filterSlip_js" title="{{taskname}}" lang="{{taskcode}}" data-taskname="{{taskname}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" processtype="{{processtype}}" data-module="showProcess">【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span>
+						
+						            <div class="right">
+						                <span class="user ellipsis"></span>
+						                <span class="comment-count">{{assigneename}}</span>
+						                <span>{{duration}}&nbsp;</span>
+						                <span>{{starttime}}</span>
+						            </div>
+						            <div class="shortcut">
+						                <span class="remind-toggle" vel="{{processinstcode}}" data-taskcode="{{taskcode}}" data-id="{{processinstcode}}">提醒</span>
+						                <span class="watch" watched="{{watched}}" taskcode="{{taskcode}}" data-id="{{processinstcode}}" module="workflow">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+						                <span class="share selector-toggle" data-taskcode="{{taskcode}}" data-entity="employee" data-multi="true" data-id="{{processinstcode}}">共享</span>
+						            </div>
+						        </li>
+						        {{/each}}
+						    </ul>
+						</div>
+	                </div>
+                   	 <!-- 分页 -->
+                    <div id="process_pagination_sub" style="margin-top: 3px;" ></div>
+	                 {{/if}}
+                     <!-- 下属待办公文 end  -->
+                  {{/ifCond}}	
+            </div>
+             
+            <div id="j_workflowright" class="col-cell" style="width:350px;">
+                <a class="j_leftViewCtrl view-l-switch graph on" title="隐藏"></a>
+                <div id="workflow-right" class="right-panel">
+                    <div class="panel">
+                        <div class="panel-head">
+                        <h3 id="workflowTitle" class="active"><a>我的公文统计</a></h3>
+                        <h3 id="deptflowTitle"><a>部门内TOP5公文统计</a></h3>
+                        <h3 id="deanflowTitle"><a>院内TOP5公文统计</a></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="workflowchart-wrap h-300" id="myworkflow"></div>
+                            <div class="workflowchart-wrap h-300 hide" id="deptworkflow"></div>
+                            <div class="workflowchart-wrap h-300 hide" id="deanworkflow"></div>
+                        </div>
+                    </div>
+                    {{#if subordinatestatinfo.length}}
+                    <div class="panel">
+                        <div class="panel-head"><h3>下属待办公文</h3></div>
+                        <ul class="list-group" id="empList">
+                                {{#each subordinatestatinfo}}
+                                <li class="list-group-item" data-href="process/sub-todo/{{usercode}}"><span class="fr j_todo">{{todotaskcount}}</span><span class="j_name">{{username}}</span></li>
+                                {{/each}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="hide j_eitem">
+                    <li class="list-group-item"><span class="fr j_todo"></span><span class="j_name"></span></li>
+                </div>
+            </div>
+        </div>

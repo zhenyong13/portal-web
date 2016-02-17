@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+       			"id":1,
+                "isenabled": "isenabled",
+                "reddoccode": "1",
+                "reddocname": "reddocname",
+                "creator": "creator",
+                "createtime": "2015-08-03",
+                "reddoctype": "readdoctype",
+                "reddoctypename": "reddoctypename",
+                "filecode": "1ewrwrwe"
+    },
+    "msg": "success",
+    "rc": 1
+}

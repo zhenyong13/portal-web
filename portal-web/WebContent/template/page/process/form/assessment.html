@@ -1,0 +1,889 @@
+				
+<!-- 表格  试用考核 start--> 
+<div class="form-category-hd">
+	<h4 id="cate-name">
+		<span class="js_categoryname">基本信息</span>
+	</h4>
+</div>	
+	
+<div class="form-category-bd">
+	<div class="entity-info clearfix">
+		  {{#if formData.checkuser}}
+		  {{#if formData.checkuser.isshow}}
+		  <div class="control-group col-6">
+			<label class="control-label">被考核人<!-- {{formData.checkuser.name}} -->：</label>
+			<div class="controls">
+				{{#if formData.checkuser.editable}}
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba;">
+					<div class="remind-user">
+					<input id="usercode" value="{{formData.checkuser.value.0.usercode}}" type="hidden">
+						<input id="username" data-code="" type="text" class="control-input typeahead search {{#if formData.checkuser.required}}required{{/if}}" value='{{formData.checkuser.value.0.username}}'
+							data-entity="employee" data-multi="true" style="width:205px;height:30px;border-radius:3px; " placeholder="被考核人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.checkuser.value.0.username}}</span>
+					<input type="hidden" id="usercode"  value='{{formData.checkuser.value.0.usercode}}'/>
+					<input type="hidden" id="username"  value='{{formData.checkuser.value.0.username}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.position}}
+		{{#if formData.position.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">岗位：</label>
+			<div class="controls">
+				{{#if formData.position.editable}}
+				<input id="position" placeholder="{{#if formData.position.required}}必填{{/if}}" class="form-control {{#if formData.position.required}}required{{/if}}" value="{{formData.position.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.position.value.0.code}}</span>
+					<input id="position"  type="hidden" id="position"  value="{{formData.position.value.0.code}}"/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.org}}
+		{{#if formData.org.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">所属部门：</label>
+			<div class="controls">
+			   {{#if formData.org.editable}}
+				<input id="orgname" placeholder="{{#if formData.org.required}}必填{{/if}}" class="form-control js-multidate {{#if formData.org.required}}required{{/if}}" value="{{formData.org.value.0.code.orgname}}" type="text">
+				<input id="orgcode" value="{{formData.org.value.0.code.orgcode}}" type="hidden">
+				<a class="icon-search j_dept_select" style=" position: relative;left: -20px;cursor: pointer;"></a>
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.org.value.0.orgname}}</span>
+					<input type="hidden" id="orgcode"  value='{{formData.org.value.0.code.orgcode}}'/>
+					<input type="hidden" id="orgname"  value='{{formData.org.value.0.code.orgname}}'/>
+				{{/if}} 
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.starttrytime}}
+		{{#if formData.starttrytime.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">开始试用日期<!-- {{formData.starttrytime.name}} -->：</label>
+			<div class="controls">
+			{{#if formData.starttrytime.editable}}
+			<input id="starttrytime" placeholder="{{#if formData.starttrytime.required}}必填{{/if}}" class="form-control date {{#if formData.starttrytime.required}}required{{/if}}" value="{{formData.starttrytime.value.0.code}}" type="text">
+			{{else}}
+				<span class="show_val" data-type="label">{{formData.starttrytime.value.0.code}}</span>
+					<input id="starttrytime" type="hidden"  value='{{formData.starttrytime.value.0.code}}'/>
+			{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.startchecktime}}
+		{{#if formData.startchecktime.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">开始考核日期：</label>
+			<div class="controls">
+			 	{{#if formData.startchecktime.editable}}
+				<input id="startchecktime" placeholder="{{#if formData.startchecktime.required}}必填{{/if}}" class="form-control date {{#if formData.starttrytime.required}}required{{/if}}" value="{{formData.startchecktime.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.startchecktime.value.0.code}}</span>
+						<input id="startchecktime" type="hidden"  value='{{formData.startchecktime.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.endtrytime}}
+		{{#if formData.endtrytime.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">结束试用日期：</label>
+			<div class="controls">
+				{{#if formData.endtrytime.editable}}
+				<input id="endtrytime" placeholder="{{#if formData.endtrytime.required}}必填{{/if}}" class="form-control date {{#if formData.endtrytime.required}}required{{/if}}" value="{{formData.endtrytime.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.endtrytime.value.0.code}}</span>
+						<input id="endtrytime" type="hidden"  value='{{formData.starttrytime.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.endchecktime}}
+		{{#if formData.endchecktime.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">结束考核日期：</label>
+			<div class="controls">
+				{{#if formData.endchecktime.editable}}
+				<input id="endchecktime" placeholder="{{#if formData.endchecktime.required}}必填{{/if}}" class="form-control date {{#if formData.endchecktime.required}}required{{/if}}" value="{{formData.endchecktime.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.endchecktime.value.0.code}}</span>
+						<input id="endchecktime" type="hidden"  value='{{formData.endchecktime.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		
+		{{#if formData.checkyear}}
+		{{#if formData.checkyear.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">评价年份：</label>
+			<div class="controls">
+				{{#if formData.checkyear.editable}}
+				<input id="checkyear" placeholder="{{#if formData.checkyear.required}}必填{{/if}}" class="form-control dateyear {{#if formData.checkyear.required}}required{{/if}}" value="{{formData.checkyear.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.checkyear.value.0.code}}</span>
+						<input id="checkyear" type="hidden"  value='{{formData.checkyear.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.checktype}}
+		{{#if formData.checktype.isshow}}
+		<div class="control-group col-12">
+			<label class="control-label">被评价人类别：</label>
+			<div class="controls">
+				{{#if formData.checktype.editable}}
+					{{#each formData.checktype.value}}
+						<input name="checktype" type="checkbox" {{#if selected}}checked{{/if}} value="{{code}}"/>{{name}}&nbsp;
+					{{/each}}
+				{{else}}
+					{{#each formData.checktype.value}}
+						<input name="checktype" type="checkbox" {{#if selected}}checked{{/if}} value="{{code}}" readonly="readonly"/>{{name}}&nbsp;
+					{{/each}}
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		
+		
+ 	 </div>
+</div>
+	
+<div class="form-category-hd">
+	<h4 id="cate-name">
+		<span class="js_categoryname">自我评价</span>
+	</h4>
+</div>
+<div class="form-category-bd">
+	<div class="entity-info clearfix ">
+		{{#if formData.evaluation}}
+		{{#if formData.evaluation.isshow}}
+		<div class="control-group col-12">
+			<label><!-- 自我评价： --> 被考核者描述本人在考核期间表现</label>
+			<div class="controls">1、考核期主要内容，提高改进内容；2、考核期内需要自我改进的地方；3、希望得到哪方面的帮助和培训；4、下一阶段计划提高的内容</div>
+			<div class="controls">
+				{{#if formData.evaluation.editable}}
+				<textarea id="evaluation" class="form-control {{#if formData.evaluation.required}}required{{/if}}" style=" height:80px">{{formData.evaluation.value.0.code}}</textarea>
+				{{else}}
+				<textarea id="evaluation" readonly="readonly" class="form-control {{#if formData.evaluation.required}}required{{/if}}" style=" height:80px">{{formData.evaluation.value.0.code}}</textarea>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.sign}}
+		{{#if formData.sign.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">签名：</label>
+			<div class="controls">
+				{{#if formData.sign.editable}}
+				<input id="sign" placeholder="{{#if formData.sign.required}}必填{{/if}}" class="form-control {{#if formData.sign.required}}required{{/if}}" value="{{formData.sign.value.0.code}}" type="text">
+				{{else}}
+						<span class="show_val" data-type="label">{{formData.sign.value.0.code}}</span>
+						<input id="sign" type="hidden" value='{{formData.sign.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.signdate}}
+		{{#if formData.signdate.isshow}}
+		<div class="control-group col-6">
+			<label class="control-label">日期：</label>
+			<div class="controls">
+				{{#if formData.signdate.editable}}
+				<input id="signdate" placeholder="{{#if formData.signdate.required}}必填{{/if}}" class="form-control date {{#if formData.signdate.required}}required{{/if}}" value="{{formData.signdate.value.0.code}}" type="text">
+				{{else}}
+					<span class="show_val" data-type="label">{{formData.signdate.value.0.code}}</span>
+						<input id="signdate" type="hidden"  value='{{formData.signdate.value.0.code}}'/>
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+		
+		{{#if formData.checkresult}}
+		{{#if formData.checkresult.isshow}}
+		<div class="control-group col-12">
+			<label class="control-label">评价结果：</label>
+			<div class="controls">
+				{{#if formData.checkresult.editable}}
+					{{#each formData.checkresult.value}}
+						<input name="checkresult" type="checkbox" {{#if selected}}checked{{/if}} value="{{code}}"/>{{name}}&nbsp;
+					{{/each}}
+				{{else}}
+					{{#each formData.checkresult.value}}
+						<input name="checkresult" type="checkbox" {{#if selected}}checked{{/if}} value="{{code}}" readonly="readonly"/>{{name}}&nbsp;
+					{{/each}}
+				{{/if}}
+			</div>
+		</div>
+		{{/if}}
+		{{/if}}
+	</div>
+</div>
+				
+<!-- 考核要素 -->	
+<div class="form-category-hd">
+	<h4 id="cate-name">
+		<span class="js_categoryname">考核要素</span>
+	</h4>
+</div>	
+<div class="form-category-bd">
+	<div class="entity-info clearfix">
+		{{#if formData.checkfactortable}}
+		{{#if formData.checkfactortable.isshow}}
+		<div class="control-group col-12">
+			<div class="controls">
+				<label class=""><!-- 考核要素 --></label><span style="float:right;">(A-优秀；B-良好；C-达标；D-不达标)</span>
+			</div>
+			<div class="controls">
+				<table id="checkfactortable" class="table table-bordered noprint"  style="margin-top:10px;">
+					<thead>
+						<tr class="change">
+							<th colspan="2" style="min-width: 99px;">考核要素 </th>
+							<th colspan="2">评价依据</th>
+							<th colspan="2" style="min-width: 111px;">评价结果</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td colspan="2">团队合作</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.teamwork_explain.editable}}
+										<textarea class="form-control" id="teamwork_explain" style="width:530px;min-width: 100%; height:50px">{{formData.teamwork_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.teamwork_explain.value.0.code}}
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.teamwork_opinionresult.editable}}
+									<select name="opinionresult" id="teamwork_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.teamwork_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.teamwork_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.teamwork_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.teamwork_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="teamwork_opinionresult" style="min-width:80px;">
+										{{#if formData.teamwork_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">遵守纪律</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.discipline_explain.editable}}
+										<textarea class="form-control" id="discipline_explain" style="width:530px;min-width: 100%; height:50px">{{formData.discipline_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.discipline_explain.value.0.code}}
+											<input type="hidden" id="discipline_explain" value="{{formData.discipline_explain.value.0.code}}"/>
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.discipline_opinionresult.editable}}
+									<select name="opinionresult" id="discipline_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.discipline_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.discipline_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.discipline_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.discipline_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="discipline_opinionresult" style="min-width:80px;">
+										{{#if formData.discipline_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.discipline_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.discipline_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.discipline_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.discipline_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作责任心</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.responsibility_explain.editable}}
+										<textarea class="form-control" id="responsibility_explain" style="width:530px;min-width: 100%; height:50px">{{formData.responsibility_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.responsibility_explain.value.0.code}}
+											<input type="hidden" id="responsibility_explain" value="{{formData.responsibility_explain.value.0.code}}" />
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.responsibility_opinionresult.editable}}
+									<select name="opinionresult"  id="responsibility_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.responsibility_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.responsibility_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.responsibility_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.responsibility_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="responsibility_opinionresult" style="min-width:80px;">
+										{{#if formData.responsibility_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作积极性与主动性</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.enthusiasm_explain.editable}}
+										<textarea class="form-control" id="enthusiasm_explain" style="width:530px;min-width: 100%; height:50px">{{formData.enthusiasm_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.enthusiasm_explain.value.0.code}}
+											<input type="hidden" id="enthusiasm_explain" value="{{formData.enthusiasm_explain.value.0.code}}"/>
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.enthusiasm_opinionresult.editable}}
+									<select name="opinionresult" id="enthusiasm_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult"  id="enthusiasm_opinionresult" style="min-width:80px;">
+										{{#if formData.enthusiasm_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作效率</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.efficiency_explain.editable}}
+										<textarea class="form-control" id="efficiency_explain" style="width:530px;min-width: 100%; height:50px">{{formData.efficiency_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.efficiency_explain.value.0.code}}
+											<input type="hidden" id="efficiency_explain" value="{{formData.efficiency_explain.value.0.code}}"/>
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.efficiency_opinionresult.editable}}
+									<select name="opinionresult" id="efficiency_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.efficiency_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.efficiency_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.efficiency_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.efficiency_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="efficiency_opinionresult" style="min-width:80px;">
+										{{#if formData.efficiency_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "C"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">专业知识能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.professional_explain.editable}}
+										<textarea class="form-control" id="professional_explain" style="width:530px;min-width: 100%; height:50px">{{formData.professional_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.professional_explain.value.0.code}}
+											<input type="hidden" id="professional_explain" value="{{formData.professional_explain.value.0.code}}" />
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.professional_opinionresult.editable}}
+									<select name="opinionresult" id="professional_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.professional_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.professional_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.professional_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.professional_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="professional_opinionresult" style="min-width:80px;">
+										{{#if formData.professional_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">学习接受新知识能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.study_explain.editable}}
+										<textarea class="form-control" id="study_explain" style="width:530px;min-width: 100%; height:50px">{{formData.study_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.study_explain.value.0.code}}
+											<input type="hidden" id="study_explain" value="{{formData.study_explain.value.0.code}}" />
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.study_opinionresult.editable}}
+									<select name="opinionresult" id="study_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.study_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.study_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.study_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.study_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="study_opinionresult" style="min-width:80px;">
+										{{#if formData.study_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">解决实际问题能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.problem_solving_explain.editable}}
+										<textarea class="form-control" id="problem_solving_explain" style="width:530px;min-width: 100%; height:50px">{{formData.problem_solving_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.problem_solving_explain.value.0.code}}
+											<input type="hidden" id="problem_solving_explain" value="{{formData.problem_solving_explain.value.0.code}}" />
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.problem_solving_opinionresult.editable}}
+									<select name="opinionresult" id="problem_solving_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="problem_solving_opinionresult"  style="min-width:80px;">
+										{{#if formData.problem_solving_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">沟通能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										{{#if formData.communicate_explain.editable}}
+										<textarea class="form-control" id="communicate_explain" style="width:530px;min-width: 100%; height:50px">{{formData.communicate_explain.value.0.code}}</textarea>
+										{{else}}
+											{{formData.communicate_explain.value.0.code}}
+											<input type="hidden" id="communicate_explain" value="{{formData.communicate_explain.value.0.code}}" />
+										{{/if}}
+									</span>
+								</td>
+								<td colspan="2">
+									{{#if formData.communicate_opinionresult.editable}}
+									<select name="opinionresult" id="communicate_opinionresult" style="min-width:80px;">
+										<option>请选择</option>
+										<option value="A" {{#ifCond formData.communicate_opinionresult.value.0.code "==" "A"}}selected{{/ifCond}}>A-优秀</option>
+										<option value="B" {{#ifCond formData.communicate_opinionresult.value.0.code "==" "B"}}selected{{/ifCond}}>B-良好</option>
+										<option value="C" {{#ifCond formData.communicate_opinionresult.value.0.code "==" "C"}}selected{{/ifCond}}>C-达标</option>
+										<option value="D" {{#ifCond formData.communicate_opinionresult.value.0.code "==" "D"}}selected{{/ifCond}}>D-不达标</option>
+									</select>
+									{{else}}
+										<select name="opinionresult" id="communicate_opinionresult" style="min-width:80px;">
+										{{#if formData.communicate_opinionresult.value}}{{else}}<option>请选择</option>{{/if}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "A"}}<option value="A" selected>A-优秀</option>{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "B"}}<option value="B" selected>B-良好</option>{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "C"}}<option value="C" selected>C-达标</option>{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "D"}}<option value="D" selected>D-不达标</option>{{/ifCond}}
+									</select>
+									{{/if}}
+								</td>
+							</tr>
+					</tbody>
+				</table>
+			</div>
+			{{/if}}
+			{{/if}}
+			
+			{{#if formData.directleadersignname}}
+		    {{#if formData.directleadersignname.isshow}}
+			<div class="controls dashset-table">
+                	直接上级签名： 
+                	{{#if formData.directleadersignnametime.editable}}
+					<input id="directleadersignnametime" placeholder="{{#if formData.directleadersignnametime.required}}必填{{/if}}" class="form-control {{#if formData.directleadersignnametime.required}}required{{/if}}" value="{{formData.directleadersignnametime.value.0.code}}" type="text">
+					{{else}}
+						<span class="show_val" data-type="label">{{formData.directleadersignnametime.value.0.code}}</span>
+							<input id="directleadersignnametime" type="hidden"  value='{{formData.directleadersignnametime.value.0.code}}'/>
+					{{/if}}
+                	　　
+                	日期：
+                	{{#if formData.directleadersignnametime.editable}}
+					<input id="directleadersignnametime" placeholder="{{#if formData.directleadersignnametime.required}}必填{{/if}}" class="form-control date {{#if formData.directleadersignnametime.required}}required{{/if}}" value="{{formData.directleadersignnametime.value.0.code}}" type="text">
+					{{else}}
+							<span class="show_val" data-type="label">{{formData.directleadersignnametime.value.0.code}}</span>
+							<input id="directleadersignnametime" type="hidden"  value='{{formData.directleadersignnametime.value.0.code}}'/>
+					{{/if}}
+                	<!-- <input placeholder="必填" class="form-control date required" value="" type="text"> -->
+             </div>
+             <!-- <div class="control-group col-6">
+				<label class="control-label">直接上级签名：</label>
+				<div class="controls">
+					{{#if formData.directleadersignname.editable}}
+					<input id="directleadersignname" placeholder="{{#if formData.directleadersignname.required}}必填{{/if}}" class="form-control {{#if formData.directleadersignname.required}}required{{/if}}" value="{{formData.directleadersignname.value.0.code}}" type="text">
+					{{else}}
+						<span class="show_val" data-type="label">{{formData.directleadersignname.value.0.code}}</span>
+							<input id="directleadersignname" type="hidden"  value='{{formData.directleadersignname.value.0.code}}'/>
+					{{/if}}
+				</div>
+			</div> -->
+             {{/if}}
+			 {{/if}}
+			 
+             
+             {{#if formData.indirectleadersign}}
+			{{#if formData.indirectleadersign.isshow}}
+				<div class="controls dashset-table">
+                	间接领导签名： 
+                	{{#if formData.indirectleadersign.editable}}
+					<input id="indirectleadersign" placeholder="{{#if formData.indirectleadersign.required}}必填{{/if}}" class="form-control {{#if formData.directleadersignnametime.required}}required{{/if}}" value="{{formData.indirectleadersign.value.0.code}}" type="text">
+					{{else}}
+						<span class="show_val" data-type="label">{{formData.indirectleadersign.value.0.code}}</span>
+							<input id="indirectleadersign" type="hidden"  value='{{formData.directleadersignnametime.value.0.code}}'/>
+					{{/if}}
+                	　　
+                	日期：
+                	{{#if formData.indirectleadersign.editable}}
+					<input id="indirectleadersigntime" placeholder="{{#if formData.indirectleadersigntime.required}}必填{{/if}}" class="form-control date {{#if formData.directleadersignnametime.required}}required{{/if}}" value="{{formData.indirectleadersigntime.value.0.code}}" type="text">
+					{{else}}
+						<span class="show_val" data-type="label">{{formData.indirectleadersigntime.value.0.code}}</span>
+							<input id="indirectleadersigntime" type="hidden"  value='{{formData.directleadersignnametime.value.0.code}}'/>
+					{{/if}}
+                </div>
+             {{/if}}
+			{{/if}}
+		</div>
+ 	</div>
+ </div>
+<!-- 表格 end-->
+
+
+
+	<div class="form-category-hd">
+				<h4 id="cate-name">
+					<span class="js_categoryname">流程处理</span>
+				</h4>
+			</div>
+			<div class="form-category-bd">
+					<div class="entity-info clearfix">
+						{{#if processdefLoad.data.result}}
+						{{#if processdefLoad.data.result.isshow}}
+						<div class="control-group col-12 js-result-isshow">
+							<label class="control-label">{{processdefLoad.data.result.name}}：</label>
+							<div class="controls">
+							<ul class="dowebok controls">
+							{{#each processdefLoad.data.result.valuesource}}
+								{{#if ../processdefLoad.data.result.editable}}
+									<li>
+										<input type="radio" name="result" value="{{../code}}" class="labelauty" {{#if ../selected}}checked="checked"{{/if}} id="labelauty{{../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../pageId}}-{{@index}}">
+										{{#if ../selected}}
+											<span data-clzz="{{../clzz}}" class="{{#radio_selected ../clzz}}{{/radio_selected}} js_commonradio">{{../name}}</span>
+											{{else}}
+											<span data-clzz="{{../clzz}}" class="labelauty-unchecked js_commonradio">{{../name}}</span>
+										{{/if}}
+										</label>
+									</li>
+								{{else}}
+								<!-- 非编辑 -->
+									{{#if ../selected}}
+									<li>
+										<input type="radio" name="result"  value="{{code}}" class="labelauty" checked="checked" id="labelauty{{../../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../../pageId}}-{{@index}}">
+												<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}}">{{name}}</span>
+										</label>
+									</li>
+									{{/if}}
+								{{/if}}
+							{{/each}}
+							</ul>
+							</div>
+						</div>
+						{{/if}}
+						{{/if}}
+						
+						<!-- end result -->
+						
+						<!-- 处理意思见 -->
+						{{#if processdefLoad.data.opinion.isshow}}
+						<div class="control-group col-12 jsopiniondiv">
+							<div>{{processdefLoad.data.opinion.name}}：<input type="checkbox"  id="setCommonLang" placeholder="必填" {{#if processdefLoad.data.handleinfo.setasfrequence}}checked="checked"{{/if}} />设定为常用语<a style="float:right;" class="js_more_normal">更多&gt;&gt;</a>
+							<span class="js_common_show" style="float:right;">{{#each commonoption  }}
+							<a class="js_span_common" style="margin-right:5px;" data-content="{{content}}" title="{{content}}">{{title}}</a>
+							{{/each}}</span>
+							</div>
+							<div class="controls"  id="common_opinion">
+							   {{#if processdefLoad.data.opinion.editable}}
+								<textarea id="opinion" class="form-control {{#if processdefLoad.data.opinion.required}}required{{/if}}" placeholder="{{#if processdefLoad.data.opinion.required}}必填{{/if}}">{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="opinion" class="form-control" readonly="readonly" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+							<!-- 已阅 -->
+							<div class="controls hide"  id="read_opinion"  style="display: none;">
+							   {{#if processdefLoad.data.opinion.editable}}
+									<textarea id="readopinion" class="form-control" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="readopinion" class="form-control" readonly="readonly">{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+						</div>
+						{{/if}}
+						<!-- 处理意思见 -->
+						
+						<!-- shownextstep 下一环节-->
+						{{#if processdefLoad.data.shownextstep}}
+						<div class="control-group col-12 js_ishide js-handlediv">
+							<label class="control-label">下一环节：</label>
+							<div class="controls">
+							 <ul class="dowebok controls">
+								{{#each processdefLoad.data.candidatesteps}}
+									<li>
+										<input type="radio" name="transition" value="{{transition.transitionid}}" data-name="{{transition.transitionname}}"   {{#if transition.selected}} checked="checked"{{/if}} class="labelauty required next-step" id="next_step_{{../random}}{{@index}}" style="display: none;">
+										<label for="next_step_{{../random}}{{@index}}">
+											{{#if transition.selected}}
+												<span class="next-step-checked js_step_sel">{{transition.transitionname}}</span>
+											{{else}}
+												<span class="next-step-unchecked js_step_sel">{{transition.transitionname}}</span>
+											{{/if}}
+										</label>
+									</li>
+								{{/each}}
+							</ul>
+						  </div>
+						</div>
+
+						<div class="control-group col-12 js_ishide js-nexthandlerdiv">
+							<label class="control-label">下一处理人：</label>
+							<div class="controls">
+								<a class="icon-plus js_next_user" {{#each processdefLoad.data.candidatesteps}}{{#if selectedvalues}}{{#if ../handleinfo}}{{#if ../../handleinfo.nextuser}}style="display:none"{{/if}}{{/if}}{{/if}}{{/each}}>添加下一处理人员</a>
+								<span id="selected_next_handler" data-type="next_handler">
+									{{#each processdefLoad.data.candidatesteps}}
+										{{#each selectedvalues}}
+										<span class="file-show" style="margin-right:3px;">
+										  <a  real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}</a>
+										  <a class="close_file js_close_dept file_remove_file" title="删除">×</a>
+										</span>
+											<!-- <a class="form_tag" real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}<button type="button" class="close js_close_dept" title="删除">×</button></a> -->
+										{{/each}}
+									{{/each}}
+								</span>
+							</div>
+						</div>
+						
+						{{/if}}
+						<!-- shownextstep 
+						<div id="submit-common" class="control-group col-12"><a class="btn btn-success js_submit"  style="float:right;">提交</a></div>
+						<div id="submit-read" class="control-group col-12 hide"><a class="btn btn-success js_read_submit" vel="read" style="float:right;">提交</a></div>
+						下一环节-->
+					</div>
+</div>
+
+<div class="form-category-hd">
+	<h4 id="cate-name">
+		<span class="js_categoryname">历史意见</span>
+	</h4>
+</div>
+<div class="form-category-bd">
+<div class="entity-info clearfix">
+{{#if formData.directleaderopinion.isshow}}
+	<div class="control-group col-12">
+			<label class="control-label" style="width:120px;">直接上级 被考核者在考核期内表现：</label>
+			<div class="controls">
+				{{#each formData.directleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+			</div>
+	</div>
+{{/if}}
+{{#if formData.indirectleaderopinion.isshow}}
+			<div class="control-group col-12">
+			<label class="control-label" ><span style="color:red;">*</span>间接领导 被考者在考核期内表现：</label>
+			<div class="controls">
+				{{#each formData.indirectleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				</div>
+				</div>
+{{/if}}
+{{#if formData.inchargeofyleaderopinion.isshow}}
+			<div class="control-group col-12">
+			<label class="control-label"><span style="color:red;">*</span>分院领导：</label>
+			<div class="controls"><br />
+				{{#each formData.inchargeofyleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				
+				</div>
+				</div>
+			{{/if}}
+{{#if formData.yassistantopinion.isshow}}
+<div class="control-group col-12">
+	<label class="control-label"><span style="color:red;">*</span>院长助理：</label>
+	<div class="controls"><br />
+	{{#each formData.yassistantopinion.value}}
+		<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+			<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+			<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+		</div>
+		<div>
+				{{#if result}}
+						{{result.name}}：
+						{{#each result.value}}
+							{{#if result.editable}}
+								<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+							{{else}}
+								<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+							{{/if}}
+						{{/each}}	
+				{{/if}}	
+		</div>
+	{{/each}}
+	</div>
+	</div>
+{{/if}}
+{{#if formData.checkinterview.isshow}}
+<div class="control-group col-12">
+	<label class="control-label" ><span style="color:red;">*</span>考核面试者情况：</label>
+	<div class="controls">
+					{{#each formData.checkinterview.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				</div>
+				</div>
+{{/if}}
+</div></div>

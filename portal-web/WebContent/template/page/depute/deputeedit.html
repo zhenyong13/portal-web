@@ -1,0 +1,65 @@
+<div class="forms-content">
+	<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+		<div class="entity-info clearfix">
+			<div class="control-group col-5">
+				<label class="control-label" style="width:120px;">委托人：</label>
+				<div class="controls">
+					<span class="show_val">{{current_username}}</span>
+				</div>
+			</div>
+			<div class="control-group col-6">
+				<label class="control-label" style="width:120px;">被委托人：</label>
+				<input type="hidden" id="depute_man_code"  value="{{delegated}}"/>
+				<div class="controls">
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba;margin-top:2px">
+					<div class="remind-user">
+						<input id="delegate_man_" data-code="" type="text" class="control-input typeahead search" value=""
+							data-entity="employee" data-multi="true" style="width:205px !important;height:30px" placeholder="被委托人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="control-group col-12">
+				<label class="control-label" style="width:120px;">授权时间：</label>
+				<div class="controls">
+					<input class="form-control required" id="startEndTime" style="width: 400px;" readonly="readonly" value="{{#if starttime}}{{starttime}} 到 {{endtime}}{{/if}}"/>
+					<input type="hidden" id="startTime" value="{{starttime}}"/>
+					<input type="hidden" id="endTime" value="{{endtime}}"/>
+				</div>
+			</div>
+			<div class="control-group col-6">
+				<label class="control-label" style="width:120px;">事项类型：</label>
+				<div class="controls">
+					<select id="deputeType" class="form-control">
+					</select>
+				</div>
+			</div>
+			<div class="control-group col-2">
+				<span><input id="doRightNow" type="checkbox">全部事项</span>
+			</div>
+			
+			<div id="deputeAll" class="control-group col-12">
+				<label class="control-label" style="width:120px;">委托事项：</label>
+				<div class="controls">
+					<a class="icon-plus js_search_inst" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a>
+					<span class="selected_inst_show"></span>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	<div style="height:31px;margin-top: 4px">
+		<div class="controls" style="float:right; padding-right:20px;  padding-top: 5px;">
+			<a id="pwdd-btn-update" class="btn btn-sm btn-primary" style="margin-right: 6px;">确定</a>
+			<a id="pwdd-btn-cancel" class="btn btn-sm js_cancel">取消</a>
+		</div>
+	</div>
+</div>

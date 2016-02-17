@@ -1,0 +1,254 @@
+{
+    "data": {
+        "usercode": "002644",
+         "currenttype":{"columncode":"column-001","columntype":"affiche","columnname":"公司新闻"},
+        "alltypes": [
+            {"columncode":"column-000",
+                "columntype": "affiche", 
+                "columnname": "公司新闻", 
+                "infourl": "/**/portal-web/"
+            }, 
+            {"columncode":"column-001",
+                "columntype": "projectinfo", 
+                "columnname": "公司公告", 
+                "infourl": "/**/portal-web/"
+            },
+            {"columncode":"column-002",
+                "columntype": "news", 
+                "columnname": "项目信息", 
+                "infourl": "/**/portal-web/"
+            },
+            {"columncode":"column-003",
+                "columntype": "emp", 
+                "columnname": "优秀员工", 
+                "infourl": "/**/portal-web/"
+            }
+        ],
+        "rows": [
+            {
+                "infocode": "info-0001",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                 "isnew":"yes",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0002",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0003",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0004",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0006",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0007",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-0009",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00087",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00016",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00041",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00041",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00031",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            },
+            {
+                "infocode": "info-00201",
+                "infoname": "地铁设计学院专家应邀到南京轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtime": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "worry",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "/**/portal-web/"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

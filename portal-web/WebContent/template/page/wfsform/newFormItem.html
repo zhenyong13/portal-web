@@ -1,0 +1,151 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">表单编码：</label>
+							<div class="controls">
+								<input type="text" id="form_code" class="form-control required" value="{{data.formcode}}"  readonly="readonly"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">表单项编码：</label>
+							<div class="controls">
+								<input type="text" id="item_code" class="form-control required" value="{{data.itemcode}}" />
+								<input type="hidden" id="item_id" value="{{data.id}}" />
+								<input type="hidden" id="token" value="{{token}}" />
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">列宽：</label>
+							<div class="controls">
+								<input type="text" id="item_col" class="form-control required number" value="{{data.cols}}" />
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">表单项名称：</label>
+							<div class="controls">
+								<input type="text" id="type_name" class="form-control" value="{{data.itemname}}" />
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">组序号：</label>
+							<div class="controls">
+								<input type="text" id="region_order" class="form-control required number" value="{{data.regionorder}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">分组：</label>
+							<div class="controls">
+								<input type="text" id="region_code" class="form-control required" value="{{data.regioncode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">项序号：</label>
+							<div class="controls">
+								<input type="text" id="item_order" class="form-control required number" value="{{data.itemorder}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">默认值：</label>
+							<div class="controls">
+								<input type="text" id="default_value" class="form-control" value="{{data.defaultvalue}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">类型：</label>
+							<div class="controls">
+								<select class="form-control" id="type_" style="width:208px;">
+									{{#each processtype.rows}}
+									{{#ifCond ../data.type "==" dictcode}}
+											<option value="{{dictcode}}" selected="selected">{{dictname}}</option>								
+										{{else}}
+											<option value="{{dictcode}}">{{dictname}}</option>
+									{{/ifCond}}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">数据类型：</label>
+							<div class="controls">
+								<select class="form-control" id="data_type" style="width:208px;">
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">是否必填：</label>
+							<div class="controls">
+								<select class="form-control" id="required_" style="width:208px;">
+									<option value="1" {{#ifCond data.required "==" "1"}}selected{{/ifCond}}>是</option>
+									<option value="0" {{#ifCond data.required "==" "0"}}selected{{/ifCond}}>否</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">是否显示：</label>
+							<div class="controls">
+								<select class="form-control" id="is_show" style="width:208px;">
+									<option value="1" {{#ifCond data.isshow "==" "1"}}selected{{/ifCond}}>是</option>
+									<option value="0" {{#ifCond data.isshow "==" "0"}}selected{{/ifCond}}>否</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">是否可编辑：</label>
+							<div class="controls">
+								<select class="form-control" id="editable_" style="width:208px;">
+									<option value="1" {{#ifCond data.editable "==" "1"}}selected{{/ifCond}}>是</option>
+									<option value="0" {{#ifCond data.editable "==" "0"}}selected{{/ifCond}}>否</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">取值方式：</label>
+							<div class="controls">
+								<select class="form-control" id="value_type" style="width:208px;">
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;">作用域：</label>
+							<div class="controls">
+								<select class="form-control" id="scope_" style="width:208px;">
+									<option value="global" {{#ifCond data.scope "==" "global"}}selected{{/ifCond}}>流程范围</option>
+									<option value="local" {{#ifCond data.scope "==" "local"}}selected{{/ifCond}}>任务范围</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">检验规则：</label>
+							<div class="controls">
+								<textarea class="form-control" id="validator_code" style="width: 640px;height:60px;">{{data.validatorcode}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">值来源：</label>
+							<div class="controls">
+								<textarea class="form-control" id="value_source" style="width: 640px;height:60px;">{{data.valuesource}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">扩展属性：</label>
+							<div class="controls">
+								<textarea class="form-control" id="custom" style="width: 640px;height:60px;">{{data.custom}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="pwd-btn-update" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a><a
+							id="pwd-btn-cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

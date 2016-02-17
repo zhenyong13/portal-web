@@ -1,0 +1,8 @@
+﻿{
+    "msg":"success",
+    "rc":1,
+    "data": {
+           "validatecode":"PFXa",
+           "validatecodeurl":"images/temp/code.jpg"
+        }
+}

@@ -1,0 +1,59 @@
+{
+    "data": {
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 100,
+        "rows": [
+		  {
+		    "id": "1",
+		    "specialtycode": "code-01",
+		    "projectcode": "pro-01",
+		    "projectname":"项目01",
+		    "status":"1",
+		    "projecttype":"protype-01",
+		    "managercode":"manager-01",
+		    "specialtytype": "sptype-01",
+		    "specialtylevel": "level-01",
+		    "planstarttime": "2015-09-07",
+		    "starttime": "2015-09-08",
+		    "endtime": "2015-09-20",
+		    "planendtime": "2015-09-22",
+		    "specialtyname": "专业名称-01"
+		},
+		{
+		    "id": "2",
+		    "specialtycode": "code-02",
+		    "projectcode": "pro-02",
+		    "projectname":"项目02",
+		    "status":"1",
+		    "projecttype":"protype-01",
+		    "managercode":"manager-01",
+		    "specialtytype": "sptype-01",
+		    "specialtylevel": "level-01",
+		    "planstarttime": "2015-09-07",
+		    "starttime": "2015-09-08",
+		    "endtime": "2015-09-20",
+		    "planendtime": "2015-09-22",
+		    "specialtyname": "专业名称-02"
+		},
+		{
+		    "id": "3",
+		    "specialtycode": "code-03",
+		    "projectcode": "pro-02",
+		    "projectname":"项目02",
+		    "status":"1",
+		    "projecttype":"protype-01",
+		    "managercode":"manager-01",
+		    "specialtytype": "sptype-01",
+		    "specialtylevel": "level-01",
+		    "planstarttime": "2015-09-07",
+		    "starttime": "2015-09-08",
+		    "endtime": "2015-09-20",
+		    "planendtime": "2015-09-22",
+		    "specialtyname": "专业名称-03"
+		}
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

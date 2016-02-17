@@ -1,0 +1,20 @@
+{
+	"data":{
+        "rows":[
+            {
+              "dictcode":"1",
+              "dictname":"来文"
+            },
+             {
+              "dictcode":"2",
+              "dictname":"发文"
+            },
+            {
+              "dictcode":"default",
+              "dictname":"默认"
+            }
+          ]
+    },
+	"msg":"",
+	"rc":"1"
+}

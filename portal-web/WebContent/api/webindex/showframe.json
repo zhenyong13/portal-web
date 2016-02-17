@@ -1,0 +1,148 @@
+{
+    "data": {
+        "usercode": "002644",
+        "modulecode": "module-001",
+        "modulename": "模块名称",
+        "picturecode": [
+            "images/dateway/banner_1.jpg",
+            "images/dateway/banner_2.jpg",
+            "images/dateway/banner_3.jpg",
+            "images/dateway/banner_4.jpg"
+        ],
+        "rows": [
+            {
+                "seqno": 1,
+                "columncode": "synergism",
+                "columnname": "协同办公",
+                "columntype": "affiche",
+                "sid": "1",
+                "isshowpicture": "yes",
+                "columnurl": "api/webindex/synergism.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 2,
+                "columncode": "workflow",
+                "columnname": "业务流程",
+                "columntype": "projectinfo",
+                "sid": "1",
+                "columnurl": "api/webindex/workflow.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 3,
+                "columncode": "friendlylink",
+                "columnname": "友情链接",
+                "columntype": "news",
+                "sid": 3,
+                "isshowpicture": "yes",
+                "columnurl": "api/webindex/friendlylink.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "newscenter",
+                "columnname": "新闻中心",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/newscenter.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "todoitems",
+                "columnname": "待办事项",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/todoitems.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "未读邮件",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/todoemail.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "newscenter",
+                "columnname": "热点追踪",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/newscenter.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "规范文档",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 2,
+                "columnurl": "api/webindex/newscenter.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "通知公告",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/noticelist.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "会议公告",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/meetinglist.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "生日祝福",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/birthdaylist.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            },
+            {
+                "seqno": 4,
+                "columncode": "column-004",
+                "columnname": "专题策划",
+                "columntype": "emp",
+                "isshowpicture": "yes",
+                "sid": 3,
+                "columnurl": "api/webindex/topicplanlist.json",
+                "relateorgcode": "",
+                "relateprojectcode": ""
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

@@ -1,0 +1,51 @@
+{
+    "data": {
+        "sheetname": "",
+        "pagesize": 20,
+        "maxpages": 40,
+        "total": 800,
+        "exporttype": "excelxml",
+        "voconfigs": [
+            {
+                "voname": "dddd",
+                "showcount": "yes/no",
+                "countinfo": 26,
+                "fields": [
+                    {
+                        "name": "orgcode",
+                        "title": "角色编码"
+                    },
+                    {
+                        "name": "orgcc",
+                        "title": "角色名称"
+                    },
+                    {
+                        "name": "orgcode",
+                        "title": "角色编码"
+                    },
+                    {
+                        "name": "dd",
+                        "title": "用户"
+                    }
+                ]
+            },
+            {
+                "voname": "dsxx",
+                "showcount": true,
+                "countinfo": "",
+                "fields": [
+                    {
+                        "name": "aa",
+                        "title": "迟到次数"
+                    },
+                    {
+                        "name": "bb",
+                        "title": "早退次数"
+                    }
+                ]
+            }
+        ]
+    },
+    "rc": 1,
+    "msg": "成功"
+}

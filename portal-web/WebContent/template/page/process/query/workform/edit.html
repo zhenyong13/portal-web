@@ -1,0 +1,93 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div class="forms-content">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						{{#if data.formcode}}
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">表单编码：</label>
+							<div class="controls">
+								<input type="text" class="form-control required" style="width: 281px;height:30px;" id="formcode" value="{{data.formcode}}"></input>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">表单名称：</label>
+							<div class="controls">
+								<input type="text" class="form-control required" style="width: 281px;height:30px;" id="formname" value="{{data.formname}}"></input>
+								<input type="hidden" value="{{token}}" id="token" />
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">表单URL：</label>
+							<div class="controls">
+								<textarea class="form-control required" id="form_url" style="width: 281px;height:30px;">{{data.url}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">表单描述：</label>
+							<div class="controls">
+								<textarea class="form-control required" id="formdesc" style="width: 281px;height:30px;">{{data.formdesc}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">序号：</label>
+							<div class="controls">
+								<input type="text" class="form-control" style="width: 281px;height:30px;" id="sortorder" value="{{data.sortorder}}"></input>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">选择启用状态：</label>
+							<div class="controls">
+								<select id="isStart" class="form-control" style="width:120px;">
+									{{#ifCond data.isenabled "==" "enable"}}
+										<option value="enable" selected="selected">启用</option>
+										<option value="disabled">停用</option>
+									{{else}}
+										<option value="enable">启用</option>
+										<option value="disabled" selected="selected">停用</option>
+									{{/ifCond}}
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">表单类型：</label>
+							<div class="controls">
+								<select id="formtype" class="form-control required" style="width:120px;">
+									<option value="">请选择</option>
+									{{#each processtype.rows}}
+										{{#ifCond ../data.formtype "==" dictcode}}
+												<option value="{{dictcode}}" selected="selected">{{dictname}}</option>								
+											{{else}}
+												<option value="{{dictcode}}">{{dictname}}</option>
+										{{/ifCond}}
+									{{/each}}
+								</select>
+							</div>
+						</div>
+						{{#if data.is_add}}
+						<!-- <div class="control-group col-12">
+							<label class="control-label" style="width:120px;">选择流程定义文件：</label>
+							<div class="controls">
+								<a id="pickFiles" class="btn btn-xs btn-info" style="position: relative;float:left; z-index: 0;">
+								<i class="icon-upload-alt"></i> 上传附件</a>
+								<input style="font-size: 1px;top:2px;  border: solid 1px; opacity: 0; position: absolute; width: 21%; height: 100%;left: 126px;"  type="file" id="file_upload" name="fileupload" class="js_file_upload"  multiple="multiple"/>
+								<a id="file_list" class="form_tag" style="position: relative;left: 14px;"></a>
+							</div>
+						</div> -->
+						{{/if}}
+						
+					</div>
+				</div>  
+				<div style="height:31px;margin-top: 6px;margin-bottom: 4px;">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

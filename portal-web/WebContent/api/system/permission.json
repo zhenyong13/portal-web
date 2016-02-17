@@ -1,0 +1,396 @@
+﻿{
+    "data": {
+        "total": 34,
+        "usercode": "user-002784",
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": 1,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 2,
+                "permcode": "2015064",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "2015062",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "2015061",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "2015067",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "2015069",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "2015060",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "20150675",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "20150644",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506333",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "20150226",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "20152206",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201522206",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201222506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "20153406",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            },
+            {
+                "id": 3,
+                "permcode": "201506",
+                "permname": "org1474",
+                "permtype": "曾文驱",
+                "appcode": 1,
+                "permdesc": "user-002644"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

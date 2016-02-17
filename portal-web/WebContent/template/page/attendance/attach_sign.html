@@ -1,0 +1,82 @@
+<!-- 补签申请 -->
+<div class="fill_det_all jscroll">
+
+	<div class="fill_border pro_lab_div control-group col-6">
+         <label class="fill_float ret_lab">姓名：</label>
+         <div>{{username}}</div>
+    </div>
+	<div class="fill_border pro_lab_div control-group col-6">
+         <label class="fill_float ret_lab">工号：</label>
+         <div>{{workno}}</div>
+	</div>
+	
+	<div class="fill_border pro_lab_div control-group col-12">
+         <label class="fill_float ret_lab">部门：</label>
+         <div>{{depname}}</div>
+	</div>
+
+	<div class="fill_border pro_lab_div control-group col-12">
+         <label class="fill_float ret_lab">考勤时间：</label>
+         <div><input type="text" placeholder="考勤时间" class="form-control required" readonly="readonly" id="sign_time"></div>
+	</div>
+	
+	<div class="pro_lab_div control-group col-12">
+		<label class="fill_float ret_lab">签到类型：</label>
+		<div class="controls">
+			 <ul class="dowebok controls">
+					<li>
+						<input type="radio" name="addresstype" value="companyinside" checked="checked" class="labelauty_" id="labelauty61009-00" style="display: none;">
+						<label for="labelauty61009-00">
+							<span data-clzz="labelauty4-checked" class="js_commonradio labelauty4-checked" style="  width: 80px;">公司内部</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="addresstype" value="countryinside" class="labelauty_" id="labelauty61009-01" style="display: none;">
+						<label for="labelauty61009-01">
+							<span data-clzz="labelauty4-checked" class="js_commonradio labelauty-unchecked" style="  width: 80px;">国内</span>
+						</label>
+					</li>
+					<li>
+						<input type="radio" name="addresstype" value="abroad"  class="labelauty_" id="labelauty61009-012" style="display: none;">
+						<label for="labelauty61009-012">
+							<span data-clzz="labelauty4-checked" class="js_commonradio labelauty-unchecked" style="  width: 80px;">国外</span>
+						</label>
+					</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="signCity_div" class="pro_lab_div control-group hide col-12">
+		<label class="fill_float ret_lab">签到城市：</label>
+		<div class="controls">
+			 <select id="resignincityname"></select>
+		</div>
+	</div>
+	<div id="signDept_div" class="pro_lab_div control-group col-12">
+		<label class="fill_float ret_lab">签到部门：</label>
+		<div class="controls">
+			 <input type="text" id="parentname" class="form-control" value="{{orgname}}" readonly="readonly"/>
+			 <input type="hidden" id="parentcode" value="{{orgcode}}"/>
+			 <a class="icon-search js_search_dept" style="position: relative;position: relative;left: -20px;"></a>
+			<!-- <span class="selected_dept_show"></span> -->
+		</div>
+	</div>
+	
+	<div id="othercheckexactaddress_" class="pro_lab_div control-group hide col-12">
+		<label class="fill_float ret_lab">详细地点：</label>
+ 		<div class="controls">
+			<input id="othercheckexactaddress" class="form-control required" type="text" placeholder="其他补签地点">
+		</div>
+	</div>
+	
+	<div class="col-12 control-group">
+		<span class="ret_lab">补签原因：</span>
+		<span class="controls">
+			<textarea id="sign_reson" class="ret_textarea form-control required" style="width: 80%;"></textarea>
+		</span>
+	</div>
+	<div class="ret_div_ok">
+		<a class="ret_btn_ok btn btn-primary btn-sm">确定</a>
+		<a class="ret_btn_ok btn btn-sm btn-cancel">取消</a>
+	</div>
+</div>

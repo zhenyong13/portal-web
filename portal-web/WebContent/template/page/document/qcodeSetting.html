@@ -1,0 +1,50 @@
+<div class="process-forms dialog-item ">
+	<div class="forms-option" id="operPanel">
+		<div class="inrPanel">
+			<div class="boxView isCreateQr">
+				<span>是否需要生成二维码：<input type="checkbox" id="isCreateQr" checked></span>
+			</div>
+			<div class="linebox"></div>
+			<div class="boxView qrPos">
+			    <span>二维码位置：</span>
+			    <p>
+					<label><font>X坐标:</font><input type="text" id="Xcoord"></label>
+					<label><font>Y坐标:</font><input type="text" id="Ycoord"></label>
+					<label><font>宽度:</font><input type="text" id="Wqr"></label>
+					<label><font>高度:</font><input type="text" id="Hqr"></label>
+				</p>
+			</div>
+			<div class="linebox"></div>
+			<div class="boxView qrCon">
+			    <span>内容：</span>
+			    <p>
+				    <label><font>图号:</font><input type="text" id="tCode"></label>
+					<label><font>工程名称:</font><input type="text" id="pName"></label>
+					<label><font>项目负责人:</font><input type="text" id="pMajor"></label>
+					<label><font>专业负责人:</font><input type="text" id="pManage"></label>
+					<label><font>其它描述:</font><textarea id="qrTxt"></textarea></label>
+				</p>
+			</div>
+			
+			<div class="boxView formIpt">
+			    <input type="button" id="Submitqr" value="生成二维码">
+			</div>
+		</div>
+		<div id="btnPanel" class="btnPanelIn"><i class="icon-angle-right"></i></div>
+	</div>
+	
+	
+	
+	<div class="slidePanel">
+		<ul>
+
+		</ul>
+	</div>
+	 
+	 <div id="cropImg">
+	 	<div id="qrBox"></div>
+	 	<p>
+			<img src="">
+	 	</p>
+	 </div>
+</div>

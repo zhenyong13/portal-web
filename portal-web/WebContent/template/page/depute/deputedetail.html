@@ -1,0 +1,48 @@
+<div class="forms-content">
+	<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+		<div class="entity-info clearfix">
+			<div class="control-group col-5">
+				<label class="control-label" style="width:120px;">委托人：</label>
+				<div class="controls">
+					<span class="show_val">{{current_username}}</span>
+				</div>
+			</div>
+			<div class="control-group col-6">
+				<label class="control-label" style="width:120px;">被委托人：</label>
+				 <div class="controls">
+					<span class="show_val">{{delegated}}</span>
+				</div>
+			</div>
+
+			<div class="control-group col-10">
+				<label class="control-label" style="width:120px;">事项类型：</label>
+				<div class="controls">
+					<span class="show_val">{{deputeType}}</span>
+				</div>
+			</div>
+			<!-- <div class="control-group col-2">
+				<span><input id="doRightNow" type="checkbox">全部事项</span>
+			</div> -->
+			
+			<div class="control-group col-12">
+				<label class="control-label" style="width:120px;">委托事项：</label>
+				<div class="controls">
+					<!-- <a class="icon-plus js_search_inst" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a> -->
+					<span class="selected_inst_show"></span>
+				</div>
+			</div>
+			
+			<div class="control-group col-7">
+				<label class="control-label" style="width:120px;">授权时间：</label>
+				<div class="controls">
+					<span class="show_val">{{starttime}} 到 {{endtime}} </span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height:31px;margin-top: 4px">
+		<div class="controls" style="float:right; padding-right:20px;  padding-top: 5px;">
+			<a id="pwdd-btn-cancel" class="btn btn-sm js_cancel">关闭</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+<script id="fileshow-template" type="text/x-handlebars-template">
+{{#each files}}
+<span class="file-show" data-code="{{code}}" data-name="{{name}}" data-isedit="{{editable}}">
+		<a  class="filename_view js_file_view" data-file-id="{{code}}">{{name}}</a>
+		<a href="{{../baseUrl}}{{code}}"  target="_blank" class="file_view fa fa-download"></a>
+	<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+</span>
+{{/each}}
+</script>

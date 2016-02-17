@@ -1,0 +1,8 @@
+@import "../vendor/compass/compass/reset-legacy";
+@import "../vendor/compass/compass/utilities";
+
+@mixin reset {
+  @include global-reset;
+  @include clearfix;
+
+}

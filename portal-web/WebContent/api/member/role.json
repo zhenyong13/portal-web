@@ -1,0 +1,209 @@
+{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 1,
+                "orgcode": "1212",
+                "rolecode": "role-1000",
+                "roledesc": null,
+                "rolename": "接口人",
+                "rolestate": "1",
+                "roletype": "5"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 2,
+                "orgcode": "1219",
+                "rolecode": "role-1003",
+                "roledesc": null,
+                "rolename": "书记",
+                "rolestate": "1",
+                "roletype": "110"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 3,
+                "orgcode": "194",
+                "rolecode": "role-1005",
+                "roledesc": null,
+                "rolename": "公章管理员",
+                "rolestate": "1",
+                "roletype": "12"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 4,
+                "orgcode": "1221",
+                "rolecode": "role-1006",
+                "roledesc": null,
+                "rolename": "工联单发文人员",
+                "rolestate": "1",
+                "roletype": "52"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 5,
+                "orgcode": "1221",
+                "rolecode": "role-1007",
+                "roledesc": null,
+                "rolename": "工联单编号人员",
+                "rolestate": "1",
+                "roletype": "51"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 6,
+                "orgcode": "186",
+                "rolecode": "role-1008",
+                "roledesc": null,
+                "rolename": "项目成员",
+                "rolestate": "1",
+                "roletype": "38"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 7,
+                "orgcode": "5",
+                "rolecode": "role-101",
+                "roledesc": null,
+                "rolename": "角色管理员",
+                "rolestate": "1",
+                "roletype": "1"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 8,
+                "orgcode": "1235",
+                "rolecode": "role-1010",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 9,
+                "orgcode": "1236",
+                "rolecode": "role-1012",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 10,
+                "orgcode": "1237",
+                "rolecode": "role-1013",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 11,
+                "orgcode": "1238",
+                "rolecode": "role-1014",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 12,
+                "orgcode": "1239",
+                "rolecode": "role-1015",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 13,
+                "orgcode": "1239",
+                "rolecode": "role-1016",
+                "roledesc": null,
+                "rolename": "角色管理员",
+                "rolestate": "1",
+                "roletype": "1"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 14,
+                "orgcode": "1235",
+                "rolecode": "role-1017",
+                "roledesc": null,
+                "rolename": "角色管理员",
+                "rolestate": "1",
+                "roletype": "1"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 15,
+                "orgcode": "1236",
+                "rolecode": "role-1018",
+                "roledesc": null,
+                "rolename": "角色管理员",
+                "rolestate": "1",
+                "roletype": "1"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 16,
+                "orgcode": "1236",
+                "rolecode": "role-1019",
+                "roledesc": null,
+                "rolename": "项目成员",
+                "rolestate": "1",
+                "roletype": "38"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 17,
+                "orgcode": "4",
+                "rolecode": "role-102",
+                "roledesc": null,
+                "rolename": "人力资源审核",
+                "rolestate": "1",
+                "roletype": "25"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 18,
+                "orgcode": "1239",
+                "rolecode": "role-1020",
+                "roledesc": null,
+                "rolename": "项目成员",
+                "rolestate": "1",
+                "roletype": "38"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 19,
+                "orgcode": "1240",
+                "rolecode": "role-1023",
+                "roledesc": null,
+                "rolename": "项目经理(总体)",
+                "rolestate": "1",
+                "roletype": "39"
+            },
+            {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 20,
+                "orgcode": "27",
+                "rolecode": "role-1024",
+                "roledesc": null,
+                "rolename": "总工程师室审核人",
+                "rolestate": "1",
+                "roletype": "147"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

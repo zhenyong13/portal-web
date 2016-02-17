@@ -1,0 +1,62 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>权限编码：</label>
+							<div class="controls">
+								<input type="text" id="permcode" class="form-control required" value="{{permcode}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>权限名称：</label>
+							<div class="controls">
+								<input type="text" id="permname" class="form-control required" value="{{permname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">关联模块：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control" value="{{parentname}}"/>
+								 <input type="hidden" id="parentcode" value="{{modulecode}}"/>
+								 <a class="icon-search js_search_dept" style="right: 20px;position: relative;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>						 
+						 
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>权限类型：</label>
+							<div class="controls">
+								<select id="permtype" class="form-control required">
+								</select>
+							</div>
+						</div>
+						 
+						<div class="control-group col-6">
+							<label class="control-label">应用编码：</label>
+							<div class="controls">
+								<input type="text" id="appcode" class="form-control" value="{{appcode}}"/>
+							</div>
+						</div>
+						 
+						<div class="control-group col-12">
+							<label class="control-label">权限描述：</label>
+							<div class="controls">
+								<textarea class="form-control" style="width:600px;height:50px" id="permdesc">{{permdesc}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

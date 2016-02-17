@@ -1,0 +1,26 @@
+{
+    "data": {
+        "attenders": "user-001070,user-001073,user-001090,user-001868,user-002644,user-002761,user-002784,user-002794,user-002940",
+        "attendnum": 9,
+        "bookcode": "meetingbooking-d68ab7e3-1e77-4342-85dd-d3e9cc120240",
+        "compere": "user-002784",
+        "contacter": "user-002784",
+        "contacterphone": null,
+        "endtime": "12:00",
+        "id": 40,
+        "meetcode": "meeting-911257df-61a7-4ba2-8539-4b6e5cc9bc2b",
+        "meetdate": "2015-11-16",
+        "meetingplace": "一号会议室",
+        "meetname": "aa",
+        "meettopic": "aa",
+        "memo": "aaaaaaaaaaa",
+        "orgcodes": null,
+        "published": "yes",
+        "roomcode": "meetingroom-1b9cf183-ad61-4790-b63a-1a2a099ea42b",
+        "starttime": "08:00",
+        "status": null,
+        "urgency": null
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,101 @@
+        <div style="padding:10px;">
+			<div class="gat_big">
+				<div id="index-header">
+
+					<div id="images-swiper" style="width:100%;">
+					    <div class="swiper-container">
+					        <div id="top_slide_img" style=" height: 99px;" class="swiper-wrapper">
+					            
+					        </div>
+					    </div>
+   					 </div>
+
+				<!-- 大事记火箭 -->
+				    <div id="big-events" class="things" >
+				    	<div class="things_text" style="display:none;width:0px;">
+				        	<span class="yellow">成功进军海外市场</span><br />
+				        	<span class="blue">我院近日成功中标澳大利亚矿产资源有限公司自动化集成散装矿石运输系统</span>
+				        </div>
+				        
+				        <div class="years" style="display:none;width:0px;">
+					        <div class="main2 js_import_year" >
+					        	<ul id="events-list">
+					            </ul>
+					        </div>
+				        </div>
+					    <!-- 时间轴展开收缩的时候 -->
+					    <div class="bigevents_img"><img src="images/dateway/bigthings.png"/></div>
+				    </div>
+				</div>
+				<!-- 栏目列表 -->
+				
+				<!-- 友情链接 -->
+				<div style="height:100px;width:100%;float:left;">
+				<div class="door_bottom">
+					<span id="link-url-list">友情链接：</span>
+				</div>
+				</div>
+			</div>
+        </div>
+ 
+<!-- 框架栏目-->
+<script id="index-frame-template" type="text/x-handlebars-template">
+<div style="  width: 100%;  float: left;">
+{{#each frameList}}
+   <div class="gat_news_div">
+	 <div class="gat_title_div">
+		<div class="gat_detailsa"><a href="#newsmore/{{columncode}}">{{columnname}}</a></div>
+	    <div class="gat_gd"><a href="#newsmore/{{columncode}}">更多</a></div>
+	 </div>
+     <div id="column_{{columncode}}" data-showimg={{showpicture}} style="clear: both;">
+		<div style="text-align: center;"><img src="images/loading.gif" title="加载中..."/></div>
+	</div>
+   </div>
+{{/each}}
+</div>
+</script>
+<!-- 栏目列表 -->
+<script id="index-frame-list-template" type="text/x-handlebars-template">
+{{#ifCond showimg "==" "yes"}}
+<span class="gat_float">
+  <div id="{{columncode}}" style="height:190px;width:190px;margin:6px">
+   		{{#each imgList}}
+			<a href="#newsdetail/{{infoid}}"><img src="{{../baseurl}}{{columnpiccode}}" class="gat_img" title="{{infoname}}"/></a>
+   		{{/each}}
+   </div>
+</span>
+{{/ifCond}}
+<span class="gat_cont">
+   {{#each columnList}}
+	<div>
+		<img src="images/dateway/news_list.gif" class="gat_ioc_img">
+		<a class="gat_cont_a" href="#newsdetail/{{infocode}}">
+			{{infoname}}
+		</a>
+		{{#ifCond isnew "==" "yes"}}<img src="images/dateway/news_new.gif">{{/ifCond}}
+		{{#if urgent}}<img src="images/dateway/news_ji.gif">{{/if}}
+		{{#ifCond isnew "==" ""}}<img src="images/dateway/news_image.png">{{/ifCond}}
+		<a class="gat_news_time">{{dateformat publishtime 'yyyy-MM-dd'}}</a>
+	</div>
+   {{/each}}	 
+</span>
+</script>
+<!-- 大事件 -->
+<script id="big-events-list-template" type="text/x-handlebars-template">
+{{#each bigevents}}
+<li><a href="#bigevents/{{eventcode}}" {{#ifCond @index "==" ../length}}id="now"{{/ifCond}} data-id="{{eventcode}}" data-title="{{eventname}}" data-contant="{{eventabstract}}">{{eventtime}}</a></li>
+{{/each}}
+</script>
+<!-- 友情链接 -->
+<script id="linkurl-list-template" type="text/x-handlebars-template">
+{{#each linkurl}}
+<a class="ret_color_a" href="{{linkurl}}" target="_blank">{{linkname}}</a>
+{{/each}}
+</script>
+
+<!-- 顶部图片 -->
+<script id="top-img-list-template" type="text/x-handlebars-template">
+{{#each imgList}}
+<div class="swiper-slide"><img src="{{../baseurl}}{{this}}"/></div>
+{{/each}}
+</script>

@@ -1,0 +1,41 @@
+{
+    "data": {
+        "selectpersonconfig": {
+            "selecttype": "checked", 
+            "selectitems": [
+                {
+                    "dataclass": "部门", 
+                    "dataurl": "api/member/orgs.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}", 
+                    "fieldmapping": {
+                        "id": "orgcode", 
+                        "name": "orgname", 
+                        "pid": "parentcode"
+                    }, 
+                    "dataytype": "tree"
+                },
+                {
+                    "dataclass": "群组", 
+                    "dataurl": "api/member/usergroups.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}", 
+                    "fieldmapping": {
+                        "id": "groupcode", 
+                        "name": "groupname", 
+                        "pid": ""
+                    }, 
+                    "dataytype": "list"
+                },
+                {
+                    "dataclass": "项目", 
+                    "dataurl": "api/member/project.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}", 
+                    "fieldmapping": {
+                        "id": "projectcode", 
+                        "name": "projectname", 
+                        "pid": ""
+                    }, 
+                    "dataytype": "list"
+                }
+            ]
+        }
+    }, 
+    "msg": "success", 
+    "rc": 1
+}

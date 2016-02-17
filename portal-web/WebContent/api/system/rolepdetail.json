@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        "permcode": "1",
+        "id": 1,
+        "permname": "1212",
+        "status": "123",
+        "updatetime": "2015-08-03",
+        "rolecode": "1",
+        "rolename": "1",
+        "groupcode": "weqreqw","effecttime":"2015-08-05","expiretime":"2015-09-04",
+        "permdesc": "1"
+    },
+    "msg": "success",
+    "rc": 1
+}

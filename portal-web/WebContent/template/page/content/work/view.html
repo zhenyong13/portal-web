@@ -1,0 +1,62 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form_info" class="forms-content js_processtypeform" style="max-height: 500px;">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee; ">
+					<div class="entity-info clearfix">
+						
+						<div class="control-group col-6">
+							<label class="control-label">名称：</label>
+							<div class="controls">
+								<span class="show_val">{{name}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">链接：</label>
+							<div class="controls">
+								<span class="show_val">{{linkd}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">序号：</label>
+							<div class="controls">
+							<span class="show_val">{{sortorder}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">是否显示：</label>
+							<div class="controls">
+							<span class="show_val">{{#ifCond ishow "==" "1"}}是{{else}}否{{/ifCond}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">创建人：</label>
+							<div class="controls">
+								<span class="show_val">{{creator}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">创建时间：</label>
+							<div class="controls">
+								<span class="show_val">{{createtime}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">图标：</label>
+							<div class="controls">
+								<span class="show_val">
+									<img id="cacheturlimg" src="{{#if icon}}{{baseurl}}{{icon}}{{else}}images/avatar.png{{/if}}">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,120 @@
+<div id="j_workflowright" class="col-cell" style="max-height: 415px;">
+	<div id="workflow-right" class="right-panel">
+		<div class="panel">
+			<div id="roleMenu" class="panel-head">
+				<h3 id="rolemenu" class="active">
+					<a>组织</a>
+				</h3>
+				<h3 id="permmenu" >
+					<a>角色</a>
+				</h3>
+			</div> 
+			<div class="panel-body">
+				<div class="workflowchart-wrap h-378" id="roleperm_rolemenu">
+				<!-- 设置角色菜单 -->
+				 	<div id="userSelector-multi">
+						<div class="user-wrapper e-query">
+							<div class="selected-container clearfix hide-selected">
+								<span style="float:left;">已选择：</span><span id="selected-depts"></span>
+							</div>
+							<div class="user-container"></div>
+						</div>
+						<div class="user-selector-body clearfix">
+							<div id="all-group-users">
+								<div class="e-title e-query">
+									<div id="org-user-info" class="">
+										<input id="search_name" data-type="treeDemo" type="text" class="form-control js_search_tree" placeholder="模块查询"> <i style="position: relative;left: -26px;top:2px;" class="icon-search" title="搜索"></i>
+										<a id="clean-all-dept" class="btn btn-sm hide  js_clean_all">全部清空</a>
+									</div>
+								</div>
+								
+								<div id="dept-container" class="row-fluid  users-container bg-white" style="max-height: 288px;width: 100%">
+									 <ul id="treeDemo" class="ztree"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workflowchart-wrap h-378 hide" id="roleperm_permmenu">
+<!-- 设置角色权限 -->
+				 	 <div id="userSelector-multi">
+						<div class="user-wrapper e-query">
+							<div class="selected-container clearfix hide-selected">
+								<span style="float:left;">已选择：</span><span id="permselect"></span>
+							</div>
+							<div class="user-container"></div>
+						</div>
+						<div class="user-selector-body clearfix">
+							<div id="all-group-users">
+								<div class="e-title e-query">
+									<div id="org-user-info" class="">
+										<input id="module_perm_name" type="text" class="form-control js_search_tree" placeholder="角色查询"> 
+										<i id="module_perm_name_" style="position: relative;left: -26px;top:2px;" class="icon-search" title="搜索"></i>
+										<a id="clean-all-perm_" class="btn btn-sm hide  js_clean_all_perm">全部清空</a>
+									</div>
+								</div>
+								<div id="perm-container" class="row-fluid  users-container" style="width: 100%">
+									<ul class="e-list flow-list">
+										<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+											<span id="perm_select_all" class="ret_width_5 ret_display  filterSlip_js"><i  id="check-all-perm" class="icon-checkbox-unchecked"></i></span>
+											<span class="ret_width_45 ret_display  filterSlip_js">角色名称</span>
+											<span class="ret_width_35 ret_display  filterSlip_js">角色描述</span>
+										</li>
+									</ul>
+									<ul id="perm-flow-list" class="e-list flow-list" style="max-height: 228px;">
+										<!-- 列表 -->
+									</ul>
+									<!-- 分页 -->
+									<div id="permission_pagination" style="margin-top: 3px;" ></div>
+									<!-- 分页 -->
+								</div>
+							</div>
+						</div>
+					</div>
+<!-- 设置角色权限 end -->
+				</div>
+			</div>
+			<div >
+				<div id="showorgext" style="margin-top: 0px; max-height: 80px">
+					<span style="margin-left:5px;" title="按回车添加院外单位">院外单位：</span>
+					<select id="orgextText" multiple="multiple" style="width:680px;" class="form-control"></select>
+					<input id="orgextBefore" name="orgextBefore" type="checkbox" value="0" placeholder="d">前面显示
+				</div>
+				<span class="selector-btns" style="float:right;  margin-right: 10px;padding-top:5px">
+					<a class="btn btn-middle btn-primary js_selected_dept_ok">确定</a>
+					<a class="btn btn-middle js_selected_dept_cancel">取消</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script id="roleperm-list-template" type="text/x-handlebars-template">
+{{#if data.length}}
+{{#each data}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}" data-code="{{rolecode}}" data-name="{{rolename}}"></i>
+     </span>
+    <span class="ret_width_45 ret_display ellipsis filterSlip_js">{{rolename}}&nbsp;</span>
+    <span class="ret_width_35 ret_display ellipsis filterSlip_js">{{roledesc}}&nbsp;</span>
+</li>
+{{/each}}
+{{else}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_15 ret_display ellipsis filterSlip_js">暂无数据</span>
+</li>
+{{/if}}
+</script>
+ 
+<!-- 选中的角色 -->
+<script id="user-select-template" type="text/x-handlebars-template">
+<span class="file-show" style="height: 20px;  width: 20px;  margin-right: 3px;">
+<a data-id="{{usercode}}" data-name="{{username}}">{{username}}</a>
+<a code="{{usercode}}" value="{{username}}" class="close_file js_close_perm file_remove_file" title="删除">×</a>&nbsp;</span>
+</script>
+<script id="extdept-select-template" type="text/x-handlebars-template">
+{{#each extdepts}}
+<li class="selected"><span>{{name}}</span><a data-code="{{code}}" class="close js-extdept-del">x</a></li>
+{{/each}}
+</script>

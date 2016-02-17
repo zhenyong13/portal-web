@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        "orgcode": "org-101",
+        "tomyorgtravelusernum": 0,
+        "myorgusertraveldays": 0,
+        "myorgtravelusernum": 0,
+        "usercode": "user-002784",
+        "orgname": "院领导",
+        "tomyorgusertraveldays": 0,
+        "startday": "2015-09-01",
+        "endday": "2015-09-11"
+    },
+    "msg": "success",
+    "rc": 1
+}

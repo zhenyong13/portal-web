@@ -1,0 +1,1197 @@
+<script id="region-template" type="text/x-handlebars-template">
+	{{#each this}}
+	{{#if isshow}}
+	{{#if region}}
+	
+	<div class="form-category-hd">
+		<div class="entity-info clearfix" >
+			<h4 id="cate-name">
+				<span class="js_categoryname js-slide-form" style="color:#0291d4; background:#F9F8F8;">{{region}}</span>
+				<i></i>
+			</h4>
+		</div>
+	</div>
+
+	<div class="form-category-bd">
+		<div class="entity-info clearfix" >
+				<div class="js_region{{regionorder}}"></div>
+		</div>
+	</div>
+	{{/if}}
+	{{/if}}
+{{/each}}
+</script>
+<script id="input-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+	{{#if custom}}
+		{{#if custom.iszj}}
+		<div style="float: right;margin-left: 0;">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control {{#if ../required}}required{{/if}}" value="{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}"  id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control {{#if ../required}}required{{/if}}">
+				{{/if}}
+			{{else}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" readonly="readonly" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control-readonly {{#if ../required}}required{{/if}} disable-form-ele" value="{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}">
+				{{/each}}
+				{{else}}
+					<input type="text" readonly="readonly" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control-readonly {{#if ../required}}required{{/if}} disable-form-ele" value="{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}">
+				{{/if}}
+			{{/if}}
+		</div>
+		
+		<label class="control-label" style="float:right;">{{name}}</label>
+		{{else}}
+			{{#if custom.title}}<div>{{#outputhtml custom.title}}{{/outputhtml}}</div>{{/if}}
+			{{#if name}}<label class="control-label">{{name}}</label>{{/if}}
+		<div class="controls">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control {{#if ../required}}required{{/if}}" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class="form-control {{#if ../required}}required{{/if}}">
+				{{/if}}
+				
+			{{else}}
+			{{#if value}}
+				{{#each value}}
+					<input type="text" readonly="readonly" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../custom.placeholder}}{{../custom.placeholder}}{{else}}{{#if ../required}}必填{{/if}}{{/if}}" class=" disable-form-ele form-control-readonly {{#if ../required}}required{{/if}}" value="{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}">
+				{{/each}}
+			{{else}}
+				<input type="text" readonly="readonly" data-code="{{code}}" data-search="{{issearch}}" data-custom="{{customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{code}}" placeholder="{{#if custom.placeholder}}{{custom.placeholder}}{{else}}{{#if required}}必填{{/if}}{{/if}}" class=" disable-form-ele form-control-readonly {{#if required}}required{{/if}}" >
+			{{/if}}
+			{{/if}}
+		</div>		
+	  {{/if}}
+	{{else}}
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}">
+				{{/if}}
+				
+			{{else}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text"  readonly="readonly" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control-readonly disable-form-ele {{#if ../required}}required{{/if}}" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  readonly="readonly" data-code="{{code}}" data-search="{{issearch}}" data-custom="{{customstr}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{code}}" placeholder="{{#if required}}必填{{/if}}" class="form-control-readonly disable-form-ele {{#if required}}required{{/if}}">
+				{{/if}}
+
+			{{/if}}
+		</div>	
+	{{/if}}	
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="multidate-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}" data-mixtype="{{mixtype}}" >
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../../custom}}{{../../custom.showformat}}{{else}}multidate{{/if}} {{#if ../required}}required{{/if}}" value="{{multidate}}">
+				{{/each}}
+				{{else}}
+					<input type="text" data-code="{{../code}}"style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../custom}}{{../custom.showformat}}{{else}}multidate{{/if}} {{#if ../required}}required{{/if}}">
+				{{/if}}
+					
+				{{#if value}}
+					{{#each value}}
+						{{#if issumday}}
+							&nbsp;&nbsp;共<input id="{{../../code}}-sumday" class="form-control" style="width:40px;" value="{{sumday}}"/>天
+						{{/if}}
+					{{/each}}
+					
+				{{/if}}
+			{{else}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" readonly="readonly" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" class="form-control"  id="{{../code}}" value="{{multidate}}"/>{{#if issumday}}共<input type="text" readonly="readonly" style="width: 40px;"  class="form-control disable-form-ele"  id="{{../../code}}-sumday" value="{{sumday}}"/>天{{/if}}
+				{{/each}}
+				{{else}}
+					<input type="text"  readonly="readonly" data-code="{{../code}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class=" disable-form-ele form-control {{#if ../custom}}{{../custom.showformat}}{{else}}multidate{{/if}} {{#if ../required}}required{{/if}}">
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="date-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" id="{{../code}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../../custom}}{{../../custom.showformat}}{{else}}date{{/if}} {{#if ../required}}required{{/if}}" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text" id="{{../code}}" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if custom}}{{custom.showformat}}{{else}}date{{/if}} {{#if ../required}}required{{/if}}">
+				{{/if}}
+			{{else}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" readonly="readonly" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control  {{#if ../required}}required{{/if}} disable-form-ele" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  readonly="readonly" style="{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control  {{#if ../required}}required{{/if}} disable-form-ele">
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+<script id="select-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+			<select class="form-control" data-code="{{code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" id="{{code}}" style="width:{{#ifCond cols "==" "12"}}80%{{else}}70%{{/ifCond}};">
+				<option value="">请选择</option>
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+			</select>
+			{{else}}
+				<select class="form-control" disabled="disabled" data-code="{{code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" id="{{code}}" style="{{#ifCond cols "==" "12"}}80%{{else}}70%{{/ifCond}};">
+				<option value="">请选择</option>
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+			</select>
+			{{/if}}
+		</div>
+	</div>
+{{else}}
+{{#each value}}
+	{{#if selected}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/if}}
+{{/each}}
+{{/if}}
+</script>
+
+<script id="radio-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+<ul class="dowebok controls3">
+{{#if editable}}
+	{{#each value}}
+	{{#if ../custom}}
+			{{#if ../../custom.isstyle}}
+					<li  {{#if ../../../custom.isnewline }}style="float:none;"{{/if}}>
+						<input type="radio" name="{{../../../code}}" data-text="{{name}}" value="{{code}}" data-params="{{../../../custom.eventparamsstr}}" class="labelauty {{../../../custom.event}}" {{#if selected}}checked="checked"{{/if}} id="labelauty{{../../../random}}-{{@index}}" style="display: none;">
+						<label for="labelauty{{../../../random}}-{{@index}}">
+							{{#if selected}}
+								<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}} js_commonradio">{{name}}</span>
+							{{else}}
+								<span data-clzz="{{clzz}}" class="labelauty-unchecked js_commonradio">{{name}}</span>
+							{{/if}}
+		 				</label>
+				  </li>	
+			{{else}}
+					<li {{#if ../../../custom.isnewline }}style="float:none;"{{/if}}>
+						<input type="radio" name="{{../../../code}}" data-text="{{name}}" class="{{../../../custom.event}}"  data-params="{{../../../custom.eventparamsstr}}" value="{{code}}"  {{#if selected}}checked="checked"{{/if}}>
+						<span>{{name}}</span>
+				  </li>	
+			{{/if}}
+		{{else}}
+			<li>
+				<input type="radio" name="{{../../code}}" value="{{code}}" class="labelauty" {{#if selected}}checked="checked"{{/if}} id="labelauty{{../random}}-{{@index}}" style="display: none;">
+				<label for="labelauty{{../random}}-{{@index}}">
+					{{#if selected}}
+						<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}} js_commonradio">{{name}}</span>
+					{{else}}
+						<span data-clzz="{{clzz}}" class="labelauty-unchecked js_commonradio">{{name}}</span>
+					{{/if}}
+		 		</label>
+			</li>	
+	{{/if}}
+	{{/each}}
+{{else}}
+{{#each value}}
+{{#if ../custom.isstyle}}
+	<li {{#if ../../custom.isnewline }}style="float:none;"{{/if}}>
+		<input type="radio" name="{{../../code}}"  value="{{code}}" class="labelauty"  disabled {{#if selected}}checked="checked"{{/if}} id="labelauty{{random}}-{{@index}}" style="display: none;">
+		<label for="labelauty{{random}}-{{@index}}">
+				{{#if selected}}
+					<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}}">{{name}}</span>
+				{{else}}
+					<span data-clzz="{{clzz}}" class="labelauty-unchecked">{{name}}</span>
+				{{/if}}
+		</label>
+	</li>
+{{else}}
+	<li {{#if ../../custom.isnewline }}style="float:none;"{{/if}}>
+		<input type="radio" name="{{../../../code}}" disabled value="{{code}}" {{#if selected}}checked="checked"{{/if}}>
+		<span>{{name}}</span>
+	 </li>	
+{{/if}}
+{{/each}}
+{{/if}}
+</ul>
+</div>
+</div>
+{{else}}
+	{{#each value}}
+		{{#if selected}}
+			<input type="radio" name="{{../../code}}"  value="{{code}}" checked="checked"  style="display: none;">
+		{{/if}}
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="checkbox-template" type="text/x-handlebars-template">
+	{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+<ul class="dowebok controls3">
+	{{#if custom.isstyle}}
+		{{#each value}}
+			<li {{#if ../custom.isnewline }}style="float:none;"{{/if}}>
+				<input type="checkbox" name="{{../code}}" {{#if ../editable}}{{else}} disabled {{/if}} class="labelauty" {{#if selected}}checked="checked"{{/if}} value="{{code}}" id="labelauty{{../random}}-{{@index}}" style="display: none;"/>
+				<label for="labelauty{{../random}}-{{@index}}">
+					{{#if selected}}
+						<span data-clzz="{{clzz}}" class="{{clzz}} {{#if ../../editable}}js_commoncheckbox{{/if}}">{{name}}</span>
+					{{else}}
+						<span data-clzz="{{clzz}}" class="labelauty-unchecked {{#if ../../editable}}js_commoncheckbox{{/if}}">{{name}}</span>
+					{{/if}}
+		 		</label>
+			</li>
+		{{/each}}
+	{{else}}
+		{{#each value}}
+			<li {{#if ../custom.isnewline }}style="float:none;"{{/if}}>
+				<span><input type="checkbox" name="{{../code}}" {{#if ../editable}}{{else}}disabled{{/if}} {{#if selected}}checked="checked"{{/if}} value="{{code}}"/>{{name}}</span>
+			</li>
+		{{/each}}
+	{{/if}}
+<ul>
+</div>
+</div>
+{{/if}}
+</script>
+
+<script id="multiselect-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+			<select class="form-control multiSelect" {{#if ../custom.isasync}} data-ajax--url="{{url}}" data-async="{{../custom.isasync}}" {{/if}} multi="multi" id="{{code}}" multiple style="width:{{#ifCond cols "==" "12"}}80%{{else}}70%{{/ifCond}};">
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+			</select>
+			{{else}}
+				<select class="form-control" id="{{../code}}" disabled  multi="multi" multiple>
+				{{#each value}}
+					<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+				{{/each}}
+				</select>
+									
+			{{/if}}
+		</div>
+	</div>
+{{else}}
+	<select class="form-control " id="{{code}}" multiple style="width:{{#ifCond cols "==" "12"}}80%{{else}}70%{{/ifCond}};display:none;">
+	{{#each value}}
+		<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+	{{/each}}
+	</select>
+{{/if}}
+</script>
+<script id="selectorgs-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}" id="{{code}}">
+		<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+		<label class="control-label" style="float: left" title="{{name}}">{{name}}</label>
+		<div class="controls">
+		 {{#if editable}}
+			<a class="icon-plus js_common_selectorgs" data-custom="{{customstr}}" data-code="{{code}}" style="margin-right: 10px;float: left;position: relative;top: 1px;">选择部门</a>
+			<span class="{{code}}-showorgs">
+				{{#each value}}
+					<span class="file-show" style="margin-right:3px;position: relative; top: 4px;">
+					 	<a data-id="{{code}}" data-edit="{{editable}}" data-name="{{name}}">{{name}}</a>
+					 {{#if editable}}
+						 <a class="close_file js_common_delselectorgs file_remove_file" title="删除">×</a>
+					 {{/if}}
+				   </span>
+				{{/each}}
+			</span>
+		{{else}}
+			<span class="{{code}}-showorgs">
+			{{#each value}}
+			<span class="file-show" style="margin-right:3px;position: relative; top: 4px;">
+				 <a data-id="{{code}}" data-edit="{{editable}}" data-name="{{name}}">{{name}}</a>
+			</span>
+			{{/each}}
+			</span>
+	 	{{/if}}
+	   </div>
+	</div>
+{{else}}
+	<span class="{{code}}-showorgs" style="display:none;">
+		{{#each value}}
+			<span class="file-show" style="margin-right:3px;">
+				<a data-id="{{code}}" data-edit="{{editable}}" data-name="{{name}}">{{name}}</a>
+			</span>
+		{{/each}}
+	</span>
+{{/if}}
+</script>
+
+<script id="fileupload-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+<div class="controls" style="margin-left:100px;">
+	{{#if editable}}
+<div class="upload-btn-wrap acl-hide html5">
+	<a  class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+		<i class="icon-upload-alt"></i> 上传{{name}}
+	</a>
+
+<span id="{{random}}-showfiles" data-code="{{code}}" style="display:block;">
+	{{#each value }}
+		<span class="file-show" data-name="{{name}}" data-file-perm="{{fileperm}}" data-operperm="{{operperm}}"  data-code="{{code}}" data-customstr="{{customstr}}" data-isedit="{{editable}}">
+			<a class="filename_view {{#checkfileperm operperm "v"}}js_file_view{{/checkfileperm}}" data-reddoctype="{{../custom.reddoctype}}" data-file-id="{{code}}" data-file-suffix="{{suffix}}" data-file-perm="{{../custom.fileperm}}">{{name}}</a>
+			{{#checkfileperm operperm "d"}}<a class="file_view fa fa-download"  href="{{../../baseUrl}}{{code}}"  target="_blank"></a>{{/checkfileperm}}
+			{{#checkfileperm operperm "r"}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/checkfileperm}}
+		</span>
+	{{/each}}
+</span>
+</div>
+<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="{{random}}" name="{{code}}" data-fileperm="{{custom.fileperm}}" data-customstr="{{customstr}}" class="js_fileupload" accept="" multiple="multiple" />
+{{else}}
+	<span id="{{random}}-showfiles" data-code="{{code}}" style="display:block;">
+	{{#each value }}
+		<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-file-perm="{{fileperm}}" data-operperm="{{operperm}}" data-customstr="{{customstr}}" data-isedit="{{editable}}">
+			<a data-file-id="{{code}}" data-reddoctype="{{../custom.reddoctype}}"  data-file-suffix="{{suffix}}"  data-file-perm="{{fileperm}}" class="filename_view {{#checkfileperm operperm "v"}}js_file_view{{/checkfileperm}}">{{name}}</a>
+			{{#checkfileperm operperm "d"}}<a class="file_view fa fa-download" href="{{../../baseUrl}}{{code}}" target="_blank"></a>{{/checkfileperm}}
+			{{#checkfileperm operperm "r"}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/checkfileperm}}		
+		</span>
+	{{/each}}
+	</span>
+{{/if}}
+</div>
+</div>
+{{/if}}
+</script>
+
+<script id="fileshow-template" type="text/x-handlebars-template">
+{{#each files}}
+<span class="file-show" data-code="{{code}}" data-name="{{name}}" data-isedit="{{editable}}" data-file-perm="{{fileperm}}" data-customstr="{{customstr}}">
+		<a  class="filename_view js_file_view" data-file-id="{{code}}"  data-file-suffix="{{suffix}}" >{{name}}</a>
+		<a href="{{../baseUrl}}{{code}}"  target="_blank" class="file_view fa fa-download"></a>
+	<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+</span>
+{{/each}}
+</script>
+
+
+<script id="memoshow-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+{{#if editable}}
+	{{#memo_add value}}
+		<a class="icon-plus js_addmemo" style=" top: 4px;position: relative;display:none;">添加便签</a>
+		{{else}}
+		<a class="icon-plus js_addmemo">添加便签</a>
+	{{/memo_add}}
+<ul class="form-list clearfix js_memolist" id="{{code}}-showmemo" style="margin-top:30px;padding-top:0px;">
+{{#each value}}
+	<li  data-editable="{{code.editable}}" data-createtime="{{code.createtime}}" data-avatarcode="{{code.avatarcode}}"  data-usercode="{{code.usercode}}" data-username="{{code.username}}"  style="width:32%">
+		<div class="form-list-box js_formListBox">
+			<div class="content">
+				<span class="serial">
+					<img  src="{{#if code.avatarcode}}{{../../baseUrl}}{{code.avatarcode}}{{else}}images/avatar.png{{/if}}">
+				</span>
+				<h4 id="form-title" class="title router ellipsis filterSlip_js js_formtitle" href="" title="{{code.username}}" style="width:76px;margin-bottom: 1px;">{{code.username}}</h4>
+				<span style="position: relative;bottom: 25px;float: right;">{{#dateformat code.createtime "MM/dd HH:mm:ss"}}{{/dateformat}}</span>
+					<p  class="js_changestate" title="{{code.content}}" style=" clear:both;position:relative;height:50px; bottom: 20px;overflow: hidden;">{{code.content}}</p>
+					<p 	class="js_updatememo hide" style="position:relative;bottom:17px;">
+						<textarea cols="21"  style="height:53px;width:170px;" class="meno-value">{{code.content}}</textarea>
+					</p>
+		   </div>
+			{{#if code.editable}}
+				<div class="btn-group js_previewbtn"><button  style="line-height: 20px;position:relative;bottom: 66px;left: 10px;" type="button" class="select_x close js_deletememo" title="删除">×</button></div>
+			{{/if}}
+		</div>
+	</li>
+{{/each}}
+</ul>
+{{else}}
+	<ul class="form-list clearfix js_memolist" id="{{code}}-showmemo">
+		{{#each value}}
+			<li  data-editable="{{code.editable}}" data-createtime="{{code.createtime}}" data-avatarcode="{{code.avatarcode}}"  data-usercode="{{code.usercode}}" data-username="{{code.username}}"  style="width:32%">
+		<div class="form-list-box js_formListBox">
+			<div class="content">
+				<span class="serial">
+					<img  src="{{#if code.avatarcode}}{{../../baseUrl}}{{code.avatarcode}}{{else}}images/avatar.png{{/if}}">
+				</span>
+				<h4 id="form-title" class="title router ellipsis filterSlip_js js_formtitle" href="" title="{{code.username}}" style="width:76px;margin-bottom: 1px;">{{code.username}}</h4>
+				<span style="position: relative;bottom: 25px;float: right;">{{#dateformat code.createtime "MM/dd HH:mm:ss"}}{{/dateformat}}</span>
+					<p  class="js_changestate" title="{{code.content}}" style=" clear:both;position:relative;height:50px; bottom: 20px;overflow: hidden;">{{code.content}}</p>
+					<p 	class="js_updatememo hide" style="position:relative;bottom:17px;">
+						<textarea cols="21"  style="height:53px;width:170px;" class="meno-value">{{code.content}}</textarea>
+					</p>
+		   </div>
+		</div>
+	</li>
+		{{/each}}
+	 </ul>
+{{/if}}
+</div>
+{{/if}}
+</script>
+
+<script id="serialcode-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}} serialcode">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}</label>
+<div class="controls">
+{{#if editable}}
+	{{#each value}}
+		<select class="form-control js_serialcode" id="{{serial.code}}" {{#if ../custom.isasync}} data-ajax--url="{{../../url}}" data-async="{{../../custom.isasync}}" {{/if}} >
+			<option value="">请选择</option>
+			{{#each serial.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		<span class="show_val">
+			<input type="hidden" id="{{year.code}}" value="{{year.value}}"></input>
+			({{year.value}})
+		</span>
+		<select class="form-control js_serialnum" id="{{num.code}}" style="width:100px;">
+			<option value="">请选择</option>
+			{{#each num.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select><span class="show_val">号</span>
+		{{#if btn_addserial.isshow}}
+		 	<a class="btn btn-sm js_addserialcode" style="padding:3px 5px;">{{btn_addserial.code}}</a>
+		{{/if}}
+	{{/each}}
+{{else}}
+<span class="show_val">
+{{#each value}}
+		<select class="form-control" id="{{serial.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each serial.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 <input type="hidden" id="{{year.code}}" value="{{year.value}}"></input>
+		<select class="form-control" id="{{num.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each num.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 {{#each serial.value}}
+			{{#if selected}}{{name}}{{/if}}
+		{{/each}}
+		({{year.value}})
+		{{#each num.value}}
+			{{#if selected}}{{name}}号{{/if}}
+		{{/each}}
+{{/each}}
+</span>
+{{/if}}
+	</div>
+</div>
+{{else}}
+	{{#each value}}
+		<select class="form-control" id="{{serial.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each serial.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+		 <input type="hidden" id="{{year.code}}" value="{{year.value}}"></input>
+		<select class="form-control" id="{{num.code}}" style="display:none;">
+			<option value="">请选择</option>
+			{{#each num.value}}
+				<option value="{{code}}" {{#if selected}}selected="selected"{{/if}}>{{name}}</option>
+			{{/each}}
+		</select>
+	{{/each}}
+{{/if}}
+</script>
+
+<script id="textarea-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+	{{#if custom.title}}<div>{{#outputhtml custom.title}}{{/outputhtml}}</div>{{/if}}
+	{{#if name}}<label class="control-label">{{name}}</label>{{/if}}
+	<div class="controls">
+		{{#if editable}}
+		{{#if value}}
+			{{#each value}}
+				<textarea id="{{../code}}"  style="background-color: #fff;margin-left: 2px;{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}">{{code}}</textarea>
+			{{/each}}
+			{{else}}
+				<textarea id="{{code}}"  style="background-color: #fff;margin-left: 2px;{{#if ../custom.width}}width:{{../../custom.width}}{{/if}}" placeholder="{{#if required}}必填{{/if}}" class="form-control {{#if required}}required{{/if}}"></textarea>
+		{{/if}}
+			
+		{{else}}
+		{{#if value}}
+		{{#each value}}
+			<textarea id="{{../code}}" readonly="readonly" placeholder="{{#if ../required}}必填{{/if}}" class="disable-form-ele form-control {{#if ../required}}required{{/if}}">{{code}}</textarea>
+		{{/each}}
+			{{else}}
+			<textarea id="{{code}}" readonly="readonly" placeholder="{{#if required}}必填{{/if}}" class="disable-form-ele form-control {{#if required}}required{{/if}}"></textarea>
+		{{/if}}
+		{{/if}}
+	</div>
+</div>
+	{{else}}
+	{{#each value}}
+			<input type="hidden" id="{{../code}}" value="{{code}}"></input>
+	{{/each}}
+{{/if}}
+</script>
+<script id="selectperon-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+<label class="control-label">{{name}}</label>
+<div class="controls">
+		{{#if editable}}
+			<a class="icon-plus js_selectperson" data-id="{{code}}" style="margin-right: 10px;float: left;position: relative;top: 9px;"></a>
+		{{/if}}
+		<span class="{{code}}-showperson">
+			{{#each value}}
+					<span class="file-show" style="margin-right:3px;top: 4px;position: relative;">
+					 	<a data-id="{{code}}" data-editable="{{editable}}" data-name="{{name}}">{{name}}</a>
+					 {{#if editable}}
+						 <a class="close_file js_common_delperson file_remove_file" title="删除">×</a>
+					 {{/if}}
+				   </span>
+			 {{/each}}
+		</span>
+	</div>
+</div>
+{{/if}}
+</script>
+<script id="selectperon-show-template" type="text/x-handlebars-template">
+{{#each persons}}
+	<span class="file-show" style="margin-right:3px;top: 4px;position: relative;">
+ 		<a data-id="{{code}}" data-editable="{{editable}}" data-name="{{name}}">{{name}}</a>
+		<a class="close_file js_common_delperson file_remove_file" title="删除">×</a>
+ 	</span>
+{{/each}}
+</script>
+<script id="nextperson-show-template" type="text/x-handlebars-template">
+{{#each persons}}
+<span class="file-show" style="margin-right:3px;"> 
+<a id="u_{{code}}" real_code="{{real_code}}" uid="{{code}}" data-name="{{name}}">{{name}}</a> 
+{{#if editable}}<a class="close_file file_remove_file" title="删除">×</a>{{/if}}
+</span>
+{{/each}}
+</script>
+
+<script id="tablelist-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}{{/if}}" class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<input id="checkerror{{code}}" type="hidden" value="" data-check="true" data-name="{{name}}" />
+{{#if custom.title}}<div>{{#outputhtml custom.title}}{{/outputhtml}}</div>{{/if}}
+<div class="controls">
+	<table class="table table-bordered noprint" id="{{code}}" data-config="{{dataconfig}}" style="margin-top:10px;">
+		<thead>
+			<tr class="change">
+				{{#each value}}
+					{{#each thead}}<th colspan="{{cols}}" class="{{#if contentconfig.isshow}}{{else}}hide{{/if}}" data-code="{{key}}" >{{name}}</th>{{/each}}
+				{{/each}}
+			</tr>
+		</thead>
+		<tbody>
+			{{#each value}}
+				{{#if ../ispicker}}
+				<tr class="{{../../custom.tr_event}}">
+				{{#each thead}}
+					{{#ifCond @index "==" "0"}}<td colspan="{{cols}}">清空</td>{{else}}<td colspan="{{cols}}">&nbsp;</td>{{/ifCond}}
+				{{/each}}
+				</tr>
+			  {{/if}}
+			{{#each tbody}}
+				<tr class="{{../../custom.tr_event}}" data-record="{{recordjson}}">
+					{{#each record}}
+						{{#if isoperate}}
+							<td colspan="{{cols}}"  class="{{#if config.isshow}}{{else}}hide{{/if}}" >
+							  {{#each operators}}
+							 		<span class="{{clzz}} {{event}}" data-title="{{title}}" data-custom="{{customstr}}" style="cursor: pointer;" title="{{title}}"></span>
+							  {{/each}}
+							</td>		
+						{{else}}
+							<td colspan="{{cols}}" style="{{#ifCond @index "==" "0"}}{{#ifCond val "==" "清空"}}color:blue;{{/ifCond}}{{/ifCond}}"   class="{{#if config.isshow}}{{else}}hide{{/if}}" data-val="{{val}}" {{#if config.ispk}}ispk="true"{{/if}} {{#if config.ispkname}}ispkname="true"{{/if}}>
+									{{#if config.ispk}}
+										{{#if ../../../../../ischeckbox}}
+											<input type="checkbox" name="{{code}}" class="js-table-checkbox" value="{{val}}"/>
+										{{else}}
+											{{val}}
+										{{/if}}
+									{{else}}
+										{{#ifCond config.type "==" "select"}}
+											{{#if config.editable}}
+												<select name="{{code}}" class="{{#if config.required}}required{{/if}}" style="70%">
+													{{#each config.value}}
+														{{#ifCond code "==" ../val}}
+																<option value="{{code}}" selected="selected">{{name}}</option>
+															{{else}}
+															 	<option value="{{code}}">{{name}}</option>	
+														{{/ifCond}}
+														
+													{{/each}}
+												</select>
+											{{else}}
+												<span class="show_val" style="color:#0D0D0D" data-type="label">{{val}}</span>
+											{{/if}}
+										{{/ifCond}}
+										{{#ifCond config.type "==" "fileupload"}}
+														<span class="showfiles" id="{{code}}" data-type="fileupload" data-code="{{code}}" style="display:block;">
+															{{#each val}}
+																<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="false">
+																	<a class="filename_view js_file_view" data-file-id="{{code}}">{{name}}</a>
+																	<a  href="{{../../baseUrl}}{{code}}" target="_blank" class="file_view fa fa-search-plus"></i>
+																</span>
+															{{/each}}
+														</span>
+										{{/ifCond}}
+										{{#ifCond config.type "==" "label"}}
+											<span class="show_val" style="color:#0D0D0D" data-type="label">
+											{{#if custom.isexpr}}
+												{{#calculate_common ../../../../record custom.expression}}{{/calculate_common}}</span>
+											{{else}}
+												{{val}}
+											{{/if}}
+											</span>
+											<input type="hidden" id="{{code}}" data-custom="{{customstr}}" style="width:70%;  height: 28px;" name="{{code}}" data-id="{{code}}" value="{{#if custom.isexpr}}{{#calculate_common ../../../../../record custom.expression custom}}{{/calculate_common}}{{else}}{{#if custom.symbol}}{{#formatMoney val custom }}{{/formatMoney}}{{else}}{{val}}{{/if}}{{/if}}" />
+										{{/ifCond}}
+										{{#ifCond config.type "==" "text"}}
+											<input type="text" id="{{code}}" {{#if config.editable}}{{else}}readonly="readonly"{{/if}} class="iptCom {{#each operators}}{{event}}{{/each}} {{#if config.required}}required{{/if}}" context="{{context}}"  data-custom="{{customstr}}" style="width:70%;  height: 28px;" name="{{code}}" data-id="{{code}}" value="{{#if custom.isexpr}}{{#calculate_common ../../../../../record custom.expression custom}}{{/calculate_common}}{{else}}{{#if custom.symbol}}{{#formatMoney val custom }}{{/formatMoney}}{{else}}{{val}}{{/if}}{{/if}}" />
+											{{#if config.editable}}<i></i>{{/if}}
+										{{/ifCond}}
+									{{/if}}
+							</td>
+						{{/if}}
+					{{/each}}
+				</tr>
+			{{/each}}
+			{{/each}}
+			{{#each value}}
+			{{#if sumobj}}
+				<tr data-type="sumcol">
+					<td colspan={{sumobj.label.cols}}>{{sumobj.label.name}}</td>
+					{{#each sumobj.sum}}
+						<td colspan="{{cols}}"  class="{{#if config.isshow}}{{else}}hide{{/if}}"  data-hassum="{{hassum}}">{{#if hassum}}<input type="hidden" data-operators="{{operatorstr}}" data-oldval="{{val}}" class="{{#if operators}}{{#each operators}}{{event}} {{/each}}{{/if}}" value="{{val}}"/><span>{{#if ../custom.symbol}}{{#formatMoney val ../custom}}{{/formatMoney}}{{else}}{{val}}{{/if}}{{/if}}</span></td>
+					{{/each}}
+				</tr>
+			{{/if}}
+			{{/each}}
+		</tbody>
+	</table>
+</div>
+	{{#each value}}
+	{{#if ispagination}}
+		<div id="table_query_pagination" style="float: right; padding-right: 10px; margin-top: 3px;width:100%;">
+		</div>	
+	{{/if}}
+	{{/each}}
+</div>
+{{/if}}
+</script>
+<!-- picker按钮 -->
+<script id="picker-template" type="text/x-handlebars-template">
+	{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		{{#if name}}
+			<label class="control-label">{{name}}</label>
+		{{/if}}
+		<div class="controls">
+			{{#each value}}
+				<a name="{{code}}" {{#if ../editable}}{{else}}disabled{{/if}} style='{{#if ../custom.pickerfloat}}float:{{../../custom.pickerfloat}}{{/if}}' data-title="{{../custom.pickerlabel}}" data-custom="{{../customstr}}" class="btn btn-info btn-sm picker-btn {{#if ../../custom.event}}{{../../custom.event}}{{/if}}">{{../custom.pickerlabel}}</a>
+			{{/each}}
+		</div>
+	</div>
+	{{/if}}
+</script>
+<!-- btn按钮 -->
+<script id="btn-template" type="text/x-handlebars-template">
+	{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#each value}}
+				<a name="{{code}}" style="float:{{float}}" {{#if ../editable}}{{else}}disabled{{/if}} data-custom="{{../customstr}}" class="btn btn-info btn-sm picker-btn {{#if ../../custom.event}}{{../../custom.event}}{{/if}}">{{name}}</a>
+			{{/each}}
+		</div>
+	</div>
+	{{/if}}
+</script>
+
+
+<!-- 搜索类型的模板 -->
+<script id="picker-list-template" type="text/x-handlebars-template">
+<div class="forms-body-wrap forms-content jscroll" style="top:0px;">
+{{#if ischeckbox}}
+	<div id="selectedval" class="entity-info">
+		<div class="control-group col-12">
+			<label class="control-label" style="text-align:left;">选中数据：</label>
+			<div class="controls" style="float:right;">
+				<a class="btn btn-success btn-sm js-table-checkbox-submit">确定</a><a class="btn btn-default btn-sm js-cancel">取消</a>
+			</div>
+		</div>
+		<div class="control-group col-12">
+			<div class="controls">
+				<select id="table-selectedValue" multiple="multiple">
+				</select>
+			</div>
+		</div>
+	</div>
+{{/if}}	
+	<div id="pickersearch" class="entity-info" style="margin-top: 10px;">
+	</div>
+	<div id="pickertable" class="entity-info" style="margin: 0 5px;">
+	</div>
+	{{#if issimpleform}}
+		<div class="controls" style="float:right;margin-right: 10px;">
+			<a class="btn btn-success btn-sm js-table-simpleform-submit">确定</a><a class="btn btn-default btn-sm js-cancel">取消</a>
+		</div>
+	{{/if}}
+<div>
+</script>
+
+
+<!-- 选择类型格式的模板如：选择费用类型 -->
+<script id="picker-xtype-template" type="text/x-handlebars-template">
+	<div class="forms-content">
+	<div class="entity-info forms-body-wrap jscroll" style="padding:2px;top:0px;">
+		<div class="xtype-title {{iconclzz}}" style="font-size:20px;line-height:50px;">{{title}}</div>
+		<table class="xtype-table" id="pickertable"></table>
+	</div>
+		<div class="control-group col-12" style="position:absolute;bottom: 0px;right: 10px;">
+			<div class="controls" style="float:right;">
+				<a class="btn btn-primary btn-sm js-table-checkbox-submit">确定</a><a class="btn btn-default btn-sm js-table-checkbox-cancel">取消</a>
+			</div>
+		</div>
+</div>
+</script>
+<script id="picker-xtype-tr-template" type="text/x-handlebars-template">
+			<tbody>
+				{{#each xtypes}}
+					<tr class="xtype-tr" {{#mod2 @index}}style="background-color:#F4F3FC"{{/mod2}}>
+					<td class="xtype-type">{{feetypename}}</td>
+					<td class="xtype-type-items">
+					 {{#each childs}}
+						<span><input type="checkbox" name="items" value="{{../feetype}}{{feeitem}}" data-name="{{feeitemname}}"/>{{feeitemname}}</span>
+					{{/each}}	
+		 	 		 </td>
+					</tr>
+				{{/each}}
+			</tbody>
+</script>
+
+<script id="searchbtn-template" type="text/x-handlebars-template">
+<div class="control-group col-{{cols}}" style="text-align:right; right:10px;">
+{{#each value}}
+	<a name="{{code}}" id="{{code}}" style="width:90px;" data-custom="{{../customstr}}" class="btn btn-primary btn-sm {{../custom.event}}">{{name}}</a>
+{{/each}}
+</div>
+</script>
+
+<script id="addtr-template" type="text/x-handlebars-template">
+		<tr>
+{{#each thead}}
+	{{#ifCond key "==" "operate_col"}}
+		<td colspan="{{cols}}" class="{{#if config.isshow}}{{else}}hide{{/if}}">
+	  		{{#each operators}}
+	 			<span class="{{clzz}} {{event}}" data-custom="{{customstr}}" style="cursor: pointer;" title="{{title}}"></span>
+			{{/each}}
+		</td>		
+{{else}}
+	<td colspan="{{cols}}" class="{{#if config.isshow}}{{else}}hide{{/if}}">
+		{{#ifCond config.type "==" "select"}}
+			<select name="{{key}}" data-id="{{key}}"  style="width:70px;">
+					{{#each config.value}}
+						<option value="{{code}}">{{name}}</option>
+					{{/each}}
+			</select>
+		{{/ifCond}}
+		{{#ifCond config.type "==" "label"}}
+			<span class="show_val" style="color:#0D0D0D" data-type="label">{{val}}</span>
+			<input type="hidden" id="key" value="{{val}}"/>
+		{{/ifCond}}
+		{{#ifCond config.type "==" "fileupload"}}
+				<span class="showfiles" id="{{key}}" data-type="fileupload" data-code="{{key}}"  style="display:block;">
+					{{#each val}}
+						<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="false">
+							<a class="filename_view js_file_view" target="_blank"  data-file-id="{{code}}"  data-file-suffix="{{suffix}}"  data-file-perm="{{fileperm}}">{{name}}</a>
+							<a href="{{../../baseUrl}}{{code}}"  class="file_view fa fa-download"></a></span>
+					{{/each}}
+				</span>
+		{{/ifCond}}
+		{{#ifCond config.type "==" "text"}}
+			{{#if config.editable}}
+				<input type="text" id="{{key}}" data-id="{{key}}" class="iptCom {{#if config.required}}required{{/if}} {{#each operators}}{{event}}{{/each}}" context="{{context}}"  data-custom="{{customstr}}" style="width:70%;  height: 28px" name="{{code}}" data-id="{{code}}" value="{{config.value}}" />
+				<i></i>
+				{{else}}
+				<input type="text" id="{{key}}" data-id="{{key}}" readonly="readonly" class="iptCom {{#each operators}}{{event}}{{/each}} {{#if config.required}}required{{/if}}" context="{{context}}"  data-custom="{{customstr}}" style="width:70%;height: 28px" name="{{code}}" data-id="{{code}}" value="{{config.value}}" />
+			{{/if}}
+		{{/ifCond}}
+	</td>
+{{/ifCond}}
+{{/each}}
+</tr>
+</script>
+
+<script id="simpleselectperson-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+	<label class="control-label">{{name}}</label>
+		<div class="controls">
+			{{#if editable}}
+					<div class="remind-user invalid" style="position: relative;">
+						{{#if value}}
+							{{#each value}}
+								<input type="text" id="{{../code}}" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control js-simpleselectperson {{#if ../required}}required{{/if}}" value="{{name}}">
+							{{/each}}
+						{{else}}
+							 <input type="text" id="{{../code}}"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control js-simpleselectperson {{#if ../required}}required{{/if}}">
+						{{/if}}
+						<a class="icon-search" style="position: relative;left: -20px;"></a>
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:0 0 0 0;position: absolute; border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist"></div>
+						</div>
+					</div>
+			{{else}}
+				{{#each value}}
+					<span class="show_val" data-type="label">{{name}}</span>
+					<input type="hidden" id="{{../code}}" value="{{name}}"/>
+				{{/each}}
+			{{/if}}
+		</div>	
+</div>
+{{/if}}
+</script>
+
+
+<!-- 选人输入框 -->
+<script id="input-user-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+	{{#if custom}}
+		{{#if custom.iszj}}
+		<div style="float: right;margin-left: 0;">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="width:70%;" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}" value="{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="width:70%;"  id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}">
+				{{/if}}
+				
+			{{else}}
+				{{#each value}}
+					<span class="show_val" data-type="label">{{#if ../custom.symbol}}{{#formatMoney code ../custom }}{{/formatMoney}}{{else}}{{code}}{{/if}}</span>
+					<input type="hidden" data-custom="{{../customstr}}" id="{{../code}}" value="{{code}}"/>
+				{{/each}}
+			{{/if}}
+		</div>
+		<label class="control-label" style="float:right;">{{name}}：</label>
+	  {{/if}}
+	{{else}}
+		<label class="control-label">{{name}}：</label>
+		<div class="controls">
+			{{#if editable}}
+				{{#if value}}
+				{{#each value}}
+					<input type="text" data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="width:70%;" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}" value="{{code}}">
+				{{/each}}
+				{{else}}
+					<input type="text"  data-code="{{../code}}" data-search="{{../issearch}}" data-custom="{{../customstr}}" style="width:70%;" id="{{../code}}" placeholder="{{#if ../required}}必填{{/if}}" class="form-control {{#if ../required}}required{{/if}}">
+				{{/if}}
+				
+			{{else}}
+			   {{#if value}}
+				{{#each value}}
+					<span class="show_val" data-type="label">{{code}}</span>
+					<input type="hidden" id="{{../code}}" value="{{code}}"/>
+				{{/each}}
+			  {{else}}
+				  <span class="show_val" data-type="label">{{code}}</span>
+					<input type="hidden" id="{{code}}"/>
+			  {{/if}}
+			{{/if}}
+		</div>	
+	{{/if}}	
+	</div>
+{{else}}
+	{{#each value}}
+		<input type="hidden" id="{{../code}}" value="{{code}}"/>
+	{{/each}}
+{{/if}}
+</script>
+
+
+<script id="ueditor-template" type="text/x-handlebars-template">
+{{#if isshow}}
+{{#if editable}}
+<div  class="control-group col-{{cols}}" data-content="{{value}}" data-ueditor="{{code}}_{{uuid}}">
+	<label class="control-label">{{name}}</label>
+ 	<div class="controls" style="float:left;" id="ueditor-div">
+ 		@editor@
+	 </div>
+ </div>
+{{else}}
+	<div class="control-group col-{{cols}}" data-content="{{value}}">
+	<label class="control-label">{{name}}：</label>
+ 	<div class="controls" style="float:left;">
+		{{#outputhtml value }}{{/outputhtml}}
+		<input type="hidden" id="{{code}}" value="{{value}}"/>
+	 </div>
+ 	</div>
+{{/if}}
+{{else}}
+<input type="hidden" id="{{code}}" value="{{value}}"/>
+{{/if}}
+</script>
+
+<script id="label-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		{{#if name}}
+			<label class="control-label">{{name}}</label>
+		{{/if}}
+		<div class="controls">
+			{{#each value}}
+				<span class="show_val {{clzz}}" data-type="label">{{code}}</span>
+				<input type="hidden" id="{{../code}}" value="{{code}}"/>
+			{{/each}}
+		</div>
+	</div>
+	{{/if}}
+</script>
+<script id="next-user-radio-template" type="text/x-handlebars-template">
+<ul class="dowebok controls">
+{{#each users}}	
+<li> 
+	<input type="radio" name="nextuser-radio" data-name="{{name}}" data-pcode="{{pcode}}" data-code="{{code}}" value="{{pcode}}_{{code}}" data-name="{{name}}" class="labelauty required next-step" id="next-user-{{../uuid}}-{{@index}}" style="display: none;"> 
+	<label for="next-user-{{../uuid}}-{{@index}}"> 
+	<span class="js_selectperson_radio next-step-unchecked">{{name}}</span> 
+	</label> 
+</li> 
+{{/each}}
+</ul> 
+</script>
+<script id="next-user-checkbox-template" type="text/x-handlebars-template">
+<ul class="dowebok controls">
+{{#each users}}	
+<li> 
+	<span class="nextuser-checkbox">
+	<input type="checkbox" name="nextuser-checkbox" data-name="{{name}}" data-pcode="{{pcode}}" data-code="{{code}}" value="{{pcode}}_{{code}}" data-name="{{name}}" class="labelauty required next-step" id="next-user-{{../uuid}}-{{@index}}">
+	<label style="cursor: pointer;" for="next-user-{{../uuid}}-{{@index}}">{{name}}</label>
+	</span> 
+</li> 
+{{/each}}
+</ul> 
+</script>
+
+<script id="taskhandle-template" type="text/x-handlebars-template">
+	<div class="form-category-bd">
+					<div class="entity-info clearfix">
+						{{#if processdefLoad.data.result}}
+						{{#if processdefLoad.data.result.isshow}}
+						<div class="control-group col-12 js-result-isshow">
+							<label class="control-label">{{processdefLoad.data.result.name}}：</label>
+							<div class="controls">
+							<ul class="dowebok controls">
+							{{#each processdefLoad.data.result.valuesource}}
+								{{#if ../processdefLoad.data.result.editable}}
+									<li>
+										<input type="radio" name="result" value="{{../code}}" class="labelauty" {{#if ../selected}}checked="checked"{{/if}} id="labelauty{{../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../pageId}}-{{@index}}">
+										{{#if ../selected}}
+											<span data-clzz="{{../clzz}}" class="{{#radio_selected ../clzz}}{{/radio_selected}} js_commonradio">{{../name}}</span>
+											{{else}}
+											<span data-clzz="{{../clzz}}" class="labelauty-unchecked js_commonradio">{{../name}}</span>
+										{{/if}}
+										</label>
+									</li>
+								{{else}}
+								<!-- 非编辑 -->
+									{{#if ../selected}}
+									<li>
+										<input type="radio" name="result"  value="{{code}}" class="labelauty" checked="checked" id="labelauty{{../../../pageId}}-{{@index}}" style="display: none;">
+										<label for="labelauty{{../../../pageId}}-{{@index}}">
+												<span data-clzz="{{clzz}}" class="{{#radio_selected clzz}}{{/radio_selected}}">{{name}}</span>
+										</label>
+									</li>
+									{{/if}}
+								{{/if}}
+							{{/each}}
+							</ul>
+							</div>
+						</div>
+						{{/if}}
+						{{/if}}
+						
+						<!-- end result -->
+						
+						<!-- 处理意思见 -->
+						{{#if processdefLoad.data.opinion.isshow}}
+						<div class="control-group col-12 jsopiniondiv">
+							<div>{{attr.name}}<input type="checkbox"  id="setCommonLang" placeholder="必填" {{#if processdefLoad.data.handleinfo.setasfrequence}}checked="checked"{{/if}} />设定为常用语<a style="float:right;" class="js_more_normal">更多&gt;&gt;</a>
+							<span class="js_common_show" style="float:right;">{{#each commonoption  }}
+							<a class="js_span_common" style="margin-right:5px;" data-content="{{content}}" title="{{content}}">{{title}}</a>
+							{{/each}}</span>
+							</div>
+							<div class="controls"  id="common_opinion">
+							   {{#if processdefLoad.data.opinion.editable}}
+								<textarea id="opinion" style="background-color: #fff;width:100%!important;" class="form-control {{#if processdefLoad.data.opinion.required}}required{{/if}}" placeholder="{{#if processdefLoad.data.opinion.required}}必填{{/if}}">{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="opinion" style="width:100%!important;" class="form-control" readonly="readonly" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+							<!-- 已阅 -->
+							<div class="controls hide"  id="read_opinion"  style="display: none;">
+							   {{#if attr.editable}}
+									<textarea id="readopinion" style="background-color: #fff;width:100%!important;"  class="form-control" >{{processdefLoad.data.opinion.value}}</textarea>
+								{{else}}
+									<textarea id="readopinion" class="form-control" style="width:100%!important;" readonly="readonly">{{processdefLoad.data.opinion.value}}</textarea>
+								{{/if}}
+							</div>
+						</div>
+						{{/if}}
+						<!-- 处理意思见 -->
+						
+						<!-- shownextstep 下一环节-->
+						{{#if processdefLoad.data.shownextstep}}
+						<div class="control-group col-12 js_ishide js-handlediv">
+							<label class="control-label">下一环节：</label>
+							<div class="controls">
+							 <ul class="dowebok controls">
+								{{#each processdefLoad.data.candidatesteps}}
+									<li>
+										<input type="radio" name="transition" value="{{transition.transitionid}}" data-name="{{transition.transitionname}}"   {{#if transition.selected}} checked="checked"{{/if}} class="labelauty required next-step" id="next_step_{{../random}}{{@index}}" style="display: none;">
+										<label for="next_step_{{../random}}{{@index}}">
+											{{#if transition.selected}}
+												<span class="next-step-checked js_step_sel">{{transition.transitionname}}</span>
+											{{else}}
+												<span class="next-step-unchecked js_step_sel">{{transition.transitionname}}</span>
+											{{/if}}
+										</label>
+									</li>
+								{{/each}}
+							</ul>
+						  </div>
+						</div>
+
+						<div class="control-group col-12 js_ishide js-nexthandlerdiv">
+							<label class="control-label">下一处理人：</label>
+							<div class="controls">
+								<a class="icon-plus js_next_user" {{#each processdefLoad.data.candidatesteps}}{{#if selectedvalues}}{{#if ../handleinfo}}{{#if ../../handleinfo.nextuser}}style="display:none"{{/if}}{{/if}}{{/if}}{{/each}}>添加下一处理人员</a>
+								<span id="selected_next_handler" data-type="next_handler">
+									{{#each processdefLoad.data.candidatesteps}}
+										{{#each selectedvalues}}
+										<span class="file-show" style="margin-right:3px;">
+										  <a  real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}</a>
+										  <a class="close_file js_close_dept file_remove_file" title="删除">×</a>
+										</span>
+											<!-- <a class="form_tag" real_code="{{pcode}}_{{code}}" uid="{{code}}" data-name="{{name}}">{{name}}<button type="button" class="close js_close_dept" title="删除">×</button></a> -->
+										{{/each}}
+									{{/each}}
+								</span>
+							</div>
+						</div>
+						
+						{{/if}}
+						
+					</div>
+				</div>
+</script>
+
+<script id="dealopinion-template" type="text/x-handlebars-template">
+{{#if isshow}}
+	<div {{#if custom}}style="height:{{custom.height}}"{{/if}} class="control-group col-{{cols}}">
+		<label class="control-label">{{name}}</label>
+		<div class="controls" style="margin-left: 100px;">
+				{{#each value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+							<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+							<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+						{{#if result}}
+								{{result.name}}：
+								{{#each result.value}}
+									{{#if result.editable}}
+										<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+									{{else}}
+										<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+									{{/if}}
+								{{/each}}	
+						{{/if}}	
+					</div>
+
+				{{/each}}
+		</div>
+	</div>
+{{/if}}
+</script>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+{
+    "data": {
+        "total": 1,
+        "rows": [
+            {
+                "attrcode": "projectcodes",
+                "datatype": "string",
+                "defaultvalue": "default",
+                "editable": true,
+                "formcode": "formcode-001",
+                "formname": null,
+                "id": 7,
+                "isshow": true,
+                "itemcode": "formitem-007",
+                "itemname": "相关项目",
+                "itemorder": 7,
+                "regioncode": "收文填写",
+                "regionorder": 2,
+                "required": true,
+                "scope": "global",
+                "type": "text",
+                "validatorcode": "ddd",
+                "valuesource": "{\"app\":\"PM\",\"definition\":\"#PM_PROJECT\",\"code\":\"projectcode\",\"name\":\"projectname\"}",
+                "valuetype": "code2name"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

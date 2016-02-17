@@ -1,0 +1,27 @@
+{{#if processlist.length}}
+    {{#each processlist}}
+        <li class="js_formitemsli {{#ifCond isenabled "==" "enable"}}enabled{{else}}disabled{{/ifCond}}">
+            <div class="form-list-box js_formListBox">
+                <div class="content">
+                    <span id="form-number" class="serial">{{addOne @index}}</span>
+                    <h4 id="form-title" title="{{processname}}">{{processname}}</h4>
+                    <p id="form-describe" class="ellipsis nodescription" title="{{processdes}}">{{processdesc}}</p></div>
+                {{#ifCond isenabled "==" "enable"}}
+                <div class="btn-group js_previewbtn">
+                    <a class="btn btn-sm js_formStart" data-id="{{processcode}}" data-curstepname="{{curstepname}}" data-name="{{processname}}">启动</a>
+                    <a class="btn btn-sm js_formPreview" data-id="{{processcode}}">预览</a>
+                </div>
+                {{else}}
+                <div class="btn-group js_previewbtn">
+                    <a class="btn btn-sm">已禁用</a>
+                </div>
+                {{/ifCond}}
+            </div>
+        </li>
+    {{/each}}
+{{else}}
+    <li class="js_formitemsli">
+        <span class="empty">此分类下没有可使用的公文</span>
+    </li>
+{{/if}}
+ 

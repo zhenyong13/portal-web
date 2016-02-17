@@ -1,0 +1,43 @@
+{
+	"data":{
+      "assignee":"",
+      "type":"",
+	  "taskstatus":"",
+      "pageSize":10,
+      "pageNo":2,
+      "total":100,
+      "rows":[
+          {
+            "taskcode":"task001",
+            "taskname":"请假条",
+            "parentcode":"",
+            "parentname":"",
+            "duration":"",
+            "assignee":"",
+            "processinstcode":"001",
+            "assigneename":"测试数据请假条1",
+            "creator":"",
+            "creatorname":"",
+            "claimtime":"2015-04-21",
+            "watched":false
+          },
+          {
+            "taskcode":"task002",
+            "taskname":"请假条",
+            "parentcode":"",
+            "parentname":"",
+            "duration":"",
+            "assignee":"",
+            "processinstcode":"002",
+            "assigneename":"测试数据请假条2",
+            "creator":"",
+            "creatorname":"",
+            "claimtime":"2015-04-21",
+            "watched":true
+          }
+        ]
+
+    },
+	"msg":"",
+	"rc":"1"
+}

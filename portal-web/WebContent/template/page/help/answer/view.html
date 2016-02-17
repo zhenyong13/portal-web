@@ -1,0 +1,58 @@
+<div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5>问题处理</h5></div>
+<div class="process-forms">
+		<div class="forms-body" id="feedbacklist" style="max-height: 500px">
+			<div class="forms-content js_processtypeform" >
+				<div id="feedbackinfo" class="control-group">
+                   
+                </div>
+				<div class="form-category-bd js_addfeedback hide" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div id="feedbackContent" class="control-group col-12">
+							 <script id="feedbackEditor" type="text/plain"></script>
+						</div>
+					</div>
+				</div>
+				
+				<div class="hide js_addfeedback" style="height:31px;margin-top: 4px; margin-bottom: 25px;">
+					<div class="controls" style="float:right;">
+						<a class="btn btn-sm btn-primary js_feedback_submit" style="margin-right: 6px;">确定</a>
+						<a class="btn btn-sm js_feedback_cancel">取消</a>
+					</div>
+				</div>
+				
+				<!-- 反馈信息 -->
+				<div id="feedbackView" style="border-bottom: 1px solid #eee;">
+					
+				</div>
+			</div>
+			
+		</div>
+</div>
+
+<!--  -->
+<script id="feedback-info-template" type="text/x-handlebars-template">
+{{title}}, 当前共【<span id="answerNum">{{number}}</span>】处理 &nbsp;
+<a id="addFeedback" data-code="{{issuecode}}"  class="icon-plus" style="height: 20px;  width: 20px;  margin: 5px;" title="添加反馈"></a>
+</script>
+
+<!-- 反馈列表 -->
+<script id="feedback-list-template" type="text/x-handlebars-template">
+{{#if data.rows.length}}
+{{#each data.rows}}
+<div class="control-group col-12">
+		<div class="controls"><b>{{creator}}</b> <span style="float: right;margin-right:30px;">{{createtime}}
+	    <a class="fa fa-pencil js_answer_detail" data-tid="{{id}}" data-name="{{creator}}" title="编辑"></a>
+		<a class="fa fa-trash-o js_del_answer" data-tid="{{id}}" title="删除"></a>
+</span></div>
+</div>
+<div id="feedback_info_{{id}}" class="control-group col-12 infolist" style="max-height:400px;min-width:960px;margin-bottom:20px ;padding-bottom: 10px; border: 1px solid #eee; background-color: #F9F9F9;">
+	 {{content}} 
+</div>
+{{/each}}
+{{else}}
+<div class="control-group col-12">
+	<div class="controls"><b> 暂无反馈</b></div>
+</div>
+{{/if}}
+</script>

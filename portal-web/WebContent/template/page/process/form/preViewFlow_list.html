@@ -1,0 +1,16 @@
+{{#each activity}}
+	<tr class="flowsheet_tab_color" id="{{stepcode}}">
+	<td><input type="checkbox" name="step_ids" value="{{id}}"></td>
+	<td><span>{{seqno}}</span></td>
+	<td><span>{{stepname}}</span></td>
+	<td><span>{{type}}</span></td>
+	<td><span>{{#if shownextstep}}是{{else}}否{{/if}}</span></td>
+	<td><span>{{stepdesc}}</span></td>
+	<td>
+		<span style="cursor:pointer;margin-right: 10px;" data-stepcode="{{stepcode}}" class="js_set_step_handler">
+		<i class="fa fa-users fa-1_4x"></i></span>
+		<span style="cursor:pointer;" data-stepcode="{{stepcode}}" class="js_set_step_info">
+		<i class="fa fa-edit fa-1_4x"></i></span>
+	</td>
+	</tr>
+{{/each}}

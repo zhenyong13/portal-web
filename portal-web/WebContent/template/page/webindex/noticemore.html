@@ -1,0 +1,40 @@
+﻿<div class="jscroll-content">
+	<div class="gat_big">
+		<div class="news_all">
+			<div class="com_news form-category-hd">
+				<div>
+					<span class="com_news_til"><a href="#index" class="com_news_til">门户首页</a>>></span><span id="top_menu" class="a_color">公告列表</span>
+					<span>
+						<i class="pro_ioc icon-search"></i>
+						<input class="pro_input form-control" type="text">
+					</span>
+				</div>
+			</div>
+		</div>
+		<div>
+	
+			<div id="list_more">
+				
+			</div>
+			<!-- 分页 -->
+			<div id="more_pagination"style="float: right; padding-right: 2%; margin-top: 3px;width:100%"></div>
+			<!-- 分页 -->
+		</div>
+	</div>
+</div>
+
+
+<!-- 右侧列表 -->
+<script id="more-right-list-template" type="text/x-handlebars-template">
+<div class="notice_cont">
+	{{#each infoList}}
+	<div class="notice_dash">
+		<img src="images/dateway/news_list.gif" class="gat_ioc_img2">
+ 		<a class="gat_cont_a" href="#noticedetail/{{id}}">
+ 			{{title}}
+ 		</a>
+		<a class="gat_news_time">{{createtime}}</a>
+	</div>
+	{{/each}}
+</div>
+</script>

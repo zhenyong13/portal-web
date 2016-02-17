@@ -1,0 +1,74 @@
+<div class="process-forms">
+    <div class="jscroll">
+        <div class="forms-body">
+            <div id="module_form" class="forms-content js_processtypeform">
+                <div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+                    <div class="entity-info clearfix">
+                        <input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+                        <div class="control-group col-6">
+                            <label class="control-label">成员编码：</label>
+                            <div class="controls">
+                                <input type="text" id="usercode"  class="form-control required"  value="{{usercode}}"/>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">成员名称：</label>
+                            <div class="controls">
+                                <input type="text" id="username" class="form-control required"  value="{{username}}"/>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">项目：</label>
+                            <div class="controls">
+                                <input type="text" id="projectcode" class="form-control required"  value="{{projectcode}}"/>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">专业：</label>
+                            <div class="controls">
+                                <input type="text" id="specialtycode" class="form-control required" value="{{specialtycode}}"/>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">角色：</label>
+                            <div class="controls">
+                                <select id="rolecode"></select>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">序号：</label>
+                            <div class="controls">
+                                <input type="text" id="sortorder" class="form-control required number" value="{{sortorder}}"/>
+                            </div>
+                        </div>
+                        <div class="control-group col-6">
+                            <label class="control-label">状态：</label>
+                            <div class="controls">
+                                <select id="status"></select>
+                            </div>
+                        </div>
+                         
+                        <div class="control-group col-6">
+                            <label class="control-label">成员类型<span class="red">*</span>：</label>
+                            <div class="controls">
+                                <select id="membertype" class="form-control required"></select>
+                            </div>
+                        </div>
+                         <div class="control-group col-6">
+                            <label class="control-label">加入日期：</label>
+                            <div class="controls">
+                                <input type="text" id="joindate" class="form-control required date" value="{{joindate}}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height:31px;margin-top: 4px">
+                    <div class="controls" style="float:right;">
+                        <a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+                        <a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

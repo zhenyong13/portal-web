@@ -1,0 +1,13 @@
+﻿{
+    "data": {
+        "paramid": "1",
+        "id": 1,
+        "paramname": "1212",
+        "paramtype": "123",
+        "value": "sdfsdfdsf",
+        "appcode": "weqreqw",
+        "appdesc": "1"
+    },
+    "msg": "success",
+    "rc": 1
+}

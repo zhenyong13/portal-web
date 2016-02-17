@@ -1,0 +1,381 @@
+{
+    "data": {
+        "buttons": [ "commit",
+            "save",
+            "diagram","circularize","watched","readed","remind","print","withdraw","termination","delete"],
+        "formdata": {
+            "comorg": {
+                "region": "1",
+                "isshow": true,
+                "itemorder": 1,
+                "name": "来文单位",
+                "value": [
+                    {
+                        "name": "来文单位",
+                        "code": "建设总部"
+                    }
+                ],
+                "code": "comorg",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "comdocno": {
+                "region": "来文信息",
+                "isshow": true,
+                "itemorder": 2,
+                "name": "来文编号",
+                "value": [
+                    {
+                        "name": "来文编号",
+                        "code": "1110"
+                    }
+                ],
+                "code": "comdocno",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "comopr": {
+                "region": "来文信息",
+                "isshow": true,
+                "itemorder": 3,
+                "name": "来文经办人",
+                "value": [
+                    {
+                        "name": "来文经办人",
+                        "code": "曾文驱"
+                    }
+                ],
+                "code": "comopr",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "urgency": {
+                "region": "来文信息",
+                "isshow": true,
+                "itemorder": 5,
+                "name": "急缓程度",
+                "value": [
+                    {
+                        "selected": false,
+                        "name": "一般",
+                        "code": "general"
+                    },
+                    {
+                        "selected": true,
+                        "name": "急",
+                        "code": "worry"
+                    },
+                    {
+                        "selected": false,
+                        "name": "紧急",
+                        "code": "urgent"
+                    }
+                ],
+                "code": "urgency",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 1
+            },
+            "title": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 6,
+                "name": "标题",
+                "value": [
+                    {
+                        "name": "标题",
+                        "code": "关于2015年BIM协同平台建设立项"
+                    }
+                ],
+                "code": "title",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "projectcodes": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 7,
+                "name": "相关项目",
+                "value": [
+                    {
+                        "selected": false,
+                        "name": "项目名称",
+                        "code": "sdfdfs"
+                    },
+                    {
+                        "selected": true,
+                        "name": "一号线项目",
+                        "code": "project-001"
+                    },
+                    {
+                        "selected": false,
+                        "name": "二号线项目",
+                        "code": "project-002"
+                    }
+                ],
+                "code": "projectcodes",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "sendrelatedep": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 8,
+                "name": "送相关部门",
+                "value": [
+                    {
+                        "name": "宁波分院",
+                        "code": "org-1066",
+                        "editable": true
+                    },
+                    {
+                        "name": "郑州项目部",
+                        "code": "org-1127",
+                        "editable": true
+                    }
+                ],
+                "code": "sendrelatedep",
+                "type": "orgpicker",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "serialcode": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 9,
+                "name": "收文顺序号",
+                "value": [
+                    {
+                        "selected": true,
+                        "name": "BIM设计项目",
+                        "code": "BIM设计项目"
+                    }
+                ],
+                "code": "serialcode",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "year": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 10,
+                "name": "年",
+                "value": [
+                    {
+                        "name": "年",
+                        "code": "2015"
+                    }
+                ],
+                "code": "year",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "num": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 11,
+                "name": "序号",
+                "value": [
+                    {
+                        "selected": true,
+                        "name": 1,
+                        "code": 1
+                    },
+                    {
+                        "selected": false,
+                        "name": 2,
+                        "code": 2
+                    },
+                    {
+                        "selected": false,
+                        "name": 3,
+                        "code": 3
+                    },
+                    {
+                        "selected": false,
+                        "name": 4,
+                        "code": 4
+                    },
+                    {
+                        "selected": false,
+                        "name": 5,
+                        "code": 5
+                    },
+                    {
+                        "selected": false,
+                        "name": 6,
+                        "code": 6
+                    },
+                    {
+                        "selected": false,
+                        "name": 7,
+                        "code": 7
+                    },
+                    {
+                        "selected": false,
+                        "name": 8,
+                        "code": 8
+                    },
+                    {
+                        "selected": false,
+                        "name": 9,
+                        "code": 9
+                    },
+                    {
+                        "selected": false,
+                        "name": 10,
+                        "code": 10
+                    }
+                ],
+                "code": "num",
+                "type": "select",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "recdocdate": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 12,
+                "name": "收文日期",
+                "value": [
+                    {
+                        "name": "收文日期",
+                        "code": "2015-07-14"
+                    }
+                ],
+                "code": "recdocdate",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "btn_addSerial": {
+                "region": "收文填写",
+                "isshow": false,
+                "itemorder": 12,
+                "name": "增加字号",
+                "value": [],
+                "code": "btn_addSerial",
+                "type": "others",
+                "required": false,
+                "editable": false,
+                "regionorder": 2
+            },
+            "durdate": {
+                "region": "收文填写",
+                "isshow": true,
+                "itemorder": 13,
+                "name": "处理时限",
+                "value": [
+                    {
+                        "name": "处理时限",
+                        "code": "2015-07-30"
+                    }
+                ],
+                "code": "durdate",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 2
+            },
+            "maincontent": {
+                "region": "文档信息",
+                "isshow": true,
+                "itemorder": 14,
+                "name": "正文摘要",
+                "value": [
+                    {
+                        "name": "正文摘要",
+                        "code": "BIM设计项目于2015立项，预算2500万"
+                    }
+                ],
+                "code": "maincontent",
+                "type": "text",
+                "required": true,
+                "editable": false,
+                "regionorder": 3
+            },
+            "maindoc": {
+                "region": "文档信息",
+                "isshow": true,
+                "itemorder": 15,
+                "name": "正文",
+                "value": [
+                    {
+                        "name": "TeamViewer.exe",
+                        "code": "ff6dd7cf-fcd7-44b0-a1fd-ad8b250daf0e",
+                        "editable": false
+                    }
+                ],
+                "code": "maindoc",
+                "type": "fileupload",
+                "required": true,
+                "editable": false,
+                "regionorder": 3
+            },
+            "attaches": {
+                "region": "文档信息",
+                "isshow": true,
+                "itemorder": 16,
+                "name": "附件",
+                "value": [
+                    {
+                        "name": "SangforCSClient.exe",
+                        "code": "bcb078af-994b-48be-8a3f-2f37bcd43e36",
+                        "editable": false
+                    }
+                ],
+                "code": "attaches",
+                "type": "fileupload",
+                "required": true,
+                "editable": false,
+                "regionorder": 3
+            },
+            "memo": {
+                "region": "便签",
+                "isshow": true,
+                "itemorder": 17,
+                "name": "公文便签",
+                "value": [
+                    {
+                        "name": null,
+                        "code": {
+                            "createtime": "2015-07-14 17:56:21",
+                            "content": "便签意见\n",
+                            "username": "蔡万里",
+                            "usercode": "user-002784",
+                            "avatarcode": "54468914-9657-41e4-845a-5e51c22d2748",
+                            "editable": false
+                        }
+                    }
+                ],
+                "code": "memo",
+                "type": "memo",
+                "required": true,
+                "editable": true,
+                "regionorder": 4
+            }
+        },
+        "formurl": "receiveform",
+        "handleinfo": null
+    },
+    "msg": "success",
+    "rc": 1
+}

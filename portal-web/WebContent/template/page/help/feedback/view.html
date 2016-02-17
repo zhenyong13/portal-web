@@ -1,0 +1,101 @@
+<!-- <div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5>新增</h5></div> -->
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form_info" class="forms-content js_processtypeform" style="max-height: 500px;">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee; ">
+					<div class="entity-info clearfix">
+						<div class="control-group col-12">
+							<label class="control-label">标题：</label>
+							<div class="controls">
+							<span class="show_val">{{title}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">类型：</label>
+							<div class="controls">
+								<span class="show_val">{{issuetype}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">级别：</label>
+							<div class="controls">
+								<span class="show_val">{{issuelevel}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">状态：</label>
+							<div class="controls">
+								<span class="show_val">{{status}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">提出人：</label>
+							<div class="controls">
+								<span class="show_val">{{creator}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">提出时间：</label>
+							<div class="controls">
+								<span class="show_val">{{createtime}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">处理人：</label>
+							<div class="controls">
+								<span class="show_val">{{resolver}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">处理时间：</label>
+							<div class="controls">
+								<span class="show_val">{{resolvetime}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">结束人：</label>
+							<div class="controls">
+								<span class="show_val">{{colser}}</span>
+							</div>
+						</div>
+						<div class="control-group col-4">
+							<label class="control-label">结束时间：</label>
+							<div class="controls">
+								<span class="show_val">{{closetime}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">附件：</label>
+							<div class="controls">
+								<span id="feedbackUpload-showfiles" data-code="maindoc" style="display:block;">
+									{{#each filecodes }}
+										<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="{{editable}}">
+										<a  class="filename_view js_file_view"  data-file-id="{{code}}">{{name}}</a>
+										<a href="{{../../baseUrl}}{{code}}" class="file_view fa fa-download" target="_blank"></a>
+										{{#if editable}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/if}}
+										</span>
+									{{/each}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label"><b>问题描述：</b></label>
+							<div class="controls">
+							</div>
+						</div>
+						<div id="feedbackView" class="control-group col-12" style="max-height: 300px; margin: 1px 40px; width: 90% ">
+							 
+						</div>
+					</div>
+				</div>
+				<!-- <div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>

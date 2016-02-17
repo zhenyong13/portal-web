@@ -1,0 +1,44 @@
+{
+    "data": {
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "activityinstance": null,
+                "alertcount": null,
+                "appcode": "WFS",
+                "businesscode": null,
+                "commontags": null,
+                "createtime": "2015-08-04 16:20:08",
+                "creator": "user-002784",
+                "cursteps": null,
+                "deleted": true,
+                "deptincharge": null,
+                "duration": 95664198,
+                "endtaskcode": null,
+                "endtime": "2015-08-05 18:54:32",
+                "id": 1,
+                "mytags": null,
+                "processcode": "aab716ad-0e6f-456d-a3f4-36722a16d3dc",
+                "processinstcode": "5a0f7cf1-2e6f-4c36-ab7b-70c559e1eaec",
+                "processname": "院收文",
+                "processstatus": "terminal",
+                "processtype": "receiveform",
+                "projectcode": null,
+                "secret": null,
+                "starter": "user-002784",
+                "startername": "蔡万里",
+                "starttaskcode": null,
+                "starttime": null,
+                "title": null,
+                "updatetime": "2015-08-04 16:20:08",
+                "updator": "user-002784",
+                "urgency": null,
+                "watched": false
+            }
+        ],
+        "total": 23
+    },
+    "msg": "success",
+    "rc": 1
+}

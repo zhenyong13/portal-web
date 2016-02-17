@@ -1,0 +1,89 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">流程编码：</label>
+							<div class="controls">
+								<span class="show_val">{{processcode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程名称：</label>
+							<div class="controls">
+								<span class="show_val">{{processname}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程类型：</label>
+							<div class="controls">
+								<span class="show_val">{{processtype}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">流程key：</label>
+							<div class="controls">
+								 <span class="show_val">{{processkey}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">业务编码：</label>
+							<div class="controls">
+								<span class="show_val">{{businesscode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">项目编码：</label>
+							<div class="controls">
+								<span class="show_val">{{projectcode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">创建人：</label>
+							<div class="controls">
+								<span class="show_val">{{creator}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">更新人：</label>
+							<div class="controls">
+								<span class="show_val">{{updator}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">序号：</label>
+							<div class="controls">
+								<span class="show_val">{{sortorder}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">activity标识：</label>
+							<div class="controls">
+								<span class="show_val">{{activiticode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">是否可用：</label>
+							<div class="controls">
+								<span class="show_val">{{#if isenabled}}是{{else}}否{{/if}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">流程描述：</label>
+							<div class="controls">
+								<span class="show_val">{{processdesc}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+
+<div class="flowsheet_height process-forms jscroll">
+	<div class="forms-body ">
+		<div >
+			<!-- {{imgurl}} -->
+			<div style="text-align: center;"><img alt="正在加载……" src="{{imgurl}}" class="flowsheet_title_img"></div>
+		
+			<div class="flowsheet_process_div">
+				<div class="flowsheet_process form-category-hd">
+					<h4 id="cate-name" style="border: 0px none;">
+						<span class="process_span js_categoryname">流程说明</span>
+					</h4>
+				</div>
+				 {{#if is_edit}}
+				 <div class="control-group col-12" style="  background-color: #eee;  padding-bottom: 7px;  padding-top: 5px;">
+					<a class="btn btn-primary btn-sm edit-form-item" style="float:right; height: 26px;line-height: 17px;">批量修改</a> 
+				 </div>
+				 {{/if}}
+				<div class="flowsheet_tab_padding">
+					<table class="table table-bordered">
+					{{#if is_edit}}
+					<thead>
+						<tr class="change">
+						<th class="flowsheet_tab_th" style="width: 5%;"><input type="checkbox" id="stepIdAll"></th>
+						<th class="flowsheet_tab_th" style="width: 5%;">序号</th>
+						<th class="flowsheet_tab_th" style="width: 20%;">环节名称</th>
+						<th class="flowsheet_tab_th" style="width: 5%;">环节类型</th>
+						<th class="flowsheet_tab_th" style="width: 7%;">下一环节</th>
+						<th class="flowsheet_tab_th">环节描述</th>
+						<th class="flowsheet_tab_th" style="width: 10%;">操作</th></tr>
+					</thead>
+					<tbody id="activityList">
+						{{#each activity}}
+							<tr class="flowsheet_tab_color" id="{{stepcode}}">
+							<td><input type="checkbox" name="step_ids" value="{{id}}"></td>
+							<td><span>{{seqno}}</span></td>
+							<td><span>{{stepname}}</span></td>
+							<td><span>{{type}}</span></td>
+							<td><span>{{#if shownextstep}}是{{else}}否{{/if}}</span></td>
+							<td><span>{{stepdesc}}</span></td>
+							<td><span style="cursor:pointer;margin-right: 10px;" data-stepcode="{{stepcode}}" class="js_set_step_handler">
+							<i class="fa fa-users fa-1_4x"></i></span>
+							<span style="cursor:pointer;" data-stepcode="{{stepcode}}" class="js_set_step_info">
+							<i class="fa fa-edit fa-1_4x"></i></span>
+							</td>
+							</tr>
+						{{/each}}
+					</tbody>
+					{{else}}
+					<thead>
+						<tr class="change"><th class="flowsheet_tab_th" style="width: 15%;">环节名称</th><th class="flowsheet_tab_th">环节描述</th></tr>
+					</thead>
+					<tbody>
+						{{#each activity}}
+							<tr class="flowsheet_tab_color"><td><span>{{stepname}}</span></td><td><span>{{stepdesc}}</span></td></tr>
+						{{/each}}
+					</tbody>
+					{{/if}}
+					</table>
+				</div>
+				
+				
+			</div>
+	
+		</div>
+	</div>
+</div>
+

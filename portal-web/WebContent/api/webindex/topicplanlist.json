@@ -1,0 +1,54 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "modulecode": "topicplanlist", 
+        "columncode": "topicplanlist", 
+        "templatecode": "topicplanlist",
+        "rows": [
+            {
+                "name": "内部论坛",
+                "id": 1,
+                "imgurl": "images/dateway/left_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "员工信箱",
+                "id": 1,
+                "imgurl": "images/dateway/left_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "影像园地",
+                "id": 1,
+                "imgurl": "images/dateway/left_3.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "企业信息化",
+                "id": 1,
+                "imgurl": "images/dateway/left_4.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "地铁设计通讯",
+                "id": 1,
+                "imgurl": "images/dateway/left_5.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "大事记",
+                "id": 1,
+                "imgurl": "images/dateway/left_6.png",
+                "targeturl": "",
+                "target": ""
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

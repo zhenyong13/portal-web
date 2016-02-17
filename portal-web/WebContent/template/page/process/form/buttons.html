@@ -1,0 +1,5 @@
+	{{#each processInfo}}
+		<a class="btn {{class}} btn-sm j_entityslider-toggle" {{#ifCond type "==" "readed"}}vel="read"{{/ifCond}} title="{{desc}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" {{#ifCond type "==" "cancel_watch"}} watched="true"{{/ifCond}} {{#ifCond type "==" "watch"}} watched="false"{{/ifCond}}> <i class="{{ico_class}}"></i>{{desc}}
+		</a>
+	{{/each}}
+	

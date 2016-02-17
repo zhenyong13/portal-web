@@ -1,0 +1,171 @@
+{
+    "data": {
+        "usercode": "002644", 
+        "currentevent":
+            {
+                "eventcode": "event-0001", 
+                "eventname": "大事记名称1", 
+                "eventtime": "2015"
+            }
+        , 
+        "allevents": [
+            {
+                "eventcode": "event-0095", 
+                "eventname": "成功进军海外市场", 
+                "eventabstract": "我院近日成功中标澳大利亚矿产资源有限公司自动化集成散装矿石运输系统", 
+                "eventabstract": "大事记内容", 
+                "eventtime": "1995", 
+                "relateurl": "/**/protal-web/"
+            }, 
+            {
+                "eventcode": "event-0096", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "1996", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0097", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "1997", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0098", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "1998", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0099", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "1999", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0000", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2000", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0001", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2001", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0002", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2002", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0003", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2003", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0004", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2004", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0005", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2005", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0006", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2006", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0007", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2007", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0008", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2008", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0009", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2009", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0010", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2010", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0011", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2011", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0012", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2012", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0013", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2013", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0014", 
+                "eventname": "大事记名称2", 
+                "eventabstract": "大事记内容2", 
+                "eventtime": "2014", 
+                "relateurl": "/**/protal-web/"
+            },
+            {
+                "eventcode": "event-0015", 
+                "eventname": "成功进军海外市场", 
+                "eventabstract": "我院近日成功中标澳大利亚矿产资源有限公司自动化集成散装矿石运输系统", 
+                "eventtime": "2015", 
+                "relateurl": "/**/protal-web/"
+            }
+        ], 
+        "detail": 
+            {
+                "eventcode": "event-0001", 
+                "eventname": "大事记名称", 
+                "envntcontent": "在2014年6月，中国第5艘903A型补给舰下水。2015年上半年，中国同时在建造4艘补给舰，这在和平年代的任何一个国家都是罕见的。也就是说，过去两年，中国一直在大规模加速建造补给舰。目前，中国海军的补给舰经常出海支援派往索马里海域的护航编队。补给舰能够为部队提供必要的燃料、水、食物和其他物资。中国需要更多的补给舰，以支援越来越频繁的西太平洋远海训练任务。　　与此同时，自上世纪90年代以来，中国海军也在不断进行海上补给训练。现在在西太平洋经常可以看到一艘中国补给舰同时为两艘军舰提供补给。这种操作的难度很大，中国并不是一夜之间学会的。　在去年与国际军事力量一起搜寻MH370失联航班的时候，中国深刻认识到补给舰有多么重要。中国发现自身没有足够的补给舰，如果不能进入外国港口获得补给，中国海军就无法维持大量军舰在远离中国的海域活动。中国海军规划者曾就此发出警告，如今领导人对此也更加重视了。结果，中国开始为海军建造更多补给舰。",
+                "eventtime": "2015"
+            }
+    }, 
+    "msg": "", 
+    "rc": 1
+}

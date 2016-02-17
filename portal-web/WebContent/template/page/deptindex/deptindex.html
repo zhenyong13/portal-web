@@ -1,0 +1,67 @@
+
+<div class="jscroll-content">
+	<div id="dept-header" class="gat_big">
+		<div class="world_bumen">
+			<span class="world_bumen_span">选择部门</span>
+			<!-- <a class="ret_color_a world_bumen_span" data-orgcode="123">部门1</a>
+			<a class="ret_color_a world_bumen_span" data-orgcode="123">部门2</a>
+			<a class="ret_color_a world_bumen_span" data-orgcode="123">部门3</a>
+			<a class="ret_color_a world_bumen_span" data-orgcode="123">部门4</a> -->
+		</div>
+		<div id="columnList">
+		<!-- 栏目 列表 -->
+		
+		</div>
+	</div>
+</div>
+ 
+ 
+ <!-- 框架栏目-->
+<script id="dept-list-template" type="text/x-handlebars-template">
+{{#each orgList}}
+<a class="ret_color_a world_bumen_span {{#ifCond @index "==" "0"}}active{{/ifCond}}" data-orgcode="{{orgcode}}">{{orgname}}</a>
+{{/each}}
+</script>
+<!-- 框架栏目-->
+<script id="dept-frame-template" type="text/x-handlebars-template">
+{{#each frameList}}
+   <div class="dt_height gat_news_div">
+	 <div class="gat_title_div">
+		<div class="gat_detailsa">{{columnname}}</div>
+	    <div class="gat_gd"><a href="#newsmore/{{columntype}}">更多</a></div>
+	 </div>
+     <div id="column_{{columncode}}" data-showimg={{showpicture}} style="clear: both;">
+		<div style="text-align: center;"><img src="images/loading.gif" title="加载中..."/></div>
+	</div>
+   </div>
+{{/each}}
+</script>
+<!-- 栏目列表 -->
+<script id="dept-frame-list-template" type="text/x-handlebars-template">
+{{#ifCond showimg "==" "yes"}}
+<span class="gat_float">
+  <div class="news-img swiper-container" style="height:190px;width:190px;">
+	 <div class="swiper-wrapper">
+   		{{#each imgList}}
+			<div class="swiper-slide"><a href="#newsdetail/{{infocode}}"><img src="{{infourl}}" class="gat_img" title="{{infoname}}"/></a></div>
+   		{{/each}}
+ 	</div>
+	<div class="swiper-pagination"></div>
+   </div>
+</span>
+{{/ifCond}}
+<span class="gat_cont">
+   {{#each columnList}}
+	<div>
+		<img src="images/dateway/news_list.gif" class="gat_ioc_img">
+		<a class="gat_cont_a" href="#newsdetail/{{infocode}}">
+			{{infoname}}
+		</a>
+		{{#ifCond isnew "==" "yes"}}<img src="images/dateway/news_new.gif">{{/ifCond}}
+		{{#if urgent}}<img src="images/dateway/news_ji.gif">{{/if}}
+		{{#ifCond isnew "==" ""}}<img src="images/dateway/news_image.png">{{/ifCond}}
+		<a class="gat_news_time">{{dateformat publishtime 'yyyy-MM-dd'}}</a>
+	</div>
+   {{/each}}	 
+</span>
+</script>

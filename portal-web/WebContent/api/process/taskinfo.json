@@ -1,0 +1,141 @@
+{
+    "data": {
+        "formurl": "createProcess",
+        "buttons": [
+            "commit",
+            "save",
+            "circularize",
+            "diagram",
+            "watched",
+            "remind",
+            "print",
+            "withdraw",
+            "cancel",
+            "delete"
+        ],
+        "candidatesteps": [
+            {
+                "transitions": "拟稿",
+                "selectpersonconfig": {
+                    "selecttype": "checkbox",
+                    "selectitems": [
+                        {
+                            "dataclass": "部门",
+                            "dataurl": "部门数据获取URL",
+                            "dataytype": "tree"
+                        }
+                    ]
+                }
+            }
+        ],
+        "formdata": {
+           "comorg":{
+      "region":"来文信息",
+      "name":"来文单位",
+      "value":"广州地铁建设总部",
+      "isshow":true,
+      "editable":false
+    },
+    "comdocno":{
+      "region":"来文信息",
+      "name":"来文编号",
+      "value":"广州地铁建设总部[2015]000001号",
+      "isshow":true,
+      "editable":false
+    },
+    "comopr":{
+      "region":"来文信息",
+      "name":"来文经办人",
+      "value":"小曾",
+      "isshow":true,
+      "editable":false
+    },
+    "mobileno":{
+      "region":"来文信息",
+      "name":"联系方式",
+      "value":"18999999999",
+      "isshow":true,
+      "editable":false
+    },
+	"urgency":{
+      "region":"来文信息",
+      "name":"急缓程度",
+      "value":"急",
+      "isshow":true,
+      "editable":true
+    },
+    "title":{
+      "region":"收文填写",
+      "name":"标题",
+      "value":"十三号线官湖车辆段上盖土地项目勘察方案审查会议纪要",
+      "isshow":true,
+      "editable":false
+    },
+    "projectcodes":{
+      "region":"收文填写",
+      "name":"相关项目",
+      "value":[{"projectcode":"prj1","projectname":"一号线项目"},{"projectcode":"prj2","projectname":"二号线项目"}],
+      "isshow":true,
+      "editable":false
+    },
+    "sendrelatedep":{
+      "region":"收文填写",
+      "name":"送相关部门",
+      "value":[{"depcode":"0123","depname":"项目管理部"},{"depcode":"0111","depname":"信息中心"}],
+      "isshow":true,
+      "editable":false
+    },
+    "serialcode":{
+      "region":"收文填写",
+      "name":"收文顺序号",
+      "value":"院收文[2015]110001号",
+      "isshow":true,
+      "editable":false
+    },
+    "recdocdate":{
+      "region":"收文填写",
+      "name":"收文日期",
+      "value":"2015-05-01",
+      "isshow":true,
+      "editable":false
+    },
+    "durdate":{
+      "region":"收文填写",
+      "name":"处理时限",
+      "value":"2015-05-01",
+      "isshow":true,
+      "editable":true
+    },
+    "maincontent":{
+      "region":"文档信息",
+      "name":"正文摘要",
+      "value":"一号线**********************",
+      "isshow":true,
+      "editable":true
+    },
+    "maindoc":{
+      "region":"文档信息",
+      "name":"正文",
+      "value":[{"docid":"20150501000001doc","docname":"十三号线会议纪要.doc"}],
+      "isshow":true,
+      "editable":false
+    },
+	"attaches":{
+      "region":"文档信息",
+      "name":"附件",
+      "value":[{"docid":"20150501000001doc","docname":"十三号线会议纪要.doc"},{"docid":"20150501000002doc","docname":"aaa.doc"}],
+      "isshow":true,
+      "editable":false
+    },
+    "memo":{
+      "region":"便签",
+      "name":"公文便签",
+      "value":[{"usercode":"002644","username":"小鸡","createtime":"2015-01-01 17:02:02","content":"便签内容测试1"},{"usercode":"002678","username":"小猫","createtime":"2015-01-01 17:02:02","content":"便签内容测试2"}],
+      "isshow":true,
+      "editable":false
+    } 
+        }
+    },
+    "msg": "",
+    "rc": 1
+}

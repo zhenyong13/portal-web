@@ -1,0 +1,14 @@
+
+<div style="width:90%;margin:15px 5% 0;">
+<div class="mom_news_title">{{title}}</div>
+<div class="mom_news_por">
+	<span>作者：</span>
+	<span>{{creator}} &nbsp;&nbsp;&nbsp;&nbsp;</span>
+	<span>来源：</span>
+	<span>{{source}} &nbsp;&nbsp;&nbsp;&nbsp;</span>	
+	<span>时间：</span>
+	<span>{{createtime}}</span>
+</div>
+<div class="mom_news_cont">{{#outputhtml content}} {{/outputhtml}}</div>
+<div class="mom_news_cont" id="attachment">附件：{{#each attachment}}<a fileCode="{{code}}">{{name}}</a>{{/each}}</div>
+</div>

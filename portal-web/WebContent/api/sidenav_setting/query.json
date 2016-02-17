@@ -1,0 +1,137 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "sortorder": 1,
+            "isshow": true,
+            "name": "个人事务",
+            "icon":"",
+            "link":"images/dateway/ic_1.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 2,
+            "sortorder": 2,
+            "isshow": true,
+            "name": "协同办公",
+            "icon":"",
+            "link":"images/dateway/ic_2.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 3,
+            "sortorder": 3,
+            "isshow": true,
+            "name": "人力管理",
+            "icon":"",
+            "link":"images/dateway/ic_3.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 4,
+            "sortorder": 4,
+            "isshow": true,
+            "name": "经营管理",
+            "icon":"",
+            "link":"images/dateway/ic_4.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 5,
+            "sortorder": 5,
+            "isshow": true,
+            "name": "项目管理",
+            "icon":"",
+            "link":"images/dateway/ic_5.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 6,
+            "sortorder": 63,
+            "isshow": true,
+            "name":"总包管理",
+            "icon":"",
+            "link":"images/dateway/ic_6.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+        },
+        {
+            "id": 7,
+            "sortorder": 7,
+            "isshow": true,
+            "name": "合同管理",
+            "icon":"",
+            "link":"images/dateway/ic_7.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+		},
+        {
+            "id": 8,
+            "sortorder": 8,
+            "isshow": true,
+            "name": "财务管理",
+            "icon":"",
+            "link":"images/dateway/ic_8.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+		},
+        {
+            "id": 9,
+            "sortorder": 9,
+            "isshow": true,
+            "name": "档案管理",
+            "icon":"",
+            "link":"images/dateway/ic_9.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+		},
+        {
+            "id": 10,
+            "sortorder": 10,
+            "isshow": true,
+            "name": "知识管理",
+            "icon":"",
+            "link":"images/dateway/ic_10.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+		},
+        {
+            "id": 11,
+            "sortorder": 11,
+            "isshow": true,
+            "name": "RTX",
+            "icon":"",
+            "link":"images/dateway/ic_11.png",
+            "creator":"",
+            "createtime":"",
+            "owner":"",
+            "ownername":""
+		}],
+		"rc":1,
+		"msg":"ddd"
+		}

@@ -1,0 +1,110 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块编码：</label>
+							<div class="controls">
+								<input type="text" id="modulecode" class="form-control required" value="{{modulecode}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块名称：</label>
+							<div class="controls">
+								<input type="text" id="modulename" class="form-control required" value="{{modulename}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>父模块：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control required" value="{{#ifCond parentcode "==" "-1"}}根节点{{else}}{{parentname}}{{/ifCond}}"/>
+								 <input type="hidden" id="parentcode" value="{{parentcode}}"/>
+								 <a class="icon-search js_search_dept" style="position: relative;position: relative;left: -20px;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块链接：</label>
+							<div class="controls">
+								 <input type="text" id="moduleuri" class="form-control required" value="{{moduleuri}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>是否显示：</label>
+							<div class="controls">
+								<select id="moduleview" class="form-control">
+									<option value="true" {{#if moduleview}}selected{{/if}}>是</option>
+									<option value="false" {{#if moduleview}}{{else}}selected{{/if}}>否</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块类型：</label>
+							<div class="controls">
+								<select id="moduletype" class="form-control required">
+									<option value="1">是</option>
+									<option value="2">否</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">图标样式：</label>
+							<div class="controls">
+								<input type="text" id="type_class" class="form-control" value="{{iconclass}}"/>
+								<i id="typeclassS" style="cursor: pointer;position: relative;position: relative;left: -20px;" class="icon-search"></i>
+								<i id="typeclass" class="{{iconclass}}"></i>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>显示顺序：</label>
+							<div class="controls">
+								<input type="text" id="moduleorder" class="form-control required number" value="{{moduleorder}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>模块级别：</label>
+							<div class="controls">
+								<select id="modulelevel" class="form-control required">
+									
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">应用编码：</label>
+							<div class="controls">
+								<input type="text" id="appcode" class="form-control" value="{{appcode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">打开方式：</label>
+							<div class="controls">
+								<input type="text" id="rel" class="form-control" value="{{rel}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">外部网页：</label>
+							<div class="controls">
+								<input type="text" id="external" class="form-control" value="{{external}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">模块描述：</label>
+							<div class="controls">
+								<textarea class="form-control" style="width:600px;height:50px" id="moduledesc">{{moduledesc}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

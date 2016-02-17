@@ -1,0 +1,22 @@
+﻿{
+    "data": {
+        "rows": [
+            {
+                "usercode": "user-001",
+                "username": "小鸡",
+                "orgcode": "org-001",
+                "orgname": "佛山分院",
+                "traveldays": 3
+            },
+            {
+                "usercode": "user-001",
+                "username": "小鸭",
+                "orgcode": "org-002",
+                "orgname": "北京分院",
+                "traveldays": 2
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

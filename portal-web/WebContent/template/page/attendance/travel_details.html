@@ -1,0 +1,62 @@
+		<div style="margin:2px;">
+				<ul id="detailHead" class="e-list flow-list">
+					<li class="workflow clearfix" style="background: #F6F6F6;">
+						<span class="ret_width_20 ret_display ellipsis">出差员工</span>
+						<span class="ret_width_35 ret_display ellipsis">时间</span>
+						<span class="ret_width_20 ret_display ellipsis">员工所在部门</span>
+						<span class="ret_width_20 ret_display ellipsis">出差天数</span>
+					</li>
+				</ul>
+				<ul class="ebox1 e-list flow-list form-horizontal scrollwrapper demo-list" style="height:370px;" id="datarows">
+					
+				
+				</ul>
+			</div>
+			
+<script id="travel-out-head-template" type="text/x-handlebars-template">	
+<li class="workflow clearfix" style="background: #F6F6F6;">
+	<span class="ret_width_10 ret_display ellipsis">出差员工</span>
+	<span class="ret_width_20 ret_display ellipsis">时间</span>
+	<span class="ret_width_20 ret_display ellipsis">出差工作地</span>
+	<span class="ret_width_35 ret_display ellipsis">工作地在部门</span>
+	<span class="ret_width_10 ret_display ellipsis">出差天数</span>
+</li>	
+</script>		
+			
+<script id="travel-detail-template" type="text/x-handlebars-template">			
+<!-- 列表内容 -->
+{{#if data.length}}
+{{#each data}}
+<li class="workflow">
+	<span class="ret_width_10 ret_display ellipsis">{{username}}</span>
+	<span class="ret_width_20 ret_display ellipsis">{{../startrange}}</span>
+	<span class="ret_width_20 ret_display ellipsis">{{traveladdress}}</span>
+	<span class="ret_width_35 ret_display ellipsis" title="{{traveladdressdetail}}">{{traveladdressdetail}}&nbsp;</span>
+	<span class="ret_width_10 ret_display ellipsis">{{traveldays}}天</span>
+</li>
+{{/each}}
+{{else}}
+<li class="workflow">
+	<span class="ret_width_20 ret_display ellipsis">&nbsp;</span>
+	<span class="ret_width_35 ret_display ellipsis">暂无数据</span>
+</li>
+{{/if}}
+</script>
+
+<script id="travel-detail-tomydept-template" type="text/x-handlebars-template">
+{{#if data.length}}
+{{#each data}}
+<li class="workflow">
+	<span class="ret_width_20 ret_display ellipsis">{{username}}&nbsp;</span>
+	<span class="ret_width_35 ret_display ellipsis">{{../startrange}}&nbsp;</span>
+	<span class="ret_width_20 ret_display ellipsis" title="{{orgname}}">{{orgname}}&nbsp;</span>
+	<span class="ret_width_20 ret_display ellipsis">{{traveldays}}天</span>
+</li>
+{{/each}}
+{{else}}
+<li class="workflow">
+	<span class="ret_width_20 ret_display ellipsis">&nbsp;</span>
+	<span class="ret_width_35 ret_display ellipsis">暂无数据</span>
+</li>
+{{/if}}
+</script>

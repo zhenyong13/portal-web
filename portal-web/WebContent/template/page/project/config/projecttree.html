@@ -1,0 +1,278 @@
+
+<span class="project-arctect-manager">项目架构<span style="color: #0288ce; margin-left: 10px;" id="showmanager"></span></span>
+<ul class="project-arctect-ul">
+	<!-- 架构 -->
+
+	<li class="project-arctect-li"><img src="images/add.jpg" style="width: 18px;margin-left: 2px;">
+	<span class="project-operate project-operate-profess">新增专业</span> 
+	<span class="project-operate project-operate-role" style="margin-left: 5px;">新增角色</span></li>
+</ul>
+
+<!-- 添加专业或角色模版 -->
+<script id="architect-info-template" type="text/x-handlebars-template">
+<li class="project-arctect-li">
+{{#ifCond orgtype "==" "p"}}<img src="images/prof.png">{{else}}<img src="images/man.png">{{/ifCond}}
+<span class="architectinfo">{{architectname}}</span>
+<input id="{{orgcode}}" data-code="{{orgcode}}" data-orgtype="{{orgtype}}" type="text" name="architect" class="architectselect control-input" value="{{architectname}}"
+							style="width:100px;height:30px;border-radius:3px; {{#if show}}display: none;{{/if}}" placeholder="{{#ifCond orgtype "==" "p"}}专业{{else}}角色{{/ifCond}}">
+{{#if manager}}
+<span class="managerinfo"></span>
+<div class="typeahead-wrapper1" style="border: 0px solid #a3adba; margin-top:4px;">
+					<div class="remind-user">
+						<input data-code="{{managercode}}" type="text" name="manager" class="mangerselect control-input typeahead search" value="{{managercode}}"
+							 data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="负责人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:100px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+<span class="project-operate-op" data-direction="Add"><i class="icon-plus"></i></span>
+{{/if}}
+{{#ifCond orgtype "==" "p"}}
+<span class="project-operate-op" data-direction="U">收起</span>
+{{/ifCond}}
+<span class="project-operate-op" data-direction="d">删除</span><span class="project-operate-op" data-direction="up">上移</span><span class="project-operate-op" data-direction="down">下移</span>
+{{#ifCond orgtype "==" "p"}}
+<ul class="project-arc-prof-ul professlist">
+	<li class="project-arctect-li"><img src="images/add.jpg" style="width: 18px;margin-left: 2px;"><span class="project-operate project-operate-role">新增角色</span></li>
+</ul>
+{{/ifCond}}
+</li>
+</script>
+
+<!-- 项目 展示 -->
+<script id="architect-info-list-template" type="text/x-handlebars-template">
+{{#each professlist}}
+<li class="project-arctect-li">
+{{#ifCond orgtype "==" "p"}}<img src="images/prof.png">{{else}}<img src="images/man.png">{{/ifCond}}
+<span {{#if edit}}class="architectinfo"{{/if}}>{{orgname}}</span>
+<input id="{{orgcode}}" data-code="{{orgcode}}" data-orgcode="{{orgcode}}" data-orgtype="{{orgtype}}" type="text" name="architect" class="architectselect control-input" value="{{orgname}}"
+	data-multi="true" style="width:100px;height:30px;border-radius:3px; {{#if ../show}}display: none;{{/if}}" placeholder="{{#ifCond orgtype "==" "p"}}专业{{else}}角色{{/ifCond}}">
+
+{{#if ../manager}}
+<span class="managerinfo">
+{{#each usercodes}}
+<span data-code="{{this}}" data-name="{{this}}" class="entity-item"><a data-value="{{this}}">{{this}}</a>
+{{#if ../../edit}}<button type="button" class="close js-delete-man" style="margin-top: 6px;display:none;" title="删除">×</button>{{/if}}&nbsp;
+</span>
+{{/each}}
+</span>
+<div class="typeahead-wrapper1" style="border: 0px solid #a3adba; margin-top:4px;">
+	<div class="remind-user">
+	<input data-code="{{usercode}}" data-orgcode="{{orgcode}}" type="text" name="manager" class="mangerselect control-input typeahead search" value="{{usercode}}"
+		data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="负责人">
+		<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:100px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+		<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+		<div class="userselectlist"></div>
+		</div>
+	</div>
+</div>
+{{#if ../edit}}
+<span class="project-operate-op" data-direction="Add"><i class="icon-plus"></i></span>
+{{/if}}
+{{/if}}
+
+<span class="project-operate-op" data-direction="U">收起</span>
+<!--
+{{#if edit}}
+<span class="project-operate-op" data-direction="d">删除</span>
+{{/if}}
+-->
+{{#if editall}}
+<span class="project-operate-op" data-direction="d">删除</span>
+<span class="project-operate-op" data-direction="up">上移</span>
+<span class="project-operate-op" data-direction="down">下移</span>
+{{/if}}
+{{#ifCond orgtype "==" "p"}}
+<ul class="project-arc-prof-ul professlist">
+	<!-- 角色 -->
+	{{#each roles}}
+	<li class="project-arctect-li"><img src="images/man.png"><span {{#if ../../edit}}class="professinfo"{{/if}}>{{orgname}}</span>
+<input id="{{orgcode}}" data-code="{{sourcecode}}" data-orgcode="{{orgcode}}" data-orgtype="{{orgtype}}" type="text" name="profess" class="roleselect control-input" value="{{orgname}}"
+				data-multi="true" style="width:100px;height:30px;border-radius:3px; {{#if ../../../show}}display: none;{{/if}}" placeholder="角色">
+{{#if ../../../manager}}
+<span class="managerinfo">
+{{#each usercodes}}
+<span data-code="{{this}}" data-name="{{this}}" class="entity-item"><a data-value="{{this}}">{{this}}</a>
+{{#if ../../../edit}}
+<button type="button" class="close js-delete-man" style="margin-top: 6px;display:none;" title="删除">×</button>
+{{/if}}
+&nbsp;</span>
+{{/each}}
+</span>
+<div class="typeahead-wrapper1" style="border: 0px solid #a3adba; margin-top:4px;">
+	<div class="remind-user">
+		<input data-code="{{managercode}}" type="text" name="rolemanager" class="mangerselect control-input typeahead search" value="{{managercode}}"
+			data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="负责人">
+		<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:100px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+		<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+		<div class="userselectlist"></div>
+		</div>
+	</div>
+</div>
+{{#if ../../edit}}
+<span class="project-operate-op" data-direction="Add"><i class="icon-plus"></i></span>
+{{/if}}
+
+{{/if}}
+
+{{#if ../edit}}
+<span class="project-operate-op" data-direction="d">删除</span>
+{{/if}}
+</li>
+	{{/each}}
+
+	{{#if ../edit}}
+	<li class="project-arctect-li"><img src="images/man.png"><span class="project-operate project-operate-role">新增角色</span></li>
+	{{/if}}
+</ul>
+{{/ifCond}}
+</li>
+{{/each}}
+</script>
+
+<!-- 项目架构默认节点 -->	
+<script id="architect-defaultNode-template-" type="text/x-handlebars-template">
+<!--
+<li class="project-arctect-li"><img src="images/man.png"><span class="professinfo">分管院领导</span><input type="hidden" name="architect" class="form-control" value="分管院领导" ></li>
+<li class="project-arctect-li"><img src="images/man.png"><span class="professinfo">分管总工</span><input  type="hidden" name="architect" class="form-control" value="分管总工" ></li>
+<li class="project-arctect-li"><img src="images/man.png"><span class="professinfo">项目助理</span><input  type="hidden" name="architect" class="form-control" value="项目助理" ></li>
+-->
+<li class="project-arctect-li">
+						<img src="images/man.png"><span class="architectinfo">分管院领导</span>
+						<input id="2132342314" data-code="2132342314" data-orgtype="r" type="text" name="architect" class="architectselect control-input typeahead search" value="" data-multi="true" style="width: 100px; height: 30px; border-radius: 3px; display: none;" placeholder="角色">
+						<!-- <span class="project-operate-op" data-direction="U" style="display: none;">收起</span><span class="project-operate-op" data-direction="d" style="display: none;">删除</span><span class="project-operate-op" data-direction="up" style="display: none;">上移</span><span class="project-operate-op" data-direction="down" style="display: none;">下移</span> -->
+			</li>
+			<li class="project-arctect-li">
+						<img src="images/man.png"><span class="architectinfo">分管总工</span>
+						<input id="2132342313" data-code="2132342313" data-orgtype="r" type="text" name="architect" class="architectselect control-input typeahead search" value="" data-multi="true" style="width: 100px; height: 30px; border-radius: 3px; display: none;" placeholder="角色">
+			</li>
+			<li class="project-arctect-li">
+						<img src="images/man.png"><span class="architectinfo">项目助理</span>
+						<input id="213234231" data-code="213234231" data-orgtype="r" type="text" name="architect" class="architectselect control-input typeahead search" value="" data-multi="true" style="width: 100px; height: 30px; border-radius: 3px; display: none;" placeholder="角色">
+			</li>
+</script>
+
+<!-- <input name="architect" class="form-control" value="{{architectname}}" > -->
+
+<!-- 项目负责人 -->
+<script id="manager-info-template" type="text/x-handlebars-template">
+<span data-code="{{usercode}}" data-name="{{usercode}}" class="entity-item"><a data-value="{{usercode}}">{{username}}</a><button type="button" class="close js-delete-man" style="margin-top: 6px;" title="删除">×</button>&nbsp;</span>
+</script>
+
+
+
+<!-- 角色 获取-->
+<script id="profess-role-list-template" type="text/x-handlebars-template">
+{{#each roles}}
+<li class="project-arctect-li">
+<img src="images/man.png">
+<span class="professinfo">{{orgname}}</span>
+<input id="{{orgcode}}" data-code="{{orgcode}}" data-orgtype="{{orgtype}}" type="text" name="profess" class="roleselect control-input" value="{{orgname}}" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="角色">
+
+{{#if ../manager}}
+<span class="managerinfo">
+</span>
+<div class="typeahead-wrapper1" style="border: 0px solid #a3adba; margin-top:4px;">
+	<div class="remind-user">
+		<input data-code="{{managercode}}" type="text" name="rolemanager" class="mangerselect control-input typeahead search" value="{{managercode}}"
+			data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="负责人">
+		<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:100px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+		<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+		<div class="userselectlist"></div>
+		</div>
+	</div>
+</div>
+<span class="project-operate-op" data-direction="Add"><i class="icon-plus"></i></span>
+{{/if}}
+
+<span class="project-operate-op" data-direction="d">删除</span>
+<span class="project-operate-op" data-direction="up">上移</span>
+<span class="project-operate-op" data-direction="down">下移</span>
+</li>
+{{/each}}
+</script>
+	
+<!-- 角色添加模版 -->
+<script id="profess-list-template" type="text/x-handlebars-template">
+<li class="project-arctect-li">
+<img src="images/man.png"><span class="professinfo"></span>
+<input id="{{uuid}}" data-code="{{orgcode}}" type="text" data-orgtype="r" name="profess" class="roleselect control-input" value="" style="width:100px;height:30px;border-radius:3px; " placeholder="角色">
+
+{{#if manager}}
+<span class="managerinfo"></span>
+<div class="typeahead-wrapper1" style="border: 0px solid #a3adba; margin-top:4px;">
+		<div class="remind-user">
+			<input data-code="{{managercode}}" type="text" name="rolemanager" class="mangerselect control-input typeahead search" value="{{managercode}}"
+							 data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="项目负责人">
+			<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:100px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+			<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+			<div class="userselectlist"></div>
+			</div>
+		</div>
+</div>
+<span class="project-operate-op" data-direction="Add"><i class="icon-plus"></i></span>
+{{/if}}
+
+<span class="project-operate-op" data-direction="d">删除</span>
+</li>	
+</script>
+
+<!-- <input name="profess" class="form-control required"> -->
+<!-- 专业 角色显示模版 -->
+<script id="profess-info-template" type="text/x-handlebars-template">
+<li class="project-arctect-li">
+<img src="images/man.png">
+<span class="professinfo">{{professname}}</span>
+<input id="{{professcode}}" data-code="{{professcode}}" data-orgtype="r" type="text" name="profess" class="roleselect control-input" value="{{professname}}" data-multi="true" style="width:100px;height:30px;border-radius:3px; display: none;" placeholder="角色">
+<span class="project-operate-op" data-direction="d">删除</span>
+</li>
+</script>
+
+<!-- 列表 -->
+<script id="role-list-template" type="text/x-handlebars-template">
+{{#each data}}
+	 <li><a data-code="{{professcode}}">{{professname}}</a></li> 
+{{/each}}
+</script>
+
+
+<!-- 弹出层,选择专业,角色  不用了-->
+<script id="tip-info-template-" type="text/x-handlebars-template">
+<div class="tipso_bubble right {{uuid}}" style="color: rgb(255, 255, 255); width: 400px; left: {{left}}px; top: {{top}}px; background: #F6F6F6; text-align:left;">
+<div class="tipso_content">
+	{{#each data}}
+	<a class="btn btn-sm js_select_toggle" data-id="{{../uuid}}" data-code="{{rolecode}}{{specialtycode}}" data-type="{{../orgtype}}" style="margin-top:1px;margin-left:1px;">{{rolename}}{{specialtyname}}</a>
+	{{/each}}
+	<a class="btn btn-sm js_select_toggle" data-id="{{uuid}}" style="margin-top:3px;margin-left:1px;float: right;">取消</a>
+	<a class="btn btn-sm btn-success js_select_add" data-id="{{uuid}}" style="margin-top:3px;margin-left:1px;float: right;" title="{{#ifCond orgtype "==" "r"}}添加项目角色{{else}}添加项目专业{{/ifCond}}"><i class="icon-plus"></i>新增</a>
+</div>
+<!--
+<div class="tipso_arrow" style="margin-top: -8px; border-color: transparent #F6F6F6 transparent transparent;"></div>
+-->
+</div>
+</script>
+
+
+<!-- 弹出层,选择专业,角色 -->
+<script id="tip-info-select-template" type="text/x-handlebars-template">
+<div class="tipso_bubble right {{uuid}}" style="border-radius: 0px; padding:5px 0px; border:1px solid #D5D2D2; color: rgb(255, 255, 255); width: 550px; left: {{left}}px; top: {{top}}px; background: #F6F6F6; text-align:left;">
+<div style="padding:3px 2px;">
+<img src="images/profess.png" style="width:25px; height:25px;">
+<span style="color:#000; margin-left: 2px; font-size: 14px;">{{#ifCond orgtype "==" "r"}}点击添加项目角色{{else}}点击添加专业架构{{/ifCond}}</span></div>
+<div class="tipso_content role_content" >
+	{{#each data}}
+	<a class="js_select_toggle role_a ellipsis {{#ifCond ../orgtype "==" "r"}}role{{else}}profess{{/ifCond}}" data-id="{{../uuid}}" data-code="{{rolecode}}{{specialtycode}}" data-type="{{../orgtype}}" title="{{rolename}}{{specialtyname}}">{{rolename}}{{specialtyname}}</a>
+	{{/each}}
+	<br/>
+	<a class="btn btn-sm js_select_toggle" data-id="{{uuid}}" style="margin-top:10px;margin-left:5px;float: right;">取消</a>
+	<a class="btn btn-sm btn-success js_select_add" data-id="{{uuid}}" style="margin-top:10px;margin-left:1px;float: right;" title="{{#ifCond orgtype "==" "r"}}添加项目角色{{else}}添加项目专业{{/ifCond}}"><i class="icon-plus"></i>新增</a>
+</div>
+<!--
+<div class="tipso_arrow" style="margin-top: -8px; border-color: transparent #F6F6F6 transparent transparent;"></div>
+-->
+</div>
+</script>

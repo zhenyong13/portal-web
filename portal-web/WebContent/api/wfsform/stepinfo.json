@@ -1,0 +1,413 @@
+{
+    "data": {
+        "rows": [
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 1,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 1,
+                "stepcode": "start-1",
+                "stepdesc": "环节描述",
+                "stepname": "开始",
+                "type": "startEvent",
+                "opinionjson": "{\"isshow\":true,\"name\":\"流程意见\",\"required\":false,\"valuesource\":\"dd\",\"editable\":true}",
+                "resultjson": "{\"isshow\":true,\"name\":\"\",\"required\":false,\"valuesource\":\"cc\",\"editable\":false}",
+                "shownextstep": false
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 2,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 10,
+                "stepcode": "7dd1a8de-2027-46fa-918b-eecbcb83d230",
+                "stepdesc": "环节描述",
+                "stepname": "拟办",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 3,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 15,
+                "stepcode": "867e476e-492d-43f7-a46c-3eb685b51101",
+                "stepdesc": "环节描述",
+                "stepname": "收文处理",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 4,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "checkbox",
+                "seqno": 20,
+                "stepcode": "afcae5f8-5f72-4c66-ac5e-67cd7b1ca53a",
+                "stepdesc": "相关人员会签",
+                "stepname": "相关人员处理（会签）",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 5,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 25,
+                "stepcode": "021d1035-64a0-41a6-ab66-d7424fadaeab",
+                "stepdesc": "领导秘书处理",
+                "stepname": "领导秘书处理",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 6,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 30,
+                "stepcode": "29b677a7-759e-43c4-8a63-596cacc988a4",
+                "stepdesc": "领导审批",
+                "stepname": "院领导审批",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 7,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 35,
+                "stepcode": "451ccd4b-d9d2-4b09-b96b-3e1f49a6a282",
+                "stepdesc": "院长助理审批",
+                "stepname": "院长助理审批",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 8,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "checkbox",
+                "seqno": 45,
+                "stepcode": "14ec8beb-72d2-4128-8c79-d4c69f751433",
+                "stepdesc": "文件收发员处理",
+                "stepname": "相关部门（文件收发员）处理",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 9,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 50,
+                "stepcode": "2b1e8979-49d1-4b11-a757-f08934b95586",
+                "stepdesc": "相关部门领导审批",
+                "stepname": "相关部门领导批办",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 10,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 55,
+                "stepcode": "2f211514-4d8b-4316-a48e-73cab294fdc0",
+                "stepdesc": "相关部门内处理",
+                "stepname": "相关部门内处理",
+                "type": "userTask",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            },
+            {
+                "createtime": "2015-07-14 10:35:12",
+                "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+                "id": 11,
+                "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+                "selecttype": "radio",
+                "seqno": 65,
+                "stepcode": "end-65",
+                "stepdesc": "结束环节",
+                "stepname": "结束",
+                "type": "endEvent",
+                "result": {
+                    "code": "result",
+                    "name": "处理意见",
+                    "value": [
+                        {
+                            "name": "通过",
+                            "code": "pass",
+                            "selected": true
+                        },
+                        {
+                            "name": "不通过",
+                            "code": "nopass",
+                            "selected": false
+                        }
+                    ],
+                    "editable": true,
+                    "isshow": true
+                },
+                "opinion": {
+                    "code": "opinion",
+                    "name": "流程意见",
+                    "value": "cc",
+                    "editable": true,
+                    "isshow": true,
+                    "required": true
+                },
+                "shownextstep": true
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

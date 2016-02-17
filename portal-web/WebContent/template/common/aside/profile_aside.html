@@ -1,0 +1,27 @@
+<ul class="menu-group">
+	<li>
+		<div class="menu-head">
+			<i class="menu-icon icon-list"></i>个人设置
+		</div>
+		<ul class="menu-group-sub j_all_flowMenu">
+			<li class="{{#ifCond type "==" "my-profile"}}active{{/ifCond}}" data-type="all-todo"
+				data-href="profile/my-profile"><a> <span
+					class="fr badge hide j_unread">0</span><span class="j_type-name">个人资料</span>
+			</a></li>
+			<li class="{{#ifCond type "==" "avatar-setting"}}active{{/ifCond}}" data-href="profile/avatar-setting">
+				<a> <span class="fr badge hide j_newComment">0</span><span
+					class="j_type-name">头像设置</span>
+			</a>
+			</li>
+			<li class="{{#ifCond type "==" "update-password"}}active{{/ifCond}}" data-href="profile/update-password" >
+				<a><span class="j_type-name">密码修改</span></a>
+			</li>
+			<li class="{{#ifCond type "==" "dash-setting"}}active{{/ifCond}}" data-href="profile/dash-setting" >
+				<a><span class="j_type-name">首页设置</span></a>
+			</li>
+			<li class="{{#ifCond type "==" "sidenav-setting"}}active{{/ifCond}}" data-href="profile/sidenav-setting" >
+				<a><span class="j_type-name">快捷方式</span></a>
+			</li>
+		</ul>
+	</li>
+</ul>

@@ -1,0 +1,25 @@
+<div class="j_con">
+	<div class="e-title">
+		<h5>首页左侧栏快捷导航显示设置</h5>
+	</div>
+		<table class="dashset-table" id="moudlelist">
+			
+		</table>
+	
+	<div class="reset-portalsetting" style="margin-left: 186px;margin-bottom:50px;">
+		<a  id="resetsetting" style="text-decoration: underline;color: #428bca;">恢复默认设置</a>
+	</div>
+</div>
+<script id="moudle-template" type="text/x-handlebars-template">
+{{#each this.rows}}
+<tr class="dashset-tr" data-tid="{{id}}" data-sid="{{sid}}" data-order="{{sortorder}}">
+	<td style="width:100px;">{{name}}</td>
+	<td style="width:400px;">
+	<span class="switch demo3" style="display:block;  width: 161px;  padding-left: 30px;">
+		<input type="checkbox"  {{#ifCond isshow "==" "1"}}checked=checked{{/ifCond}}>
+		<label><i></i></label>
+	</span>
+	</td>
+</tr>
+{{/each}}
+</script>

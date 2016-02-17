@@ -1,0 +1,44 @@
+{
+    "data": {
+        "pageSize": 10,
+        "pageNo": 1,
+        "total": 100,
+        "rows": [
+            {
+                "id": 791,
+                "usercode": "123213",
+                "username": "角色用户",
+                "rolecode": "role-1006",
+                "rolename": "角色1",
+                "createtime": "",
+                "effecttime": "",
+                "expiretime": "",
+                "memo": ""
+            },
+            {
+                "id": 2,
+                "usercode": "qwe",
+                "username": "基基本",
+                "rolecode": "role-1007",
+                "rolename": "角色2",
+                "createtime": "",
+                "effecttime": "",
+                "expiretime": "",
+                "memo": ""
+            },
+            {
+                "id": 3,
+                "usercode": "123",
+                "username": "adafds",
+                "rolecode": "role-1003",
+                "rolename": "角色3",
+                "createtime": "",
+                "effecttime": "",
+                "expiretime": "",
+                "memo": ""
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

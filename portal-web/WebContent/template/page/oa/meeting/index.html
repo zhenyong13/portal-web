@@ -1,0 +1,139 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 模块管理  主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">会议室：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<select id="meetingcode"></select>
+			</div>
+		</li>
+		 
+		<li class="toolkit-item toolkit-title j_catalog_name">会议名称：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="meeting_name" class="form-control qt_">
+			</div>
+		</li>
+		
+		<li class="toolkit-item toolkit-title j_catalog_name">日期：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_date" class="form-control date qt_">
+			</div>
+		</li>
+		
+		<li class="toolkit-item toolkit-title j_catalog_name"></li>
+		<li class="toolkit-item">
+			<div class="controls">
+				 <a class="icon-search js_search_meeting" title="查询"></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button" style="z-index: 0;">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle" id="module-add"><i class="icon-plus-thin glyphicon">会议室预定</i></a></li>
+<!-- 		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="module-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning j_entityslider-toggle" id="module-del"> <i class="fa fa-trash-o">批量删除</i></a></li> -->
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="module-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<!-- 列表 -->
+
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix" style="background: #F6F6F6;">
+				<span class="ret_width_10 ret_display ellipsis" style="border-right: 1px solid #eee;">会议室名称</span>
+				<span class="ret_width_9 ret_display ellipsis">8:00</span>
+				<span class="ret_width_9 ret_display ellipsis">9:00</span>
+				<span class="ret_width_9 ret_display ellipsis">10:00</span>
+				<span class="ret_width_9 ret_display ellipsis">11:00</span>
+				<span class="ret_width_9 ret_display ellipsis">12:00</span>
+				<span class="ret_width_9 ret_display ellipsis">13:00</span>
+				<span class="ret_width_9 ret_display ellipsis">14:00</span>
+				<span class="ret_width_9 ret_display ellipsis">15:00</span>
+				<span class="ret_width_9 ret_display ellipsis">16:00</span>
+				<span class="ret_width_9 ret_display ellipsis">17:00</span>
+			</li>
+		</ul>
+		<ul id="module-flow-list" class="e-list flow-list demo-list">
+			<!-- 
+			<li class="workflow clearfix" style="position: relative;">
+				<span class="ret_width_10 ret_display ellipsis" style="border-right: 1px solid #eee;">一楼会议室</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">1</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">2</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">3</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">4</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">5</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">6</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">7</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">1</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">2</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">3</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">4</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">5</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">6</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">7</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">4</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">5</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">6</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">7</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">4</span>
+			    <span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">5</span>
+				<div style="width:90%;margin-left:10%;top:6px;line-height: 22px;position:absolute;z-index:1002;height:22px;text-align:center;background: #A3C3EF;">
+		     		1232131231
+			   	</div>
+			</li> -->
+		</ul>
+		
+		</div>
+		</div>
+	</div>
+</div>
+<!-- 分页 -->
+		<!-- <div id="module_pagination" ></div> -->
+		<!-- 分页 -->
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each this}}
+
+<li class="workflow clearfix js_add_date_room" style="position: relative;" data-code="{{roomname}}" >
+<span class="ret_width_10 ret_display ellipsis js_roominfo" style="border-right: 1px solid #eee;color:rgb(25, 77, 242);" data-code="{{roomcode}}">{{#if roomname}}{{roomname}}{{else}}{{roomcode}}{{/if}}</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+<span class="ret_width_4 ret_display ellipsis" style="margin-left: 0.5%;">&nbsp;</span>
+	
+{{#each rows}}			
+<div class="js_meetinfo tipsoinfo tipso_style" data-tid="{{id}}" data-bookcode="{{bookcode}}" data-tipso="会议名称：{{meetname}}<br/>会议议题：{{meettopic}}<br/>申请人：{{bookername}}<br/>申请部门：{{bookdept}}<br/>开始时间：{{usetimebegin}}<br/>结束时间：{{usetimeend}}<br/>备注：{{memo}}<br/>"  
+style="{{periodLimit usetimebegin usetimeend}}top:6px;line-height: 22px;position:absolute;z-index:1002;height:22px;text-align:center;background: #A3C3EF;">
+		{{bookername}}
+		<i style="position:absolute;left:0;top:0;height:22px;width:2px;background:#fff;display:inline-block;"></i>
+		<i style="position:absolute;right:0;top:0;height:22px;width:2px;background:#fff;display:inline-block;"></i>
+	</div>
+{{/each}}
+
+</li>
+{{/each}}
+</script>
+
+
+ 

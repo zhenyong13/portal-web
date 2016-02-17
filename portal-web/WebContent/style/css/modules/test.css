@@ -1,0 +1,23 @@
+.button {
+  background-color: #7f7f7f;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.aa {
+  background-color: blue;
+}
+.aa .transparent-red-element {
+  border-color: #a50059;
+  border-color: rgba(255, 0, 0, 0.65);
+}
+.aa .at {
+  background-color: #a50059;
+  background-color: rgba(255, 0, 0, 0.65);
+}
+.lt-ie9 .aa .at {
+  background-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#A6FF0000,endColorstr=#A6FF0000);
+  zoom: 1;
+}
+
+/*# sourceMappingURL=test.css.map */

@@ -1,0 +1,5 @@
+﻿{
+	"data":{"id":1,"rolename":"测试角色","rolecode":"test", "specialtycode":"34123441","specialtyname":"测试专业"},
+	"msg":"success",
+	"rc":1
+}

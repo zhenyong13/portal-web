@@ -1,0 +1,32 @@
+<div class="workflows-container toolkit-panel dialog-item">
+    <div class="toolkit toolkit-lg toolkit-bar clearfix" style="background-color: #faf9f9">
+        <ul class="toolkit-list fl js_formtab">
+            {{#each processtype}}
+            <li class="toolkit-item toolkit-item-tab {{#if @index}}{{else}}active{{/if}}" data-processtype="{{code}}" data-parentcode="{{pcode}}"><a><i class="{{iconclass}}"></i>{{name}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+   <!-- 二级分类 -->
+      {{#each processtype}}
+      	{{#if values.length}} 
+      <div class="toolkit toolkit-bar second_level hide clearfix" style="margin-left: 20px; min-height: 40px" id="type_{{code}}">
+          <ul class="toolkit-list fl js_formtab" >
+              {{#each values}}
+              	<li class="toolkit-item toolkit-item-tab" data-processtype="{{typecode}}">
+              	<a style="line-height: 40px;font-size:12px"><i class="{{iconclass}}"></i>{{typename}}</a>
+              	</li>
+              {{/each}}
+          </ul>
+      </div>
+        {{/if}}
+     {{/each}}
+      
+      <div class="scrollwrapper"  style="margin-top: {{#each processtype}} {{#ifCond @index "==" "0"}} {{#if values.length}} 50px{{else}}5px {{/if}} {{/ifCond}} {{/each}};">
+      <div class="form-list-wrap js_companyforms">
+            <div class="js_formcategory js_other">
+                   <ul id="processtype_list" class="form-list clearfix j_formlist">
+                   </ul>
+             </div>
+      </div>
+      </div>
+</div>

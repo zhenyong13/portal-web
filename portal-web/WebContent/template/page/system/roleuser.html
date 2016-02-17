@@ -1,0 +1,35 @@
+<div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5> {{rolename}}</h5></div>
+<div id="user-container" class="user-container bg-white pt-20">
+    <div style="margin-left:50px;">
+                <div class="control-group">
+                    {{rolename}}, 当前共【{{#if members.length}}{{members.length}}{{else}}0{{/if}}】位成员
+                </div>
+                <div class="control-group">
+                    <label class="control-label">角色成员：<a id="addGroupMember" data-code="{{rolecode}}" class="icon-plus" style="height: 20px;  width: 20px;  margin: 5px;" title="添加角色成员"></a></label>
+                    <div id="user-info" class="scrollwrapper form-horizontal" style="height:400px;margin-left:50px;"> 
+		                    <ul class="user-list clearfix">
+		                    	{{#if members.length}}
+			                    {{#each members}}
+			                    <li class="j_clickhide file-show" style="margin-right:5px;position: relative;display: inline-block; height: 60px;margin:0 5px;float: left;text-align: center;">
+				                    <a class="fl router user-item-cart">
+					                    <img style="height: 20px;  width: 20px;  margin-right: 5px; border-radius: 50%;" src="{{#if avatarcode}}{{../../baseurl}}{{avatarcode}}{{else}}images/avatar.png{{/if}}">
+					                    <br/><em class="ellipsis user-item" style="width:100%;height:18px;text-overflow: ellipsis; overflow: hidden;" user-id="{{usercode}}" title="{{#if username}}{{username}}{{else}}{{usercode}}{{/if}}">{{#if username}}{{username}}{{else}}{{usercode}}{{/if}}</em>
+				                    </a>
+				                    <span class="fl" style="width:25px;position:absolute;top: -8px;right:-18px;">
+				                    	<a data-code="{{id}}" class="fl select_x close_file  file_remove_file remove_user" title="删除">×</a>
+				                    </span>
+			                    </li>
+			                     {{/each}}
+			                     {{else}}
+			                     <li class="j_clickhide file-show" style="margin-right:5px; height: 50px;width: 60px;float: left;text-overflow: ellipsis; overflow: hidden;text-align: center;">
+				                    <a class="fl router user-item-cart" style="padding-left: 12px;">
+					                    <br/><em class="ellipsis">暂无成员</em>
+				                    </a>
+			                    </li>
+			                     {{/if}}
+		                    </ul>
+                    </div>
+             </div>
+   </div>
+</div>

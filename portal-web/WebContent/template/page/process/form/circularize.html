@@ -1,0 +1,25 @@
+<div id="circularize-div" class="remind sbox-white filterSlip_js"
+	style="left: 430px; top: 177px;">
+	<textarea id="circularize-textarea" class="form-control" name="comment"
+		rows="3">请传阅相关人员，谢谢！</textarea>
+	<div class="control-group ">
+		<label class="control-label" style="float: left" title="传阅给">传阅给：</label>
+	</div>
+	<div id="other-employee" class="control-group clearfix">
+		<span class="js_employee_circularize" style="float:left;  position: relative;top: 5px;"><a class="icon-plus"></a></span>
+		<div id="circularizelist" class="entity-container" style="position:relative; top: 4px;"></div>
+	</div>
+	<div class="control-group pull-right">
+		<a  class="btn btn-sm js_circularize_submit">提交</a>
+		<a class="btn btn-sm js_circularize_cancle">取消</a>
+	</div>
+</div>
+
+<script id="selectperson-template" type="text/x-handlebars-template">
+{{#each members}}
+<span class="file-show" style="margin-right:3px;"> 
+	<a id="{{code}}" data-uid="{{code}}" data-name="{{name}}">{{name}}</a> 
+	<a class="close_file js_close_dept file_remove_file" title="删除">×</a>
+</span>
+{{/each}}
+</script>

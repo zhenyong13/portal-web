@@ -1,0 +1,41 @@
+<!-- 补签主页面 -->
+<div class="toolkit clearfix">
+       <ul class="toolkit-list" id="workday-set">
+		<li class="toolkit-item toolkit-title j_catalog_name">年度：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<select id="year" class="form-control" style="width: 80px;">
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+					<option value="2023">2023</option>
+					<option value="2024">2024</option>
+					<option value="2025">2025</option>
+				</select>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">上班时间定义：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input id="start_time" type="text" class="form-control required" style="width: 140px;float:left;" placeholder="上班时间"><span style="float:left;">-</span> 
+				<input id="end_time" type="text" class="form-control required" style="width: 140px;" placeholder="下班时间" />
+			</div>
+		</li>
+
+		<li class="toolkit-item search">
+			<a id="workday_set" class="btn js_save btn-primary btn-sm j_entityslider-toggle" data-id="001"> <i class="icon-save"></i>&nbsp;设定</a>
+		</li>
+	</ul>             
+</div>
+				
+<div class="ebox1 flows" style="margin-top: 3px;margin-bottom:25px;">
+	<div>
+		<div style="margin-top: 30px;"></div>
+		<div id="calendar"></div>
+    </div>
+</div>

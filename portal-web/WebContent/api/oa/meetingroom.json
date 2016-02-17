@@ -1,0 +1,30 @@
+{
+    "data": {
+        "assignee": "",
+        "type": "",
+        "taskstatus": "",
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 100,
+        "rows": [
+            {
+                "id": "2",
+                "roomcode": "111",
+                "roomname": "会议室名称1111",
+                "position": "位置",
+                "capacity": 23,
+                "memo": "sf硒鼓"
+            },
+            {
+                "id": "1",
+                "roomcode": "sdfsdf122",
+                "roomname": "会议室名称222",
+                "position": "位置",
+                "capacity": 23,
+                "memo": "sf硒鼓"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

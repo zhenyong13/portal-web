@@ -1,0 +1,115 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "usercode": "sdf",
+                "username": "小张",
+                "id": 1,
+                "avatarcode": "22"
+            },
+            {
+                "usercode": "ssdf",
+                "username": "小三",
+                "id": 1,
+                "avatarcode": "33"
+            },
+            {
+                 "usercode": "ssdf",
+                "username": "小国",
+                "id": 1,
+                "filecode": "32"
+            },
+            {
+                "usercode": "ssdf",
+                "username": "小小",
+                "id": 1,
+                "imgurl": "44",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+               "usercode": "ssdf",
+                "username": "哥哥",
+                "id": 1,
+                "avatarcode": "55",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "妈妈",
+                "id": 1,
+                "imgurl": "66",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "妈妈",
+                "id": 1,
+                "imgurl": "66",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "妈妈",
+                "id": 1,
+                "imgurl": "66",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "usercode": "ssdf",
+                "username": "哈哈哈哈哈哈",
+                "id": 1,
+                "avatarcode": "77",
+                "targeturl": "",
+                "target": ""
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

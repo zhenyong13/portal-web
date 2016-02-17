@@ -1,0 +1,32 @@
+﻿{
+    "data": {
+        "address": "",
+        "avatarcode": "128fddb9-df29-4cd6-9da2-6ff80dd8f4ef",
+        "email": null,
+        "extorgcode": "org-1",
+        "id": 1182,
+        "ikeynumber": "ygo/VhCxNF0x/H9WKSeKz1Gi3k+kABvarNVyQo/RZSSIRnyxt+DbHu1+QkyZvIUnx21Q2AGmnRy7j48qeYEn0Q==",
+        "imnumber": null,
+        "isenabled": "enable",
+        "leader": null,
+        "mobileno": null,
+        "officephone": null,
+        "orgcode": "org-101",
+        "orgname": "广州地铁设计研究院",
+        "password": "3156960f08369aa1b5bb64e2dfb331d65930fc8c",
+        "pinyin": "mhtwriter",
+        "positionlevel": null,
+        "sex": "female",
+        "signfilecode": "1da71620-413d-45dd-bcc3-2e69b25e71de",
+        "updatetime": "2015-08-14 09:06:37",
+        "usercode": "user-002785",
+        "userdesc": "1111",
+        "userlevel": null,
+        "username": "研究院",
+        "userrank": null,
+        "validatecode": "85d67cb1-e294-4190-b7e8-b65d5f5b4086",
+        "workno": "002785"
+    },
+    "msg": "success",
+    "rc": 1
+}

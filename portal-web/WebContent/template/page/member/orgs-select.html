@@ -1,0 +1,41 @@
+<div class="">
+	<div id="userSelector-multi" style="max-height: 350px;">
+		<div class="user-wrapper">
+			<div class="selected-container clearfix">
+				<span style="float:left;margin-left: 15px;">已选择：</span><span id="selected-depts"></span>
+			</div>
+			<div class="user-container"></div>
+		</div>
+		<div class="user-selector-body clearfix">
+			<div id="all-group-users">
+				<div class="e-title" style="height:35px;"> <!-- height:75px -->
+					<div id="org-user-info" class="">
+						<input id="search_name" type="text" style="top: 3px;position: relative;" class="form-control js_search_tree" placeholder="{{#if search_name}}{{search_name}}{{else}}查询部门{{/if}}"> <i style="position: relative;left: -26px;top:5px;" class="icon-search" title="搜索"></i>
+						<a id="clean-all-dept" class="btn btn-sm hide  js_clean_all">全部清空</a>
+					</div>
+				</div>
+				
+				<div id="dept-container" class="row-fluid  users-container bg-white " style="height: 270px;">
+						<ul id="treeDemo" class="ztree"></ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div id="showorgext" style="margin-top:0px; display: none" >
+					<input id="orgextText" type="text" style="width:550px;margin-left:24px;" class="form-control" value="" placeholder="添加院外单位"/>
+					<input id="orgextBefore" name="orgextBefore" type="checkbox" value="0"/>前面显示
+		</div>
+		<span class="selector-btns" style="float:right;  margin-right: 10px;margin-top:5px;">
+			{{#if submit}}
+			<a class="btn btn-middle js_selected_dept_cancel">关闭</a>
+			{{else}}
+			<a class="btn btn-middle btn-primary js_selected_dept_ok">确定</a>
+			<a class="btn btn-middle js_selected_dept_cancel">取消</a>
+			{{/if}}
+			</span>
+	</div>
+</div>
+
+
+

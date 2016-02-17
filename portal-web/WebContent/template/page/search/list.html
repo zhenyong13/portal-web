@@ -1,0 +1,49 @@
+<div>
+    {{#if this.length}}
+    <ul id="flow-list" class="e-list flow-list">
+        {{#each this}}
+        <li data-id="{{processinstcode}}" class="workflow clearfix filterSlip_js j_entityslider-toggle" style="height:200px;" >
+            <span class="sn">{{addOne @index}}</span>
+            <span class="checkbox">
+                <i class="icon-checkbox-unchecked"></i>
+            </span>
+            <div class="list_div_title">
+	            <span class="{{#ifCond type "==" "file"}}list_a_color{{/ifCond}} ellipsis filterSlip_js" title="{{assigneename}}" lang="{{taskcode}}" data-taskname="{{taskname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" processtype="{{processtype}}" data-module="showProcess">{{title}}</span>
+				<div>
+					<span class="list_div_img"><img src="images/avatar.png"></span>
+					<span class="list_cont">{{abstract}}</span>
+					{{#ifCond type "==" "process"}}
+					<div class="list_name_time list_doc">发起人：{{creator}}</div>
+					<div class="list_name_time list_doc">启动时间：{{createTime}}</div>
+				</div>
+				<div class="list_doc list_a_color">正文：<a class="list_a_color">{{#each files}}{{#ifCond type "==" "maindoc"}}{{name}}{{/ifCond}}{{/each}}</a></div>
+				<div class="list_doc list_a_color">附件：<a class="list_a_color">{{#each files}}{{#ifCond type "==" "attachment"}}{{name}}{{/ifCond}}{{/each}}</a></div>
+					{{/ifCond}}
+					{{#ifCond type "==" "file"}}
+					<div class="list_name_time list_doc">创建人：{{creator}}</div>
+					<div class="list_name_time list_doc">创建时间：{{createTime}}</div>
+				</div>
+					{{/ifCond}}
+			</div>
+			
+            <!-- <div class="shortcut">
+                <span class="remind-toggle" vel="{{processinstcode}}" data-id="{{processinstcode}}">提醒</span>
+                <span class="watch" watched="{{watched}}" taskcode="{{taskcode}}" data-id="{{processinstcode}}" module="workflow">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+                <span class="share selector-toggle" taskcode="{{taskcode}}" data-entity="employee" data-multi="true" data-id="{{processinstcode}}">共享</span>
+            </div> -->
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <div class="j_no_my_workflow no-result">
+        	没有搜索相关的内容
+    </div>
+    <!-- <div id="guide-div" class="guide-div">
+        <div class="clearfix">您可点击“发起公文”来提交您的公文申请审批；<br>审批公文可以帮助您把日常行政方面的申请直接提交给您的上级或其他同事，<br>方便他们快速审核，同时系统支持可自定义审批过程及人员
+        </div>
+        <div class="clearfix">
+            <a id="guide-customer-create" class="btn j_entityslider-toggle" data-module="creatProcess" data-id="new" userid="4522889269382076526">发起公文</a>
+        </div>
+    </div> -->
+    {{/if}}
+</div>

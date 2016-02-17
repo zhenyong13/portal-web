@@ -1,0 +1,14 @@
+﻿{
+    "data": {
+                "createtime": "2015-07-04 22:27:49",
+                "id": 1,
+                "orgcode": "1212",
+                "rolecode": "role-1000",
+                "roledesc": null,
+                "rolename": "接口人",
+                "rolestate": "1",
+                "roletype": "5"
+    },
+    "msg": "success",
+    "rc": 1
+}

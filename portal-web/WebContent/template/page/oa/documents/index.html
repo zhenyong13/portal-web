@@ -1,0 +1,386 @@
+
+<div id="org_container">
+	<aside class="aside" style="width: 280px !important; min-height: 500px;">
+		<ul class="menu-group">
+			<li>
+				<div class="menu-head">
+					<i class="menu-icon icon-list"></i>目录结构
+				</div>
+				
+				<div class="newGroup">
+					<ul class="ztree demo-list">
+						<li style="padding-left:4px;font-weight:bold;">创建新目录&nbsp;<span class="button add" style="position:relative;top:-2px;" id="newGroup"></span></li>
+					</ul>
+				</div>
+				<div id="GroupTree">
+				<ul id="dirTreeDemo" class="ztree demo-list"></ul>
+				</div>
+			</li>
+		</ul>
+	</aside>
+	<div id="j_mainscroll" class="main   " style="left: 280px !important">
+				<div class="col-tb  " >
+					<div id="document-center" class="col-cell j_center">
+						<!-- <div>
+							<ol id="navbar" class="breadcrumb doc-folder-path hide"
+								style="display: block;">
+								<li id="folder-menu" data-type="all"><span class="title">所有文件</span></li>
+							</ol>
+						</div> -->
+						<!-- 导航 -->
+						<div class="toolkit">
+							<ul class="toolkit-list">
+								<!-- <li id="documents-title" class="toolkit-item toolkit-title">文档库</li>
+								<li class="toolkit-item">
+									<div id="document-filter" class="btn-group dropdown" data-toggle="#document-filter-dropdown">
+										<a class="btn btn-sm btn-square">筛选 
+										<i class="icon-caret-down"></i></a>
+										<div id="document-filter-dropdown"
+											class="dropdown-filter border-dropdown dropdown-div"
+											style="display: none;">
+											<div id="filter-div" class="clearfix">
+												<div class="loading_large" style="display: none;"></div>
+												<div id="info-div" class="hide" style="display: block;">
+													<div id="employee-title" class="filter-group filter-title">
+														<span id="employee-type-task" class="filter-label hide">负责人或创建人</span><span
+															id="employee-type-blog" class="filter-label hide">我关注的人及下属</span><span
+															id="employee-type-document" class="filter-label">负责人或创建人</span><span
+															id="employee-type-customer" class="filter-label hide">负责人或创建人</span><span
+															id="employee-type-mainline" class="filter-label hide">负责人或创建人</span><span
+															id="employee-type-workflow" class="filter-label hide">申请人</span><span
+															id="employee-type-tag" class="filter-label hide">创建人</span><span
+															class="filter-input"><input name="username"
+															class="typehead" data-entity="employee"
+															placeholder="搜索人员"></span>
+													</div>
+													<div id="employee-filter" class="filter-group">
+														<span class=" filter-item"><a
+															data-entity="4523312868403470340" title="wuzy"
+															class="employee-click">wuzy</a></span><span class=" filter-item"><a
+															data-entity="6993329589063243119" title="zhouzl"
+															class="employee-click">zhouzl</a></span>
+													</div>
+													<div id="due-time"
+														class="filter-group filter-title due-time-div hide">
+														<span class="filter-label">到期日</span>
+													</div>
+													<div id="due-time-filter" class="filter-group hide">
+														<span>从：<input id="due-time-begin"
+															name="taskGtDate" type="text" class="datepicker"
+															minview="month" maxview="decade" format="yyyy-mm-dd"
+															dategroup="true" insertafter="true" v-name="date">&nbsp;至：<input
+															id="due-time-end" name="taskLtDate" type="text"
+															class="datepicker" minview="month" maxview="decade"
+															format="yyyy-mm-dd" dategroup="true" insertafter="true"
+															v-name="date"></span>
+													</div>
+													<div id="comment"
+														class="filter-group filter-title comment-div">
+														<span id="comment-type-task" class="filter-label hide">反馈时间</span><span
+															id="comment-type-document" class="filter-label">文档类型</span><span
+															id="comment-type-customer" class="filter-label hide">反馈时间</span><span
+															id="comment-type-workflow" class="filter-label hide">表单</span>
+													</div>
+													<div id="comment-filter-customer" class="filter-group hide">
+														<span id="one-mounth-no" class="filter-item"><a
+															data-entity="one_mounth_no" class="comment-click">一个月内未联系的客户</a></span><span
+															id="one-weak-no" class="filter-item"><a
+															data-entity="one_weak_no" class="comment-click">一周未联系的客户</a></span><span
+															id="3day-no" class="filter-item"><a
+															data-entity="three_day_no" class="comment-click">3天未联系的客户</a></span><span
+															id="1day-no" class="filter-item"><a
+															data-entity="one_day_no" class="comment-click">1天未联系的客户</a></span><span
+															id="none" class="filter-item"><a
+															data-entity="none" class="comment-click">无联系的客户</a></span><span
+															id="one_weak_yes" class="filter-item"><a
+															data-entity="one_weak_yes" class="comment-click">本周内联系的客户</a></span><span
+															id="one-mounth-yes" class="filter-item"><a
+															data-entity="one_mounth_yes" class="comment-click">本月内联系的客户</a></span>
+													</div>
+													<div id="comment-filter-task" class="filter-group hide">
+														<span id="one-mounth-no" class="filter-item"><a
+															data-entity="one_mounth_no" class="comment-click">一个月内未反馈的任务</a></span><span
+															id="one-weak-no" class="filter-item"><a
+															data-entity="one_weak_no" class="comment-click">一周未反馈的任务</a></span><span
+															id="three_day-no" class="filter-item"><a
+															data-entity="three_day_no" class="comment-click">3天未反馈的任务</a></span><span
+															id="one_day-no" class="filter-item"><a
+															data-entity="one_day_no" class="comment-click">1天未反馈的任务</a></span><span
+															id="none" class="filter-item"><a
+															data-entity="none" class="comment-click">无反馈的任务</a></span><span
+															id="one_weak_yes" class="filter-item"><a
+															data-entity="one_weak_yes" class="comment-click">本周内反馈的任务</a></span><span
+															id="one-mounth-yes" class="filter-item"><a
+															data-entity="one_mounth_yes" class="comment-click">本月内反馈的任务</a></span>
+													</div>
+													<div id="comment-filter-document" class="filter-group">
+														<span id="html" class="filter-item"><a
+															data-entity="html" class="comment-click">html文档</a></span><span
+															id="office" class="filter-item"><a
+															data-entity="office" class="comment-click">Office文档</a></span><span
+															id="text" class="filter-item"><a
+															data-entity="text" class="comment-click">文本文档</a></span><span
+															id="pdf" class="filter-item"><a data-entity="pdf"
+															class="comment-click">PDF文档</a></span><span id="image"
+															class="filter-item"><a data-entity="image"
+															class="comment-click">图片文件</a></span><span id="audio"
+															class="filter-item"><a data-entity="audio"
+															class="comment-click">音频文件</a></span><span id="video"
+															class="filter-item"><a data-entity="video"
+															class="comment-click">视频文件</a></span><span id="other"
+															class="filter-item"><a data-entity="other"
+															class="comment-click">其他类型文件</a></span>
+													</div>
+													<div id="comment-filter-workflow" class="filter-group hide"></div>
+													<div id="mainline"
+														class="filter-group filter-title mainline-div">
+														<span class="filter-label">目标</span><span
+															class="filter-input"><input name="mainline"
+															class="typehead" data-entity="mainline"
+															placeholder="搜索目标"></span>
+													</div>
+													<div id="mainline-filter" class="filter-group mainline-div">
+														<span class=" filter-item"><a
+															data-entity="6993659995405515525" title="李厚霖"
+															class="mainline-click">李厚霖</a></span><span class=" filter-item"><a
+															data-entity="4523313854022708919" title="目标"
+															class="mainline-click">目标</a></span><span class=" filter-item"><a
+															data-entity="6993659983185315419" title="就想创建一个目标"
+															class="mainline-click">就想创建一个目标</a></span><span
+															class=" filter-item"><a
+															data-entity="6993315109126272011" title="呀哈"
+															class="mainline-click">呀哈</a></span><span class=" filter-item"><a
+															data-entity="6993459574545751064" title="加油"
+															class="mainline-click">加油</a></span><span class=" filter-item"><a
+															data-entity="6993798249744323075" title="添加目标名称"
+															class="mainline-click">添加目标名称</a></span><span
+															class=" filter-item"><a
+															data-entity="6993798266966023641" title="添加目标名称"
+															class="mainline-click">添加目标名称</a></span><span
+															class=" filter-item"><a
+															data-entity="6993798305152024516" title="微信"
+															class="mainline-click">微信</a></span>
+													</div>
+													<div id="tag" class="filter-group filter-title tag-div">
+														<span class="filter-label">标签</span><span
+															class="filter-input"><input name="tag"
+															class="typehead" data-entity="tag" placeholder="搜索标签"></span>
+													</div>
+													<div id="tag-filter" class="filter-group tag-div">
+														<span class="privacy-tag filter-item"><a
+															data-entity="4523314256690121308" title="我的标签:想得美"
+															class="tag-click">想得美</a></span><span
+															class="common-tag filter-item"><a
+															data-entity="6993314423465652866" title="公共标签:假假"
+															class="tag-click">假假</a></span><span
+															class="common-tag filter-item"><a
+															data-entity="6993798239290322902" title="公共标签:微信"
+															class="tag-click">微信</a></span><span
+															class="common-tag filter-item"><a
+															data-entity="6993798256634023378" title="公共标签:1111"
+															class="tag-click">1111</a></span>
+													</div>
+													<div id="formstatus"
+														class="filter-group filter-title formstatus-div hide">
+														<span class="filter-label">表单状态</span>
+													</div>
+													<div id="formstatus-filter"
+														class="filter-group formstatus-div hide">
+														<span class="filter-item"><a data-entity="enable"
+															class="comment-click">收集中</a></span><span class="filter-item"><a
+															data-entity="disable" class="comment-click">未发布</a></span>
+													</div>
+													<div id="relatedstatus"
+														class="filter-group filter-title relatedstatus-div hide">
+														<span class="filter-label">关联流程</span>
+													</div>
+													<div id="relatedstatus-filter"
+														class="filter-group relatedstatus-div hide">
+														<span class="filter-item"><a data-entity="true"
+															class="comment-click">已关联</a></span><span class="filter-item"><a
+															data-entity="false" class="comment-click">未关联</a></span>
+													</div>
+													<div id="btns" class="filter-btns pull-right">
+														<a class="btn filter-submit btn-sm hide">确定</a><a
+															class="btn filter-cancle btn-sm">重置</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div></li> -->
+								<!-- <li class="toolkit-item"><div
+										class="btn-group dropdown dropdown-menu-toggle">
+										<a id="document-order"
+											class="btn btn-sm btn-square dropdown-toggle" data-entity="">排序
+											<i class="icon-caret-down"></i>
+										</a>
+										<ul class="dropdown-menu border-dropdown"
+											style="display: none;">
+											<li><a class="orderType" data-entity="default">默认</a></li>
+											<li><a class="orderType" data-entity="last_comment_time">反馈时间</a></li>
+											<li><a class="orderType" data-entity="last_update_time">文档更新时间</a></li>
+											<li><a class="orderType" data-entity="create_time">文档创建时间</a></li>
+											<li><a class="orderType" data-entity="manager">负责人</a></li>
+										</ul>
+									</div></li> -->
+								<li class="toolkit-item toolkit-title ">是否包含子文件夹：</li>
+								<li class="toolkit-item">
+									<div class="controls">
+										<input type="checkbox" id="childFolder" class="form-control"> 
+									</div>
+								</li>
+								<li class="toolkit-item">
+								<input id="document-keywords" class="form-control" type="text" style="width: 150px !important" placeholder="搜索">
+								<i class="icon-search left-20" title="搜索" ></i>
+								</li>
+								
+									
+								<!-- <li class="toolkit-item fr"><a id="document-html-create"
+									class="btn btn-success btn-sm dropdown-toggle"
+									data-module="document" data-id="0"><i
+										class="icon-plus-thin glyphicon"></i>新建文档</a></li> -->
+										
+								<li class="toolkit-item fr"><a id="document-create"
+									class="btn btn-success btn-sm dropdown-toggle"><i
+										class="icon-plus-thin glyphicon"></i>上传文档</a></li>
+										
+								<!-- <li class="toolkit-item fr hide" id="js_folder-create-li"
+									style="display: list-item;"><a id="js_folder-create"
+									class="btn btn-success btn-sm"><i
+										class="icon-plus-thin glyphicon"></i>新建文件夹</a></li> -->
+										
+								<!-- <li class="toolkit-item fr"><div
+										class="btn-group dropdown dropdown-menu-toggle">
+										<a class="btn btn-sm btn-square dropdown-toggle"><i
+											class="icon-th-list glyphicon"></i>批量 <i
+											class="icon-caret-down"></i></a>
+										<ul class="dropdown-menu dropdown-menu-right border-dropdown"
+											style="">
+											<li><a class="document-watchs">批量关注</a></li>
+											<li><a class="document-reminds remind-toggle">批量提醒</a></li>
+											<li><a class="document-share  typeahead-search"
+												data-entity="employee" data-multi="true" style="width: 60px">批量共享</a></li>
+											<li><a class="document-move">批量移动</a></li>
+										</ul>
+									</div></li> -->
+							</ul>
+						</div>
+						
+						<!-- 文档列表 -->
+						<div id="documentlist-container" class="ebox1 documentlist-container">
+							<div>
+								<ul class="e-list flow-list">
+									<li style="background: #F6F6F6;font-weight: bold;">
+										<span class="ret_width_5 ret_display  filterSlip_js"><i id="check-all-module" class="icon-checkbox-unchecked"></i></span>
+										<span class="ret_width_15 ret_display  filterSlip_js" data-col="modulecode">文件编码</span>
+										<span class="ret_width_15 ret_display  filterSlip_js" data-col="modulename">文件名称</span>
+										<span class="ret_width_15 ret_display  filterSlip_js" data-col="moduletype">目录</span>
+										<span class="ret_width_15 ret_display  filterSlip_js" data-col="parentcode">创建人</span>
+										<span class="ret_width_8 ret_display  filterSlip_js" data-col="moduleorder">创建时间</span>
+										<span class="ret_width_20 ret_display  filterSlip_js">操作</span>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<ul id="module-flow-list" class="e-list document-list demo-list">
+									
+								</ul>
+							</div>
+							<div id="documentlist-loading" class="loading_small hide">
+								<span>正在加载数据，请稍后...</span>
+							</div>
+							<div class="hide no-result" style="display: none;">无知识文档</div>
+							<div class="hide center-more" style="display: none;">更多...</div>
+							<div class="hide no-more" style="display: none;">已加载所有文档</div>
+							<div id="guide-div" class="guide-div hide" style="display: none;">
+								<div class="clearfix">
+									<div>
+										您还没有上传过文档，您可点击“新建文档”来上传<br>文档库可以方便您快速上传文件形成团队统一的知识网盘，<br>并快速的分享给有需要的同事，沉淀工作中的文件和知识经验。
+									</div>
+								</div>
+								<div class="clearfix">
+									<a id="guide-document-create" class="btn">上传文档</a>
+								</div>
+							</div>
+						</div>
+						<div id="module_pagination" style=" margin-top: 3px;" ></div>
+					</div>
+				</div>
+			</div>
+			 
+		</div>
+<div id="entitySlider" class="j_stretchBox stretch-box"></div>
+
+<!-- 列表 -->
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="document clearfix router document-li ui-draggable j_entityslider-toggle mine">
+		<span class="sn" style="width:5%;">{{addOne @index}}</span>
+		<span class="checkbox js-check-box" style="width:5%;"><i class="icon-checkbox-unchecked" data-id="{{id}}"></i></span>
+		<span class="ret_width_15 ellipsis filterSlip_js" title="{{filecode}}">{{filecode}}</span>
+		<span class="ret_width_15 ellipsis filterSlip_js" title="{{filename}}">{{filename}}</span>
+		<span class="ret_width_15 ellipsis filterSlip_js" title="{{foldercode}}">{{foldercode}}</span>
+		<span class="ret_width_15 ellipsis filterSlip_js" title="{{creator}}">{{creator}}</span>
+
+
+		<span class="ret_width_8 ellipsis date">{{createtime}}</span>
+
+		<span class="ret_width_5 js_document-download" data-code="{{filecode}}" data-filecode="{{downloadurl}}"  style="color:#0000FF;">下载</span>
+		<span class="ret_width_10 js_document-qcode" data-code="{{filecode}}" data-filecode="{{downloadurl}}"  style="color:#0000FF;">
+			{{#if hasqrcode}}
+				重新生成二维码
+			{{else}}
+				生成二维码
+			{{/if}}
+		</span>
+		<span class="ret_width_5 js_document-move" data-code="{{id}}" data-filecode="{{downloadurl}}" style="color:#0000FF;">移动</span>
+</li>
+{{/each}}
+</script>
+
+
+
+<script id="uploadFileView-template" type="text/x-handlebars-template">
+<form id="uploadFileForm" name="uploadFileForm" method="post" enctype="multipart/form-data">
+<div class="uploadFileView">
+<div class="control-group col-12">
+	<div class="controls">
+        <label class="vl_name">文件名称：</label>
+		<a id="pick_ipt" class="btn" ></a>
+		<input type="file" id="attachfile_upload" data-attach="attach" name="fileupload" class="js_file_upload" multiple="multiple" />
+		<a id="pickFiles" class="btn btn-xs btn-info"> 
+			<i class="icon-upload-alt"></i> 上传附件
+		</a> 
+		
+	</div>
+</div>
+
+<div class="control-group col-12">
+	<div class="controls">
+        <label class="vl_name">文件目录：</label>
+		<input type="hidden" id="folderCodeDir" name="foldercode" />
+		<input type="hidden" id="userCodeDir" name="usercode" />
+		<a id="selectFolder" class="btn btn-xs" foldercode=""></a> 
+	</div>
+</div>
+
+<div class="control-group col-12">
+	<div class="controls">
+        <label class="vl_name">文件描述：</label>
+		<textarea id="filedesc" name="filedesc"></textarea>
+	</div>
+</div>
+
+<div class="control-group col-12">
+	<div class="controls" style="float:right;">
+		<a id="uploadFormSubmit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+		<a id="uploadFormCancel" class="btn btn-sm js_form_cancel">取消</a>
+	</div>
+</div>
+</div>
+</form>
+</script>
+
+<script id="selectFolder-template" type="text/x-handlebars-template">
+<ul id="dialogTree" class="ztree" style="max-height:245px;"></ul>
+</script>

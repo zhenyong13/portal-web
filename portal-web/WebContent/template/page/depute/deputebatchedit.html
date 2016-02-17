@@ -1,0 +1,20 @@
+<div class="forms-content">
+	<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+		<div class="entity-info clearfix">
+			<div class="control-group col-12">
+				<label class="control-label" style="width:120px;">授权时间：</label>
+				<div class="controls">
+					<input class="form-control required" id="startEndTime" style="width: 400px;" readonly="readonly" value="{{#if starttime}}{{starttime}} 到 {{endtime}}{{/if}}"/>
+					<input type="hidden" id="startTime" value="{{starttime}}"/>
+					<input type="hidden" id="endTime" value="{{endtime}}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="height:31px;margin-top: 4px">
+		<div class="controls" style="float:right; padding-right:20px;  padding-top: 5px;">
+			<a id="pwdd-btn-update" class="btn btn-sm btn-primary" style="margin-right: 6px;">确定</a>
+			<a id="pwdd-btn-cancel" class="btn btn-sm js_cancel">取消</a>
+		</div>
+	</div>
+</div>

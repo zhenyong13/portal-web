@@ -1,0 +1,13 @@
+{
+	"data":{
+		"pageSize":0,
+		"pageNo":0,
+		"total":100,
+		"rows":[
+			{"id":"1","specialtycode":"1","specialtyname":"专业名称1","specialtylevel":"receiveform","specialtytype":"receiveform"},
+			{"id":"2","specialtycode":"2","specialtyname":"专业名称2","specialtylevel":"receiveform","specialtytype":"receiveform"}
+		]
+	},
+	"msg":"",
+	"rc":1
+}

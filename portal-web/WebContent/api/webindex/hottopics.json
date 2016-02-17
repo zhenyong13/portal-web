@@ -1,0 +1,206 @@
+﻿{
+    "data": {
+        "usercode": "002644",
+        "modulecode": "hottopics",
+        "columncode": "hottopics",
+        "templatecode": "middlehalf",
+        "columnname": "栏目名称",
+        "title": "地铁设计院专家应邀到南昌轨道交通集团进行培训",
+        "specification": [
+            {
+                "name": "公司规章",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "公司制度",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "人力管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "经营管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_2.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "项目管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_7.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "总包管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_4.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "合同管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "财务管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_5.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "档案管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_1.png",
+                "targeturl": "",
+                "target": ""
+            },
+            {
+                "name": "知识管理",
+                "id": 1,
+                "imgurl": "images/dateway/ic_13.png",
+                "targeturl": "",
+                "target": ""
+            }
+        ],
+        "hottopics": [
+            {
+                "infocode": "info-0001",
+                "infoname": "地铁设计院专家应邀到南昌轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "isnew": "yes",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "资讯名称",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "地铁设计院专家应邀到南昌轨道交通集团进行技术培训",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "资讯名称asdasd",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "资讯名称qwe",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "资讯名称",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-08-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001",
+                "infoname": "资讯名称",
+                "content": "资讯内容",
+                "attachmentcode": [
+                    "1001",
+                    "1002",
+                    "1003"
+                ],
+                "autor": "小鸡",
+                "publishtimej": "2015-07-12 18:20:10",
+                "importantlevel": "general",
+                "urgent": "",
+                "tag": "***",
+                "readcount": 10,
+                "infourl": "#"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

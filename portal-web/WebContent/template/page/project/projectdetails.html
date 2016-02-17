@@ -1,0 +1,578 @@
+﻿ <div class="cooperative-work-div jscroll">
+	<!-- 左边 -->
+	<div id="leftModule" class="col-2" style="padding-right:0px;">
+	
+	</div>
+	
+	<!-- 中间和右边 -->
+	<div class="middle-and-right"></div>
+	
+ </div>
+
+<script id="project-list-template" type="text/x-handlebars-template">
+	<div class="products_list_middle">
+		<div class="js_categoryname">项目列表</div>
+	    <div class="products_list_title_1_main"  style="display: block;">
+	    	<!--项目循环开始 -->
+		    <div class="products_list_title_1_list" id="products_list_title_1_list_2">
+		     <div class="products_list_title_1_l_text"><a>项目名称名称项目名称名称项目名称名称目名称名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+	    	<!--项目循环结束 -->
+	    	
+	        <!--项目循环开始 -->
+		    <div class="products_list_title_1_list" >
+		     <div class="products_list_title_1_l_text"><a>项目名称名称项目名称名称项目名称名称目名称名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+		    <!--项目循环结束 -->
+	        <!--项目循环开始 -->
+		    <div class="products_list_title_1_list">
+		     <div class="products_list_title_1_l_text"><a>专业名称<br />项目名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+		    <!--项目循环结束 -->
+	    	<!--项目循环开始 -->
+		    <div class="products_list_title_1_list" id="products_list_title_1_list_2">
+		     <div class="products_list_title_1_l_text"><a>项目名称名称项目名称名称项目名称名称目名称名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+	    	<!--项目循环结束 -->
+	    	
+	        <!--项目循环开始 -->
+		    <div class="products_list_title_1_list" >
+		     <div class="products_list_title_1_l_text"><a>项目名称名称项目名称名称项目名称名称目名称名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+		    <!--项目循环结束 -->
+	        <!--项目循环开始 -->
+		    <div class="products_list_title_1_list">
+		     <div class="products_list_title_1_l_text"><a>专业名称<br />项目名称</a></div>
+		     <div class="products_list_title_1_l_right">10%</div>
+		    </div>
+		    <!--项目循环结束 -->
+	    </div>
+	    
+	</div>
+ </script>
+ 
+ <script id="project-detail-template" type="text/x-handlebars-template">
+	
+	<!-- 中间 -->
+	<div id="middleModule" class="col-6" style="background: white;height: 100%;">
+		<div id="item4" class="por_table">
+			<div class="pro_table_ul" style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_10 js-project-work" style="float:left;"><h4 class="pro_h4 pro_h4_font">项目任务</h4></div>
+				<div class="ret_width_10 js-profess-work" style="float:left;"><h4 class="pro_h4">专业任务</h4></div>
+			</div>
+			<ul class="pro_table_ul e-list js-project-work-list">
+				
+			
+			</ul>
+				
+		</div>
+		
+		<div id="item5" class="por_table">
+			
+			<div class="pro_table_ul" style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_10 js-project-document" style="float:left;"><h4 class="pro_h4 pro_h4_font">项目公文</h4></div>
+				<div class="ret_width_10 js-profess-document"  style="float:left;"><h4 class="pro_h4">专业公文</h4></div>
+			</div>
+			<ul class="pro_table_ul e-list js-project-document-list">
+				
+
+			</ul>
+		</div>
+		
+		<div id="item6" class="por_table">
+		
+			<div class="pro_table_ul" style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_15 js-project-issues" style="float:left;"><h4 class="pro_h4 pro_h4_font">项目问题列表</h4></div>
+				<div class="ret_width_15 js-profess-issues"  style="float:left;"><h4 class="pro_h4">专业问题列表</h4></div>
+				<div class="ret_width_10" style="float: right;"><a class="ret_color_a">更多&gt;&gt;</a></div>
+				<div class="ret_width_15" style="float: right;"><a class="tab_add_btn">添加问题</a></div>
+			</div>
+			<ul class="pro_table_ul e-list js-project-issues-list">
+
+			</ul>
+		</div>
+		
+		<div id="item7" class="por_table">
+			<div class="pro_table_ul" style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_10 js-project-log" style="float:left;"><h4 class="pro_h4 pro_h4_font">项目日志</h4></div>
+				<div class="ret_width_10 js-profess-log"  style="float:left;"><h4 class="pro_h4">专业日志</h4></div>
+				<div class="ret_width_10" style="float: right;"><a class="ret_color_a">更多&gt;&gt;</a></div>
+				<div class="ret_width_15" style="float: right;"><a class="tab_add_btn">添加问题</a></div>
+			</div>
+			<ul class="pro_table_ul e-list js-project-log-list">
+				
+			</ul>
+		</div>
+		
+	</div>
+	
+	
+	<!-- 右边 -->
+	<!--右边导航菜单-->
+	<div class="onedaohang">
+		<div class="rightdaohang" style="display:none;">快捷导航</div>
+	</div>
+	<div id="menu">
+		<div class="p_m_bg">快捷导航</div>
+		<ul style="height: 210px;" class="m_da">
+			<li><a style="display: inherit;" data-id="item1" class="p_m_dh">项目公告</a></li>
+			<li><a style="display: inherit;" data-id="item2" class="p_m_dh">项目成员</a></li>
+			<li><a style="display: inherit;" data-id="item3" class="p_m_dh">项目文档</a></li>
+			<li><a style="display: inherit;" data-id="item4" class="p_m_dh">项目任务</a></li>
+			<li><a style="display: inherit;" data-id="item5" class="p_m_dh">项目公文</a></li>
+			<li><a style="display: inherit;" data-id="item6" class="p_m_dh">项目问题</a></li>
+			<li><a style="display: inherit;" data-id="item7" class="p_m_dh">项目日志</a></li>
+		</ul>
+		<div class="p_m_bg js_contraction">收起</div>
+	</div>
+
+
+	<div id="rightModule" class="col-4" style="background: white;">
+		<div class="project_ann" id="item1">
+			<div style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_15" style="float:left;">项目公告</div>
+				<div class="ret_width_15" style="float: right;"><a class="project_ann_gd ret_color_a">更多&gt;&gt;</a></div>
+				<div class="ret_width_15" style="float: right;"><a style="display: block;background: #1898C7;border-radius: 5px;text-align: center;height: 27px;margin-top: 5px;line-height: 27px;color: white;">发布</a></div>
+			</div>
+			<div tabindex="0" class="projscroll jspScrollable">
+			
+				<div class="jspContainer">
+					<div class="jspPane">
+						<div>
+							<div class="pro_herd">
+								<img src="images/avatar.png" class="pro_head_img">
+				            </div>
+			                <div class="pro_ann_head">
+			                	  <span class="pro_ann_name">小张</span>
+			                	  <span class="pro_ann_time">2015年7月10日</span>
+			                </div>
+			                <div class="pro_ann_cont col-12">
+			                	 公告内容公告内容公告内容公告内容公告内容公告内容公告内容
+			                </div>
+				        	<div class="pro_dashed col-12"></div>
+						</div>
+					</div>
+				
+					<div class="jspVerticalBar">
+						<div class="jspCap jspCapTop"></div>
+						<div class="jspTrack"><div class="jspDrag">
+								<div class="jspDragTop"></div>
+								<div class="jspDragBottom"></div>
+							</div>
+						</div>
+						<div class="jspCap jspCapBottom"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div class="project_ann" id="item2">
+			<div style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_30" style="float:left;">项目成员信息</div>
+				<div class="ret_width_15" style="float: right;"><a class="project_ann_gd ret_color_a">更多&gt;&gt;</a></div>
+			</div>
+			<div tabindex="0" class="projscroll jspScrollable">
+				
+				<div class="jspContainer">
+					<div class="jspPane">
+						<div>
+							<div class="pro_name pro_reny_height">
+								<span class="pro_reny">项目负责人</span>
+								<div class="pro_herd">
+									<img src="images/avatar.png" class="pro_head_img">
+								</div>
+								<div class="pro_person">
+									<div>小二</div>
+									<div>总经理</div>
+								</div>
+							</div>
+							<div class="col-12 pro_dashed pro_ann_cont">
+							    <span>电力专业</span>
+							</div>
+							<div class="pro_reny_height">
+								<span class="pro_reny">负责人</span>
+								<div class="pro_herd">
+									<img src="images/avatar.png" class="pro_head_img">
+								</div>
+								<div class="pro_person">
+									<div>小二</div>
+									<div>电力经理</div>
+								</div>
+							</div>
+				
+							<div class="pro_reny_height" style="clear: both;">
+								<span class="pro_reny">成&nbsp;&nbsp;&nbsp;&nbsp;员</span>
+								<div style="float: left;width: 68px;text-align: center;">
+									<img src="images/avatar.png" class="pro_head_img pro_herd">
+									<div class="center" style="width: 68px; clear: both; text-align: center;"><span>张三</span><span><img src="images/dateway/post_sd.png"></span></div>
+								</div>
+								<div style="float: left;width: 68px;text-align: center;">
+									<img src="images/avatar.png" class="pro_head_img pro_herd">
+									<div class="center" style="width: 68px; clear: both; text-align: center;"><span>李四</span><span><img src="images/dateway/post_sh.png"></span></div>
+								</div>
+								<div style="float: left;width: 68px;text-align: center;">
+									<img src="images/avatar.png" class="pro_head_img pro_herd">
+									<div class="center"style="width: 68px; clear: both; text-align: center;"><span>王老五</span><span><img src="images/dateway/post_sj.png"></span></div>
+								</div>
+								<div style="float: left;width:68px;text-align: center;">
+									<img src="images/avatar.png" class="pro_head_img pro_herd">
+									<div class="center"style="width: 68px; clear: both; text-align: center;"><span>老六</span><span><img src="images/dateway/post_xs.png"></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+						
+					<div class="jspVerticalBar">
+						<div class="jspCap jspCapTop"></div>
+						<div class="jspTrack">
+							<div class="jspDrag">
+								<div class="jspDragTop"></div>
+								<div class="jspDragBottom"></div>
+							</div>
+						</div>
+						<div class="jspCap jspCapBottom"></div>
+					</div>
+				</div>
+			</div>
+	                    
+		</div>
+		
+		
+		
+		
+		<div class="project_ann" id="item3">
+		
+			<div style="height:36px;line-height: 36px;width: 100%;background: #1FB7EC;color: white;">
+				<div class="ret_width_15" style="float:left;">项目文档</div>
+				<div class="ret_width_15" style="float: right;"><a class="project_ann_gd ret_color_a">更多&gt;&gt;</a></div>
+				<div class="ret_width_15" style="float: right;"><a style="display: block;background: #1898C7;border-radius: 5px;text-align: center;height: 27px;margin-top: 5px;line-height: 27px;color: white;">上传</a></div>
+			</div>
+			<div tabindex="0" class="projscroll jspScrollable">
+			
+				<div class="jspContainer">
+					<div class="jspPane">
+						<div>
+							<div class="pro_for">
+								<span>公告名称：</span><span>请十一号线BIM总体务必在2号前发布BIM标准</span>
+							</div>
+							<div class="pro_for">
+								<span>发布人：</span><span>小张</span>
+							</div>
+							<div class="pro_for">
+								<span>发布部门：</span><span>项目管理部门</span>
+							</div>
+							<div class="pro_for">
+								<span>发布时间：</span><span>2015年7月10日</span>
+							</div>
+							<div class="pro_for">
+								<span>公告名称：</span><span>测试公告</span>
+							</div>
+							<div class="pro_for">
+								<span>发布人：</span><span>小谭</span>
+							</div>
+						</div>
+					</div>
+					<div class="jspVerticalBar">
+						<div class="jspCap jspCapTop"></div>
+						<div style="height: 207px;" class="jspTrack">
+							<div style="height: 77px;" class="jspDrag">
+								<div class="jspDragTop"></div>
+								<div class="jspDragBottom"></div>
+							</div>
+						</div>
+						<div class="jspCap jspCapBottom"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		
+	</div>
+</script>
+
+<!-- 项目任务 -->
+<script id="project-work-template" type="text/x-handlebars-template">
+				<li class="tab_border workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis">公文名称</span>
+					<span class="ret_width_15 ret_display ellipsis">主要程度</span>
+					<span class="ret_width_15 ret_display ellipsis">发起人</span>
+					<span class="ret_width_15 ret_display ellipsis">接收时间</span>
+					<span class="ret_width_15 ret_display ellipsis">完成时间</span>
+					<span class="ret_width_15 ret_display ellipsis">状态</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_1.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_2.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_3.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_4.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+				</li>
+
+</script>
+
+<!-- 专业任务 -->
+<script id="profess-work-template" type="text/x-handlebars-template">
+				<li class="tab_border workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis">公文名称</span>
+					<span class="ret_width_15 ret_display ellipsis">主要程度</span>
+					<span class="ret_width_15 ret_display ellipsis">发起人</span>
+					<span class="ret_width_15 ret_display ellipsis">接收时间</span>
+					<span class="ret_width_15 ret_display ellipsis">完成时间</span>
+					<span class="ret_width_15 ret_display ellipsis">状态</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_1.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_2.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_3.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis">15号前完成施工设计图</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_4.png"></span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+				</li>
+
+</script>
+
+
+<!-- 项目公文 -->
+<script id="project-document-template" type="text/x-handlebars-template">
+				<li class="tab_border workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis">公文名称</span>
+					<span class="ret_width_15 ret_display ellipsis">主要程度</span>
+					<span class="ret_width_10 ret_display ellipsis ">任务类型</span>
+					<span class="ret_width_10 ret_display ellipsis">发起人</span>
+					<span class="ret_width_10 ret_display ellipsis">状态</span>
+					<span class="ret_width_10 ret_display ellipsis">发起部门</span>
+					<span class="ret_width_15 ret_display ellipsis">接收时间</span>
+					<span class="ret_width_15 ret_display ellipsis">完成时间</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_1.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_2.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_3.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_4.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+</script>
+
+<!-- 专业公文 -->
+<script id="profess-document-template" type="text/x-handlebars-template">
+				<li class="tab_border workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis">公文名称</span>
+					<span class="ret_width_15 ret_display ellipsis">主要程度</span>
+					<span class="ret_width_10 ret_display ellipsis ">任务类型</span>
+					<span class="ret_width_10 ret_display ellipsis">发起人</span>
+					<span class="ret_width_10 ret_display ellipsis">状态</span>
+					<span class="ret_width_10 ret_display ellipsis">发起部门</span>
+					<span class="ret_width_15 ret_display ellipsis">接收时间</span>
+					<span class="ret_width_15 ret_display ellipsis">完成时间</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_1.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_2.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_3.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#1D1D1E;">已办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+				<li class="table_cont_color workflow clearfix j_entityslider-toggle">
+					<span class="ret_width_15 ret_display ellipsis" title="领导班子会议纪要（20151010）">领导班子会议纪要（20151010）</span>
+					<span class="ret_width_15 ret_display ellipsis"><img src="images/dateway/important_4.png"></span>
+					<span class="ret_width_10 ret_display ellipsis">项目</span>
+					<span class="ret_width_10 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_10 ret_display ellipsis" style="color:#FF8420;">未办理</span>
+					<span class="ret_width_10 ret_display ellipsis">信息中心</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">11/11/2015</span>
+				</li>
+</script>
+
+
+<!-- 项目问题列表 -->
+<script id="project-issues-template" type="text/x-handlebars-template">
+				<li class="tab_border">
+					<span class="ret_width_15 ret_display ellipsis">问题名称</span>
+					<span class="ret_width_15 ret_display ellipsis">问题状态</span>
+					<span class="ret_width_15 ret_display ellipsis">问题发布人</span>
+					<span class="ret_width_20 ret_display ellipsis">问题发布时间</span>
+					<span class="ret_width_15 ret_display ellipsis">问题解决人</span>
+					<span class="ret_width_20 ret_display ellipsis">问题解决时间</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis"><a class="ret_color_a">问题2</a></span>
+					<span class="ret_width_15 ret_display ellipsis">已解决</span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_20 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">小二</span>
+					<span class="ret_width_20 ret_display ellipsis">2015-10-10 18:20:20</span>
+				</li>
+</script>
+
+<!-- 专业问题列表 -->
+<script id="profess-issues-template" type="text/x-handlebars-template">
+				<li class="tab_border">
+					<span class="ret_width_15 ret_display ellipsis">问题名称</span>
+					<span class="ret_width_15 ret_display ellipsis">问题状态</span>
+					<span class="ret_width_15 ret_display ellipsis">问题发布人</span>
+					<span class="ret_width_20 ret_display ellipsis">问题发布时间</span>
+					<span class="ret_width_15 ret_display ellipsis">问题解决人</span>
+					<span class="ret_width_20 ret_display ellipsis">问题解决时间</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_15 ret_display ellipsis"><a class="ret_color_a">问题2</a></span>
+					<span class="ret_width_15 ret_display ellipsis">已解决</span>
+					<span class="ret_width_15 ret_display ellipsis">吴浪</span>
+					<span class="ret_width_20 ret_display ellipsis">11/11/2015</span>
+					<span class="ret_width_15 ret_display ellipsis">小二</span>
+					<span class="ret_width_20 ret_display ellipsis">2015-10-10 18:20:20</span>
+				</li>
+</script>
+
+<!-- 项目日志 -->
+<script id="project-log-template" type="text/x-handlebars-template">
+				<li class="tab_border">
+					<span class="ret_width_50 ret_display ellipsis">日志名称</span>
+					<span class="ret_width_20 ret_display ellipsis">日志发起人</span>
+					<span class="ret_width_30 ret_display ellipsis">日志发布时间</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_50 ret_display ellipsis">11号目前已完成初步设计</span>
+					<span class="ret_width_20 ret_display ellipsis">小猫</span>
+					<span class="ret_width_30 ret_display ellipsis">2015-10-10 18:20:20</span>
+				</li>
+</script>
+
+<!-- 专业日志 -->
+<script id="profess-log-template" type="text/x-handlebars-template">
+				<li class="tab_border">
+					<span class="ret_width_50 ret_display ellipsis">日志名称</span>
+					<span class="ret_width_20 ret_display ellipsis">日志发起人</span>
+					<span class="ret_width_30 ret_display ellipsis">日志发布时间</span>
+				</li>
+				<li class="table_cont_color">
+					<span class="ret_width_50 ret_display ellipsis">11号目前已完成初步设计</span>
+					<span class="ret_width_20 ret_display ellipsis">小猫</span>
+					<span class="ret_width_30 ret_display ellipsis">2015-10-10 18:20:20</span>
+				</li>
+</script>
+
+
+
+
+
+
+
+
+

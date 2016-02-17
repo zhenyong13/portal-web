@@ -1,0 +1,87 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>数据库名称：</label>
+							<div class="controls">
+								<select id="dbname" class="form-control required"></select>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>表名：</label>
+							<div class="controls">
+								<select id="tablename" class="form-control required"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>字段名称：</label>
+							<div class="controls">
+								<input type="text" id="columnname" class="form-control required" value="{{columnname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>字段中文名：</label>
+							<div class="controls">
+								<input type="text" id="columncname" class="form-control required" value="{{columncname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>类字段名：</label>
+							<div class="controls">
+								<input type="text" id="vofieldname" class="form-control required" value="{{vofieldname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>字段类型：</label>
+							<div class="controls">
+								<select id="columntype" class="form-control required"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>是否编码字段：</label>
+							<div class="controls">
+								<select id="isuniqcode" class="form-control required"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>是否自动生成：</label>
+							<div class="controls">
+								<select id="setoncreate" class="form-control required"></select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>实体类名称：</label>
+							<div class="controls">
+								<input type="text" id="voname" class="form-control required" style="width:605px;" value="{{voname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">取值规则：</label>
+							<div class="controls">
+								<textarea id="rulejson" style="width:550px; height:60px;">{{rulejson}}</textarea>
+							</div>
+						</div>
+						    
+						<div class="control-group col-12">
+							<label class="control-label">备注：</label>
+							<div class="controls">
+								<textarea id="memo" style="width:550px;height:60px;">{{memo}}</textarea>
+							</div>
+						</div>
+						    
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,84 @@
+{
+    "employee": {
+        "username": "闫明",
+        "email": "manager1@mdboss.cn",
+        "mobile": "13983268390",
+        "status": "normal",
+        "department": {
+            "name": "1231323",
+            "id": "4523251585416515312"
+        },
+        "secLevel": 0,
+        "authorities": [
+            {
+                "authority": "ROLE_USER"
+            },
+            {
+                "authority": "ROLE_ADMIN"
+            }
+        ],
+        "avatar": {
+            "id": "4523219670769935560",
+            "p1": "6993329715355246743",
+            "p2": "6993329717652346829",
+            "p3": "6993329717657246831",
+            "p4": "6993329717661946833",
+            "p5": "6993329717666946835"
+        },
+        "activeDate": 1432092222000,
+        "loginAccount": "manager1@mdboss.cn",
+        "loginCount": 1305,
+        "lastLoginTime": 1433422610000,
+        "rank": "boss",
+        "admin": true,
+        "name": "闫明",
+        "id": "4523209222242534075",
+        "userId": "8005824116895346247",
+        "employeeId": "4523209222242534075",
+        "hasAvatar": true
+    },
+    "page": {
+        "pageNo": 1,
+        "pageSize": 25,
+        "result": [],
+        "totalCount": 0,
+        "totalPages": 0,
+        "hasNext": false,
+        "nextPage": 1,
+        "hasPre": false,
+        "prePage": 1,
+        "first": 1
+    },
+    "pageNo": 1,
+    "pageSize": 25,
+    "userId": 4523209222242534075,
+    "filter": {
+        "creator": null,
+        "primary": null,
+        "participants": null,
+        "primarys": [
+            4523209222242534075
+        ],
+        "searchTime": null,
+        "searchType": null,
+        "ltCommentTime": null,
+        "gtCommentTime": null,
+        "noComment": false,
+        "commentType": null,
+        "status": null,
+        "mainlines": null,
+        "tags": null,
+        "type": "mine",
+        "keywords": null,
+        "flowFilter": "todo",
+        "taskGtDate": null,
+        "taskLtDate": null,
+        "formIds": null
+    },
+    "order": {
+        "direction": "DESC",
+        "property": "default"
+    },
+    "unreadTodoCount": 0,
+    "newfeedTodoCount": 0
+}

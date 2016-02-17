@@ -1,0 +1,32 @@
+{
+    "data": {
+        "assignee": "",
+        "type": "",
+        "taskstatus": "",
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 1,
+        "rows": [
+            {
+                "id": "1",
+                "issuecode": "1",
+                "answercode": "1",
+                "content":"<h2 class=\"zm-item-title zm-editable-content\" style=\"font-size: 18px; outline: 0px; margin: 0px; display: inline;\">backbone的view切换问题?</h2><p>AppRouter = Backbone.Router.extend({ routes: { &#39;&#39;: &#39;nav&#39;, &#39;!gongjiao/:step&#39;: &#39;goStep&#39; }, nav: function(){ var Step1 = Backbone.View.extend({ el: &#39;.step1&#39;, initialize: function() { }, events: { &#39;click .button&#39;, &#39;taped&#39; //当前el子元素的一些事件绑定 }, taped: function() { } }); var step1 = new Step1(); }, goStep: function(step) { var Step2 = Backbone.View.extend({ el: &#39;.step2&#39;, initialize: function() { }, events: { &#39;click a&#39;, &#39;taped&#39; //当前el子元素的一些事件绑定 }, taped: function() { } }); var step2 = new Step2(); } }); window[&#39;app_router&#39;] = new AppRouter; Backbone.history.start(); …&nbsp;<a class=\"toggle-expand\" style=\"color: rgb(34, 85, 153); -webkit-tap-highlight-color: rgba(225, 225, 225, 0.498039); display: inline-block; padding: 0px 3px; border-radius: 2px; font-size: 0.9em;\">显示全部</a></p><p><br/></p>",
+                "creator": "sdf",
+                "createtime": "2015-04-21",
+                "closetime": "2015-04-21"
+            },
+            {
+                "id": "2",
+                "issuecode": "2",
+                "answercode": "2",
+                "content":"<p><img src=\"http://localhost/portal-web/ueditor/jsp/upload/image/20150827/1440683367511097279.jpg\" title=\"1440683367511097279.jpg\" alt=\"100.jpg\"/>李厚霖 椅</p>",
+                "creator": "sdf",
+                "createtime": "2015-04-21",
+                "closetime": "2015-04-21"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

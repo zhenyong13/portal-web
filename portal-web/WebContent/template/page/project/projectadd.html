@@ -1,0 +1,100 @@
+	<div >
+		<div class="add-project-banner">
+			<span class="return-projectlist">&lt;&lt;返回</span>
+			<span class="add-project-newproject">新建项目</span>
+			<a class="btn btn-sm btn-primary js-saveproject" style="float:right;">保存</a>
+		</div>
+		<div  class="add-project-info add-project-info-height " style="padding: 20px;">
+			<div class="add-project-left forms-content">
+				<div class="entity-info" style="float: left;border-right: 1px dashed #dfdfdf;">
+					<div class="control-group col-12" style=" padding-left: 50px;">
+					<div class="controls">
+						<label class="project-label">项目类型：</label>
+						<select id="projecttype"  placeholder="请输入项目类型" class="required form-control">
+							<option value="">请选择</option>
+							<option value="1">工程类</option>
+						</select>
+					</div>
+					</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目名称：</label>
+						<input type="text" id="name"  placeholder="请输入项目名称" class="required form-control">
+						<input type="hidden" id="projectcode" >
+						<input type="hidden" id="tid" >
+					</div>
+				</div>
+					<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目负责人：</label>
+						<div class="typeahead-wrapper">
+							<div class="remind-user" style="position: relative;">
+								<input type="text" id="manager"   placeholder="请输入项目负责人" class="required form-control " style="width:205px !important;">
+								<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px !important;margin-top:0px;position: absolute; border: 0px solid #a3adba">
+									<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+										<div class="userselectlist"></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目计划起止时间：</label>
+						<input type="text" id="startendtime"  placeholder="项目计划起止时间" class=" required form-control">
+					</div>
+				</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目等级：</label>
+						<select id="level" class="form-control required">
+							<option value="1">一级</option>
+							<option value="2">二级</option>
+							<option value="3">三级</option>
+						</select>
+					</div>
+				</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">发生地：</label>
+						<input type="text" id="birthplace" placeholder="请输入发生地" class="form-control required">
+					</div>
+				</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目图片：</label>
+						<div class="controls">
+								<button class="btn btn-info" type="button" style="width: 50px; height: 25px;padding: 0;"><i class="icon-upload-alt"></i>上传</button>
+								<input id="cacheturlUpload" data-id="cacheturl" value="" style="top:8px;  left: 50px;  cursor: pointer; opacity: 0; position: absolute; width: 27%;" type="file" name="fileupload" multiple="multiple" class="js_fileupload_"/>
+								
+								<span id="feedbackUpload-showfiles" data-code="maindoc" style="display:block;">
+								</span>
+						</div>
+					</div>
+				</div>
+				<div class="control-group col-12" style="padding-left: 50px;">
+					<div class="controls">
+						<label  class="project-label">项目简介：</label>
+						<textarea placeholder="请输入项目简介" id="intro" class="form-control" style="width: 333px;"></textarea>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+			<div id="projectArchitectlist" class="add-project-right jscroll" style="padding-left: 62px; max-height: 470px;">
+				<div class="control-group col-12">
+						<div id="project-arctect" style="padding-left: 20px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+<script id="file_view_template" type="text/x-handlebars-template">
+ <span class="file-show" data-name="{{filecode}}" data-code="{{filecode}}" data-isedit="{{editable}}">
+<a  class="filename_view js_file_view" data-file-id="{{filecode}}" >{{filecode}}</a>
+<a href="{{baseurl}}{{filecode}}" target="_blank" class="file_view fa fa-download"></a>
+<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+</span>
+</script>

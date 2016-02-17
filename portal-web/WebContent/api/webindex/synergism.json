@@ -1,0 +1,167 @@
+﻿{
+    "data": {
+        "total": 13,
+        "pageNo": 0,
+        "pageSize": 0,
+        "rows": [
+            {
+                "createtime": "2015-11-19 19:34:39",
+                "creator": "user-002784",
+                "icon": "images/avatar.png",
+                "id": 17,
+                "ishow": true,
+                "linkd": "#",
+                "name": "人力管理",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-f15bb3bf-c243-4e0e-bdf1-74857e3ae421",
+                "sortorder": 0
+            },
+            {
+                "createtime": "2015-11-19 19:00:10",
+                "creator": "user-002784",
+                "icon": "8e8ae89d-bc2d-4541-adc8-8a01ca9e04a8",
+                "id": 1,
+                "ishow": true,
+                "linkd": "#",
+                "name": "个人事务",
+                "owner": null,
+                "shortcutcode": "shortcutcode-001",
+                "sortorder": 1
+            },
+            {
+                "createtime": "2015-11-19 19:35:35",
+                "creator": "user-002784",
+                "icon": "images/avatar.png",
+                "id": 14,
+                "ishow": false,
+                "linkd": "2",
+                "name": "经营管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-3df7ee8f-e4e6-4883-89f6-e3f2c03bb95e",
+                "sortorder": 2
+            },
+            {
+                "createtime": "2015-11-19 19:16:45",
+                "creator": "user-002784",
+                "icon": "66cf6c18-5f75-4ff3-83b1-78354459683f",
+                "id": 8,
+                "ishow": true,
+                "linkd": "http://baidu.com",
+                "name": "合同管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-c73a26ac-edf0-4583-bf4e-1ed795657a68",
+                "sortorder": 3
+            },
+            {
+                "createtime": "2015-11-19 19:34:55",
+                "creator": "user-002784",
+                "icon": "07a14287-1228-4b90-b7c7-a18dbcfcef77",
+                "id": 11,
+                "ishow": true,
+                "linkd": "df",
+                "name": "财务管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-365b1378-2bde-45a2-a673-f6f03ff81864",
+                "sortorder": 3
+            },
+            {
+                "createtime": "2015-11-19 15:52:07",
+                "creator": "user-002784",
+                "icon": "images/avatar.png",
+                "id": 16,
+                "ishow": false,
+                "linkd": "3",
+                "name": "3",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-a278882f-e25a-44c5-8f86-880245861238",
+                "sortorder": 3
+            },
+            {
+                "createtime": "2015-11-19 19:16:01",
+                "creator": "user-002784",
+                "icon": "7bbe724a-e327-4afa-84be-19f78ffc6a34",
+                "id": 7,
+                "ishow": true,
+                "linkd": "vvvv",
+                "name": "项目管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-5f884848-5cfd-41d9-9795-4384dfe3e696",
+                "sortorder": 4
+            },
+            {
+                "createtime": "2015-11-19 19:16:25",
+                "creator": "user-002784",
+                "icon": "486ce8fd-8d0a-4c43-8c74-d91dd9a82ec3",
+                "id": 9,
+                "ishow": true,
+                "linkd": "http://www.baidu.com",
+                "name": "知识管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-17b4b99e-e12f-4389-b047-5210b7654076",
+                "sortorder": 4
+            },
+            {
+                "createtime": "2015-11-19 19:35:06",
+                "creator": "user-002784",
+                "icon": "10cbc062-3154-4376-9676-81f3ad3b5a37",
+                "id": 12,
+                "ishow": false,
+                "linkd": "vvv",
+                "name": "RTX",
+                "owner": null,
+                "shortcutcode": "shortcutcode-b8a014ca-a85b-4979-b4fa-b788f483a61f",
+                "sortorder": 6
+            },
+            {
+                "createtime": "2015-11-19 19:17:13",
+                "creator": "user-002784",
+                "icon": "ceb58b47-994b-45ba-a2c1-55e9aa95639d",
+                "id": 10,
+                "ishow": true,
+                "linkd": "aaa",
+                "name": "云平台",
+                "owner": null,
+                "shortcutcode": "shortcutcode-181e85bc-e2c6-4ef5-82ec-05e4c0b7d3d2",
+                "sortorder": 8
+            },
+            {
+                "createtime": "2015-11-19 19:15:47",
+                "creator": "user-002784",
+                "icon": "4cd0638d-c243-414c-8e46-52c2518167d0",
+                "id": 4,
+                "ishow": true,
+                "linkd": "我v",
+                "name": "协同办公",
+                "owner": null,
+                "shortcutcode": "shortcutcode-5bf4eaba-4b4d-45ec-a023-768bcfa3c228",
+                "sortorder": 22
+            },
+            {
+                "createtime": "2015-11-19 19:36:02",
+                "creator": "user-002784",
+                "icon": "78d6de4b-1e61-4165-9c0a-75f53ef2f31b",
+                "id": 13,
+                "ishow": true,
+                "linkd": "33",
+                "name": "档案管理",
+                "owner": null,
+                "shortcutcode": "shortcutcode-8f194d86-517b-4ce9-95f9-108012df9fff",
+                "sortorder": 33
+            },
+            {
+                "createtime": "2015-11-19 15:38:24",
+                "creator": "user-002784",
+                "icon": "images/avatar.png",
+                "id": 15,
+                "ishow": false,
+                "linkd": "33",
+                "name": "33",
+                "owner": "user-002784",
+                "shortcutcode": "shortcutcode-4a8e1ab5-e985-440b-8794-5129a62b014b",
+                "sortorder": 33
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,149 @@
+﻿{
+    "data": {
+        "usercode": "002644",
+        "rows": [
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            },
+            {
+                "orgcode": "org-001",
+                "orgname": "项目管理部",
+                "statisticdate": "2015-06-03 至 2015-06-20",
+                "orgtotalusernum": 30,
+                "myorgtravelusernum": 10,
+                "myorgusertraveldays": 25,
+                "tomyorgtravelusernum": 20,
+                "tomyorgusertraveldays": 30
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

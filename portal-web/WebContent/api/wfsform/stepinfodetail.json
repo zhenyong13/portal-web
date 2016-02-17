@@ -1,0 +1,19 @@
+{
+    "data": {
+        "createtime": "2015-07-14 10:35:12",
+        "formcode": "form-e144b6c4-2b6b-4297-8b6d-727858b091f9",
+        "id": 1,
+        "processcode": "2914b9a5-d183-4c30-9036-c98e2a3e2369",
+        "selecttype": "radio",
+        "seqno": 1,
+        "stepcode": "start-1",
+        "stepdesc": "环节描述",
+        "stepname": "开始",
+        "type": "startEvent",
+        "opinionjson": "{\"isshow\":true,\"name\":\"流程意见\",\"required\":false,\"valuesource\":\"dd\",\"editable\":true}",
+        "resultjson": "{\"isshow\":true,\"name\":\"\",\"required\":false,\"valuesource\":\"cc\",\"editable\":false}",
+        "shownextstep": false
+    },
+    "msg": "success",
+    "rc": 1
+}

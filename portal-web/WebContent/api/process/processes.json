@@ -1,0 +1,45 @@
+{
+  data: {
+    pageSize: 10,
+    pageNo: 2,
+    total: 100,
+    datamap: {
+      processtype: '',
+      //公文类别
+      processdefs: [
+        {
+          id: '',
+          //记录标识
+          seqno: '',
+          //公文记录序号
+          processcode: '',
+          //公文流程编码
+          processname: '',
+          //公文流程名称
+          processtype: '',
+          //公文类别
+          processkey: '',
+          //公文主键
+          isenabled: '',
+          //是否启用
+          appcode: '',
+          //应用编码
+          deptincharge: '',
+          //主管部门
+          processdes: '',
+          //公文流程描述
+          projectcode: '',
+          //关联项目编码
+          diagramresource: '',
+          //流程图url
+          mytags: '',
+          //我的标签
+          commontags: '',
+          //公共标签
+        }
+      ]
+    },
+    msg: '',
+    rc: ''
+  }
+}

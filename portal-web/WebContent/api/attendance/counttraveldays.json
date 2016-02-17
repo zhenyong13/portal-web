@@ -1,0 +1,63 @@
+﻿{
+    "data": {
+        "total": 11,
+        "usercode": "002644",
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "id": 1,
+                "signinmonth": "2015-06",
+                "orgcode": "1474",
+                "username": "曾文驱",
+                "usercode": "002644",
+                "travelnum": 1,
+                "orgname": "信息中心",
+                "positionlevel": "专员"
+            },
+                    
+            {
+                "id": 3,
+                "signinmonth": "2015-05",
+                "orgcode": "1474",
+                "username": "小狗",
+                "usercode": "002785",
+                "travelnum": 10,
+                "orgname": "综合部",
+                "positionlevel": "主管"
+            },
+            {
+                "id": 3,
+                "signinmonth": "2015-05",
+                "orgcode": "1474",
+                "username": "小狗",
+                "usercode": "002785",
+                "travelnum": 10,
+                "orgname": "综合部",
+                "positionlevel": "主管"
+            },
+            {
+                "id": 3,
+                "signinmonth": "2015-05",
+                "orgcode": "1474",
+                "username": "小狗",
+                "usercode": "002785",
+                "travelnum": 10,
+                "orgname": "综合部",
+                "positionlevel": "主管"
+            },
+            {
+                "id": 3,
+                "signinmonth": "2015-05",
+                "orgcode": "1474",
+                "username": "小狗",
+                "usercode": "002785",
+                "travelnum": 10,
+                "orgname": "综合部",
+                "positionlevel": "主管"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

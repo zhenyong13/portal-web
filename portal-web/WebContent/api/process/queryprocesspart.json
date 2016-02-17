@@ -1,0 +1,83 @@
+{
+    "data": {
+        "pageNo": 1,
+        "pageSize": 20,
+        "rows": [
+            {
+                "handleinfo": {
+                    "createtime": "2015-08-26 12:49:54",
+                    "result": "pass",
+                    "opinion": "【下一环节-拟稿】没有填写意见",
+                    "attachments": []
+                },
+                "processinstcode": "7e82e92e-e406-445d-9136-acf01031b515",
+                "taskcode": "task-14d80f3f-9a24-44cb-8933-f568c6023da7",
+                "taskname": "开始[启动流程]",
+                "userinfo": {
+                    "address": "",
+                    "avatarcode": "62e6bce7-85e4-401e-b01d-37ec95cce369",
+                    "email": "caiwanli@dtsjy.com",
+                    "extorgcode": "org-158",
+                    "id": 958,
+                    "imnumber": null,
+                    "isenabled": "enable",
+                    "leader": "user-001308",
+                    "mobileno": "13580562592",
+                    "officephone": null,
+                    "orgcode": "org-158",
+                    "orgname": "信息中心",
+                    "pinyin": "caiwanli",
+                    "positionlevel": "高级专业人员/主管",
+                    "sex": "男",
+                    "signfilecode": null,
+                    "updatetime": "2015-08-14 09:06:37",
+                    "usercode": "user-002784",
+                    "userdesc": null,
+                    "userlevel": null,
+                    "username": "蔡万里",
+                    "userrank": "主管",
+                    "workno": "002784"
+                }
+            },
+            {
+                "handleinfo": {
+                    "createtime": "2015-08-26 12:49:54",
+                    "result": "pass",
+                    "opinion": "【下一环节-代理人审批】请领导批示~",
+                    "attachments": []
+                },
+                "processinstcode": "7e82e92e-e406-445d-9136-acf01031b515",
+                "taskcode": "task-99ecc4d8-d9e0-44ce-a535-7fdb1deab1fe",
+                "taskname": "拟稿",
+                "userinfo": {
+                    "address": "",
+                    "avatarcode": "62e6bce7-85e4-401e-b01d-37ec95cce369",
+                    "email": "caiwanli@dtsjy.com",
+                    "extorgcode": "org-158",
+                    "id": 958,
+                    "imnumber": null,
+                    "isenabled": "enable",
+                    "leader": "user-001308",
+                    "mobileno": "13580562592",
+                    "officephone": null,
+                    "orgcode": "org-158",
+                    "orgname": "信息中心",
+                    "pinyin": "caiwanli",
+                    "positionlevel": "高级专业人员/主管",
+                    "sex": "男",
+                    "signfilecode": null,
+                    "updatetime": "2015-08-14 09:06:37",
+                    "usercode": "user-002784",
+                    "userdesc": null,
+                    "userlevel": null,
+                    "username": "蔡万里",
+                    "userrank": "主管",
+                    "workno": "002784"
+                }
+            }
+        ],
+        "total": null
+    },
+    "msg": "success",
+    "rc": 1
+}

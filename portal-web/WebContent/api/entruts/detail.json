@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+         
+                "id": 1,
+                "delegate": "201506",
+                "delegated": "201506",
+                "bustype": "1",
+                "buscode": "201506",
+                 "busitem": "[{'code':'11','name':'哈哈dsf'},{'code':'12','name':'哈哈dsf'}]",
+                "starttime": "2015-08-02 22:22:12",
+                "endtime": "2015-08-09 00:13:11"
+    },
+    "msg": "success",
+    "rc": 1
+}

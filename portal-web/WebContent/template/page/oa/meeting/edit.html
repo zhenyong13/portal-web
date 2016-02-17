@@ -1,0 +1,230 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>会议名称：</label>
+							<div class="controls">
+								 <input type="text" id="meetingname" class="form-control required" value="{{meetname}}" style="width: 635px;"/>
+								 <input type="hidden" id="tid" class="form-control" value="{{id}}" />
+								 <input type="hidden" id="meetcode" class="form-control" value="{{meetcode}}" />
+								 <input type="hidden" id="bookcode" class="form-control" value="{{bookcode}}" />
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>会议议题：</label>
+							<div class="controls">
+								<!-- <select id="meetingname"></select> -->
+								 <input type="text" id="meettopic" class="form-control required" value="{{meettopic}}" />
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>预定部门：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" data-orgcode="{{orgcode}}" class="form-control" value="{{bookdept}}" readonly="readonly"/>
+								<!--  <input type="hidden" id="parentcode" value="{{orgcode}}"/>
+								 <a class="icon-search js_search_dept" style="position: relative;position: relative;left: -20px;"></a> -->
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>预定人：</label>
+							 <div class="controls">
+								 <input type="text" id="userleader" data-code="{{booker}}" class="form-control" value="{{bookername}}" readonly="readonly"/>
+							 </div>
+							<!-- <div class="controls">
+								<input type="hidden" id="userleader" class="form-control" value="{{userleader}}"/>
+								<div class="typeahead-wrapper" style="border: 0px solid #a3adba">
+									<div class="remind-user">
+										<input id="leader_man" data-code="" type="text" class="control-input typeahead search" value="{{userleader}}"
+											data-entity="employee" data-multi="true" style="width:205px;height:30px" placeholder="输入姓名">
+										<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+											<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+											<div id="searchListL" class="userselectlist">
+												 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> -->
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>预定时间：</label>
+							<div class="controls">
+								<input type="text" id="date_time" class="form-control required" readonly="readonly" value="{{booktime}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>循环类型：</label>
+							<div class="controls">
+								<select id="circle_time" class="form-control required" >
+									<option value="SpecifiedDate" {{#ifCond looptype "==" "SpecifiedDate"}}selected{{/ifCond}}>指定时间</option>
+									<option value="CyclePeriod" {{#ifCond looptype "==" "CyclePeriod"}}selected{{/ifCond}}>循环周期</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>时间段类型：</label>
+							<div class="controls">
+								<select id="time_type" class="form-control required" >
+									<option value="TimeSlot" {{#ifCond usetimetype "==" "TimeSlot"}}selected{{/ifCond}}>时间段</option>
+									<option value="AllDay" {{#ifCond usetimetype "==" "AllDay"}}selected{{/ifCond}}>全天</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>开始时间：</label>
+							<div class="controls">
+								<input type="text" id="starttime" class="form-control date required" readonly="readonly" value="{{perioddatebegin}}"/>
+							</div>
+						</div>
+						
+						<div id="endtimediv" class="control-group hide col-6">
+							<label class="control-label"><span class="red">*</span>结束时间：</label>
+							<div class="controls">
+								<input type="text" id="endtime" class="form-control date required" readonly="readonly" value="{{perioddateend}}"/>
+							</div>
+						</div>
+						<!-- Mon,Tue,Wed,Thu,Fri,Sat,Sun -->
+						<div id="circleDay" class="control-group hide col-12">
+							<label class="control-label"></label>
+							<div class="controls">
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="sunday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期日</span></span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="monday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期一</span>
+								</span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="tuesday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期二</span>
+								</span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="wednesday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期三</span>
+								</span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="thursday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期四</span></span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="friday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期五</span></span>
+								<span style="margin-left: 20px;">
+								<input type="checkbox" value="saturday" name="circledate" class="form-control"/><span style="margin-left: 5px;">星期六</span></span>
+							</div>
+						</div>
+						
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>会议时间：</label>
+							<div class="controls">
+								<!-- <input type="text" id="meeting_start_time" class="form-control datetime required" readonly="readonly" value="{{endtime}}"/> -->
+								<select id="meeting_start_time"  class="form-control" style="width: 80px;">
+									<option value="08:00" {{#ifCond usetimebegin "==" "08:00"}}selected{{/ifCond}}>08:00</option>
+									<option value="08:30" {{#ifCond usetimebegin "==" "08:30"}}selected{{/ifCond}}>08:30</option>
+									<option value="09:00" {{#ifCond usetimebegin "==" "09:00"}}selected{{/ifCond}}>09:00</option>
+									<option value="09:30" {{#ifCond usetimebegin "==" "09:30"}}selected{{/ifCond}}>09:30</option>
+									<option value="10:00" {{#ifCond usetimebegin "==" "10:00"}}selected{{/ifCond}}>10:00</option>
+									<option value="10:00" {{#ifCond usetimebegin "==" "10:30"}}selected{{/ifCond}}>10:30</option>
+									<option value="11:00" {{#ifCond usetimebegin "==" "11:00"}}selected{{/ifCond}}>11:00</option>
+									<option value="11:30" {{#ifCond usetimebegin "==" "11:30"}}selected{{/ifCond}}>11:30</option>
+									<option value="12:00" {{#ifCond usetimebegin "==" "12:00"}}selected{{/ifCond}}>12:00</option>
+									<option value="12:30" {{#ifCond usetimebegin "==" "12:30"}}selected{{/ifCond}}>12:30</option>
+									<option value="13:00" {{#ifCond usetimebegin "==" "13:00"}}selected{{/ifCond}}>13:00</option>
+									<option value="13:30" {{#ifCond usetimebegin "==" "13:30"}}selected{{/ifCond}}>13:30</option>
+									<option value="14:00" {{#ifCond usetimebegin "==" "14:00"}}selected{{/ifCond}}>14:00</option>
+									<option value="14:30" {{#ifCond usetimebegin "==" "14:30"}}selected{{/ifCond}}>14:30</option>
+									<option value="15:00" {{#ifCond usetimebegin "==" "15:00"}}selected{{/ifCond}}>15:00</option>
+									<option value="15:30" {{#ifCond usetimebegin "==" "15:30"}}selected{{/ifCond}}>15:30</option>
+									<option value="16:00" {{#ifCond usetimebegin "==" "16:00"}}selected{{/ifCond}}>16:00</option>
+									<option value="16:30" {{#ifCond usetimebegin "==" "16:30"}}selected{{/ifCond}}>16:30</option>
+									<option value="17:00" {{#ifCond usetimebegin "==" "17:00"}}selected{{/ifCond}}>17:00</option>
+									<option value="17:30" {{#ifCond usetimebegin "==" "17:30"}}selected{{/ifCond}}>17:30</option>
+									<option value="18:00" {{#ifCond usetimebegin "==" "18:00"}}selected{{/ifCond}}>18:00</option>
+								</select>
+								到
+								<!-- <input type="text" id="meeting_end_time" class="form-control datetime required" readonly="readonly" value="{{endtime}}"/> -->
+								<select id="meeting_end_time"  class="form-control" style="width: 80px;">
+									<!-- <option value="8:00" {{#ifCond usetimeend "==" "8:00"}}selected{{/ifCond}}>8:00</option> -->
+									<option value="08:30" {{#ifCond usetimeend "==" "08:30"}}selected{{/ifCond}}>08:30</option>
+									<option value="09:00" {{#ifCond usetimeend "==" "09:00"}}selected{{/ifCond}}>09:00</option>
+									<option value="09:30" {{#ifCond usetimeend "==" "09:30"}}selected{{/ifCond}}>09:30</option>
+									<option value="10:00" {{#ifCond usetimeend "==" "10:00"}}selected{{/ifCond}}>10:00</option>
+									<option value="10:00" {{#ifCond usetimeend "==" "10:30"}}selected{{/ifCond}}>10:30</option>
+									<option value="11:00" {{#ifCond usetimeend "==" "11:00"}}selected{{/ifCond}}>11:00</option>
+									<option value="11:30" {{#ifCond usetimeend "==" "11:30"}}selected{{/ifCond}}>11:30</option>
+									<option value="12:00" {{#ifCond usetimeend "==" "12:00"}}selected{{/ifCond}}>12:00</option>
+									<option value="12:30" {{#ifCond usetimeend "==" "12:30"}}selected{{/ifCond}}>12:30</option>
+									<option value="13:00" {{#ifCond usetimeend "==" "13:00"}}selected{{/ifCond}}>13:00</option>
+									<option value="13:30" {{#ifCond usetimeend "==" "13:30"}}selected{{/ifCond}}>13:30</option>
+									<option value="14:00" {{#ifCond usetimeend "==" "14:00"}}selected{{/ifCond}}>14:00</option>
+									<option value="14:30" {{#ifCond usetimeend "==" "14:30"}}selected{{/ifCond}}>14:30</option>
+									<option value="15:00" {{#ifCond usetimeend "==" "15:00"}}selected{{/ifCond}}>15:00</option>
+									<option value="15:30" {{#ifCond usetimeend "==" "15:30"}}selected{{/ifCond}}>15:30</option>
+									<option value="16:00" {{#ifCond usetimeend "==" "16:00"}}selected{{/ifCond}}>16:00</option>
+									<option value="16:30" {{#ifCond usetimeend "==" "16:30"}}selected{{/ifCond}}>16:30</option>
+									<option value="17:00" {{#ifCond usetimeend "==" "17:00"}}selected{{/ifCond}}>17:00</option>
+									<option value="17:30" {{#ifCond usetimeend "==" "17:30"}}selected{{/ifCond}}>17:30</option>
+									<option value="18:00" {{#ifCond usetimeend "==" "18:00"}}selected{{/ifCond}}>18:00</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>会议室：</label>
+							<div class="controls">
+								<select id="meeting_room">
+									<option value="1">时间段</option>
+									<option value="2"></option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>与会人数：</label>
+							<div class="controls">
+								<input type="text" id="meeting_num" class="form-control required number" value="{{attendnum}}"/>
+							</div>
+						</div>
+						
+						
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>与会人：</label>
+							<div class="controls">
+								<input type="hidden" id="meeting_man_code" value="{{attenders}}">
+								<textarea id="meeting_man" class="form-control required" style="width:600px;">{{attendernames}}</textarea>
+								<a class="icon-search js_search_man" style="position: relative;left: -20px;"></a>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">备注：</label>
+							<div class="controls">
+								<textarea id="memo" class="form-control"  style="width:600px;">{{memo}}</textarea>
+							</div>
+						</div>
+						{{#if id}}
+						<div class="control-group col-12">
+							<label class="control-label">退订原因：</label>
+							<div class="controls">
+								<textarea id="reason" class="form-control"  style="width:600px;"></textarea>
+							</div>
+						</div>
+						{{/if}}
+						 
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						{{#if id}}
+						<a id="submit" class="btn btn-sm btn-primary" style="margin-right: 6px;">修改</a>
+						<a id="meetingback" class="btn btn-sm btn-warning" style="margin-right: 6px;">退订</a>
+						{{else}}
+						<a id="startProcess" class="btn btn-sm btn-success" style="margin-right: 6px;">启动会议通知发文</a>
+						<a id="submit" class="btn btn-sm btn-primary" style="margin-right: 6px;">预定</a>
+						{{/if}}
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

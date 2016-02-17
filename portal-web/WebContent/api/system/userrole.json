@@ -1,0 +1,7 @@
+﻿{
+    "data": {
+        "roles": [{"rolecode":"role-1000","rolename":"接口人"}]
+    },
+    "msg": "success",
+    "rc": 1
+}

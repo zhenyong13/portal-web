@@ -1,0 +1,91 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						{{#if assestcode}}
+						<div class="control-group col-6">
+							<label class="control-label">资产编码：</label>
+							<div class="controls">
+								<input type="text" id="assestcode" class="form-control required"  value="{{assestcode}}"/>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-6">
+							<label class="control-label">资产编号：</label>
+							<div class="controls">
+								<input type="text" id="serialno" class="form-control required" value="{{serialno}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">资产名称：</label>
+							<div class="controls">
+								<input type="text" id="assestname" class="form-control required" value="{{assestname}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">资产类型：</label>
+							<div class="controls">
+								<select id="assesttype"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">品牌：</label>
+							<div class="controls">
+								<input type="text" id="brand" class="form-control required" value="{{brand}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">型号：</label>
+							<div class="controls">
+								<input type="text" id="model" class="form-control required" value="{{model}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">价格：</label>
+							<div class="controls">
+								<input type="text" id="price" class="form-control" value="{{price}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">系列：</label>
+							<div class="controls">
+								<input type="text" id="specification" class="form-control" value="{{specification}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">单位：</label>
+							<div class="controls">
+								<input type="text" id="unit" class="form-control required" value="{{unit}}"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label">是不可用：</label>
+							<div class="controls">
+								<select id="isenabled"></select>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">备注：</label>
+							<div class="controls">
+								<textarea id="memo" style="width:600px;"></textarea>
+							</div>
+						</div>
+						 
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

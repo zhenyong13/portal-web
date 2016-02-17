@@ -1,0 +1,95 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 用户管理 主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">工号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_code" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">名称：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_name" class="form-control qt">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">组织：</li>
+		<li class="toolkit-item">
+			<div class="controls" style="width: 245px;">
+				 <input type="text" id="parentname" class="form-control qt_p" style="float: left; width: 205px !important;" value="" readonly="readonly"/>
+				 <input type="hidden" id="parentcode" value=""/>
+				 <a class="icon-search js_search_operate" style="position: relative;left: -20px;  bottom: 4px;"></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle" id="module-add"><i class="icon-plus-thin glyphicon">新增</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="module-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning j_entityslider-toggle" id="module-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="module-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<!-- 列表 -->
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+			<!-- <span class="ret_width_5 ret_display" style="margin-top: 11px;">
+			<i class="icon-checkbox-unchecked"></i></span> --> 
+				<span class="ret_width_5 ret_display  filterSlip_js"><i id="check-all-module" class="icon-checkbox-unchecked"></i></span>
+				<span class="ret_width_5 ret_display  filterSlip_js js_sort sorting" data-col="workno">工号</span>
+				<span class="ret_width_8 ret_display  filterSlip_js js_sort sorting" data-col="username">名称</span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="orgcode">所在组织</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="positionlevel">职级</span>
+				<span class="ret_width_20 ret_display  filterSlip_js js_sort sorting" data-col="userrank">职务</span>
+				<span class="ret_width_5 ret_display  filterSlip_js js_sort sorting" data-col="sex">性别</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="mobileno">手机</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="email">邮箱</span>
+				<span class="ret_width_5 ret_display  filterSlip_js" style="float: right;width: 10%;">操作</span>
+			</li>
+		</ul>
+		<ul id="operate-flow-list" class="e-list flow-list form-horizontal scrollwrapper demo-list">
+			<!-- 列表 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="operate_pagination" style=" margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{workno}}&nbsp;</span>
+    <span class="ret_width_8 ret_display ellipsis filterSlip_js" title="{{username}}">{{username}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js"  title="{{orgname}}">{{orgname}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{userlevel}}">{{userlevel}}&nbsp;</span>
+    <span class="ret_width_20 ret_display ellipsis filterSlip_js" title="{{userrank}}">{{userrank}}&nbsp;</span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{#ifCond sex "==" "male"}}男{{/ifCond}}{{#ifCond sex "==" "female"}}女{{/ifCond}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{mobileno}}">{{mobileno}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis  filterSlip_js" title="{{email}}">{{email}}&nbsp;</span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js" style="float: right;width: 10%;" title="">
+		<a class="fa fa-eye js_module_view" data-tid="{{id}}" title="明细"></a>
+		<a class="fa fa-pencil js_module_edit" data-tid="{{id}}" title="编辑"></a>
+		<a class="fa fa-trash-o js_module_del" data-tid="{{id}}" title="删除"></a>
+		<a class="fa fa-user js_module_role" data-tid="{{usercode}}" title="分配角色"></a>
+		<a class="fa fa-unlock js_module_roleperm" data-tid="{{usercode}}" title="授权信息"></a>
+		<a class="fa fa-refresh btn-resetPwd" data-tid="{{id}}" data-usercode="{{usercode}}" title="重置密码"></a>
+	</span>
+</li>
+{{/each}}
+</script>
+
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script> 

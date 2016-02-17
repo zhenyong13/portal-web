@@ -1,0 +1,92 @@
+{
+    "data": {
+        "selectpersonconfig": {
+            "selectitems": [
+                {
+                    "dataclass": "组织",
+                    "datatype": "tree",
+                    "dataurl": "api/member/orgs.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"org-\"}",
+                    "fieldmapping": {
+                        "id": "orgcode",
+                        "name": "orgname",
+                        "pid": "parentcode"
+                    }
+                },
+                {
+                    "dataclass": "项目",
+                    "datatype": "list",
+                    "dataurl": "api/member/project.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"role-\"}",
+                    "fieldmapping": {
+                        "id": "projectcode",
+                        "name": "projectname"
+                    }
+                },
+                {
+                    "dataclass": "角色",
+                    "datatype": "list",
+                    "dataurl": "api/member/role.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"role-\"}",
+                    "fieldmapping": {
+                        "id": "rolecode",
+                        "name": "rolename"
+                    }
+                },
+                {
+                    "dataclass": "群组",
+                    "datatype": "list",
+                    "dataurl": "api/member/usergroups.json?model={\"usercode\":\"user-002784\",\"dataclass\":\"group-\"}",
+                    "fieldmapping": {
+                        "id": "groupcode",
+                        "name": "groupname"
+                    }
+                }
+            ],
+            "selecttype": "radio"
+        },
+        "selectedvalues": [
+            {
+                "name": "user-Administrator",
+                "pcode": "org-1",
+                "code": "user-Administrator"
+            },
+             {
+                "name": "全组织",
+                "pcode": "org-all"
+            },
+            {
+                "name": "user-Administrator",
+                "pcode": "org-1",
+                "code": "user-Administrator"
+            },
+            {
+                "name": "user-Administrator",
+                "pcode": "org-1",
+                "code": "user-Administrator"
+            },
+            {
+                "name": "user-mhtwriter",
+                "pcode": "org-1",
+                "code": "user-mhtwriter"
+            },
+            {
+                "name": "user-mhtwriter",
+                "pcode": "org-1",
+                "code": "user-mhtwriter"
+            },
+            {
+                "name": "user-mhtwriter",
+                "pcode": "org-1",
+                "code": "user-mhtwriter"
+            },
+            {
+                "pcode": "org-10",
+                "name": "org-10"
+            },
+            {
+                "pcode": "role-1000",
+                "name": "接口人"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

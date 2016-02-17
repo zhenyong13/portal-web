@@ -1,0 +1,326 @@
+   <div> 
+    <div class="reports-left jscroll">
+     <div class="reports-selectyear text-center">
+     	<div class="dropdown dropdown-menu-toggle">
+     		<a class="dropdown-toggle">
+     			<span id="curYear">2015</span>
+     			<b class="caret"></b>
+     		</a>
+     		<ul style="display: none;" class="dropdown-menu border-dropdown">
+     			<li><a id="curYearDrop">2015</a></li>
+     			<!-- <li><a>2016</a></li> -->
+     		</ul>
+     	</div>
+     </div>
+     <div>
+      <div>
+       <div>
+       <!-- 左边时间线 -->
+        <div class="reports-timetree"></div>
+       </div>
+      </div>
+     </div>
+    
+    </div>
+    <!-- 右边报告内容 -->
+    <div class="reports-right"></div>
+    <div class="member-layer text-center">
+     <div class="member-head text-center">
+      我的下属
+     </div>
+     <div class="member-layer-search">
+      <input placeholder="搜索成员" class="form-control" type="text" />
+     </div>
+     <div style="height: 470px; max-height: 470px;" class="scrollwrapper">
+        <ul class="member-list">
+         <li class="">
+         	<p class="avatar">
+         		<a class="router" href="#">
+         			<img class="avatar" src="" />
+         		</a>
+         	</p>
+         	<p class="name">
+         		<a class="router" href="#">CT</a>
+         	</p>
+         	<span></span>
+         </li>
+        </ul>
+       </div>
+     
+    </div>
+   </div>
+   
+     <!-- 我的下属 -->
+	<script id="my_sub_member" type="text/x-handlebars-template">
+		{{#each submembers}}
+		<li class="">
+         	<p class="avatar">
+         		<a class="router" href="#">
+         			<img class="avatar" src="{{#if avatarcode}}{{baseurl}}{{avatarcode}}{{else}}images/avatar.png{{/if}}" />
+         		</a>
+         	</p>
+         	<p class="name">
+         		<a class="router" href="#">{{username}}</a>
+         	</p>
+         	<span></span>
+         </li>
+		{{/each}}
+	</script>
+   		
+   
+	<script id="tr-template" type="text/x-handlebars-template">
+   <tr>
+ 	<td>1</td>
+ 	<td>
+     	<select id="worktype" style="width:120px;">
+         	<option value="1">运维类</option>
+         	<option value="2">研发类</option>
+         	<option value="3">BIM事项</option>
+     		<option value="4">日常工作</option>
+     	</select>
+ 	</td>
+ 	<td><textarea id="worktask" class="form-control" name="worktask"></textarea></td>
+ 	<td>
+ 		<select id="worklevel" style="width:50px;">
+         	<option value="1">高</option>
+         	<option value="2">中</option>
+         	<option value="3">低</option>
+     	</select>
+ 	</td>
+ 	<td><div class="controls">
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba; margin-top:4px">
+					<div class="remind-user">
+						<input id="creator" data-code="" type="text" class="control-input typeahead search js_select_man" value=""
+							data-entity="employee" data-multi="true" style="width:75px;height:30px;border-radius:3px; " placeholder="创建人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:75px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></td>
+ 	<td><div class="controls">
+				<div class="typeahead-wrapper" style="border: 0px solid #a3adba; margin-top:4px">
+					<div class="remind-user">
+						<input id="creator" data-code="" type="text" class="control-input typeahead search js_select_man" value=""
+							data-entity="employee" data-multi="true" style="width:75px;height:30px;border-radius:3px; " placeholder="创建人">
+						<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:75px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+							<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+							<div class="userselectlist">
+								 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></td>
+ 	<td><textarea id="workresult" class="form-control" name="workresult"></textarea></td>
+ 	<td><input type="text" id="planfinish" class="date form-control" /></td>
+ 	<td><input type="text" id="currentfinish" class="date form-control" /></td>
+ 	<td>
+ 	<select id="workstate" style="width:120px;">
+     	<option value="1">进行中</option>
+     	<option value="2">未开始</option>
+     	<option value="3">已完成</option>
+    </select>
+ 	</td>
+ 	<td>
+ 		<textarea id="workprogress" class="form-control" name="workprogress"></textarea>
+ 	</td>
+ 	<td>
+ 		<textarea id="nofinishreason" class="form-control" name="nofinishreason"></textarea>
+ 	</td>
+ 	</tr>
+   </script>
+   
+<!-- 左边 月季周  导航 -->
+<script id="timeline" type="text/x-handlebars-template">
+{{#each months}}
+{{#if ismonth}}
+<div class="timetree-month">
+   <div class="timetree-head month {{#if active}}active{{/if}}" data-month="{{val}}">
+    <span class="time-text">
+    	<strong style="color: #000;">{{val}}</strong>月
+    </span>
+    <span><em data-month="{{val}}" class="time-circle"></em></span>
+   </div>
+   <ul id="month{{val}}" class="timetree-weeklist" {{#if active}}style="display: block;"{{/if}}>
+    {{#each weeks}}
+	<li data-week="{{val}}" data-from="{{from}}" data-to="{{to}}" {{#if iscurrent}}class="active"{{/if}}>
+    	<a class="router j_weekreport" >第<span>{{val}}</span>周<em class="arrow-s"></em><em class="arrow-b"></em></a>
+    	<em class="time-circle {{#if iscurrent}}currentweek{{/if}}"  data-week="{{val}}" ></em>
+    </li>
+	{{/each}}
+   </ul>
+</div>
+{{else}}
+<div class="timetree-head season">
+     <span class="time-text">{{desc}}</span>
+     <em class="time-circle"></em>
+</div>
+{{/if}}
+{{/each}}
+</script>
+   
+<!-- 报告头部 - 月周 -->
+<script id="report-work-head" type="text/x-handlebars-template">
+<div class="reports-head">
+<span class="reports-caption" id="title">{{reportTitle}}</span>
+<span id="weekDay">{{#if from}}[<i>{{from}}~{{to}}</i>]{{/if}}</span> 
+<span id="createTime" class="time">{{#if createTime}}最后提交于{{createTime}}{{/if}}</span> 
+<span><a title="" id="wr-print" data-toggle="tooltip" data-placement="top" class="mh-5 fs-14 hide" data-original-title="打印">
+<i class="icon-print"></i></a></span>
+<span><a title="" data-toggle="tooltip" data-placement="top" id="wr-export" class="fs-14 hide" href="/workreport/export.json?id=4524292126919527582&amp;userId=4523312868403470340" data-original-title="导出"><i class="icon-file-word"></i></a></span>
+<div class="btn-group pull-right" id="switch">
+<a class="btn" id="prev">{{#ifCond currentType "==" "month"}}上一月{{else}}上一周{{/ifCond}}</a> 
+<a class="btn" id="current">{{#ifCond currentType "==" "month"}}本月{{else}}本周{{/ifCond}}</a> 
+<a class="btn" id="next">{{#ifCond currentType "==" "month"}}下一月{{else}}下一周{{/ifCond}}</a>
+<a class="btn" id="maxWindow" title="最大化"><i class="fa fa-arrows-alt"></i></a>
+</div>
+</div>
+</script>
+
+<!-- 报告填写 -->
+  <script id="report-work" type="text/x-handlebars-template">
+    <!-- <div class="reports-head">
+      <span class="reports-caption">CT的第37周的工作报告</span>
+      <span>[<i>{{from}}~{{to}}</i>]</span> 
+      <span class="time"></span> 
+      <span><a title="" class="mh-5 fs-14 hide"><i class="icon-print"></i></a></span>
+      <span><a title="" class="fs-14 hide"><i class="icon-file-word"></i></a></span>
+      <div class="btn-group pull-right">
+       <a class="btn">上一周</a> 
+       <a class="btn">本周</a> 
+       <a class="btn">下一周</a>
+      </div>
+     </div> -->
+     
+
+
+       <div class="jscroll" style="height:100%;">
+        <div class="loading_large hide"></div>
+        <div>
+
+         <div class="reports-body">
+		<!-- 本周工作计划 -->
+          <div class="reports-input">
+           <div class="reports-input-tit">
+            <i class="graph graph-task"></i>
+            <span>本周工作成效</span>
+			<span class="btn btn-success btn-sm js-add-plan"  data-plan="curweekplan" style="padding:1px;float:right;  margin-left: 3px;">添加事项</span>
+			<span class="btn btn-primary btn-sm js-plan-save"  data-plan="curweekplan" style="padding:1px;float:right;">保存</span>
+           </div>
+         <div id="curweekplan" class="weekplan">
+          <table class="table-bordered" style="width:1500px;text-align:center;">
+          <thead style="background-color: #eee;">
+          	<tr>
+          	<th style="width:3%;">序号</th>
+          	<th style="width:5%;">工作大类</th>
+          	<th style="width:15%;">工作任务</th>
+          	<th style="width:5%;">任务级别</th>
+          	<th style="width:5%;">负责人</th>
+          	<th style="width:5%;">协办人</th>
+          	<th style="width:15%;"> 周结果定义</th>
+          	<th style="width:8%;">计划完成时间</th>
+          	<th style="width:8%;">实际完成时间</th>
+          	<th style="width:3%;">状态</th>
+          	<th style="width:15%;">本周完成进度描述</th>
+          	<th style="width:15%;">未完成原因及解决措施</th>
+          	</tr>
+          </thead>
+          <tbody>
+          	
+          </tbody>
+          </table>
+          </div>
+          </div>
+
+         <!-- 下周工作计划 -->
+          <div class="reports-input">
+           <div class="reports-input-tit">
+            <i class="graph graph-plan"></i>
+            <span>下周工作计划 </span>
+            <span class="btn btn-success btn-sm js-add-plan" data-plan="nextweekplan" style="padding:1px;float:right;  margin-left: 3px;">添加事项</span>
+            <span class="btn btn-primary btn-sm js-plan-save" data-plan="nextweekplan" style="padding:1px;float:right;">保存</span>
+           </div>
+          <div id="nextweekplan" class="weekplan">
+          <table class="table-bordered" style="width:1500px;text-align:center;">
+          <thead style="background-color: #eee;">
+          	<tr>
+          	<th style="width:3%;">序号</th>
+          	<th style="width:5%;">工作大类</th>
+          	<th style="width:15%;">工作任务</th>
+          	<th style="width:5%;">任务级别</th>
+          	<th style="width:5%;">负责人</th>
+          	<th style="width:5%;">协办人</th>
+          	<th style="width:15%;"> 周结果定义</th>
+          	<th style="width:8%;">计划完成时间</th>
+          	<th style="width:8%;">实际完成时间</th>
+          	<th style="width:3%;">状态</th>
+          	<th style="width:15%;">本周完成进度描述</th>
+          	<th style="width:15%;">未完成原因及解决措施</th>
+          	</tr>
+          </thead>
+          <tbody>
+          	
+          </tbody>
+          </table>
+          </div>
+          </div>
+
+		<!-- 心得 -->
+ 		 <div class="reports-input">
+           <div class="reports-input-tit">
+            <i class="graph graph-idea"></i>总结心得
+           </div>
+		   <textarea class="form-control" placeholder="此处填写总结心得..." id="summary" style="overflow: hidden; word-wrap: break-word; resize: none; height: 130px;"></textarea>
+
+          </div>
+
+
+          <div class="form-horizontal entity-info">
+           <div style="position: relative;" class="control-group">
+            <label class="control-label" title="上传附件" style="min-width:20px;text-align: left;width: 50px;">附　件:</label>
+           <div>
+			   <div class="upload-btn-wrap acl-hide html5">
+					<a class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+						<i class="icon-upload-alt"></i> 上传附件
+					</a>
+					<span id="attach-showfiles" data-code="maindoc" style="display:block;"></span>
+			  </div>
+				<input style="font-size: 1px;top:12px;  left:60px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="attach" name="attach" class="js_fileupload focus" accept="" multiple="multiple"/>
+			</div>
+           </div>
+          </div>
+          <div class="reports-input">
+          <div style="background-color:#eee;margin-top:10px;padding-left:10px;"><span>反馈及评论</span></div>
+          <textarea class="form-control" style="margin-top:10px;" placeholder="评论"></textarea>
+          <div style="position:relative;height:30px;margin-top:10px;">
+         	 <a id="comment-attach" class="fl" title="选择要上传的文档，然后提交"><i class="icon-paperclip"></i>上传附件</a>
+       		 <input style="font-size: 12px;left:0px;opacity:0; position: absolute; width: 30%; height: 100%;" type="file" accept="" multiple="multiple"/>
+          	<a class="btn btn-success btn-sm" style="float:right;padding:2px;">提交评论</a>
+          </div>
+         <div class="comment-container">
+       		<div class="comment-box" style="padding:5px;">
+       			<a style="color:#2a6496;">zhanghs</a>
+       			<div>sss</div>
+       			<div><span style="color:#999;">2015-09-16 09:40:29</span></div>
+       		</div>
+			<div class="comment-box" style="padding:5px;">
+       			<a style="color:#2a6496;">zhanghs</a>
+       			<div>sss</div>
+       			<div><span style="color:#999;">2015-09-16 09:40:29</span></div>
+       		</div>
+			<div class="comment-box" style="padding:5px;">
+       			<a style="color:#2a6496;">zhanghs</a>
+       			<div>sss</div>
+       			<div><span style="color:#999;">2015-09-16 09:40:29</span></div>
+       		</div>
+         </div>
+          </div>
+         </div>
+        </div>
+       </div>
+</script>
+

@@ -1,0 +1,22 @@
+<div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5> {{name}}</h5></div>
+<div id="user-container" class="user-container bg-white pt-20">
+    <div style="margin-left:50px;">
+                <div class="control-group">
+                    {{name}}, 当前共【{{#if members.length}}{{members.length}}{{else}}0{{/if}}】个区域
+                </div>
+                <div class="control-group">
+                    <label class="control-label">区域：<a id="addGroupMember" data-code="{{code}}" data-type="{{grouptype}}" class="icon-plus" style="height: 20px;  width: 20px;  margin: 5px;" title="添加区域"></a></label>
+                    <div id="user-info" class="scrollwrapper form-horizontal" style="height:400px;margin-left:50px;"> 
+		                    {{#if members.length}}
+			                    {{#each members}}
+		                    <span class="file-show"><a>{{name}}</a>
+							<a  data-code="{{id}}" class="select_x close_file remove_user  file_remove_file" title="删除">×</a>&nbsp;</span>
+							{{/each}}
+							{{else}}
+							 <span id="user-001008" class="file-show">暂无数据</span>
+							{{/if}}
+                    </div>
+             </div>
+   </div>
+</div>

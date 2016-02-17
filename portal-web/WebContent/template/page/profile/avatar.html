@@ -1,0 +1,70 @@
+	<div id="profileContainer">
+		<div class="main jscroll jspScrollable" style="overflow: hidden; padding: 0px; width: 1115px;">
+			<div class="j_con" style="position: relative;">
+				<div class="e-title">
+					<h5>头像设置</h5>
+				</div>
+				<div id="altContent"></div>
+		<div id="avatar_priview"></div>
+		<script type="text/javascript" src="scripts/vendor/avatar/swfobject.js"></script>
+		<script type="text/javascript">
+			function uploadevent(status){
+				console.log(status);
+				if(status=="-1"){
+					$.fn.notify("#tips",{message:"取消成功！",fadeOut: { enabled: true,  delay: 3000 } }).show();
+					return ;
+				}
+			     var rc= status.rc;
+				 switch(rc){
+					case 1:
+						// TODO 获取响应回来的 avatarcode
+						$("#current-user-avatar").attr("src", baseConfig.base+"download?t="+new Date().getTime()+"&filecode="+status.data[0].id);
+						$("#current-user-avatar2").attr("src", baseConfig.base+"download?t="+new Date().getTime()+"&filecode="+status.data[0].id);
+						mdboss.cache.data.getMyInfo.avatarcode=status.data[0].id;
+						mdboss.cache.data.getUserInfo.userinfo.avatarcode=status.data[0].id;
+						$.fn.notify("#tips",{message:"上传成功！",fadeOut: { enabled: true,  delay: 3000 } }).show();
+						break;
+
+					case -1:
+						$.fn.notify("#tips",{message:"上传失败！",fadeOut: { enabled: true,  delay: 3000 } }).show();
+						//window.location.href = "#";
+						break;
+					case -2:
+						$.fn.notify("#tips",{message:"上传失败！",fadeOut: { enabled: true,  delay: 3000 } }).show();
+						window.location.href = "#";
+						break;
+
+					default:
+						var msg = typeof(status) + ' ' + status;
+						$.fn.notify("#tips",{message: msg ,fadeOut: { enabled: true,  delay: 3000 } }).show();
+				} 
+			}
+
+			var flashvars = {
+			  "jsfunc":"uploadevent",
+			  "imgUrl":baseConfig.base+"download?filecode="+mdboss.cache.data.getMyInfo.avatarcode,
+			  "pid":"75642723",
+			  "uploadSrc":true,
+			  "showBrow":true,
+			  "showCame":true,
+			  //"uploadUrl":"http://localhost/js/uploadstream"
+			  "uploadUrl":baseConfig.base + "avatarupload"
+			};
+
+			var params = {
+				menu: "false",
+				scale: "noScale",
+				allowFullscreen: "true",
+				allowScriptAccess: "always",
+				wmode:"transparent",
+				bgcolor: "#FFFFFF"
+			};
+
+			var attributes = {
+				id:"FaustCplus"
+			};
+			swfobject.embedSWF("scripts/vendor/avatar/FaustCplus.swf", "altContent", "650", "500", "9.0.0", "expressInstall.swf", flashvars, params, attributes);
+		</script>
+			</div>
+		</div>
+	</div>

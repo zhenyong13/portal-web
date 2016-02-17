@@ -1,0 +1,68 @@
+<!-- 搜索类型的模板 -->
+<script id="picker-list-template" type="text/x-handlebars-template">
+	{{#each this}}
+	{{#if region}}
+	<div class="form-category-hd">
+		<h4 id="cate-name">
+			<span class="js_categoryname">{{region}}</span>
+		</h4>
+	</div>
+	<div class="form-category-bd">
+		<div class="entity-info clearfix js_region{{regionorder}}">
+		</div>
+	</div>
+	{{/if}}
+{{/each}}
+</script>
+
+<!-- 搜索条件模板 -->
+<script id="picker-search-template" type="text/x-handlebars-template">
+	
+</script>
+
+<!-- 选择类型格式的模板如：选择费用类型 -->
+<script id="picker-xtype-template" type="text/x-handlebars-template">
+	
+</script>
+
+<script id="fileupload-template" type="text/x-handlebars-template">
+{{#if isshow}}
+<div class="control-group col-{{cols}}">
+<input id="requiredflag{{code}}" type="hidden" value="" data-required="{{required}}" data-name="{{name}}"/>
+<label class="control-label">{{name}}：</label>
+<div class="controls">
+	{{#if editable}}
+<div class="upload-btn-wrap acl-hide html5">
+	<a  class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+		<i class="icon-upload-alt"></i> 上传附件
+	</a>
+
+<span id="{{random}}-showfiles" data-code="{{code}}" style="display:block;">
+	{{#each value }}
+		<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="{{editable}}">
+				<a class="filename_view js_file_view"   data-file-id="{{code}}">{{name}}</a>
+				<a href="{{../../baseUrl}}{{code}}" class="file_view fa fa-download" target="_blank"></a>
+		{{#if editable}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/if}}
+		</span>
+	{{/each}}
+</span>
+</div>
+<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="{{random}}" name="{{code}}" class="js_fileupload" accept="" multiple="multiple"/>
+{{else}}
+	<span id="{{random}}-showfiles" data-code="{{code}}" style="display:block;">
+	{{#each value }}
+		<span class="file-show" data-name="{{name}}" data-code="{{code}}" data-isedit="{{editable}}">
+			<a  class="filename_view js_file_view" data-file-id="{{code}}" >{{name}}</a>
+			<a href="{{../../baseUrl}}{{code}}" class="file_view fa fa-download" target="_blank"></a>
+		</span>
+	{{/each}}
+	</span>
+{{/if}}
+</div>
+</div>
+{{/if}}
+</script>
+
+
+
+

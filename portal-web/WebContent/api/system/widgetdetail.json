@@ -1,0 +1,16 @@
+﻿{
+    "data": {
+        "templateid": "dictcode",
+        "id": 1,
+        "name": "dictname",
+        "usercode": "dictstate",
+        "sid": "2015-08-03",
+        "appcode": "dictorder",
+        "isdefault": "groupcode",
+        "isshow": true,
+        "sortorder": 1,
+        "minheight": "122"
+    },
+    "msg": "success",
+    "rc": 1
+}

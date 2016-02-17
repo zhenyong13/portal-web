@@ -1,0 +1,121 @@
+{
+    "data": {
+        "total": 99,
+        "pageNo": 1,
+        "pageSize": 0,
+        "rows": [
+            {
+                "code": "1",
+                "pcode": "",
+                "name": "分类1"
+            },
+            {
+                "code": "2",
+                "pcode": "",
+                "name": "分类3"
+            },
+            {
+                "code": "3",
+                "pcode": "",
+                "name": "分类4"
+            },
+            {
+                "code": "4",
+                "pcode": "",
+                "name": "分类4"
+            },
+            {
+                "code": "5",
+                "pcode": "",
+                "name": "分类5"
+            },
+            {
+                "code": "6",
+                "pcode": "1",
+                "name": "分类6"
+            },
+            {
+                "code": "7",
+                "pcode": "1",
+                "name": "哈哈we"
+            },
+            {
+                "code": "72",
+                "pcode": "7",
+                "name": "哈哈we88"
+            },
+            {
+                "code": "722",
+                "pcode": "7",
+                "name": "哈哈w7787e"
+            },
+            {
+                "code": "8",
+                "pcode": "1",
+                "name": "哈哈"
+            },
+            {
+                "code": "88",
+                "pcode": "8",
+                "name": "哈8哈"
+            },
+            {
+                "code": "838",
+                "pcode": "8",
+                "name": "哈44哈"
+            },
+            {
+                "code": "9",
+                "pcode": "2",
+                "name": "哈哈sdf"
+            },
+            {
+                "code": "10",
+                "pcode": "2",
+                "name": "哈哈sdf"
+            },
+            {
+                "code": "11",
+                "pcode": "2",
+                "name": "哈哈dsf"
+            },
+            {
+                "code": "12",
+                "pcode": "2",
+                "name": "哈哈dsf"
+            },
+            {
+                "code": "13",
+                "pcode": "3",
+                "name": "哈哈2sjdf"
+            },
+            {
+                "code": "14",
+                "pcode": "4",
+                "name": "哈哈sd2f"
+            },
+            {
+                "code": "15",
+                "pcode": "6",
+                "name": "哈哈f1s"
+            },
+            {
+                "code": "111",
+                "pcode": "4",
+                "name": "哈哈11"
+            },
+            {
+                "code": "44",
+                "pcode": "5",
+                "name": "哈哈222"
+            },
+            {
+                "code": "43",
+                "pcode": "6",
+                "name": "哈哈333"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

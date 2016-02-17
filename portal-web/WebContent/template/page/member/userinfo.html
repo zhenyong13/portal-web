@@ -1,0 +1,203 @@
+<div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a><i class="imgcon img-profile"></i><h5>
+    用户资料</h5></div>
+<div id="user-container" class="user-container bg-white pt-20 jscroll">
+    <div id="user-info" class="scrollwrapper form-horizontal entity-info user-info mCustomScrollbar _mCS_7>
+        <div id="mCSB_7" class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside" tabindex="0">
+            <div id="mCSB_7_container" class="mCSB_container" style="position:relative; top:0; left:0;"
+                 dir="ltr">
+                <div class="control-group"><label class="control-label">账号：</label>
+					<div class="controls"><p>{{usercode}}</p></div>
+                </div>
+                <div class="control-group"><label class="control-label">姓 名：</label>
+                 	<div class="controls"><p>{{username}}</p></div>
+                </div>
+                <div class="control-group"><label class="control-label">邮箱：</label>
+                 <div class="controls"><p>{{email}}</p></div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">手 机：</label>
+                    <div class="controls"><p>{{mobileno}}</p></div>
+                </div>
+                <div class="control-group"><label class="control-label">性 别：</label>
+                	<div class="controls">
+                       <p>
+                        	{{#ifCond sex "==" "male"}}男{{/ifCond}}
+                        	{{#ifCond sex "==" "female"}}女{{/ifCond}}
+                        </p>
+                    </div>
+                </div>
+                <div class="control-group"><label class="control-label">电 话：</label>
+                	<div class="controls"><p>{{officephone}}</p></div>
+                </div>
+                
+                <div id="department-div" class="control-group">
+						<label class="control-label">部 门：</label>
+						<div class="controls">
+							<p>{{orgname}}</p>
+						</div>
+					</div>
+					<div id="rank-div" class="control-group">
+						<label class="control-label">职 级：</label>
+						<div class="controls">
+						{{positionlevel}}
+						</div>
+					</div>
+					<div id="superior-div" class="control-group">
+						<label class="control-label">职位：</label>
+						<div class="controls">
+							<p>{{userlevel}}</p>
+						</div>
+					</div>
+					<div id="other-superior-div" class="control-group">
+						<label class="control-label">职务：</label>
+						<div class="controls"><p>{{userrank}}</p></div>
+					</div>
+					
+					<div id="other-superior-div" class="control-group">
+						<label class="control-label">地址：</label>
+
+						<div class="controls"><p>{{address}}</p></div>
+					</div>
+                
+                <div class="control-group"><label class="control-label">用户简介：</label>
+                    <div class="controls">
+                    	<textarea class="form-control bluebox" style="width:600px;height:100px" rows="3"  id="employee-userdesc">{{userdesc}}</textarea>
+                    </div>
+                </div>
+                
+                <!-- <div id="user-info-noAcl" class="">
+                    <div id="department-div" class="control-group"><label class="control-label">部 门：</label>
+
+                        <div class="controls"><p>夹娃狂魔</p></div>
+                    </div>
+                    <div id="rank-div" class="control-group"><label class="control-label">职 级：</label>
+
+                        <div class="controls"><span class="controls-text  user">职员</span><span
+                                class="controls-text  manager hide">经理</span><span
+                                class="controls-text  boss hide">领导</span>
+                        </div>
+                    </div>
+                    <div id="superior-div" class="control-group"><label class="control-label">上 级：</label>
+
+                        <div class="controls"><p></p></div>
+                    </div>
+                    <div id="other-superior-div" class="control-group"><label
+                            class="control-label">其他上级：</label>
+
+                        <div class="controls"></div>
+                    </div>
+                    <div id="assistant-div" class="control-group"><label class="control-label">助 理：</label>
+
+                        <div class="controls"><p></p></div>
+                    </div>
+                    <div id="open-access-div" class="control-group hide"><label
+                            class="control-label">权限开放：</label>
+
+                        <div class="controls"></div>
+                    </div>
+                    <div id="openAccessRow" class="control-group"><label class="control-label">权限开放：</label>
+
+                        <div class="controls">
+                            <div id="open-access" class="entity-container"></div>
+                                <span class="typeahead-wrapper hide"><input type="text" id="typeahead-open-access"
+                                                                            class="control-input typeahead search"
+                                                                            data-entity="employee" data-multi="true"
+                                                                            placeholder="输入姓名"><a
+                                        class="btn typeahead-search" data-entity="employee" data-multi="true"><i
+                                        class="icon-search"></i></a></span><span id="editParticipant"
+                                                                                 class="control-btn btn acl-hide"
+                                                                                 title="修改权限开放人员"><a
+                                class="icon-plus"></a></span></div>
+                    </div>
+                </div> -->
+                <!-- <div id="statusDiv" class="control-group"><label class="control-label">状 态：</label>
+
+                    <div class="controls">
+                        <div class="value" for="status"><span id="employee-status" class="controls-text"
+                                                              style="">在职</span><span class="radio" style=""><a
+                                id="employee-unavailable" class="btn btn-sm btn-primary"
+                                propertyname="quit">退出公司</a></span><span class="radio" style="display: none;"><a
+                                id="employee-available" class="btn btn-sm btn-primary"
+                                propertyname="normal">返聘</a></span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+           <!--  <div id="mCSB_7_scrollbar_vertical"
+                 class="mCSB_scrollTools mCSB_7_scrollbar mCS-darkblue mCSB_scrollTools_vertical"
+                 style="display: block;">
+                <div class="mCSB_draggerContainer">
+                    <div id="mCSB_7_dragger_vertical" class="mCSB_dragger"
+                         style="position: absolute; min-height: 30px; display: block; height: 57px; max-height: 195px;"
+                         oncontextmenu="return false;">
+                        <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                    </div>
+                    <div class="mCSB_draggerRail"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- 
+    <div id="user-info-normal" class="form-horizontal entity-info user-info hide">
+        <div id="employee-username-div" class="control-group"><label class="control-label">姓 名：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="employee-email-div" class="control-group"><label class="control-label">邮 件：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="employee-mobile-div" class="control-group"><label class="control-label">手 机：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="employee-sex-div" class="control-group"><label class="control-label">性 别：</label>
+
+            <div class="controls"><p class="male hide">男</p>
+
+                <p class="female hide">女</p></div>
+        </div>
+        <div id="employee-telephone-div" class="control-group"><label class="control-label">电 话：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="department-div" class="control-group"><label class="control-label">部 门：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="rank-div" class="control-group"><label class="control-label">职 级：</label>
+
+            <div class="controls"><p class="user hide">职员</p>
+
+                <p class="manager hide">经理</p>
+
+                <p class="boss hide">领导</p></div>
+        </div>
+        <div id="superior-div" class="control-group"><label class="control-label">上 级：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="other-superior-div" class="control-group"><label class="control-label">其他上级：</label>
+
+            <div class="controls"></div>
+        </div>
+        <div id="assistant-div" class="control-group"><label class="control-label">助 理：</label>
+
+            <div class="controls"><p></p></div>
+        </div>
+        <div id="open-access-div" class="control-group"><label class="control-label">权限开放：</label>
+
+            <div class="controls"></div>
+        </div>
+        <div id="status-div" class="control-group"><label class="control-label">状 态：</label>
+
+            <div class="controls"><p class="normal hide">在职</p>
+
+                <p class="unavailable hide">离职</p>
+
+                <p class="locked hide">锁定</p></div>
+        </div>
+    </div>
+     -->
+</div>
+

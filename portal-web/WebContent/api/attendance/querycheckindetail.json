@@ -1,0 +1,109 @@
+﻿{
+    "data": {
+        "total": null,
+        "signinmonth": "2015-06",
+        "orgcode": "1474",
+        "username": null,
+        "usercode": "002644",
+        "avatarcode":"22",
+        "orgname": null,
+        "pageNo": 1,
+        "positionlevel": null,
+        "pageSize": 20,
+        "rows": [
+            {
+                "detail": [
+                    {
+                        "signinaddress": "信息中心",
+                        "signintime": "2015-06-01 15:47:23",
+                        "daytype": "workday",
+                        "signintype": "signin"
+                    },
+                    {
+                        "signinaddress": "佛山分院",
+                        "signintime": "2015-06-01 16:50:46",
+                        "daytype": "workday",
+                        "signintype": "signin"
+                    }
+                ],
+                "signindate": "2015-06-01",
+                "datetype": "workday"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "工地施工监督",
+                        "signintime": "2015-06-06 15:32:09",
+                        "daytype": "weekend",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-06",
+                "datetype": "weekend"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "南昌分院",
+                        "signintime": "2015-06-05 15:29:58",
+                        "daytype": "workday",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-05",
+                "datetype": "workday"
+            },
+            {
+                "detail": [
+                     
+                ],
+                "signindate": "2015-06-15",
+                "datetype": "workday"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "北京项目部",
+                        "signintime": "2015-06-03 17:56:16",
+                        "daytype": "holiday",
+                        "signintype": "resignin"
+                    },
+                    {
+                        "signinaddress": "广州塔工地",
+                        "signintime": "2015-06-03 17:56:25",
+                        "daytype": "holiday",
+                        "signintype": "travelresignin"
+                    }
+                ],
+                "signindate": "2015-06-03",
+                "datetype": "holiday"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "信息中心",
+                        "signintime": "2015-06-04 15:28:14",
+                        "daytype": "workday",
+                        "signintype": "resignin"
+                    }
+                ],
+                "signindate": "2015-06-04",
+                "datetype": "workday"
+            },
+            {
+                "detail": [
+                    {
+                        "signinaddress": "信息中心",
+                        "signintime": "2015-06-02 15:54:14",
+                        "daytype": "weekend",
+                        "signintype": "signin"
+                    }
+                ],
+                "signindate": "2015-06-02",
+                "datetype": "weekend"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

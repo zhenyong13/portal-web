@@ -1,0 +1,35 @@
+﻿{
+  "data":{
+	"pageSize":1,
+	"pageNo":2,
+	"total":100,
+	"rows":[
+	  {
+		"id":1,
+		"usercode":143271096254000,
+		"username":"小明",
+		"avatarcode":""
+	  },
+	  {
+		"id":2,
+		"usercode":142731209654000,
+		"username":"baby",
+		"avatarcode":""
+	  },
+	  {
+		"id":2,
+		"usercode":142731209654000,
+		"username":"baby bb",
+		"avatarcode":""
+	  },
+	  {
+		"id":3,
+		"usercode":14273109654000,
+		"username":"angle",
+		"avatarcode":""
+	  }
+	]
+  },
+  "msg":"",
+  "rc":1
+}

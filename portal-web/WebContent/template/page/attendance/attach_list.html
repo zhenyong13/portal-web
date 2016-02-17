@@ -1,0 +1,27 @@
+<!-- 补签列表 -->
+{{#each this}}
+<li  class="workflow clearfix filterSlip_js j_entityslider-toggle">
+    <!-- <span class="ret_width_5 ret_display" style="margin-top: 11px;">{{checkexactid}}<i class="icon-checkbox-unchecked"></i></span> -->
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{addOne @index}}&nbsp;</span>
+    <!-- <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{usercode}}&nbsp;</span> -->
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js">{{username}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{orgname}}">{{orgname}}&nbsp;</span>
+    <span class="ret_width_5 ret_display ellipsis filterSlip_js" title="{{positionlevel}}">{{positionlevel}}&nbsp;</span>
+    <span class="ret_width_12 ret_display ellipsis filterSlip_js">{{resignintime}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{#ifCond addresstype '==' 'companyinside'}}【公司内部】{{/ifCond}}{{#ifCond addresstype '==' 'countryinside'}}【国内】{{/ifCond}}{{#ifCond addresstype '==' 'abroad'}}【国外】{{/ifCond}}{{resigninorgname}}{{#if resignincityname }}【{{resignincityname }}】{{/if}}{{otherplace}}">
+    {{#ifCond addresstype '==' 'companyinside'}}【公司内部】{{/ifCond}}{{#ifCond addresstype '==' 'countryinside'}}【国内】{{/ifCond}}{{#ifCond addresstype '==' 'abroad'}}【国外】{{/ifCond}}{{resigninorgname}}{{#if resignincityname }}【{{resignincityname }}】{{/if}}{{otherplace}}&nbsp;</span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js" title="{{reason}}">{{reason}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">&nbsp;
+    	{{#ifCond auditstatus '==' '审核通过'}}审核通过{{/ifCond}}
+    	{{#ifCond auditstatus '==' '审核不通过'}}<span style="color:red">审核不通过</span>{{/ifCond}}
+    	{{#ifCond auditstatus '==' '未审核'}}<span class="ret_color_a">未审核</span>{{/ifCond}}
+    </span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js" title="{{opinion}}">&nbsp;{{opinion}}</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{audittime}}&nbsp;</span>
+    <span class="ret_display ellipsis filterSlip_js">
+    &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+    {{#ifCond auditstatus '==' '未审核'}}<a class="ret_color_a toaudit" vel="{{id}}" title="审核"><i class="fa fa-check"></i></a>{{/ifCond}}&nbsp;&nbsp;
+    {{#ifCond auditstatus '==' '未审核'}}<a class="ret_color_a delete_exact" vel="{{id}}" title="删除"><i class="fa fa-times"></i></a>{{/ifCond}}
+    </span>
+</li>
+{{/each}}

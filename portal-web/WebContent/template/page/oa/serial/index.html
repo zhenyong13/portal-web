@@ -1,0 +1,89 @@
+<div class="col-tb jscroll-content">
+	<div id="j_workflowcenter" class="col-cell j_center"><!-- 模块管理  主页面 -->
+<div id="queryMain" class="toolkit clearfix">
+	<ul class="toolkit-list js_toolkit_search_">
+		<li class="toolkit-item toolkit-title j_catalog_name">发文字号：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_name" class="form-control qt_">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">年：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<input type="text" id="module_code" class="form-control qt_">
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">类型：</li>
+		<li class="toolkit-item">
+			<div class="controls">
+				<select id="module_type"></select>
+			</div>
+		</li>
+		<li class="toolkit-item toolkit-title j_catalog_name">所属组织：</li>
+		<li class="toolkit-item">
+			<div class="controls" style="width: 245px;">
+				 <input type="text" id="parentname" class="form-control qt_p" style="float: left;" value="" readonly="readonly"/>
+				 <input type="hidden" id="parentcode" value=""/>
+				 <a class="icon-search js_search_operate" style="position: relative;left: -20px;  bottom: 4px;"></a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 功能按钮 -->
+<div class="toolkit clearfix fun-button" style="z-index: 0;">
+	<ul>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-success j_entityslider-toggle" id="module-add"><i class="icon-plus-thin glyphicon">新增</i></a></li>
+		<!-- <li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-info j_entityslider-toggle" id="module-batch"> <i class="fa fa-pencil-square-o">批量修改</i></a></li> -->
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm btn-warning j_entityslider-toggle" id="module-del"> <i class="fa fa-trash-o">批量删除</i></a></li>
+		<li class="toolkit-item fr" style="line-height: 35px;"><a class="btn btn-sm j_entityslider-toggle" id="module-export"> <i class="fa fa-arrow-down">导出</i></a></li>
+	</ul> 
+</div>
+<!-- 列表 -->
+<div class="ebox1 flows" style="margin-top: 3px;position: relative;top: 34px;margin-bottom: 50px;">
+	<div>
+		<ul class="e-list flow-list">
+			<li class="workflow clearfix filterSlip_js j_entityslider-toggle" style="background: #F6F6F6;font-weight: bold;">
+				<span class="ret_width_5 ret_display  filterSlip_js"><i id="check-all-module" class="icon-checkbox-unchecked"></i></span>
+				<span class="ret_width_15 ret_display  filterSlip_js js_sort sorting" data-col="serialcode">发文字号</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="year">年份</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="num">流水号</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="type">类型</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="orgcode">所属组织</span>
+				<span class="ret_width_10 ret_display  filterSlip_js js_sort sorting" data-col="creator">创建人</span>
+				<span class="ret_width_10 ret_display  filterSlip_js" style="float: right;width: 10%;">操作</span>
+			</li>
+		</ul>
+		<ul id="module-flow-list" class="e-list flow-list demo-list">
+			<!-- 列表 -->
+		</ul>
+		<!-- 分页 -->
+		<div id="module_pagination" style=" margin-top: 3px;" ></div>
+		<!-- 分页 -->
+	</div>
+</div></div>
+</div>
+<div id="entitySlider" class="j_stretchBox stretch-box" style="width:100%; "></div>
+
+<script id="module-list-template" type="text/x-handlebars-template">
+{{#each data.rows}}
+<li class="workflow clearfix filterSlip_js j_entityslider-toggle">
+	<span class="ret_width_5 ret_display filterSlip_js js-check-box">
+        <i class="icon-checkbox-unchecked" data-id="{{id}}"></i>
+     </span>
+    <span class="ret_width_15 ret_display ellipsis filterSlip_js">{{serialcode}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{year}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{num}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{type}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{orgcode}}&nbsp;</span>
+    <span class="ret_width_10 ret_display ellipsis filterSlip_js">{{creator}}&nbsp;</span>
+ 	<span class="ret_width_10 ret_display ellipsis filterSlip_js" style="float: right;width: 10%;" title="">
+		<a class="fa fa-eye js_module_view" data-tid="{{id}}" title="明细"></a>
+		<a class="fa fa-pencil js_module_edit" data-tid="{{id}}" title="编辑"></a>
+		<a class="fa fa-trash-o js_module_del" data-tid="{{id}}" title="删除"></a>
+	</span>
+</li>
+{{/each}}
+</script>
+
+ 

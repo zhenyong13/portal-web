@@ -1,0 +1,163 @@
+
+	<div >
+		<div id="professprojList">
+			{{#if projects}}
+			{{#each projects}}
+			<div class="js-professional-title" style="width: 100%;cursor:pointer;background: #E6E6E6;height: 25px;line-height: 25px;clear: both;">
+				<div style="float: left;">{{projectname}}</div>
+				<div class="js_ss" style="float: right;margin-right: 10px;">收缩</div>
+			</div>
+			<div class="goal" style="clear: both;margin-top: 10px;">
+				{{#each professlist}}
+                      <dl href="#" class="goal-item router" style="background: #fff;">
+                          <dt class="goal-head clearfix">
+                              <div class="goal-icon pull-left">
+                                  <img class="icon-img" src="images/dateway/pro_icon.png">
+                              </div>
+                              <div class="goal-icon-r" style="position: relative;">
+                              	<div style="position: absolute; right: 0px;top: -14px;">
+                              		<img src="images/dateway/pro_icon_1.png">
+                              	</div>
+                                  <p class="caption ellipsis">
+                                      <a title="{{projectname}}" class="router title" style="color: #08C;">
+                                          	{{projectname}}
+                                      </a>
+                                  </p>
+                                  <span style="color:#08C;">{{specialtyname}}</span>
+                                  <p class="leader">
+                                      	负责人：
+                                      <span class="manager">
+                                          {{managercode}}
+                                      </span>
+                                  </p>
+                              </div>
+                          </dt>
+                          <dd class="goal-detail clearfix" style="padding-top: 0px;">
+                              <div style="width: 52px;"class="goal-chart pull-left circliful">
+                                  <span style="line-height: 52px; font-size: 13px;" class="circle-text">
+                                      0%
+                                  </span>
+                                  <canvas style="width: 52px; height: 52px;" height="52" width="52">
+                                  </canvas>
+                              </div>
+                              <div class="goal-info" style="position: relative;">
+                                  <p>
+                                      	共
+                                      <span class="participant">
+                                          1
+                                      </span>
+                                      	位同事参与
+                                  </p>
+                                  <p>{{projecttype}}</p>
+                                  <p style="color:#1DAB01;position: absolute;top: 22px;right: 16px;">{{status}}</p>
+                              </div>
+                          </dd>
+                          <dd class="goal-date text-center">
+                              <span class="start">
+                                  {{dateformat starttime 'yyyy-MM-dd'}}
+                              </span>
+                              <span class="end">
+                                  {{dateformat endtime 'yyyy-MM-dd'}}
+                              </span>
+                          </dd>
+                          <em data-original-title="点击添加关注"  class="arrow">
+                          </em>
+                          <i class="icon-star"></i>
+                          <i class="icon-star-empty hide"></i>
+                      </dl>
+					{{/each}}
+		</div>
+		{{/each}}
+		{{else}}
+		<div >
+				<div class="goal-item-guide-wrap">
+					<div class="guide-div goal-item-guide ">暂无专业信息</div>
+				</div>
+			</div>
+		{{/if}}
+	</div>
+</div>
+		
+			
+		<script id="projecttype-template" type="text/x-handlebars-template">
+			{{#each data}}
+				<span class="filter-item">
+				 	<a data-code="{{dictcode}}" title="{{dictname}}" class="projtype-click">{{dictname}}</a>
+				</span>
+			{{/each}}
+		</script>
+		
+		<script id="professlist-template" type="text/x-handlebars-template">
+			{{#each data}}
+				<span class="filter-item">
+				 	<a data-code="{{specialtycode}}" title="{{specialtyname}}" class="profess-click">{{specialtyname}}</a>
+				</span>
+			{{/each}}
+		</script>
+		
+		
+<!-- 列表模式-滚动加载 -->
+		<script id="projectlist-template-list-more" type="text/x-handlebars-template">
+		{{#each list}}
+        <li data-id="{{projectcode}}" class="workflow clearfix " data-obj="{{json2Str this}}">
+            <span class="sn1">{{addOneMore @index ../count}}</span>
+<!--
+						            <span class="checkbox">
+						                <i class="icon-checkbox-unchecked"></i>
+						            </span>
+-->
+            <span class="title ellipsis filterSlip_js" title="{{projectname}}" data-code="{{projectcode}}" >【{{projectname}}】</span>
+
+            <div class="right1">
+                <span class="user ellipsis">{{managercode}}</span>
+                <span class="comment-count" style="padding-right:3px">{{status}}&nbsp;</span>
+                <span style="padding-right:3px">{{progress}}&nbsp;</span>
+                <span>{{dateformat planstarttime 'yyyy-MM-dd'}}至{{dateformat planendtime 'yyyy-MM-dd'}}</span>
+            </div>
+			<!--
+            <div class="shortcut">
+                <span class="remind-toggle" vel="1111" data-taskcode="100" data-id="1111">提醒</span>
+                <span class="watch" watched="" taskcode="100" data-id="1111" module="workflow">关注</span>
+                <span class="share selector-toggle" data-entity="employee" data-multi="true" data-id="1111" data-processcode="1111" data-taskcode="100">共享</span>
+            </div>
+			-->
+        </li>
+        {{/each}}
+		</script>
+		
+		<!-- 列表模式 -->
+		<script id="projectlist-template-list" type="text/x-handlebars-template">
+				<div  class="ebox1 flows" style="margin-top: 3px;margin-bottom:5px;">
+	                    <div>
+						    <ul id="projectlist" class="e-list flow-list ">
+								{{#each list}}
+						        <li data-id="{{projectcode}}" class="workflow clearfix " data-obj="{{json2Str this}}">
+						            <span class="sn1">{{addOne @index }}</span>
+<!--
+						            <span class="checkbox">
+						                <i class="icon-checkbox-unchecked"></i>
+						            </span>
+-->
+						            <span class="title ellipsis filterSlip_js" title="{{projectname}}" data-code="{{projectcode}}" >【{{projectname}}】</span>
+						
+						            <div class="right1">
+						                <span class="user ellipsis">{{managercode}}</span>
+						                <span class="comment-count" style="padding-right:3px">{{status}}&nbsp;</span>
+						                <span style="padding-right:3px">{{progress}}&nbsp;</span>
+						                <span>{{dateformat planstarttime 'yyyy-MM-dd'}}至{{dateformat planendtime 'yyyy-MM-dd'}}</span>
+						            </div>
+									<!--
+						            <div class="shortcut">
+						                <span class="remind-toggle" vel="1111" data-taskcode="100" data-id="1111">提醒</span>
+						                <span class="watch" watched="" taskcode="100" data-id="1111" module="workflow">关注</span>
+						                <span class="share selector-toggle" data-entity="employee" data-multi="true" data-id="1111" data-processcode="1111" data-taskcode="100">共享</span>
+						            </div>
+									-->
+						        </li>
+						        {{/each}}
+						    </ul>
+						</div>
+						 
+                </div>
+
+		</script>

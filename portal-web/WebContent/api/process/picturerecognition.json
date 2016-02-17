@@ -1,0 +1,14 @@
+{
+    "data": {
+        "usercode": "002644",
+        "rows": [
+            {
+                "seqno": 1,
+                "filecode": "1111111111111",
+                "outputstring": "全图片识别屌屌的"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": 1
+}

@@ -1,0 +1,39 @@
+<div class="jscroll-content">
+  <div class="gat_big">
+	<div class="news_all">
+		<div class="com_news form-category-hd">
+			<div class="com_news_til"><span><a class="com_news_til" href="#index">门户首页>></a></span><span class="a_color">大事记</span></div>
+		 </div>
+	</div>
+	<div>
+		<!-- 左侧菜单 -->
+		<div id="event_left_menu" class="news_dh">
+		</div>
+		<!-- 详情 -->
+		<div id="event_detail" class="mom_title">
+		</div>
+	</div>
+ </div>
+</div>
+        
+<!-- 大事件 导航-->
+<script id="big-events-list-template" type="text/x-handlebars-template">
+{{#each bigevents}}
+<div {{#ifCond eventcode "==" ../currentevent}}class="dh_img"{{/ifCond}}><a href="#bigevents/{{eventcode}}" title="{{eventname}}">{{eventtime}}</a></div>
+{{/each}}
+</script>
+<!-- 详情 -->
+<script id="big-events-detail-template" type="text/x-handlebars-template">
+<div class="mom_news_title">{{eventname}}</div>
+<div class="mom_news_por">
+	<!-- <span>作者：</span>
+	<span>地铁设计学院 &nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+	<span>时间：</span>
+	<span>{{eventtime}}</span>
+</div>
+<!-- <div class="center">
+	<img src="images/img4.png" />
+</div> -->
+<div class="mom_news_cont">{{envntcontent}}</div>
+</script>
+		

@@ -1,0 +1,11 @@
+<!-- 群组 -->
+{{#each usergroups}}
+<li><a id="{{groupcode}}" groupcode="{{groupcode}}" class="router show-group-member" title="{{groupname}}">{{groupname}}</a>
+	<span class="actions"> 
+		<a class="router add-group-member" groupcode="{{groupcode}}" groupname="{{groupname}}" title="编辑">设置群组成员</a> 
+		<a id="delete-group" groupcode="{{groupcode}}" class="router" title="删除">
+		<i class="icon-trash"></i>
+	</a>
+	</span>
+</li>
+{{/each}}

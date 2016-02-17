@@ -1,0 +1,43 @@
+{
+    "data": {
+        "usercode": "caiwanli", 
+        "taskstatinfo": {
+            "name": [
+                "我的待办", 
+                "我的已办", 
+                "我的办结", 
+                "草稿公文"
+            ], 
+            "value": [
+                3, 
+                1, 
+                6, 
+                3
+            ]
+        }, 
+        "subordinatestatinfo": [
+            {
+                "todotaskcount": 3, 
+                "usercode": "002644", 
+                "username": "小牛"
+            }, 
+            {
+                "todotaskcount": 3, 
+                "usercode": "002645", 
+                "username": "小羊"
+            }, 
+            {
+                "todotaskcount": 3, 
+                "usercode": "002646", 
+                "username": "小鸡"
+            }, 
+            {
+                "todotaskcount": 3, 
+                "usercode": "002647", 
+                "username": "小鸭"
+            }
+        ]
+    }, 
+    "msg": "success", 
+    "rc": 1
+}

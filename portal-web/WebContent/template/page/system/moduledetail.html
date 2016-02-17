@@ -1,0 +1,95 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">模块编码：</label>
+							<div class="controls">
+								<span class="show_val">{{modulecode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块名称：</label>
+							<div class="controls">
+								<span class="show_val">{{modulename}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">父模块：</label>
+							<div class="controls">
+								<span class="show_val">{{#ifCond parentcode "==" "-1"}}根节点{{else}}{{parentname}}{{/ifCond}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块链接：</label>
+							<div class="controls">
+								 <span class="show_val">{{moduleuri}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">是否显示：</label>
+							<div class="controls">
+								<span class="show_val">{{moduleview}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块类型：</label>
+							<div class="controls">
+								<span class="show_val">{{moduletype}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">图标样式：</label>
+							<div class="controls">
+								<span class="show_val"><i class="{{iconclass}}"></i></span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">显示顺序：</label>
+							<div class="controls">
+								<span class="show_val">{{moduleorder}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块级别：</label>
+							<div class="controls">
+								<span class="show_val">{{modulelevel}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">应用编码：</label>
+							<div class="controls">
+								<span class="show_val">{{appcode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">打开方式：</label>
+							<div class="controls">
+								<span class="show_val">{{rel}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">外部网页：</label>
+							<div class="controls">
+								<span class="show_val">{{external}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">模块描述：</label>
+							<div class="controls">
+								<span class="show_val">{{moduledesc}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

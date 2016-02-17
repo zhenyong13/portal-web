@@ -1,0 +1,40 @@
+
+<div class="flowsheet_height process-forms jscroll">
+	<div class="forms-body ">
+		<div >
+			<div style="text-align: center;" id="processimage"></div>
+		
+			<div class="flowsheet_process_div">
+				<div class="flowsheet_process form-category-hd">
+					<h4 id="cate-name" style="border: 0px none;">
+						<span class="process_span js_categoryname">办理过程</span>
+					</h4>
+				</div>
+				
+				<div class="flowsheet_tab_padding" id="flowsheet_table">
+					
+				</div>
+				
+				
+			</div>
+	
+		</div>
+	</div>
+</div>
+<script id="activity-img-temp" type="text/x-handlebars-template">
+<img alt="正在加载……" src="{{imgurl}}" class="flowsheet_title_img">
+</script>
+
+<script id="activity-records-temp" type="text/x-handlebars-template">
+<table class="table table-bordered">
+<thead>
+	<tr class="change"><th class="flowsheet_tab_th">处理人</th><th class="flowsheet_tab_th">部门</th><th class="flowsheet_tab_th">职位</th><th class="flowsheet_tab_th">送达时间</th><th class="flowsheet_tab_th">处理时间</th><th class="flowsheet_tab_th">处理意见</th><th class="flowsheet_tab_th">处理步骤</th></tr>
+</thead>
+<tbody>
+	{{#each activity}}
+		<tr class="flowsheet_tab_color"><td><span>{{assignee.username}}</span></td><td><span>{{assignee.orgname}}</span></td><td><span>{{assignee.userrank}}</span></td><td><span>{{#if createtime}}{{createtime}}{{else}}<span style="color:red">无</span>{{/if}}</span></td><td><span>{{#if endtime}}{{endtime}}{{else}}<span style="color:red">未处理</span>{{/if}}</span></td><td>{{opinion}}</td><td>{{taskname}}</td></tr>
+	{{/each}}
+</tbody>
+</table>
+</script>
+

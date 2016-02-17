@@ -1,0 +1,37 @@
+{
+    "data": {
+        "assignee": "",
+        "type": "",
+        "taskstatus": "",
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 100,
+        "rows": [
+            {
+                "id": "2",
+                "serialcode": "sdfsdf1",
+                "year": "1999",
+                "num": "12",
+                "orgcode": "org-1",
+                "type": "jj",
+                "creator": "bookername",
+                "creatime": "bookdept",
+                "remark": "2015-09-23"
+                
+            },
+            {
+               "id": "22",
+                "serialcode": "sdfsdf1",
+                "year": "1999",
+                "num": "12",
+                "orgcode": "org-1",
+                "type": "jj",
+                "creator": "bookername",
+                "creatime": "bookdept",
+                "remark": "2015-09-23"
+            }
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

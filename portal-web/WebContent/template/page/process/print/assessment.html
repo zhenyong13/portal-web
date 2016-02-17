@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+.table_wrap { width:80%; height:100%;padding: 30px; margin:0 auto;background-color: #fff;}
+.table_wrap table{border-right: solid 1px #333; border-top:solid 1px #333; font-size:12px;}
+.table_wrap table td{ border-left: solid 1px #333; border-bottom:solid 1px #333; padding:5px;    border-top: 1px solid;}
+.common_input_1{ border:solid 1px #999; margin-left:1０px;}
+.table_text_com_1{border:solid 1px #999; width:90%; margin-left:3%; height:100px;}
+.table_left_juli{ margin-left:3%;}
+.table_qianming{ float:right;}
+.table_text_com_2{ width:99%; height:50px;}
+.table_text_com_3{ width:95%; margin-left:3%;}
+-->
+</style>
+</head>
+<body>
+	<div style="height:50px;" class="noprint">
+		<span style="float:right; line-height: 50px;width:200px;"><a href="javascript:window.print()" target="_self">打印预览</a></span>
+	</div>
+	<div style="margin:0 auto;">
+	<div class="table_wrap">
+		<table  border="0" cellspacing="0" style="margin: 0px auto;width:100%;">
+			<!-- <tr>
+				<td height="35" colspan="3" align="center"><h1>广州地铁设计研究院有限公司</h1>
+					<h1>员工试用期考核</h1></td>
+			</tr> -->
+			<tr>
+				<td height="35">被考核人 ：{{formData.checkuser.value.0.code.username}}</td>
+				<td>岗位 ：{{formData.position.value.0.code}}</td>
+				<td>所属部门 ：{{formData.org.value.0.code.orgname}}</td>
+			</tr>
+			<tr>
+				<td height="35">开始试用日期 ：{{formData.starttrytime.value.0.code}}</td>
+				<td>开始考核日期 ：{{formData.startchecktime.value.0.code}}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td height="35">结束试用日期 ：  {{formData.endtrytime.value.0.code}}
+				</td>
+				<td>结束考核日期 ：{{formData.endchecktime.value.0.code}}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="3">自我评价： 被考核者描述本人在考核期间表现<br />
+				<br /> <a class="table_left_juli">
+						1，考核期主要内容，提高改进内容；2，考核期内需要自我改进的地方；3，希望得到哪方面的帮助和培训；4，下一阶段计划提高的内容</a><br />
+				<br /> <textarea class="table_text_com_1" >{{formData.evaluation.value.0.code}}</textarea>
+				<br />
+				<br /> <a class="table_qianming">
+						签名： {{formData.sign.value.0.code}}
+						日期：{{formData.signdate.value.0.code}}
+						</a>
+				</td>
+			</tr>
+			<tr>
+				<td height="35" colspan="3">考核要素<a style="float: right;">A-优秀；B-良好；C-达标；D-不达标</a><br />
+					<table width="100%" border="0" cellspacing="0">
+						<tr>
+							<td width="26%" colspan="2" align="center">考核要素</td>
+							<td width="58%" colspan="2" align="center">评价依据</td>
+							<td width="16%" align="center" colspan="2">评价结果</td>
+						</tr>
+						<tr>
+								<td colspan="2">团队合作</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="teamwork_explain" style="width:530px;min-width: 100%; height:50px">{{formData.teamwork_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+									{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+									{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+									{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+									{{#ifCond formData.teamwork_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">遵守纪律</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="discipline_explain" style="width:530px;min-width: 100%; height:50px">{{formData.discipline_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+									{{#ifCond formData.discipline_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+									{{#ifCond formData.discipline_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+									{{#ifCond formData.discipline_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+									{{#ifCond formData.discipline_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作责任心</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="responsibility_explain" style="width:530px;min-width: 100%; height:50px">{{formData.responsibility_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+									{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+									{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+									{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+									{{#ifCond formData.responsibility_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作积极性与主动性</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="enthusiasm_explain" style="width:530px;min-width: 100%; height:50px">{{formData.enthusiasm_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+									{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+									{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+									{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+									{{#ifCond formData.enthusiasm_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">工作效率</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="efficiency_explain" style="width:530px;min-width: 100%; height:50px">{{formData.efficiency_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+									{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+									{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+									{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+									{{#ifCond formData.efficiency_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">专业知识能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="professional_explain" style="width:530px;min-width: 100%; height:50px">{{formData.professional_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+										{{#ifCond formData.professional_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">学习接受新知识能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="study_explain" style="width:530px;min-width: 100%; height:50px">{{formData.study_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+										{{#ifCond formData.study_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">解决实际问题能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+											<textarea class="form-control" readonly="readonly" id="problem_solving_explain" style="width:530px;min-width: 100%; height:50px">{{formData.problem_solving_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+										{{#ifCond formData.problem_solving_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">沟通能力</td>
+								<td colspan="2" >
+									<span class="show_val" style="color:#0D0D0D">
+										<textarea class="form-control" readonly="readonly" id="communicate_explain" style="width:530px;min-width: 100%; height:50px">{{formData.communicate_explain.value.0.code}}</textarea>
+									</span>
+								</td>
+								<td colspan="2">
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "A"}}A-优秀{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "B"}}B-良好{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "C"}}C-达标{{/ifCond}}
+										{{#ifCond formData.communicate_opinionresult.value.0.code "==" "D"}}D-不达标{{/ifCond}}
+								</td>
+							</tr>
+					</table>
+					<br /> <a class="table_qianming">
+					直接上级签名： {{formData.directleadersignname.value.0.code}}
+					日期： {{formData.directleadersignnametime.value.0.code}}
+						</a><br />
+				<br /> <a class="table_qianming">
+				间接领导签名：{{formData.indirectleadersign.value.0.code}}
+				日期：{{formData.indirectleadersigntime.value.0.code}}
+						</a><br />
+				<br /> <a class="table_qianming">该表由被考着直接上级填写，作为考核结果参照标准，评价结果为D必须填写评价依据标准</a>
+				</td>
+			</tr>
+
+			<tr>
+				<td height="35" colspan="3">直接上级 被考核者在考核期内表现：
+				{{#each formData.directleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				</td>
+			</tr>
+
+			<tr>
+				<td height="35" colspan="3">间接领导 被考者在考核期内表现：
+				{{#each formData.indirectleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				</td>
+			</tr>
+
+			<tr>
+				<td height="35" colspan="3">分院领导<br />
+				{{#each formData.inchargeofyleaderopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				
+				</td>
+			</tr>
+
+			<tr>
+				<td height="35" colspan="3">院长助理<br />
+				{{#each formData.yassistantopinion.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+				</td>
+			</tr>
+
+			<tr>
+				<td height="40" colspan="3"><p>
+						考核面试者情况：
+					</p>
+					{{#each formData.checkinterview.value}}
+					<div style="{{#ifCond @index "!=" "0"}}border-top: 1px dotted;{{/ifCond}} font-size:14px; display: table;  min-width: 50%;min-height:60px;">
+						<p style="padding-top: 6px; word-break: break-all;">{{opinion}}</p>
+						<p style="float: right;"><span style="margin-right: 10px;">{{#if signfile}}<img src="{{../../baseUrl}}{{signfile}}" />{{else}}{{dealuser}}{{/if}}{{#if delegateinfo}}代{{delegateinfo}}签{{/if}}</span><span>{{dealtime}}</span></p>
+					</div>
+					<div>
+							{{#if result}}
+									{{result.name}}：
+									{{#each result.value}}
+										{{#if result.editable}}
+											<input type="{{../../result.selecttype}}" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{else}}
+											<input type="{{../../result.selecttype}}" disabled="disabled" name="handleresult" value="{{code}}" {{#if selected}}checked=checked{{/if}} />{{name}}
+										{{/if}}
+									{{/each}}	
+							{{/if}}	
+					</div>
+				{{/each}}
+					</td>
+			</tr>
+		</table>
+
+	</div>
+	</div>
+</body>
+</html>

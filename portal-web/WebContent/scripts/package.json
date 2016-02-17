@@ -1,0 +1,32 @@
+{
+  "name": "mdboss",
+  "version": "0.0.1",
+  "description": "广州地铁设计院",
+  "keywords": [],
+  "homepage": "",
+  "author": "jahon",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "bootstrap": "~3.3.1"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  },
+  "devDependencies": {
+    "spm": "3"
+  },
+  "scripts": {
+    "test": "spm test",
+    "build": "spm build"
+  }
+}

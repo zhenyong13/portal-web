@@ -1,0 +1,134 @@
+{
+    "msg": "success", 
+    "rc": 1, 
+    "data": [
+        {
+            "comorg": "广州地铁建设总部"
+        }, 
+        {
+            "comdocno": "广州地铁建设总部[2015]000001号"
+        }, 
+        {
+            "urgency": "1"
+        }, 
+        {
+            "durdate": "2015-05-01"
+        }, 
+        {
+            "comopr": "小曾"
+        }, 
+        {
+            "mobileno": "18999999999"
+        }, 
+        {
+            "recdoccode": "院收文[2015]110001号"
+        }, 
+        {
+            "recdocdate": "2015-05-01"
+        }, 
+        {
+            "projectcodes": "广州市轨道交通十三号线首期工程设计总体和总包管理"
+        }, 
+        {
+            "title": "十三号线官湖车辆段上盖土地项目勘察方案审查会议纪要"
+        }, 
+        {
+            "maindoc": [
+                {
+                    "docid": "20150501000001doc", 
+                    "docname": "十三号线会议纪要.doc"
+                }
+            ]
+        }, 
+        {
+            "attaches": [
+                {
+                    "docid": "20150501000002doc", 
+                    "docname": "aaa.doc"
+                }, 
+                {
+                    "docid": "20150501000003doc", 
+                    "docname": "bbb.doc"
+                }
+            ]
+        }, 
+        {
+            "maincontent": "广州市轨道交通十三号线首期工程设计总体和总包管理"
+        }, 
+        {
+            "draftopinion": [
+                {
+                    "dealtime": "2015-01-01 17:02:02", 
+                    "dealuser": "小鸡", 
+                    "opinion": "拟请建筑规划分院、岩土分院阅处。"
+                }
+            ]
+        }, 
+        {
+            "leaderopinion": [
+                {
+                    "dealtime": "2015-01-01 17:02:02", 
+                    "dealuser": "小鸟", 
+                    "opinion": "拟请建筑规划分院、岩土分院阅处。"
+                }, 
+                {
+                    "dealtime": "2015-01-01 17:02:02", 
+                    "dealuser": "小猫", 
+                    "opinion": "拟请建筑规划分院、岩土分院阅处。"
+                }
+            ]
+        }, 
+        {
+            "depopinion": [
+                {
+                    "dealtime": "2015-01-01 17:02:02", 
+                    "dealuser": "小鸟", 
+                    "opinion": "拟请建筑规划分院、岩土分院阅处。"
+                }
+            ]
+        }, 
+        {
+            "dealresultopinion": [
+                {
+                    "dealtime": "2015-01-01 17:02:02", 
+                    "dealuser": "小鸟", 
+                    "opinion": "拟请建筑规划分院、岩土分院阅处。"
+                }
+            ]
+        }, 
+        {
+            "nextstep": [
+                "拟办", 
+                "相关部门（文件收发员）处理"
+            ]
+        }, 
+        {
+            "nextuser": [
+                {
+                    "userid": "002644", 
+                    "username": "小鸡"
+                }, 
+                {
+                    "userid": "002645", 
+                    "username": "小猪"
+                }
+            ]
+        }, 
+        {
+            "memo": [
+                {
+                    "userid": "002644", 
+                    "username": "小鸡", 
+                    "createtime": "2015-01-01 17:02:02", 
+                    "content": "便签内容测试1"
+                }, 
+                {
+                    "userid": "002678", 
+                    "username": "小猫", 
+                    "createtime": "2015-01-01 17:02:02", 
+                    "content": "便签内容测试2"
+                }
+            ]
+        }
+    ]
+}

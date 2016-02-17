@@ -1,0 +1,45 @@
+@import "../vendor/breakpoint/breakpoint";
+@import "../vendor/susy/susy";
+@import "../mixins";
+@import "../variables";
+@import "../partials/base";
+
+$image-path: '../../../images/';
+
+$mobile: 320px;
+$smallmobile-max-width: max-width 400px;
+$mobile-horizontal: 480px;
+$mobile-max-width: max-width 640px;
+$smalltablet-max-width: max-width 768px;
+$smalltablet-min-width: min-width 770px;
+$tablet: 768px 1023px;
+$tablet-horizontal: 1024px;
+$tablet-max-width: max-width 1000px;
+$desktop: 1200px;
+$desktop-wide: 1600px;
+
+/*******header.scss**********/
+//768px~1023px
+@include breakpoint($tablet) {
+  nav {
+    .container .navbar ul li {
+      padding: 0;
+    }
+  }
+  //  .gallery {
+  //    height: 480px;
+  //    .gallery-item {
+  //      height: 480px;
+  //      .inner {
+  //        h2.home {
+  //          margin-top: 1.5em;
+  //        }
+  //        .button {
+  //          margin-top: 3em;
+  //        }
+  //      }
+  //    }
+  //  }
+
+}
+

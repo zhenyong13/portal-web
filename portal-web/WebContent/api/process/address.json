@@ -1,0 +1,121 @@
+{
+    "data": {
+        "total": 345,
+        "pageNo": 1,
+        "pageSize": 10,
+        "rows": [
+            {
+                "citycode": "1",
+                "cityname": "北京市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 1,
+                "pinyin": "beijingshi",
+                "provincecode": "1",
+                "provincename": "北京市",
+                "zipcode": "100000"
+            },
+            {
+                "citycode": "2",
+                "cityname": "天津市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 2,
+                "pinyin": "tianjinshi",
+                "provincecode": "2",
+                "provincename": "天津市",
+                "zipcode": "100000"
+            },
+            {
+                "citycode": "3",
+                "cityname": "石家庄市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 3,
+                "pinyin": "shijiazhuangshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "050000"
+            },
+            {
+                "citycode": "4",
+                "cityname": "唐山市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 4,
+                "pinyin": "tangshanshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "063000"
+            },
+            {
+                "citycode": "5",
+                "cityname": "秦皇岛市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 5,
+                "pinyin": "qinhuangdaoshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "066000"
+            },
+            {
+                "citycode": "6",
+                "cityname": "邯郸市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 6,
+                "pinyin": "handanshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "056000"
+            },
+            {
+                "citycode": "7",
+                "cityname": "邢台市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 7,
+                "pinyin": "xingtaishi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "054000"
+            },
+            {
+                "citycode": "8",
+                "cityname": "保定市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 8,
+                "pinyin": "baodingshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "071000"
+            },
+            {
+                "citycode": "9",
+                "cityname": "张家口市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 9,
+                "pinyin": "zhangjiakoushi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "075000"
+            },
+            {
+                "citycode": "10",
+                "cityname": "承德市",
+                "createtime": "2015-08-25 03:29:48",
+                "creator": "user-002784",
+                "id": 10,
+                "pinyin": "chengdeshi",
+                "provincecode": "3",
+                "provincename": "河北省",
+                "zipcode": "067000"
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

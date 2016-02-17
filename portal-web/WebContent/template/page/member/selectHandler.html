@@ -1,0 +1,221 @@
+<div class="modal-content">
+	<div id="userSelector-multi" class="modal-body">
+		<div class="user-wrapper">
+			<div class="selected-container clearfix">
+				<span>已选择：</span>
+				<div class="selected-users">
+					<!-- <a id="4523312868403470340"> wuzy </a>
+					<a id="6993312853826738478"> chenzz </a> -->
+					<span id="selectedMember"></span> 
+					<span id="addUserToGroup" class="add-group-user"> 
+					<a id="addUserToGroupButton" class="btn btn-sm hide" title="将已选择的用户加入到新的群组">创建新的群组</a> 
+					<input id="add-group-input-text" type="text" class="form-control" style="display: none;"> 
+					<a id="addConfirmButton" class="btn btn-sm hide">确定</a> 
+					<a id="addCancelButton" class="btn btn-sm hide">取消</a>
+					<a id="clearSelectedButton" class="btn btn-sm hide">全部清空</a>
+					</span>
+				</div>
+			</div>
+			<div class="user-container"></div>
+		</div>
+		<div class="user-selector-body clearfix">
+			<div id="all-org-users" class="user-selector-body-l pull-left">
+				<div class="e-title">
+					<ul class="e-title-tab fl"><!-- active -->
+						<!-- <li id="organization_tab" class=""><a id="organization-users">部门</a></li>
+						<li id="group_tab" class=""><a id="group-users">群组</a></li>
+						<li id="role_tab"  class=""><a id="role-users">角色</a></li> -->
+						<!-- <li class="project_tab"><a id="project-users">项目</a></li> -->
+					</ul>
+				</div>
+				<!--搜索部门，角色-->
+				<div style="border-bottom: 1px solid #ddd;padding: 2px;">
+					<input type="text" class="form-control js_search_org_class" id="search_class" name="search"/>
+					<i class="icon-search js_icon_search" style="position: relative;right: 26px;top: 3px;cursor: pointer;"></i>
+				</div>
+				<a id="show-first-group" class="hide router"></a>
+				<div id="org-tree" class="org-tree scrollwrapper bg-white mCustomScrollbar _mCS_4 mCS_no_scrollbar" height="250" style="height: 250px;">
+					<div id="mCSB_4" class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside" tabindex="0">
+						<div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+							style="position: relative; top: 0px; left: 0px;" dir="ltr">
+							 
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div id="all-group-users" class="user-selector-body-r">
+				<div class="e-title">
+					<div id="org-user-info" class="">
+						<input id="search_name" type="text" class="form-control" style="margin-top: 13px; position: absolute; line-height: 27px;" placeholder="查询联系人">
+						<i class="icon-search" style="position: relative; left: 188px; top: 18px;"></i> 
+						<span class="huiqian"><input style="position:relative;top:2px;" type="checkbox" name="all_check" value="group-all" data-name="group" id="group-all" data-alias="全部群组"/><label style="cursor: pointer;" for="group-all">全部群组</label></span>
+						<span class="huiqian"><input style="position:relative;top:2px;" type="checkbox" name="all_check" value="role-all" data-name="role" id="role-all" data-alias="全部角色"/><label style="cursor: pointer;" for="role-all">全部角色</label></span>
+						<span class="huiqian"><input style="position:relative;top:2px;" type="checkbox" name="all_check" value="project-all" data-name="project"  id="project-all" data-alias="全部项目"/><label style="cursor: pointer;" for="project-all">全部项目</label></span>
+						<span class="huiqian"><input id="org_current" style="position:relative;top:2px;" type="checkbox" name="all_check" value="org-current" data-name="current" id="org-current" data-alias="本组织"/><label style="cursor: pointer;" for="org-current">本组织</label></span>
+						<span class="huiqian"><input style="position:relative;top:2px;" type="checkbox" name="all_check" value="org-all" data-name="org" id="org-all" data-alias="全部组织"/><label style="cursor: pointer;" for="org-all">全部组织</label></span>
+					</div>
+					
+				</div>
+				<div class="right-panel">
+					<div class="caption form-inline">
+						<span id="group-user-checkall" class="">
+						<input id="checkAll" class="user-id" type="checkbox" uc="" value="0" propid="" pre="" name=""></span>
+							
+							<span class="users-list-pinyin"><a class="" id="ALL">全部</a>
+							<a id="degit">#</a><a class="highlight" id="A">A</a><a class="highlight" id="B">B</a>
+							<a id="C" class="highlight">C</a><a class="highlight" id="D">D</a><a class="highlight" id="E">E</a>
+							<a class="highlight" id="F">F</a><a class="highlight" id="G">G</a>
+							<a class="highlight" id="H">H</a>
+							<a class="highlight" id="I">I</a>
+							<a class="highlight" id="J">J</a>
+							<a class="highlight" id="K">K</a>
+							<a class="highlight" id="L">L</a>
+							<a class="highlight" id="M">M</a><a class="highlight" id="N">N</a>
+							<a class="highlight" id="O">O</a><a class="highlight" id="P">P</a><a class="highlight" id="Q">Q</a><a class="highlight" id="R">R</a>
+							<a class="highlight" id="S">S</a><a class="highlight" id="T">T</a><a class="highlight" id="U">U</a><a class="highlight" id="V">V</a>
+							<a class="highlight" id="W">W</a><a class="highlight" id="X">X</a><a class="highlight" id="Y">Y</a>
+							<a class="highlight" id="Z">Z</a></span>
+							<!-- <label class="checkbox users-list-checkbox">
+							<input type="checkbox" id="chk2" title="含离职人员"><i>含离职人员</i></label> -->
+					</div>
+				</div>
+				<div id="user-container"
+					class="row-fluid users-container bg-white scrollwrapper mCustomScrollbar _mCS_5 mCS_no_scrollbar"
+					height="250" style="height: 250px;">
+					<!-- class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside" -->
+					<div id="mCSB_5" tabindex="0">
+						<!-- mCS_y_hidden mCS_no_scrollbar_y -->
+						<div id="mCSB_5_container" >
+							<div id="employee-container">
+								<ul class="employee-list users-list">
+
+								</ul>
+								<div class="center-more hide">更多...</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<span class="selector-btns" style="float:right;">
+		<a class="btn btn-middle btn-primary j_user_ok">确定</a>
+		<a class="btn btn-middle j_user_cancel">取消</a></span>
+	</div>
+</div>
+
+<input id="deptCode" type="hidden" value="">
+<input id="groupCode" type="hidden" value="">
+<input id="roleCode" type="hidden" value="">
+<input id="projectCode" type="hidden" value="">
+<input id="pageNo" type="hidden" value="1">
+<input id="tabFlag" type="hidden" value="true">
+<input id="searchFlag" type="hidden" value="false">
+<input id="chooseModel" type="hidden" value="true">
+
+<!-- 部门树结构 -->
+<script id="tree-template" type="text/x-handlebars-template">
+<div id="{{DIV-ID}}" class="">
+	<ul>
+		{{#each orgs}}
+		<li>
+			<div class="treenode router {{#ifCond parentcode "==" ""}}root selected{{/ifCond}}" style="padding-left: {{#if parentcode}}40px{{else}}20px{{/if}}" id="{{orgcode}}">
+				<i class="nodeicon "></i><a class="router" title="{{orgname}}">
+					<span class="tree-name">{{orgname}}</span></a>
+			</div>
+		</li>
+		{{/each}}
+	</ul>
+</div>
+</script>
+
+<!-- 组织结构 -->
+<script id="org-template" type="text/x-handlebars-template">
+<li class="{{active}}"><a id="{{org_id}}-users">{{org_name}}</a></li>
+</script>
+
+<!--复选 用户列表 -->
+<script id="users-template" type="text/x-handlebars-template">
+    {{#each members}}
+    <li id="{{id}}" class="clearfix">
+        <a class="select_show"><input id="{{id}}" value="{{username}}" orgcode="{{orgcode}}" uc="{{usercode}}" type="checkbox" name="userids" class="user-id mr-3"></a>
+        <span class="orgname" >{{orgname}}</span>
+        <a class="avatar usercard-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}">
+            <img alt="avatar" title="" src="{{#if avatarcode}}{{../../baseUrl}}download?filecode={{avatarcode}}{{else}}images/avatar.png{{/if}}">
+        </a>
+        <a class="name j_entityslider-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}"  >{{username}}
+            <font color="red"></font>
+        </a>
+        
+        <span class="userrank" >{{userrank}}</span>
+        <span class="phone" >{{mobileno}}</span>
+        <span class="email" >{{email}}</span>
+    </li>
+    {{/each}}
+
+</script>
+
+<!--单选 用户列表 -->
+<script id="users-template-2" type="text/x-handlebars-template">
+    {{#each members}}
+    <li id="{{id}}" class="clearfix">
+        <span class="orgname" >{{orgname}}</span>
+        <a class="avatar usercard-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}" orgcode="{{orgcode}}">
+            <img alt="avatar" title="" src="{{#if avatarcode}}{{../../baseUrl}}download?filecode={{avatarcode}}{{else}}images/avatar.png{{/if}}">
+        </a>
+        <a class="name j_entityslider-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}" orgcode="{{orgcode}}" >{{username}}
+            <font color="red"></font>
+        </a>
+        
+        <span class="userrank" >{{userrank}}</span>
+        <span class="phone" >{{mobileno}}</span>
+        <span class="email" >{{email}}</span>
+    </li>
+    {{/each}}
+
+</script>
+
+<!-- 用户列表 -->
+<script id="processhandler-template" type="text/x-handlebars-template">
+    {{#each members}}
+    <li id="{{id}}" class="clearfix">
+        <a class="select_show"><input id="{{../pcode}}_{{usercode}}" value="{{username}}" uc="{{usercode}}" orgcode="{{orgcode}}" type="checkbox" name="userids" class="user-id mr-3"></a>
+        <a class="avatar usercard-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}">
+            <img alt="avatar" title="" src="{{#if avatarcode}}{{../../baseUrl}}download?filecode={{avatarcode}}{{else}}images/avatar.png{{/if}}">
+        </a>
+        <a class="name j_entityslider-toggle" orgcode="{{orgcode}}" userid="{{id}}" vel="{{username}}" uc="{{usercode}}" >{{username}}
+            <font color="red"></font>
+        </a>
+        <span class="orgname">{{orgname}}</span>
+        <span class="userrank" >{{userrank}}</span>
+        <span class="phone" >{{mobileno}}</span>
+        <span class="email">{{email}}</span>
+    </li>
+    {{/each}}
+
+</script>
+
+<!-- 用户 -->
+<script id="user-template" type="text/x-handlebars-template">
+    <li id="{{id}}" class="clearfix">
+        <a class="select_show" {{hide}}><input id="{{id}}" orgcode="{{orgcode}}" value="{{username}}" uc="{{usercode}}" type="checkbox" name="userids" class="user-id mr-3"></a>
+        <a class="avatar usercard-toggle" userid="{{id}}" vel="{{username}}" uc="{{usercode}}">
+            <img alt="avatar" title="" src="{{#if avatarcode}}{{baseUrl}}download?filecode={{avatarcode}}{{else}}images/avatar.png{{/if}}">
+        </a>
+        <a class="name j_entityslider-toggle" orgcode="{{orgcode}}" userid="{{id}}" vel="{{username}}" uc="{{usercode}}"  >{{username}}
+            <font color="red"></font>
+        </a>
+        <span class="orgname" >{{orgname}}</span>
+        <span class="userrank" >{{userrank}}</span>
+        <span class="phone" >{{mobileno}}</span>
+        <span class="email" >{{email}}</span>
+    </li>
+</script>
+
+<!-- 选择的用户 -->
+<script id="user-select-template" type="text/x-handlebars-template">
+<span id="{{usercode}}" class="file-show"><a data-value="{{usercode}}">{{username}}</a>
+<a id="{{usercode}}" uc="{{usercode}}" name="{{username}}" class="select_x close_file  file_remove_file" title="删除">×</a>&nbsp;</span>
+</script>

@@ -1,0 +1,39 @@
+﻿{
+    "data": {
+        "total": 1345,
+        "rows": [
+            {
+                "id": 1,
+                "dbname": "dbname",
+                "dbcname": "dbcname",
+                "tablename": "2015-08-03",
+                "tablecname": "tablecname",
+                "voname": "voname",
+                "appcode": "1ewrwrwe"
+            },
+            {
+                "cachetcode": "1",
+                "id": 1,
+                "dbname": "1212",
+                "dbcname": "123",
+                "tablename": "2015-08-03",
+                "tablecname": "weqreqw",
+                "voname": "UCP_ROLETYPE",
+                "appcode": "1"
+            },
+            {
+                "cachetcode": "1",
+                "id": 1,
+                "dbname": "1212",
+                "dbcname": "123",
+                "tablename": "2015-08-03",
+                "tablecname": "weqreqw",
+                "voname": "weqreqw",
+                "appcode": "1"
+            }
+             
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,65 @@
+<!-- 我关注的公文  -->
+<div>
+    {{#if processList.length}}
+    <ul id="flow-list" class="e-list flow-list">
+        {{#each processList}}
+        <li data-id="{{processinstcode}}" class="workflow clearfix filterSlip_js j_entityslider-toggle" >
+            <span class="sn">{{addOne @index}}</span>
+            <span class="checkbox">
+                <i class="icon-checkbox-unchecked"></i>
+            </span>
+            <span class="title ellipsis filterSlip_js" title="{{title}}" lang="{{taskcode}}" data-taskname="{{#if taskname}}{{taskname}}{{else}}{{curstepname}}{{/if}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{#each cursteps}}{{taskcode}}{{/each}}" data-processtype="{{processtype}}" data-processcode="{{processcode}}" data-type="{{../type}}" data-module="{{#ifCond ../type "==" "draft"}}draftProcess{{else}}showProcess{{/ifCond}}">
+            	【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{else}}-{{curstepname}}{{/if}}】{{#if title}}-{{title}}{{/if}}
+            	
+            </span>
+            <div class="right">
+                <span class="user ellipsis"></span>
+                <span class="comment-count" style="padding-left:3px">{{startername}}&nbsp;</span>
+                <span style="padding-right:3px">{{timeformat duration}}&nbsp;</span>
+                 {{#ifCond ../../type "==" "share"}}
+                 <span style="padding-right:3px">共享人【{{shareuser}}】&nbsp;</span>
+                 {{/ifCond}}
+                <span style="padding-right:3px">{{updatetime}}&nbsp;</span>
+                 {{#ifCond ../../type "==" "history"}}
+	                <span style="padding-right:3px">{{endtime}}&nbsp;</span>
+                 	{{#if deleted}}<a class="fa fa-trash-o js_module_del" title="已删除"></a>{{/if}}
+                 {{/ifCond}}
+            </div>
+              
+               <div class="shortcut">
+	              <!-- 经办 -->
+	              {{#ifCond ../../type "==" "my-finshed"}}
+	                <span class="remind-toggle" vel="{{processinstcode}}" data-taskcode="{{taskcode}}" data-id="{{processinstcode}}">提醒</span>
+	                <span class="share selector-toggle" data-entity="employee" data-multi="true" data-id="{{processinstcode}}" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">共享</span>
+	              {{/ifCond}}
+	              <!-- 关注 -->
+	              {{#ifCond ../../type "==" "watched"}}
+	                <span class="watch" watched="true" taskcode="{{taskcode}}" data-id="{{processinstcode}}" module="workflow">取消关注</span>
+	              {{/ifCond}}
+	               <!-- 共享 -->
+	              {{#ifCond ../../type "==" "share"}}
+	                <span class="delete-process-share" vel="{{processinstcode}}" >取消共享</span>
+	              {{/ifCond}}
+	               <!-- 草稿 -->
+	              {{#ifCond ../../type "==" "draft"}}
+	                <span class="delete-process-toggle" vel="{{processinstcode}}" >删除</span>
+	              {{/ifCond}}
+	               <!-- 已办 -->
+	              {{#ifCond ../../type "==" "done"}}
+	                <span class="delete-process-toggle" vel="{{processinstcode}}" >删除</span>
+	              {{/ifCond}}
+              </div>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <div class="j_no_my_workflow no-result_">
+    	{{#ifCond ../type "==" "draft"}}暂无草稿公文{{/ifCond}}
+    	{{#ifCond ../type "==" "my-finshed"}}暂无经办公文{{/ifCond}}
+    	{{#ifCond ../type "==" "watched"}}暂无关注公文{{/ifCond}}
+    	{{#ifCond ../type "==" "share"}}暂无共享公文{{/ifCond}}
+    	{{#ifCond ../type "==" "done"}}暂无办结公文{{/ifCond}}
+    	{{#ifCond ../type "==" "history"}}暂无历史公文{{/ifCond}}
+    </div>
+    {{/if}}
+</div>

@@ -1,0 +1,300 @@
+{
+    "data": {
+        "buttons": [],
+        "candidatesteps": null,
+        "formdata": {
+            "reviewmoderatorauditopinion": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 45,
+                "name": "评审主持人审核意见",
+                "value": [
+                    {
+                        "name": "评审主持人审核意见",
+                        "code": ""
+                    }
+                ],
+                "code": "reviewmoderatorauditopinion",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true,
+                "custom": {
+                    "width": "80%"
+                }
+            },
+            "themeetingsignrecord": {
+                "region": "生产类",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 35,
+                "name": "会议/会签记录人",
+                "value": [
+                    {
+                        "name": "会议/会签记录人",
+                        "code": {
+                            "name": "农兴中",
+                            "code": "themeetingsignrecord"
+                        }
+                    }
+                ],
+                "code": "themeetingsignrecord",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true
+            },
+            "reviewcontent": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 40,
+                "name": "评审内容",
+                "value": [
+                    {
+                        "name": "评审内容",
+                        "code": "测试测试测试测试测试测试"
+                    }
+                ],
+                "code": "reviewcontent",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 1,
+                "editable": true
+            },
+             "xx": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 40,
+                "name": "评审内容",
+                "value": [
+                    {
+                        "opinion": "评审内容",
+                        "dealuser": "测试测试测试测试测试测试",
+                        "dealtime":"2015",
+                        "signfilecode":"222",
+                        "delegateinfo":"gggg"
+                    },
+                      {
+                        "opinion": "评审内容",
+                        "dealuser": "测试测试测试测试测试测试",
+                        "dealtime":"2015",
+                        "signfilecode":"222",
+                        "delegateinfo":"gggg"
+                    }
+                ],
+                "code": "cc",
+                "required": true,
+                "type": "dealopinion",
+                "regionorder": 1,
+                "editable": true
+            },
+            "projectname": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "项目名称",
+                "value": [
+                    {
+                        "name": "项目名称",
+                        "code": "项目测试"
+                    }
+                ],
+                "code": "projectname",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true,
+                "custom": {
+                    "width": "80%"
+                }
+            },
+            "businessnumber": {
+                "region": "生产类",
+                "cols": 4,
+                "isshow": true,
+                "itemorder": 20,
+                "name": "业务号",
+                "value": [
+                    {
+                        "name": "业务号",
+                        "code": "111-测试"
+                    }
+                ],
+                "code": "businessnumber",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true
+            },
+            "psyjls": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 65,
+                "name": "评审意见落实情况",
+                "value": [
+                    {
+                        "name": "评审意见落实情况",
+                        "code": ""
+                    }
+                ],
+                "code": "psyjls",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 1,
+                "editable": true
+            },
+            "verification": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 70,
+                "name": "验证",
+                "value": [
+                    {
+                        "name": "验证",
+                        "code": ""
+                    }
+                ],
+                "code": "verification",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 1,
+                "editable": true
+            },
+            "therecordofthemeeting": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 55,
+                "name": "会议记录/会签意见总结",
+                "value": [
+                    {
+                        "name": "会议记录/会签意见总结",
+                        "code": ""
+                    }
+                ],
+                "code": "therecordofthemeeting",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true,
+                "custom": {
+                    "width": "80%"
+                }
+            },
+            "designphase": {
+                "region": "生产类",
+                "cols": 4,
+                "isshow": true,
+                "itemorder": 15,
+                "name": "设计阶段",
+                "value": [
+                    {
+                        "name": "设计阶段",
+                        "code": "测试"
+                    }
+                ],
+                "code": "designphase",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true
+            },
+            "moderator": {
+                "region": "生产类",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 30,
+                "name": "评审主持人",
+                "value": [
+                    {
+                        "name": "评审主持人",
+                        "code": {
+                            "name": "农兴中",
+                            "code": "moderator"
+                        }
+                    }
+                ],
+                "code": "moderator",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true
+            },
+            "countersign": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 50,
+                "name": "会签意见",
+                "value": [
+                    {
+                        "name": "会签意见",
+                        "code": ""
+                    }
+                ],
+                "code": "countersign",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true,
+                "custom": {
+                    "width": "80%"
+                }
+            },
+            "appraisalconclusion": {
+                "region": "生产类",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 60,
+                "name": "评审结论",
+                "value": [
+                    {
+                        "name": "评审结论",
+                        "code": ""
+                    }
+                ],
+                "code": "appraisalconclusion",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 1,
+                "editable": true
+            },
+            "pm": {
+                "region": "生产类",
+                "cols": 4,
+                "isshow": true,
+                "itemorder": 5,
+                "name": "项目经理",
+                "value": [
+                    {
+                        "name": "项目经理",
+                        "code": {
+                            "name": "史海欧",
+                            "code": "pm"
+                        }
+                    }
+                ],
+                "code": "pm",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": true
+            }
+        },
+        "formurl": "receiveform",
+        "handleinfo": null,
+        "opinion": null,
+        "printformdata": null,
+        "printformurl": null,
+        "result": null,
+        "shownextstep": false
+    },
+    "msg": "success",
+    "rc": 1
+}

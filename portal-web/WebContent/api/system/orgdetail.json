@@ -1,0 +1,18 @@
+{
+    "data": {
+       
+                "iconclass": null,
+                "id": 1,
+                "isenabled": "enable",
+                "orgcode": "org-1",
+                "orgdesc": null,
+                "orglevel": "1",
+                "orgname": "广州地下铁道研究设计院",
+                "orgorder": null,
+                "orgtype": "1",
+                "parentcode": "org--1",
+                "updatetime": "2015-07-04 22:27:55"
+    },
+    "msg": "success",
+    "rc": 1
+}

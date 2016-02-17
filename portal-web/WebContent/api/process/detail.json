@@ -1,0 +1,43 @@
+{
+    "data": {
+        "managers": "蔡万里（002784）",
+        "department": "信息中心",
+        "number": "",
+        "date": "2015-08-27",
+        "business": "业务接待事由：给我个充分且必要的理由",
+        "managername": "陈瑛",
+        "reception": {
+            "endtime": "2015-08-27",
+            "starttime": "2015-08-27",
+            "sumday": "1"
+        },
+        "receptionnum": "接待单位：总公司",
+        "organization": "组织接待工作人员：5",
+        "title": "业务接待费申请流程测试",
+        "numberofreception": "接待人数：10000",
+        "otherexpensenotes": "",
+        "accompanied": "陪同接待人员：10",
+        "projectinfocode": "SJ-08-037",
+        "feeitemtype": [
+            {
+                "amount": 20,
+                "unitprice": 10,
+                "num": "2",
+                "feeitem": "1",
+                "finance": 10,
+                "feeitemname": "办公用品"
+            },
+            {
+                "amount": 10,
+                "unitprice": 10,
+                "num": "1",
+                "feeitem": "2",
+                "finance": 10,
+                "feeitemname": "办公耗材"
+            }
+        ],
+        "mobile": "86767676"
+    },
+    "msg": "success",
+    "rc": 1
+}

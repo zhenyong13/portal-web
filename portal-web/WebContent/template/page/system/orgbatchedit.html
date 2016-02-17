@@ -1,0 +1,59 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						
+						<div class="control-group col-6">
+							<label class="control-label">父组织：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control" value="{{parendname}}"/>
+								 <input type="hidden" id="parentcode" value="{{parendcode}}"/>
+								 <a class="icon-search js_search_org" style="margin-right: 10px;position: relative;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>						 
+						 
+						<div class="control-group col-6">
+							<label class="control-label">组织类型：</label>
+							<div class="controls">
+								<select id="orgtype" class="form-control">
+									<option value="1" {{#ifCond orgtype "==" "1"}}selected{{/ifCond}}>菜单</option>
+									<option value="2" {{#ifCond orgtype "==" "2"}}selected{{/ifCond}}>按钮</option>
+									<option value="3" {{#ifCond orgtype "==" "3"}}selected{{/ifCond}}>其他</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label">组织级别：</label>
+							<div class="controls">
+								<select id="orglevel" class="form-control">
+									<option value="1" {{#ifCond orglevel "==" "1"}}selected{{/ifCond}}>一级</option>
+									<option value="2" {{#ifCond orglevel "==" "2"}}selected{{/ifCond}}>二级</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">是否可用：</label>
+							<div class="controls">
+								<select id="isenabled" class="form-control">
+									<option value="1" {{#ifCond isenabled "==" "1"}}selected{{/ifCond}}>是</option>
+									<option value="2" {{#ifCond isenabled "==" "2"}}selected{{/ifCond}}>否</option>
+								</select>
+							</div>
+						</div>
+						   
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

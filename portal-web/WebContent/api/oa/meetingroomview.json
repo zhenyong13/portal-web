@@ -1,0 +1,12 @@
+{
+    "data": {
+        "id": "2",
+        "roomcode": "sdfsdf1",
+        "roomname": "会议室名称",
+        "position": "位置",
+        "capacity": 23,
+        "memo": "sf硒鼓"
+    },
+    "msg": "",
+    "rc": "1"
+}

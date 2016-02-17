@@ -1,0 +1,393 @@
+<div class="process-forms dialog-item active">
+	<div class="forms-body-wrap jscroll" style="top:0px;">
+		<div class="forms-body">
+			<div class="forms-content">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>环节名称：</label>
+							<div class="controls">
+								<input type="text" class="form-control" id="stepname" value="{{step.stepname}}"></input>
+								<input type="hidden" value="{{step.stepcode}}" id="stepcode" />
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>序号：</label>
+							<div class="controls">
+							<input type="text" class="form-control" id="seqno" value="{{step.seqno}}"></input>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>选择类型：</label>
+							<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="selecttype" value="radio" {{#ifCond step.selecttype "==" "radio"}}checked="checked"{{/ifCond}}  class="labelauty_" id="labelauty1009-00" style="display: none;">
+										<label for="labelauty1009-00">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#ifCond step.selecttype "==" "radio"}}labelauty4-checked{{else}}labelauty-unchecked{{/ifCond}}">非会签</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="selecttype" value="checkbox" {{#ifCond step.selecttype "==" "checkbox"}}checked="checked"{{/ifCond}}  class="labelauty_" id="labelauty1009-01" style="display: none;">
+										<label for="labelauty1009-01">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#ifCond step.selecttype "==" "checkbox"}}labelauty-checked{{else}}labelauty-unchecked{{/ifCond}}">会签</span>
+										</label>
+									</li>
+							</ul>
+						</div>
+						<div class="control-group col-6" style="height:44px;">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>处理表单：</label>
+							<div id="formlist" style="float: left;">
+							<select id="formcode">
+									<option value="">请选择</option>
+								{{#each formlist}}
+									{{#ifCond formcode "==" ../step.formcode}}
+										<option value="{{formcode}}" selected="selected">{{formname}}</option>	
+									{{else}}
+										<option value="{{formcode}}">{{formname}}</option>
+									{{/ifCond}}
+								{{/each}}
+							</select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>是否撤回：</label>
+							<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="canmoveback" {{#if step.canmoveback}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-00111" style="display: none;">
+										<label for="labelauty1009-00111">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.canmoveback}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="canmoveback" {{#if step.canmoveback}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-10122" style="display: none;">
+										<label for="labelauty1009-10122">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.canmoveback}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+						</div>
+						<div class="control-group col-6" style="height:44px;">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>打印表单：</label>
+							<div id="formlist" style="float: left;">
+							<select id="printform">
+									<option value="">请选择</option>
+								{{#each formlist}}
+									{{#ifCond formcode "==" ../step.printform}}
+										<option value="{{formcode}}" selected="selected">{{formname}}</option>	
+									{{else}}
+										<option value="{{formcode}}">{{formname}}</option>
+									{{/ifCond}}
+								{{/each}}
+							</select>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">环节描述：</label>
+							<div class="controls">
+								<textarea class="form-control" id="stepdesc" style="width: 608px;height:50px;">{{step.stepdesc}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">扩展属性：</label>
+							<div class="controls">
+								<textarea class="form-control" id="custom" style="width: 608px;height:50px;">{{step.custom}}</textarea>
+							</div>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>处理结果</legend>
+									<div class="col-6">
+										<label class="control-label" style="width: 110px;"><span style="color:red;">*</span>名称：</label>
+										<div class="controls"><input type="text" class="form-control" style="width:200px;" id="result-name" value="{{step.result.name}}"></input></div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否可编辑：</label>
+										<!-- <div class="controls">
+												<select id="result-isedit">
+													{{#if step.result.editable}}
+														<option value="true" selected="selected">是</option>
+														<option value="false">否</option>
+													{{else}}
+														<option value="true">是</option>
+														<option value="false" selected="selected">否</option>
+													{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="result-isedit" {{#if step.result.editable}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-001" style="display: none;">
+										<label for="labelauty1009-001">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.result.editable}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="result-isedit" {{#if step.result.editable}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-012" style="display: none;">
+										<label for="labelauty1009-012">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.result.editable}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<!-- <div class="controls">
+												<select id="result-isshow">
+												{{#if step.result.isshow}}
+													<option value="true" selected="selected">是</option>
+													<option value="false">否</option>
+													{{else}}
+													<option value="true">是</option>
+													<option value="false" selected="selected">否</option>
+												{{/if}}
+													
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="result-isshow" {{#if step.result.isshow}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-0011" style="display: none;">
+										<label for="labelauty1009-0011">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.result.isshow}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="result-isshow" {{#if step.result.isshow}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-0122" style="display: none;">
+										<label for="labelauty1009-0122">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.result.isshow}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否必填：</label>
+										<!-- <div class="controls">
+												<select id="result-isrequire">
+													{{#if step.result.required}}
+														<option value="true" selected="selected">是</option>
+														<option value="false">否</option>
+													{{else}}
+														<option value="true">是</option>
+														<option value="false" selected="selected">否</option>
+													{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="result-isrequire" {{#if step.result.required}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty01009-00111" style="display: none;">
+										<label for="labelauty01009-00111">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.result.required}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="result-isrequire" {{#if step.result.required}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty01009-01221" style="display: none;">
+										<label for="labelauty01009-01221">
+											<span data-clzz="labelauty-checked" class="js_commonradio  {{#if step.result.required}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+									</div>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;"><span style="color:red;"></span>值来源：</label>
+										<div class="controls">
+												<textarea class="form-control" id="result-val-from" style="width: 608px;height:50px;">{{step.result.valuesource}}</textarea>
+										</div>
+									</div>
+								</fieldset>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>流程意见</legend>
+									<div class="col-6">
+										<label class="control-label" style="width: 110px;"><span style="color:red;">*</span>名称：</label>
+										<div class="controls"><input type="text" class="form-control" style="width:200px;" id="opinion-name" value="{{step.opinion.name}}"></input></div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否可编辑：</label>
+										<!-- <div class="controls">
+												<select id="opinion-isedit">
+													{{#if step.opinion.editable}}
+														<option value="true" selected="selected">是</option>
+														<option value="false">否</option>
+													 {{else}}
+														<option value="true">是</option>
+														<option value="false"  selected="selected">否</option>
+													{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+									<li>
+										<input type="radio" name="opinion-isedit" {{#if step.opinion.editable}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-001110" style="display: none;">
+										<label for="labelauty1009-001110">
+											<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.opinion.editable}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+										</label>
+									</li>
+									<li>
+										<input type="radio" name="opinion-isedit" {{#if step.opinion.editable}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-012210" style="display: none;">
+										<label for="labelauty1009-012210">
+											<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.opinion.editable}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+										</label>
+									</li>
+							</ul>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<!-- <div class="controls">
+												<select id="opinion-isshow">
+												{{#if step.opinion.isshow}}
+													<option value="true" selected="selected">是</option>
+													<option value="false">否</option>
+												{{else}}
+													<option value="true">是</option>
+													<option value="false" selected="selected">否</option>
+												{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+											<li>
+												<input type="radio" name="opinion-isshow" {{#if step.opinion.isshow}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-8" style="display: none;">
+												<label for="labelauty1009-8">
+													<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.opinion.isshow}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" name="opinion-isshow" {{#if step.opinion.isshow}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-9" style="display: none;">
+												<label for="labelauty1009-9">
+													<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.opinion.isshow}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否必填：</label>
+										<!-- <div class="controls">
+												<select id="opinion-isrequire">
+													{{#if step.opinion.required}}
+														<option value="true" selected="selected">是</option>
+														<option value="false">否</option>
+													{{else}}
+														<option value="true">是</option>
+														<option value="false" selected="selected">否</option>
+													{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+											<li>
+												<input type="radio" name="opinion-isrequire" value="true" {{#if step.opinion.required}}checked="checked"{{/if}} class="labelauty_" id="labelauty1009-51" style="display: none;">
+												<label for="labelauty1009-51">
+													<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.opinion.required}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" name="opinion-isrequire" value="false" {{#if step.opinion.required}}{{else}}checked="checked"{{/if}} class="labelauty_" id="labelauty1009-52" style="display: none;">
+												<label for="labelauty1009-52">
+													<span data-clzz="labelauty-checked" class="js_commonradio {{#if step.opinion.required}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;"><span style="color:red;"></span>值来源：</label>
+										<div class="controls">
+												<textarea class="form-control" id="opinion-val-from" style="width: 608px;height:50px;">{{step.opinion.valuesource}}</textarea>
+										</div>
+									</div>
+								</fieldset>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>下一环节</legend>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<!-- <div class="controls">
+												<select id="nextstep-isshow">
+													{{#if step.shownextstep}}
+														<option value="true" selected="selected">是</option>
+														<option value="false">否</option>
+													{{else}}
+														<option value="true">是</option>
+														<option value="false" selected="selected">否</option>
+													{{/if}}
+												</select>
+										</div> -->
+										<ul class="dowebok controls">
+											<li>
+												<input type="radio" name="nextstep-isshow" {{#if step.shownextstep}}checked="checked"{{/if}}  value="true" class="labelauty_" id="labelauty1009-512" style="display: none;">
+												<label for="labelauty1009-512">
+													<span data-clzz="labelauty4-checked" class="js_commonradio {{#if step.shownextstep}}labelauty4-checked{{else}}labelauty-unchecked{{/if}}">是</span>
+												</label>
+											</li>
+											<li>
+												<input type="radio" name="nextstep-isshow" {{#if step.shownextstep}}{{else}}checked="checked"{{/if}}  value="false" class="labelauty_" id="labelauty1009-521" style="display: none;">
+												<label for="labelauty1009-521">
+													<span data-clzz="labelauty-checked" class="js_commonradio  {{#if step.shownextstep}}labelauty-unchecked{{else}}labelauty-checked{{/if}}">否</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+									
+								</fieldset>
+						</div>
+						
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>套红头</legend>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;">红头文件：</label>
+										<select id="reddoctype" multiple="multiple" style="width:220px;">
+											<option value="">请选择</option>
+										</select>
+									</div>
+									
+								</fieldset>
+						</div>
+							<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>正文模板</legend>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;">正文模板：</label>
+										<div class="upload-btn-wrap acl-hide html5">
+											<a  class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+												<i class="icon-upload-alt"></i> 上传附件
+											</a>
+											<span id="{{random}}-showfiles"  style="display:block;">
+												{{#if step.maindoctmpl }}
+													<span class="file-show" data-name="{{ step.maindoctmpl.filename}}" data-code="{{step.maindoctmpl.fileid}}">
+														<a class="filename_view js_file_view"  data-file-id="{{step.maindoc.fileid}}">{{step.maindoctmpl.filename}}</a>
+														<a class="file_view fa fa-download"  href="{{../baseUrl}}{{step.maindoctmpl.fileid}}"  target="_blank"></a>
+														<button type="button" data-fileid="{{step.maindoc.filecode}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+													</span>
+												{{/if}}
+											</span>
+										</div>
+										<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="{{random}}" name="maindoc" class="js_fileupload" accept="">
+									</div>
+									
+								</fieldset>
+						</div>
+						
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>印章</legend>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;">印章：</label>
+										<select id="oa_cachet" multiple="multiple">
+											<option value="">请选择</option>
+										</select>
+									</div>
+								</fieldset>
+						</div>
+						
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="pwd-btn-update" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a><a
+							id="pwd-btn-cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,15 @@
+﻿{
+    "data": {
+        
+                "id": 1,
+                "dbname": "dbname",
+                "dbcname": "dbcname",
+                "tablename": "2015-08-03",
+                "tablecname": "tablecname",
+                "voname": "voname",
+                "appcode": "1ewrwrwe",
+             "memo":"备注"
+    },
+    "msg": "success",
+    "rc": 1
+}

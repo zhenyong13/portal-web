@@ -1,0 +1,24 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+@mixin wrapper-container {
+  max-width: $container;
+  margin: 0 auto;
+  .content {
+    height: 100%;
+    margin: 0 auto;
+    max-width: $screen-lg;
+  }
+}
+
+@mixin max-height($height: 100%) {
+  max-height: $height;
+  height: $height;
+}
+
+@mixin margin-left-with-padding($width, $padding) {
+  margin-left: $width/-2-$padding;
+  width: $width;
+  padding-left: $padding;
+  padding-right: $padding;
+}

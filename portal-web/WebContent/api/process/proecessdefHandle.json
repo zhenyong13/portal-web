@@ -1,0 +1,841 @@
+{
+    "data": {
+        "buttons": [
+            "commit",
+            "save",
+            "circularize",
+            "diagram",
+            "watched",
+            "remind",
+            "print"
+        ],
+        "candidatesteps": [
+            {
+                "handleinfo": {
+                    "nextuser": [
+                        {
+                            "name": "黄穗忠",
+                            "pcode": "org-13502",
+                            "code": "user-001062"
+                        }
+                    ],
+                    "opinion": null,
+                    "result": null,
+                    "setasfrequence": false,
+                    "transition": "flow12-车辆管理员派车"
+                },
+                "selectedvalues": [
+                    {
+                        "$ref": "$.data.candidatesteps[0].handleinfo.nextuser[0]"
+                    }
+                ],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"processcode\":\"21c6d35c-da34-4c05-88a1-801d185aea0c\",\"taskcode\":\"task-bce1f99d-3f8f-44f6-bbd1-cee0c479a977\",\"dataclass\":\"role-\",\"stepcode\":\"c633b010-118a-44b8-a631-a108a23f065e\",\"roletype\":[\"flowrole\",\"commonrole\"]}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            },
+                            "objtype": "role-"
+                        }
+                    ],
+                    "selecttype": "radio"
+                },
+                "transition": {
+                    "transitionname": "车辆管理员派车",
+                    "transitionid": "flow12-车辆管理员派车"
+                }
+            },
+            {
+                "handleinfo": null,
+                "selectedvalues": [],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "组织",
+                            "datatype": "tree",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"dataclass\":\"org-\"}",
+                            "fieldmapping": {
+                                "id": "orgcode",
+                                "name": "orgname",
+                                "pid": "parentcode"
+                            },
+                            "objtype": "org-"
+                        },
+                        {
+                            "dataclass": "项目",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"dataclass\":\"project-\"}",
+                            "fieldmapping": {
+                                "id": "projectcode",
+                                "name": "projectname"
+                            },
+                            "objtype": "project-"
+                        },
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"dataclass\":\"role-\",\"roletype\":[\"flowrole\",\"commonrole\"]}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            },
+                            "objtype": "role-"
+                        },
+                        {
+                            "dataclass": "群组",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"dataclass\":\"group-\"}",
+                            "fieldmapping": {
+                                "id": "groupcode",
+                                "name": "groupname"
+                            },
+                            "objtype": "group-"
+                        }
+                    ],
+                    "selecttype": "checkbox"
+                },
+                "transition": {
+                    "transitionname": "提出申请",
+                    "transitionid": "flow6-提出申请"
+                }
+            },
+            {
+                "handleinfo": null,
+                "selectedvalues": [],
+                "selectpersonconfig": {
+                    "selectitems": [
+                        {
+                            "dataclass": "角色",
+                            "datatype": "list",
+                            "dataurl": "rest/wfs/task/personconfigdata?model={\"processcode\":\"21c6d35c-da34-4c05-88a1-801d185aea0c\",\"taskcode\":\"task-bce1f99d-3f8f-44f6-bbd1-cee0c479a977\",\"usercode\":\"user-002940\",\"dataclass\":\"role-\",\"stepcode\":\"fe0187aa-0d50-496b-a211-16dc7950e520\"}",
+                            "fieldmapping": {
+                                "id": "rolecode",
+                                "name": "rolename"
+                            },
+                            "objtype": "role-"
+                        }
+                    ],
+                    "selecttype": "radio"
+                },
+                "transition": {
+                    "transitionname": "综合部领导",
+                    "transitionid": "flow7-综合部领导"
+                }
+            }
+        ],
+        "formdata": {
+            "memo": {
+                "region": "备注",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 40,
+                "name": "备注",
+                "value": [
+                    {
+                        "name": "备注",
+                        "code": "是"
+                    }
+                ],
+                "code": "memo",
+                "required": false,
+                "type": "textarea",
+                "regionorder": 9,
+                "editable": true
+            },
+            "reason": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 14,
+                "name": "用车理由",
+                "value": [
+                    {
+                        "name": "用车理由",
+                        "code": "测试"
+                    }
+                ],
+                "code": "reason",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 3,
+                "editable": true
+            },
+            "yfgld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 9,
+                "name": "院分管领导",
+                "value": [],
+                "code": "yfgld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "applydept": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "申请部门",
+                "value": [
+                    {
+                        "name": "申请部门",
+                        "code": "信息中心"
+                    }
+                ],
+                "code": "applydept",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "number": {
+                "region": "用车信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 2,
+                "name": "用车人数",
+                "value": [
+                    {
+                        "name": "用车人数",
+                        "code": "4"
+                    }
+                ],
+                "code": "number",
+                "required": true,
+                "type": "text",
+                "regionorder": 3,
+                "editable": false
+            },
+            "destination": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 6,
+                "name": "前往地点",
+                "value": [
+                    {
+                        "name": "前往地点",
+                        "code": "设定"
+                    }
+                ],
+                "code": "destination",
+                "required": true,
+                "type": "text",
+                "regionorder": 3,
+                "editable": false
+            },
+            "managername": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 9,
+                "name": "项目负责人",
+                "value": [
+                    {
+                        "name": "项目负责人",
+                        "code": "陈瑛"
+                    }
+                ],
+                "code": "managername",
+                "required": false,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "selectproject": {
+                "region": "申请信息",
+                "cols": 1,
+                "isshow": false,
+                "itemorder": 9,
+                "name": null,
+                "value": [],
+                "code": "selectproject",
+                "required": false,
+                "type": "picker",
+                "regionorder": 1,
+                "editable": false,
+                "custom": {
+                    "pickerlabel": "选择项目",
+                    "event": "js-open-picker",
+                    "pikcerfloat": "left",
+                    "pickerform": {
+                        "template": "picker-list-template",
+                        "formcode": "form-e50c36f9-bdef-41fe-8b6f-45610d2ff880",
+                        "datamapping": [
+                            {
+                                "dest": "projectinfocode",
+                                "src": "projectinfocode"
+                            },
+                            {
+                                "dest": "managername",
+                                "src": "managername"
+                            }
+                        ],
+                        "refreshfun": "showrefreshform",
+                        "selecttype": "radio"
+                    }
+                }
+            },
+            "applyuser": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "申请人",
+                "value": [
+                    {
+                        "name": "申请人",
+                        "code": "蔡万里"
+                    }
+                ],
+                "code": "applyuser",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "timelimit": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 11,
+                "name": "计划用车时间",
+                "value": [
+                    {
+                        "endtime": {
+                            "value": " 2015-12-12",
+                            "code": "endtime"
+                        },
+                        "starttime": {
+                            "value": "2015-12-11 ",
+                            "code": "starttime"
+                        },
+                        "sumday": {
+                            "name": "",
+                            "value": "2",
+                            "code": "sumday"
+                        }
+                    }
+                ],
+                "code": "timelimit",
+                "required": true,
+                "type": "multidate",
+                "regionorder": 3,
+                "editable": false,
+                "custom": {
+                    "showformat": "multidate"
+                }
+            },
+            "yzzl": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 12,
+                "name": "院长助理",
+                "value": [],
+                "code": "yzzl",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "zhbld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 6,
+                "name": "综合部领导",
+                "value": [],
+                "code": "zhbld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "projectinfocode": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 8,
+                "name": "项目编号",
+                "value": [
+                    {
+                        "name": "项目编号",
+                        "code": "SJ-08-037"
+                    }
+                ],
+                "code": "projectinfocode",
+                "required": false,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "caruser": {
+                "region": "用车信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "用车人",
+                "value": [
+                    {
+                        "name": "用车人",
+                        "code": "caruser"
+                    }
+                ],
+                "code": "caruser",
+                "required": true,
+                "type": "simpleselectperson",
+                "regionorder": 3,
+                "editable": false
+            },
+            "kilometer": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 12,
+                "name": "预计里程数（公里）",
+                "value": [
+                    {
+                        "selected": false,
+                        "name": "小于150",
+                        "code": "1"
+                    },
+                    {
+                        "selected": false,
+                        "name": "150至300",
+                        "code": "2"
+                    },
+                    {
+                        "selected": false,
+                        "name": "300至500",
+                        "code": "3"
+                    },
+                    {
+                        "selected": false,
+                        "name": "大于500",
+                        "code": "4"
+                    }
+                ],
+                "code": "kilometer",
+                "required": true,
+                "type": "select",
+                "regionorder": 3,
+                "editable": false
+            },
+            "opinions": {
+                "region": "流程意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "流程意见",
+                "value": [],
+                "code": "opinions",
+                "required": true,
+                "type": "taskhandle",
+                "regionorder": 5,
+                "editable": true
+            },
+            "xmfzr": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "项目负责人",
+                "value": [],
+                "code": "xmfzr",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "bmld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "部门领导",
+                "value": [],
+                "code": "bmld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            }
+        },
+        "formurl": "receiveform",
+        "handleinfo": {
+            "nextuser": [
+                {
+                    "pcode": "org-141",
+                    "code": "user-001308"
+                }
+            ],
+            "opinion": null,
+            "result": "",
+            "setasfrequence": false,
+            "transition": "flow5-部长审批"
+        },
+        "opinion": {
+            "isshow": true,
+            "name": "流程意见",
+            "value": null,
+            "required": false,
+            "valuesource": "",
+            "editable": true
+        },
+        "printformdata": {
+            "memo": {
+                "region": "备注",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 40,
+                "name": "备注",
+                "value": [
+                    {
+                        "name": "备注",
+                        "code": "是"
+                    }
+                ],
+                "code": "memo",
+                "required": false,
+                "type": "textarea",
+                "regionorder": 9,
+                "editable": true
+            },
+            "reason": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 14,
+                "name": "用车理由",
+                "value": [
+                    {
+                        "name": "用车理由",
+                        "code": "测试"
+                    }
+                ],
+                "code": "reason",
+                "required": true,
+                "type": "textarea",
+                "regionorder": 3,
+                "editable": true
+            },
+            "yfgld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 9,
+                "name": "院分管领导",
+                "value": [],
+                "code": "yfgld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "applydept": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "申请部门",
+                "value": [
+                    {
+                        "name": "申请部门",
+                        "code": "信息中心"
+                    }
+                ],
+                "code": "applydept",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "number": {
+                "region": "用车信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 2,
+                "name": "用车人数",
+                "value": [
+                    {
+                        "name": "用车人数",
+                        "code": "4"
+                    }
+                ],
+                "code": "number",
+                "required": true,
+                "type": "text",
+                "regionorder": 3,
+                "editable": false
+            },
+            "destination": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 6,
+                "name": "前往地点",
+                "value": [
+                    {
+                        "name": "前往地点",
+                        "code": "设定"
+                    }
+                ],
+                "code": "destination",
+                "required": true,
+                "type": "text",
+                "regionorder": 3,
+                "editable": false
+            },
+            "managername": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 9,
+                "name": "项目负责人",
+                "value": [
+                    {
+                        "name": "项目负责人",
+                        "code": "陈瑛"
+                    }
+                ],
+                "code": "managername",
+                "required": false,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "selectproject": {
+                "region": "申请信息",
+                "cols": 1,
+                "isshow": false,
+                "itemorder": 9,
+                "name": null,
+                "value": [],
+                "code": "selectproject",
+                "required": false,
+                "type": "picker",
+                "regionorder": 1,
+                "editable": false,
+                "custom": {
+                    "pickerlabel": "选择项目",
+                    "event": "js-open-picker",
+                    "pikcerfloat": "left",
+                    "pickerform": {
+                        "template": "picker-list-template",
+                        "formcode": "form-e50c36f9-bdef-41fe-8b6f-45610d2ff880",
+                        "datamapping": [
+                            {
+                                "dest": "projectinfocode",
+                                "src": "projectinfocode"
+                            },
+                            {
+                                "dest": "managername",
+                                "src": "managername"
+                            }
+                        ],
+                        "refreshfun": "showrefreshform",
+                        "selecttype": "radio"
+                    }
+                }
+            },
+            "applyuser": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "申请人",
+                "value": [
+                    {
+                        "name": "申请人",
+                        "code": "蔡万里"
+                    }
+                ],
+                "code": "applyuser",
+                "required": true,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "timelimit": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 11,
+                "name": "计划用车时间",
+                "value": [
+                    {
+                        "endtime": {
+                            "value": " 2015-12-12",
+                            "code": "endtime"
+                        },
+                        "starttime": {
+                            "value": "2015-12-11 ",
+                            "code": "starttime"
+                        },
+                        "sumday": {
+                            "name": "",
+                            "value": "2",
+                            "code": "sumday"
+                        }
+                    }
+                ],
+                "code": "timelimit",
+                "required": true,
+                "type": "multidate",
+                "regionorder": 3,
+                "editable": false,
+                "custom": {
+                    "showformat": "multidate"
+                }
+            },
+            "yzzl": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 12,
+                "name": "院长助理",
+                "value": [],
+                "code": "yzzl",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "zhbld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 6,
+                "name": "综合部领导",
+                "value": [],
+                "code": "zhbld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "projectinfocode": {
+                "region": "申请信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 8,
+                "name": "项目编号",
+                "value": [
+                    {
+                        "name": "项目编号",
+                        "code": "SJ-08-037"
+                    }
+                ],
+                "code": "projectinfocode",
+                "required": false,
+                "type": "text",
+                "regionorder": 1,
+                "editable": false
+            },
+            "caruser": {
+                "region": "用车信息",
+                "cols": 6,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "用车人",
+                "value": [
+                    {
+                        "name": "用车人",
+                        "code": "caruser"
+                    }
+                ],
+                "code": "caruser",
+                "required": true,
+                "type": "simpleselectperson",
+                "regionorder": 3,
+                "editable": false
+            },
+            "kilometer": {
+                "region": "用车信息",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 12,
+                "name": "预计里程数（公里）",
+                "value": [
+                    {
+                        "selected": false,
+                        "name": "小于150",
+                        "code": "1"
+                    },
+                    {
+                        "selected": false,
+                        "name": "150至300",
+                        "code": "2"
+                    },
+                    {
+                        "selected": false,
+                        "name": "300至500",
+                        "code": "3"
+                    },
+                    {
+                        "selected": false,
+                        "name": "大于500",
+                        "code": "4"
+                    }
+                ],
+                "code": "kilometer",
+                "required": true,
+                "type": "select",
+                "regionorder": 3,
+                "editable": false
+            },
+            "opinions": {
+                "region": "流程意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "流程意见",
+                "value": [],
+                "code": "opinions",
+                "required": true,
+                "type": "taskhandle",
+                "regionorder": 5,
+                "editable": true
+            },
+            "xmfzr": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 1,
+                "name": "项目负责人",
+                "value": [],
+                "code": "xmfzr",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            },
+            "bmld": {
+                "region": "历史意见",
+                "cols": 12,
+                "isshow": true,
+                "itemorder": 3,
+                "name": "部门领导",
+                "value": [],
+                "code": "bmld",
+                "required": false,
+                "type": "dealopinion",
+                "regionorder": 6,
+                "editable": false
+            }
+        },
+        "printformurl": "receiveform",
+        "result": null,
+        "shownextstep": true
+    },
+    "msg": "success",
+    "rc": 1
+}

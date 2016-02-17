@@ -1,0 +1,119 @@
+
+<div class="middle_list jscroll">
+<div class="middle_list_title">
+   	 <div style="border-bottom: 1px solid #ddd;padding: 2px;">
+				<input type="text" class="form-control js_search_org_class" style="width: 63%" id="search_profess" name="search" placeholder="按编码，名称筛选"/>
+				<i class="icon-search js_icon_search left-20" style="/* position: relative;right: 26px;top: 3px; */cursor: pointer;"></i>
+				<a  class="btn btn-sm btn-success" id="module-add" title="新增专业架构"><i class="icon-plus-thin glyphicon">新增</i></a>
+	 </div>
+   </div>
+   <div id="left-m-list" class="middle_list_main" style="max-height: 470px;width: 278px;  margin-top: 20px;">
+   	<ul id="project_profess_list">
+    </ul>
+   
+   </div>
+</div>
+<div id="module_form_p"  style="width: 100%;  height: 100%;  margin-left: 280px;background-color: white;" class="jscroll">
+	<div class="add-project-banner"><span class="add-project-newproject">新建专业架构</span>
+		<a class="btn btn-sm btn-default js-cancel-profess" style="float:right;margin-left: 5px;">取消</a>
+		<a class="btn btn-sm btn-warning hide" id="module-del" style="float:right;"> <i class="fa fa-trash-o">删除</i></a>
+		<a class="btn btn-sm btn-primary js-save-profess" style="float:right;">保存</a>
+	</div>
+	
+	<div class="entity-info" style="  float: left;  margin-top: 30px;">
+		<div class="control-group col-12" style=" padding-left: 50px;">
+		<div class="controls" style="float:left;">
+			<label class="control-label"><span class="red">*</span>专业名称：</label>
+			<input type="text" id="professname" placeholder="请输入专业名称" class="form-control required" >
+			<input type="hidden" id="professcode" >
+			<input type="hidden" id="tid"  >
+		</div>
+		
+		<div class="controls">
+			<label  class="control-label"><span class="red">*</span>专业类型：</label>
+			<select id="professtype" class="form-control required"></select>
+		</div>
+	</div>
+
+	<div class="control-group col-12" style="padding-left: 50px;">
+		<div class="controls">
+			<label  class="control-label"><span class="red">*</span>专业等级：</label>
+			<select id="professlevel" class="form-control required" >
+			</select>
+		</div>
+	</div>
+	<div class="control-group col-12" style="padding-left: 50px;">
+		<div class="controls">
+			<label  class="control-label"><span class="red">*</span>状态：</label>
+			<select id="professstatus" class="form-control required">
+				 
+			</select>
+		</div>
+	</div>
+	<div class="control-group col-12"  style="  padding-top: 20px;  padding-left: 150px;">
+			<span class="project-arctect-manager">专业</span>
+			<ul class="project-arctect-ul">
+				<li class="project-arctect-li"><img src="images/add.jpg" style="width: 18px;margin-left: 2px;">
+				<span class="project-operate">新增</span></li>
+			</ul>
+	</div>
+	</div>
+</div>
+
+	
+<!-- 添加模版 -->
+<script id="profess-list-template" type="text/x-handlebars-template">
+<li class="project-arctect-li">
+<img src="images/man.png">
+<span class="professinfo"></span>
+<input id="{{uuid}}" data-code="" readonly="readonly" data-sourcecode="{{sourcecode}}" data-orgcode="{{orgcode}}" type="text" name="profess" class="roleselect control-input" value="" style="width:100px;height:30px;border-radius:3px; " placeholder="角色">
+<span class="project-operate-op" data-direction="d">删除</span>
+<span class="project-operate-op" data-direction="up">上移</span>
+<span class="project-operate-op" data-direction="down">下移</span>
+</li>	
+</script>
+
+<!-- 显示模版 -->
+<script id="profess-info-template" type="text/x-handlebars-template">
+{{#each orgs}}
+{{#ifCond parentcode "!=" "-1"}}
+<li class="project-arctect-li">
+<img src="images/man.png">
+<span class="professinfo" readonly="readonly" data-sourcecode="{{sourcecode}}" data-orgcode="{{orgcode}}" data-orgname="{{orgname}}" data-orgtype="{{orgtype}}" data-status="{{status}}" data-orglevel="{{orglevel}}">{{orgname}}</span>
+<input id="{{orgcode}}" data-code="{{orgcode}}" data-sourcecode="{{sourcecode}}" type="text" name="profess" class="roleselect control-input" value="{{orgname}}" style="width:100px;height:30px;border-radius:3px; display:none;" placeholder="角色">
+<span class="project-operate-op" data-direction="d">删除</span>
+<span class="project-operate-op" data-direction="up">上移</span>
+<span class="project-operate-op" data-direction="down">下移</span>
+</li>
+{{/ifCond}}
+{{/each}}
+</script>
+
+<!-- 列表 -->
+<script id="role-list-template" type="text/x-handlebars-template">
+{{#each data}}
+	 <li><a style="background-image: url(images/profess.png) ;background-repeat:no-repeat;  background-position: 30px 10px;" data-tid="{{id}}"  data-orgcode="{{orgcode}}" data-specialtycode="{{specialtycode}}" data-specialtyname="{{specialtyname}}" data-status="{{status}}" data-specialtylevel="{{specialtylevel}}" data-specialtytype="{{specialtytype}}">{{specialtyname}}</a></li> 
+{{/each}}
+</script>
+
+
+
+<!-- 弹出层,选择专业,角色 -->
+<script id="tip-info-template" type="text/x-handlebars-template">
+<div class="tipso_bubble right {{uuid}}" style="border-radius: 0px; padding:5px 0px; border:1px solid #D5D2D2; color: rgb(255, 255, 255); width: 555px; left: {{left}}px; top: {{top}}px; background: #F6F6F6; text-align:left;">
+<div style="padding:3px 2px;">
+<img src="images/avatar.png" style="width:25px; height:25px;">
+<span style="color:#000; margin-left: 2px; font-size: 14px;">点击选择角色</span></div>
+<div class="tipso_content role_content">
+	{{#each data}}
+	<a class="js_select_toggle role_a role ellipsis" data-id="{{../uuid}}" data-code="{{rolecode}}" title="{{rolename}}{{professname}}">{{rolename}}{{professname}}</a>
+	{{/each}}
+	<br/>
+	<a class="btn btn-sm js_select_toggle" data-id="{{uuid}}" style="margin-top:10px;margin-left:5px;float: right;">取消</a>
+	<a class="btn btn-sm btn-success js_select_add" data-id="{{uuid}}" style="margin-top:10px;margin-left:1px;float: right;" title="添加项目角色"><i class="icon-plus"></i>新增</a>
+</div>
+<!--
+<div class="tipso_arrow" style="margin-top: -8px; border-color: transparent #F6F6F6 transparent transparent;"></div>
+-->
+</div>
+</script>

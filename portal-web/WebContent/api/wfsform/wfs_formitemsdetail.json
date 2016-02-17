@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": 213,
+        "itemcode": "001",
+        "itemname": "用户",
+        "formcode": "001",
+        "formname": "表单",
+        "type": "001",
+        "datatype": "001",
+        "defaultvalue": "描述11",
+        "required": true,
+        "isshow": true,
+        "editable": true,
+        "regioncode": "分组",
+        "regionorder": "组序号",
+        "itemorder": "项序号",
+        "valuetype": "取值方式",
+        "valuetypename": "取值方式",
+        "valuesource": "值来源",
+        "scopee": "local",
+        "validatorcode": "校验规则"
+    },
+    "msg": "成功",
+    "rc": 1
+}

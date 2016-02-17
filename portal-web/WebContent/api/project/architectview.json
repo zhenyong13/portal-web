@@ -1,0 +1,70 @@
+{
+    "data": {
+        "assignee": "",
+        "type": "",
+        "taskstatus": "",
+        "pageSize": 10,
+        "pageNo": 2,
+        "total": 100,
+        "rows": [
+         {
+                "orgcode": "0123",
+                "orgname": "项目架构2",
+                "parentcode": "-1",
+                "sourcecode": "1212",
+                "orgtype": "p",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "123",
+                "orgname": "专业1",
+                "parentcode": "0123",
+                "sourcecode": "1212",
+                "orgtype": "p",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1234",
+                "orgname": "专业2",
+                "parentcode": "0123",
+                "orgtype": "p", "sourcecode": "1212",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "123f", "sourcecode": "1212",
+                "orgname": "角色3",
+                "parentcode": "123",
+                "orgtype": "r",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1s23",
+                "orgname": "角色12", "sourcecode": "1212",
+                "parentcode": "1234",
+                "orgtype": "r",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            },
+            {
+                "orgcode": "1s223",
+                "orgname": "角色22",
+                "parentcode": "0123",
+                "orgtype": "r",
+                "status": "",
+                "orglevel": "1",
+                "sortorder": 3
+            }
+        ]
+    },
+    "msg": "",
+    "rc": "1"
+}

@@ -1,0 +1,88 @@
+{
+    "data": [
+        {
+            "appcode": null,
+            "id": 1,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "公文",
+            "sid": 1,
+            "sortorder": 1,
+            "templateid": "wfs",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 2,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "项目",
+            "sid": 1,
+            "sortorder": 2,
+            "templateid": "projs",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 4,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "日报",
+            "sid": 1,
+            "sortorder": null,
+            "templateid": "diarys",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 5,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "公告",
+            "sid": 2,
+            "sortorder": null,
+            "templateid": "notices",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 6,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "日程",
+            "sid": 2,
+            "sortorder": null,
+            "templateid": "calendar",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 7,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "文档",
+            "sid": 2,
+            "sortorder": null,
+            "templateid": "documents",
+            "usercode": null
+        },
+        {
+            "appcode": null,
+            "id": 8,
+            "isdefault": null,
+            "isshow": true,
+            "minheight": 187,
+            "name": "客户",
+            "sid": 2,
+            "sortorder": null,
+            "templateid": "customers"
+		}],
+		"rc":1,
+		"msg":"ddd"
+		}

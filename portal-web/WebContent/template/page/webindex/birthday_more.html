@@ -1,0 +1,41 @@
+﻿<div class="jscroll-content">
+	<div class="gat_big">
+		<div class="news_all">
+			<div class="com_news form-category-hd">
+				<div>
+					<span class="com_news_til"><a href="#index" class="com_news_til">门户首页</a>>></span><span id="top_menu" class="a_color">生日祝福</span>
+					<span>
+						<i class="pro_ioc icon-search"></i>
+						<input class="pro_input form-control" type="text">
+					</span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div id="list_more">
+				
+			</div>
+			<!-- 分页 -->
+			<div id="more_pagination"
+				style="float: right; padding-right: 2%; margin-top: 3px;width:100%"
+				></div>
+			<!-- 分页 -->
+		</div>
+	</div>
+</div>
+
+<!-- 右侧列表 -->
+<script id="more-right-list-template" type="text/x-handlebars-template">
+<div class="news_cont">
+	<ul>
+	{{#each infoList}}
+	<div class="birthday-more">
+			<a href="#" title="username">
+				<img src="{{../baseUrl}}{{avatarcode}}">
+				<img src="images/dateway/cake.png" width="18" height="18" class="cake"><span title="username">{{username}}</span>
+			</a>
+		</div>
+	{{/each}}
+	</ul>
+</div>
+</script>

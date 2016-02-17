@@ -1,0 +1,35 @@
+
+<div class="modal-body">
+	<div class="control-group">
+		<div class="controls">
+			<textarea cols="41" style="height:50px;" id="processMeno"></textarea>
+		</div>
+	</div>
+
+
+	<div style="padding:8px;float:right;bottom: 5px;position: relative;">
+		<div class="controls">
+			<a id="pwd-btn-update" class="btn btn-sm btn-primary">确定</a><a
+				id="pwd-btn-cancel" class="btn btn-sm">取消</a>
+		</div>
+	</div>
+</div>
+
+<script id="meno-template" type="text/x-handlebars-template">
+<li  data-editable="true" data-createtime="{{createtime}}" data-avatarcode="{{userinfo.avatarcode}}"  data-usercode="{{userinfo.usercode}}" data-username="{{userinfo.username}}"  style="width:32%">
+		<div class="form-list-box js_formListBox">
+			<div class="content">
+				<span class="serial">
+					<img  src="{{#if userinfo.avatarcode}}{{../baseUrl}}{{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}">
+				</span>
+				<h4 id="form-title" class="title router ellipsis filterSlip_js js_formtitle" href="" title="{{userinfo.username}}" style="width:76px;margin-bottom: 1px;">{{userinfo.username}}</h4>
+				<span style="position: relative;bottom: 25px;float: right;">{{#dateformat createtime "MM/dd HH:mm:ss"}}{{/dateformat}}</span>
+					<p  class="js_changestate" title="{{meno}}" style=" clear:both;position:relative;height:50px; bottom: 20px;overflow: hidden;">{{meno}}</p>
+					<p 	class="js_updatememo hide" style="position:relative;bottom:17px;">
+						<textarea cols="21" style="height:53px;width:170px;" class="meno-value">{{meno}}</textarea>
+					</p>
+		   </div>
+				<div class="btn-group js_previewbtn"><button  style="line-height: 20px;position:relative;bottom: 66px;left: 10px;" type="button" class="select_x close js_deletememo" title="删除">×</button></div>
+		</div>
+	</li>
+</script>

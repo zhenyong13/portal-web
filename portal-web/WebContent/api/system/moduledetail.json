@@ -1,0 +1,22 @@
+﻿{
+    "data": {
+        "appcode": "",
+        "childs": [],
+        "external": "",
+        "iconclass": "fa fa-file-o",
+        "id": 43,
+        "modulecode": "im",
+        "moduledesc": "",
+        "modulelevel": 3,
+        "modulename": "sdf",
+        "moduleorder": 5,
+        "moduletype": 1,
+        "moduleuri": "sdf",
+        "moduleview": true,
+        "parentcode": "-1",
+        "parentname": null,
+        "rel": ""
+    },
+    "msg": "success",
+    "rc": 1
+}

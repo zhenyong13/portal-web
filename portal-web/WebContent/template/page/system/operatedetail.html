@@ -1,0 +1,122 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label">工号：</label>
+							<div class="controls">
+								<span class="show_val">{{workno}}</span>
+							</div>
+						</div>
+						
+						<div class="control-group col-3">
+							<label class="control-label">头像：</label>
+							<div class="controls">
+								<img id="avatarcodeimg" style="height: 30px;  width: 30px; margin-left: 10px;  border-radius: 50%;" src="{{#if avatarcode}}{{baseurl}}{{avatarcode}}{{else}}images/avatar.png{{/if}}">
+							</div>
+						</div>
+						
+						<div class="control-group col-3">
+								<label class="control-label">签名：</label>
+								<div class="controls">
+								<img id="signfilecodeimg" style="height: 30px;  width: 60px; margin-left: 10px; border-radius: 50%;" src="{{#if signfilecode}}{{baseurl}}{{signfilecode}}{{else}}images/sign.gif{{/if}}">
+								</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label">用户编码：</label>
+							<div class="controls">
+								<span class="show_val">{{usercode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">用户名称：</label>
+							<div class="controls">
+								<span class="show_val">{{username}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">拼音：</label>
+							<div class="controls">
+								<span class="show_val">{{pinyin}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">上级领导：</label>
+							<div class="controls">
+								<span class="show_val">{{userleader}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">性别：</label>
+							<div class="controls">
+								<span class="show_val">{{#ifCond sex "==" "male"}}男{{/ifCond}}{{#ifCond sex "==" "female"}}女{{/ifCond}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">所在组织：</label>
+							<div class="controls">
+								<span class="show_val">{{orgname}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职务：</label>
+							<div class="controls">
+								 <span class="show_val">{{userrank}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职位：</label>
+							<div class="controls">
+								<span class="show_val">{{userlevel}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职级：</label>
+							<div class="controls">
+								<span class="show_val">{{positionlevel}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">手机号码：</label>
+							<div class="controls">
+								<span class="show_val">{{mobileno}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">邮箱：</label>
+							<div class="controls">
+								<span class="show_val">{{email}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">地址：</label>
+							<div class="controls">
+								<span class="show_val">{{address}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">分管组织：</label>
+							<div class="controls">
+								<span class="show_val">{{extorgcode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">简介：</label>
+							<div class="controls">
+								<span class="show_val">{{userdesc}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

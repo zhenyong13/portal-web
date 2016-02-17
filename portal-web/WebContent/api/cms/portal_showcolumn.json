@@ -1,0 +1,152 @@
+{
+    "data": {
+        "usercode": "002644", 
+        "modulecode": "module-001", 
+        "columncode": "column-001", 
+        "columnname": "栏目名称", 
+        "pictureinfo": [
+            {
+                "columnpiccode": "1001", 
+                "infoname": "图片显示内容", 
+                "infourl": "images/dateway/img_3.jpg", 
+                "infocode": "1233"
+            },
+            {
+                "columnpiccode": "1002", 
+                "infoname": "图片显示内容", 
+                "infourl": "images/dateway/img_2.jpg", 
+                "infocode": "123"
+            },
+            {
+                "columnpiccode": "1003", 
+                "infoname": "图片显示内容", 
+                "infourl": "images/dateway/img_1.jpg", 
+                "infocode": "123"
+            }
+        ], 
+        "rows": [
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "worry", 
+                "tag": "***", 
+                "isnew":"yes",
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "worry", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            },
+            {
+                "infocode": "info-0001", 
+                "infoname": "资讯名称", 
+                "content": "资讯内容", 
+                "attachmentcode": [
+                    "1001", 
+                    "1002", 
+                    "1003"
+                ], 
+                "autor": "小鸡", 
+                "publishtime": "2015-07-12 18:20:10", 
+                "importantlevel": "general", 
+                "urgent": "", 
+                "tag": "***", 
+                "readcount": 10, 
+                "infourl": "#"
+            }
+        ]
+    }, 
+    "msg": "", 
+    "rc": 1
+}

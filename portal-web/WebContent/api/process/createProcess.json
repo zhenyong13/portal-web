@@ -1,0 +1,32 @@
+{
+  "assignee": "002644",
+  "taskname": "收文登记",
+  "processinstid": "2622",
+  "processformtype": "院收文",
+  "data": [
+    {"comorg": "广州地铁建设总部"},
+    {"comdocno": "广州地铁建设总部[2015]000001号"},
+    {"urgency": "紧急"},
+    {"durdate": "2015-05-01"},
+    {"comopr": "小曾"},
+    {"contactinfo": "18999999999"},
+    {"recdoccode": "院收文[2015]110001号"},
+    {"recdocdate": "2015-05-01"},
+    {
+      "projectinfo": [
+        {
+          "projectid": "001",
+          "projectname": "项目1"
+        },
+        {
+          "projectid": "002",
+          "projectname": "项目2"
+        }
+      ]
+    },
+    {"title": "十三号线官湖车辆段上盖土地项目勘察方案审查会议纪要"},
+    {
+      "maindoc": [{"docid": "20150501000001doc"}]
+    }
+  ]
+}

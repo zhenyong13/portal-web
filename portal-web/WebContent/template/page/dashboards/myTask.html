@@ -1,0 +1,23 @@
+<!-- 我的 待办公文  -->
+{{#if this.length}}
+{{#each this}}
+<li class="j_portal_item" >
+    <div class="e-list-inner entitybox-toggle">
+        <span class="j_name title ellipsis" data-module="showProcess"  title="{{taskname}}" lang="{{taskcode}}" data-taskname="{{taskname}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" data-processtype="{{processtype}}" data-processcode="{{processcode}}">【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span>
+
+        <div class="right"><span class="comment-count"></span>
+            <span class="user ellipsis">{{duration}}</span>
+            <span class="date">{{starttime}}</span>
+        </div>
+        <div class="shortcut">
+        	<span class="remind-toggle" vel="{{processinstcode}}" data-taskcode="{{taskcode}}" data-id="{{processinstcode}}">提醒</span>
+            <span class="watch" watched="{{watched}}" data-id="{{processinstcode}}">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+            <span class="share selector-toggle" data-entity="employee" data-multi="true"
+                  data-id="{{processinstcode}}" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">共享</span>
+        </div>
+    </div>
+</li>
+{{/each}}
+{{else}}
+<div class="no-result">暂无待办公文</div>
+{{/if}}

@@ -1,0 +1,280 @@
+<div id="header">
+<span id="tips" class="tips_info"></span>
+    <div id="top">
+        <ul class="top-menu nav nav-pills fr j_topMenu">
+            <!-- <li><a id="check-in" class="j_check_inOrOut">签到</a></li> -->
+            <li class="search-box">
+                <input id="searchTop" type="text" value="{{keyword}}" class="form-control" placeholder="全局搜索"><span class="search-btns ps-a"><a id="searchTopIcon"><i class="icon-search"></i></a></span>
+            </li>
+            <li id="j_message" class="dropdown dropdown-menu-toggle j_messageCount message-menu">
+                <a>
+                    <i class="graph graph-bell"></i><em class="message-count hide j_point"></em>
+                </a>
+                <ul id="j_dropMessage" class="dropdown-menu dropdown-menu-right border-dropdown" style="">
+                   
+                    <li>
+                        <a class="router j_newitem" href="#feed/newitem">
+                            <span class="fr badge ml-10"></span><em claass="graph graph2"></em>未读事项
+                        </a>
+                    </li>
+                    <li>
+                        <a class="router j_remind" href="#feed/notify">
+                            <span class="fr badge ml-10"></span><em class="graph graph7"></em>提醒
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+            <!-- <li><a class="invite-toggle" type="modal" title="邀请同事"><i class="graph graph-msg"></i></a></li> -->
+            <!-- <li class="popover-toggle">
+                <a><i class="graph graph-qq"></i></a>
+                <div class="popover popover-bottom" style="opacity: 1; display: none;">
+                    <div class="arrow"></div>
+                    <div class="popover-content">
+                        <strong class="fs-14">官方群</strong>
+                        <p class="mv-5">437626412</p>
+                        <a class="btn btn-sm btn-primary"  href="http://jq.qq.com/?_wv=1027&amp;k=fYq8bY" target="_blank">加入</a>
+                    </div>
+                </div>
+            </li> -->
+            <li id="j_systemSetup" class="dropdown dropdown-menu-toggle">
+                <a class="dropdown-toggle">
+                    <i class="graph graph-set"></i>
+                </a>
+                <ul id="j_dropSetup" class="dropdown-menu dropdown-menu-right border-dropdown" style="display: none;">
+                    <li><a class="router" data-href="profile">个人设置</a></li>
+                    <!-- <li><a class="router" data-href="member">组织成员设置</a></li> -->
+                    <!-- <li><a class="router" data-href="info">系统设置</a></li> -->
+                </ul>
+            </li>
+            <li class="dropdown dropdown-menu-toggle quick-link">
+                <a class="dropdown-toggle">
+                    <i class="graph graph-mdboss"></i><i class="icon-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right border-dropdown" style="display: none;">
+                    <!-- <li><a class="invite-toggle" type="modal">邀请同事</a></li>
+                    <li><a id="help" target="_blank" data-href="help">帮助</a></li>
+                    <li><a class="advise-toggle">意见反馈</a></li>
+                    <li><a class="router" data-href="versioninfo">系统更新动态</a></li>
+                    <li><a class="router" data-href="introduction">产品介绍</a></li> -->
+                    <li><a id="logout">退出系统</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="navigation" class="navigation">
+        <div id="user-panel" class="user-panel dropdown dropdown-menu-toggle fl">
+            <div class="user-avatar fl router ">
+                <img id="current-user-avatar" class="j_user-avatar user-avatar" src="{{#if userinfo.avatarcode}}{{baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}">
+            </div>
+            <div class="user-menu">
+                <a class="dropdown-toggle ds-ib-w router " href="#profile/avatar-setting">
+                    <span class="user-name ellipsis">{{userinfo.username}}</span><i class="icon-angle-down"></i><span class="user-nameof hide">的</span>
+                </a>
+
+                <div id="j_dropUser" class="dropdown-user dropdown-div border-dropdown clearfix" style="display: none;">
+                    <div class="mypanel fl">
+                        <div class="avatar"><img id="current-user-avatar2" src="{{#if userinfo.avatarcode}}{{baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}"></div>
+                        <div class="myoption">
+                            <a class="btn btn-sm btn-block on j_to-myspace hide router">返回我的工作空间</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/update-password">修改我的密码</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/avatar-setting">我的头像设置</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/my-profile">我的资料</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/dash-setting">首页设置</a>
+                        </div>
+                    </div>
+                    <div class="otherspanel fl">
+                        <p class="user-menu-tip">在此您可以切换到关注的人或下属的工作空间</p>
+                        <ul class="user-tab js_userTab clearfix">
+                            <li class="router  j_user_follow j_clickhide active" data-items="user_follow"><a>我关注的人</a></li>
+                            <li class="router j_user_mysub j_clickhide" data-items="user_mysub">
+                                <a>我的下属</a>
+                            </li>
+                            <li class="router j_user_org j_clickhide" data-items="user_org">
+                                <a>组织成员</a>
+                            </li>
+                        </ul>
+                        <div class="user-list-container clearfix jscroll">
+                            <ul id="user_follow" class="user-list clearfix">
+                                {{#ifCond myfollower.length "==" 0}}
+                                <div class="ta-c">
+                                    <span>目前没有关注人,您可以点击<a class="j_clickhide j_addFollow">加关注</a>添加关注人！</span>
+                                </div>
+                                {{else}}
+                                {{#each myfollower}}
+                                <li class="user-item j_clickhide" user-id="{{usercode}}" title="{{username}}">
+                                    <a class="fl router">
+                                        <img src="{{#if userinfo.avatarcode}}{{../baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}" class="avatar"><em class="ellipsis">{{username}}</em>
+                                    </a>
+                                </li>
+                                {{/each}}
+                                {{/ifCond}}
+                            </ul>
+                            <ul id="user_mysub" class="user-list clearfix hide">
+                                {{#ifCond myfollower.length "==" 0}}
+                                <div class="ta-c">
+                                    <span>目前没有下属</span>
+                                </div>
+                                {{else}}
+                                {{#each mysubordinate}}
+                                <li class="user-item j_clickhide" user-id="{{usercode}}" title="{{username}}">
+                                    <a class="fl router">
+                                        <img src="{{#if userinfo.avatarcode}}{{../baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}" class="avatar"><em class="ellipsis">{{username}}</em>
+                                    </a>
+                                </li>
+                                {{/each}}
+                                {{/ifCond}}
+                            </ul>
+                            <ul id="user_org" class="user-list clearfix hide">
+                                <li class="user-item j_clickhide" user-id="" title="张三">
+                                    <a class="fl router user-item-cart" >
+                                        <img src="images/avatar.png" class="avatar"><em class="ellipsis">张三</em>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="user_followbtn" class="user-follow-btns" style="display: none;">
+                                <a class="btn btn-sm j_clickhide j_addFollow mr-10">加关注</a><a class="btn btn-sm j_clickhide router" href="/users/myfollow">更多关注</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="useroption clearfix clear">
+                        <a class="btn btn-sm btn-success j_clickhide router"
+                           href="/organization">组织成员设置</a><a class="btn btn-sm btn-success invite-toggle">邀请同事</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div id="j_navwrap" class="nav-wrap" style="height: 48px;">
+
+            <ul class="nav nav-pills j_pageActive">
+
+                {{#each modulelist}}
+                <li class="js_more_router">
+                    <a data-pageid="{{modulecode}}" body-css="page-{{modulecode}}" class="router {{#ifCond ../pageid "==" modulecode}}active{{/ifCond}}" href="#{{moduleuri}}" data-url="/portal">
+                        <i class="graph {{iconclass}}"></i>{{modulename}}
+                    </a>
+                    {{#if childs}}
+                    {{#each childs}}
+                    {{#ifCond @index "==" 0}}
+                    {{#ifCond modulelevel "==" 2}}
+                     <div class="tengxun-more-channels">
+		             <div class="tengxun-more-count">
+		              <div class="tengxun-list-wrap cf">
+		                 <ul class="tengxun-list-left">
+		                 {{#each ../../../../childs}}
+		                 	{{#ifCond modulelevel "==" 2}}
+		                	 <li><a href="#{{moduleuri}}" class="link"><span>{{modulename}}</span></a></li>
+		                	 {{/ifCond}}
+		                 {{/each}}
+		                </ul>
+		               </div>
+		            </div>
+		           </div>
+		           {{/ifCond}}
+		           {{/ifCond}}
+		           {{/each}}
+		           {{/if}}
+                </li>
+                {{/each}}
+              <a id="nav-switcher" class="nav-switcher off">更多<span><i class="icon-caret-down"></i></span></a>
+            </ul>
+        </div>
+        <div id="menu-home" class="to-myspace j_to-myspace fl hide">
+            <a class="btn btn-sm router" href="/">返回我的工作空间</a>
+        </div>
+        <ul id="j_quickBuildGroup" class="reminds-group ps-a">
+            <li id="j_quickBuild" class="dropdown dropdown-menu-toggle">
+                <a id="btn-new" class="btn-new dropdown-toggle">
+                    <i class="graph graph-plus"></i>
+                </a>
+                 <div id="j_dropQuick" class="dropdown-user dropdown-div border-dropdown clearfix" style="display: none;">
+                    <div class="mypanel fl">
+                        <div class="avatar"><img id="current-user-avatar2" src="{{#if userinfo.avatarcode}}{{baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}"></div>
+                        <div class="myoption">
+                            <a class="btn btn-sm btn-block on j_to-myspace hide router">返回我的工作空间</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/update-password">修改我的密码</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/avatar-setting">我的头像设置</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/my-profile">我的资料</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/dash-setting">首页设置</a>
+                            <a class="btn btn-sm btn-block" data-href="#profile/sidenav-setting">快捷方式</a>
+                        </div>
+                    </div>
+                    <div class="otherspanel fl">
+                        <p class="user-menu-tip">在此您可以切换到关注的人或下属的工作空间</p>
+                        <ul class="user-tab js_userTab clearfix">
+                            <li class="router  j_user_follow j_clickhide active" data-items="user_follow"><a>我关注的人</a></li>
+                            <li class="router j_user_mysub j_clickhide" data-items="user_mysub">
+                                <a>我的下属</a>
+                            </li>
+                            <li class="router j_user_org j_clickhide" data-items="user_org">
+                                <a>组织成员</a>
+                            </li>
+                        </ul>
+                        <div class="user-list-container clearfix jscroll">
+                            <ul id="user_follow" class="user-list clearfix">
+                                {{#ifCond myfollower.length "==" 0}}
+                                <div class="ta-c">
+                                    <span>目前没有关注人,您可以点击<a class="j_clickhide j_addFollow">加关注</a>添加关注人！</span>
+                                </div>
+                                {{else}}
+                                {{#each myfollower}}
+                                <li class="user-item j_clickhide" user-id="{{usercode}}" title="{{username}}">
+                                    <a class="fl router">
+                                        <img src="{{#if userinfo.avatarcode}}{{../baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}" class="avatar"><em class="ellipsis">{{username}}</em>
+                                    </a>
+                                </li>
+                                {{/each}}
+                                {{/ifCond}}
+                            </ul>
+                            <ul id="user_mysub" class="user-list clearfix hide">
+                                {{#ifCond myfollower.length "==" 0}}
+                                <div class="ta-c">
+                                    <span>目前没有下属</span>
+                                </div>
+                                {{else}}
+                                {{#each mysubordinate}}
+                                <li class="user-item j_clickhide" user-id="{{usercode}}" title="{{username}}">
+                                    <a class="fl router">
+                                        <img src="{{#if userinfo.avatarcode}}{{../baseUrl}}download?filecode={{userinfo.avatarcode}}{{else}}images/avatar.png{{/if}}" class="avatar"><em class="ellipsis">{{username}}</em>
+                                    </a>
+                                </li>
+                                {{/each}}
+                                {{/ifCond}}
+                            </ul>
+                            <ul id="user_org" class="user-list clearfix hide">
+                                <li class="user-item j_clickhide" user-id="" title="张三">
+                                    <a class="fl router user-item-cart" >
+                                        <img src="images/avatar.png" class="avatar"><em class="ellipsis">张三</em>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="user_followbtn" class="user-follow-btns" style="display: none;">
+                                <a class="btn btn-sm j_clickhide j_addFollow mr-10">加关注</a><a class="btn btn-sm j_clickhide router" href="/users/myfollow">更多关注</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="useroption clearfix clear">
+                        <a class="btn btn-sm btn-success j_clickhide router"
+                           href="/organization">组织成员设置</a><a class="btn btn-sm btn-success invite-toggle">邀请同事</a>
+                    </div> -->
+                </div>
+            </li>
+            <li class="router j_hidetosub" href="/feed/unfinish/all" title="未完成事项">
+                <a><i class="graph graph-guide"></i></a>
+            </li>
+            <li class="router j_hidetosub" href="/feed/watched/all" title="关注事项">
+                <a><i class="graph graph-care"></i></a>
+            </li>
+            <li class="dropdown dropdown-menu-toggle j_tag j_hidetosub">
+                <a class="dropdown-toggle">
+                    <i class="graph graph-label"></i>
+                </a>
+
+                <div class="dropdown-tag dropdown-menu-right dropdown-div border-dropdown">
+                    <div class="dropdown-tag-list clearfix" id="taglist"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

@@ -1,0 +1,8 @@
+/*******header.scss**********/
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav .container .navbar ul li {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

@@ -1,0 +1,54 @@
+<!-- 补签申请 -->
+<div class="fill_det_all" style="width:644px">
+
+	<div class="fill_border pro_lab_div control-group col-12">
+         <label class="fill_float ret_lab">当前日期：</label>
+         <div>{{dateStr}} <input type="hidden" id="dateStr" value="{{dateStr}}"/> 
+         </div>
+    </div>
+	
+	<div class="pro_lab_div control-group col-6">
+		<label class="fill_float ret_lab">日期类型：</label>
+		<div class="controls">
+			<select id="daytype" style="width:120px" class="fill_sel form-control">
+				<option value="workday">工作日</option>
+				<option value="weekend">周末</option>
+				<option value="holiday">节假日</option>
+			</select>
+		</div>
+	</div>
+	
+	<div id="othercheckexactaddress_" style="display: none;" class="pro_lab_div control-group col-6">
+		<label class="fill_float ret_lab">节日名称：</label>
+		<div class="controls">
+			<select id="jieriname" style="width:120px" class="fill_sel form-control required">
+				<option value="">节日名称</option>
+				<option value="元旦">元旦</option>
+				<option value="妇女节">妇女节</option>
+				<option value="清明节">清明节</option>
+				<option value="劳动节">劳动节</option>
+				<option value="端午节">端午节</option>
+				<option value="中秋节">中秋节</option>
+				<option value="国庆节">国庆节</option>
+				<option value="春节">春节</option>
+				<option value="元宵节">元宵节</option>
+			</select>
+		</div>
+	</div>
+	
+	 <div id="work_time" class="fill_border pro_lab_div control-group col-12">
+         <label class="fill_float ret_lab">上班时间：</label>
+         <div><input type="text" class="form-control required" placeholder="上班时间" readonly="readonly" style="width:120px" id="work_start_time">
+         -
+         <input type="text" class="form-control required" placeholder="下班时间" style="width:120px" readonly="readonly" id="work_end_time">
+         </div>
+	</div>
+	
+	 <div id="work_kong" class="fill_border pro_lab_div control-group col-12" style="display: none;">
+	</div>
+	
+	<div class="ret_div_ok">
+		<a class="ret_btn_ok btn btn-primary btn-sm">确定</a>
+		<a class="ret_btn_ok btn btn-sm btn-cancel">取消</a>
+	</div>
+</div>

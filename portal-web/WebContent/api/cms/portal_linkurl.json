@@ -1,0 +1,47 @@
+{
+    "data": {
+        "total": 3,
+        "pageNo": 1,
+        "pageSize": 10,
+        "rows": [
+            {
+                "createtime": "2015-11-18 20:37:57",
+                "creator": "user-002784",
+                "icon": "",
+                "id": 1,
+                "ishow": true,
+                "linkcode": "linkcode-001",
+                "linkd": "http://kms.dtsjy.cn/",
+                "name": "知识管理系统",
+                "owner": null,
+                "sortorder": 1
+            },
+            {
+                "createtime": "2015-11-18 20:38:18",
+                "creator": "user-002784",
+                "icon": null,
+                "id": 3,
+                "ishow": false,
+                "linkcode": "linkcode-727ae053-7930-475e-be31-12c2bd25d0cc",
+                "linkd": "http://www.baidu.com",
+                "name": "百度",
+                "owner": null,
+                "sortorder": 3
+            },
+            {
+                "createtime": "2015-11-18 20:38:43",
+                "creator": "user-002784",
+                "icon": null,
+                "id": 4,
+                "ishow": false,
+                "linkcode": "linkcode-c27292c7-d5d3-46fb-8f48-b72ca41e2b27",
+                "linkd": "324",
+                "name": "234",
+                "owner": null,
+                "sortorder": 2
+            }
+        ]
+    },
+    "msg": "success",
+    "rc": 1
+}

@@ -1,0 +1,28 @@
+{
+    "data": {
+        "activiticode": null,
+        "appcode": "1",
+        "businesscode": "1",
+        "commonstags": null,
+        "createtime": null,
+        "creator": "002644",
+        "deleted": "no",
+        "diagramcode": "123",
+        "id": 1,
+        "isenabled": "receiveform",
+        "sortorder": 9,
+        "mytags": null,
+        "processcode": "1001",
+        "processdesc": "==施工图咨询公司借支申请流程-启动表单==",
+        "processkey": "1",
+        "processname": "施工图咨询公司借支申请流程-启动表单",
+        "processtype": "001",
+        "projectcode": "111",
+        "seqno": 1,
+        "updatetime": null,
+        "updator": null,
+        "vesion": 1
+    },
+    "msg": "success",
+    "rc": 1
+}

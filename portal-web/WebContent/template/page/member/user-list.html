@@ -1,0 +1,183 @@
+
+	<div id="org_container">
+		<aside class="aside">
+			<ul class="menu-group">
+				<li>
+					<div class="menu-head">
+						<i class="menu-icon icon-list"></i>组织成员设置
+					</div>
+					<ul class="menu-group-sub">
+						<!-- <li class="router j_user active" data-href="#member"><a>人员选择</a></li> -->
+						<li class="router j_user" data-href="#member"><a>组织结构</a></li>
+						<!-- <li class="router j_invitation"
+							data-href="/organization/4522889269382076526/invitation"><a>邀请列表</a>
+						</li> -->
+					</ul>
+				</li>
+			</ul>
+			<!-- <div class="dept-user-invite mt-50" id="inviteMembers">
+				<div id="user-invite" class="user-invite form-invite popbox-invite">
+					<div class="control-group">
+						<label class="control-label" for="inputUsername">姓名</label>
+
+						<div class="controls">
+							<input type="text" class="form-control" id="inputUsername"
+								name="username" v-required="true" v-name="name" maxlength="15"
+								placeholder="请输入姓名">
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="inputEmail">联系方式</label>
+
+						<div class="controls">
+							<input type="text" id="inputEmail" class="form-control"
+								name="email" maxlength="50" v-required="true"
+								v-name="emailOrMobile" placeholder="请输入邮箱或手机号码">
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<button id="invite-submit" type="submit"
+								class="btn btn-sm btn-success">邀请</button>
+							<button id="invite-cancel" type="button" class="btn btn-sm hide">取消</button>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</aside>
+		<div class="main main-narrow j_main jscroll">
+			<div class="col-tb">
+				<div class="col-cell w-250 j_depa">
+					<div class="e-title">
+						<ul class="e-title-tab fl">
+							<li class="active tab" data-tab="org-tree-list"><a
+								id="organization-users">部门</a></li>
+							<li class="tab" data-tab="org-group-list"><a
+								id="group-users">群组</a></li>
+						</ul>
+					</div>
+					<a id="show-first-group" class="hide router"></a>
+
+					<div id="org-tree" class="org-tree scrollwrapper bg-white mCustomScrollbar _mCS_21 mCS_no_scrollbar">
+						<div id="mCSB_21" class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside" tabindex="0">
+							<div id="mCSB_21_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position: relative; top: 0; left: 0;" dir="ltr">
+								<div id="org-tree-list">
+									<ul id="org-tree-ul-list" class="ztree">
+									</ul>
+								</div>
+								<div id="org-group-list" class="hide">
+									<a id="add-dept-group">
+										<div class="dept-grouplist-add text-center">添加群组</div>
+									</a>
+
+									<div id="group-message" class="dept-grouplist">
+										<input id="group-input-text" class="form-control" placeholder="群组名称" style="margin:10px 0px 10px 20px; display: none;" type="text">
+										
+										<div id="group-input-btn" class="controls" style="text-align: center;display: none;">
+											<a id="pwd-btn-update" class="btn btn-sm btn-primary js_group_submit" style="margin-right: 6px;">确定</a><a
+												id="pwd-btn-cancel" class="btn btn-sm js_group_cancel">取消</a>
+										</div>
+										
+										<ul id="group-list-ul">
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-cell j_user">
+					<div class="e-title">
+						<div id="org-user-info" class="">
+							<!-- <a class="invite-toggle btn btn-success btn-sm fr mt-8"
+								type="modal">邀请同事加入</a> -->
+							<h5>成员列表</h5>
+						</div>
+						<div id="group-user-info" class="form-horizontal group-info hide">
+							<div class="control-group nomg">
+								<div>
+									<label class="control-label">群组名称：</label>
+
+									<div class="controls">
+										<input type="hidden" id="group-id" name="group.id" value="">
+										<input type="text" class="form-control" id="group-name" name="group.name">
+										<a id="edit-group-user" class="btn btn-sm btn-success router ">设置群组成员</a>
+										<span id="add-users" class="group-tips hide">从下面的用户列表中选择用户即可添加到群组</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right-panel">
+						<div class="caption form-inline">
+							<span id="group-user-checkall" class="hide"><input
+								id="checkAll" class="user-id" type="checkbox"></span><span
+								class="users-list-pinyin"><a class="highlight active" id="ALL">全部</a><a
+								id="degit">#</a><a id="A">A</a><a id="B">B</a><a id="C">C</a><a
+								id="D">D</a><a id="E">E</a><a id="F">F</a><a id="G">G</a><a
+								id="H">H</a><a id="I">I</a><a id="J" class="">J</a><a
+								id="K">K</a><a id="L">L</a><a id="M">M</a><a id="N">N</a><a
+								id="O">O</a><a id="P">P</a><a id="Q">Q</a><a id="R">R</a><a
+								id="S">S</a><a id="T">T</a><a id="U">U</a><a id="V">V</a><a
+								id="W">W</a><a id="X">X</a><a id="Y">Y</a><a id="Z"
+								class="">Z</a></span>
+							<!-- <label class="checkbox users-list-checkbox">
+							<input type="checkbox" id="chk2" title="含离职人员"><i>含离职人员</i></label> -->
+						</div>
+					</div>
+					<div id="user-container" class="row-fluid users-container bg-white scrollwrapper mCustomScrollbar _mCS_22 mCS_no_scrollbar">
+						<div id="mCSB_22"
+							class="mCustomScrollBox mCS-darkblue mCSB_vertical mCSB_inside"
+							tabindex="0">
+							<div id="mCSB_22_container"
+								class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y"
+								style="position: relative; top: 0; left: 0;" dir="ltr">
+								<div id="employee-container" style="mix-height:100px">
+									<div id="memberLoading" class="center-more" style="text-align: center;"><img src="images/loading.gif" title="加载中..."/></div>
+									<ul class="employee-list users-list">
+	
+
+									</ul>
+									<div class="center-more hide">更多...</div>
+								</div>
+							</div>
+							<div id="mCSB_22_scrollbar_vertical"
+								class="mCSB_scrollTools mCSB_22_scrollbar mCS-darkblue mCSB_scrollTools_vertical"
+								style="display: none;">
+								<div class="mCSB_draggerContainer">
+									<div id="mCSB_22_dragger_vertical" class="mCSB_dragger"
+										style="position: absolute; min-height: 30px; height: 0px; top: 0px;"
+										oncontextmenu="return false;">
+										<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+									</div>
+									<div class="mCSB_draggerRail"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div id="entitySlider" class="j_stretchBox stretch-box"></div>
+<input type="hidden" id="showHide" value="false"><!-- 隐藏 --> 
+<!--     <li id="{{id}}" class="clearfix">
+        <a><input type="checkbox" name="userids" class="user-id mr-3 hide"></a>
+        <a class="avatar usercard-toggle" userid="{{id}}">
+            <img alt="avatar" title="查看卡片信息" src="static/images/avatar.png">
+        </a>
+        <a class="name j_entityslider-toggle" userid=""
+           data-id="{{id}}" data-module="profile" title="查看他的资料">{{username}}
+            <font color="red"></font>
+        </a>
+        <span class="email" title="{{email}}">{{email}}</span>
+        <span class="lastlogin" title="最近登入{{updatetime}}/登录总次数1次">最近登入{{updatetime}}/1次</span>
+        <span class="follow-btns"><span class="approved hide" title="已关注，点击取消关注"><i class="icon-ok"></i> 已关注 |
+            <a class="btn-unfollow-cancle">取消</a>
+        </span>
+            <span class="unapproved" title="已发送关注申请">已申请关注</span>
+            <span class="none btn-follow-add hide" title="点击添加关注"> <i class="icon-plus"></i> 添加关注</span>
+        </span>
+    </li> -->

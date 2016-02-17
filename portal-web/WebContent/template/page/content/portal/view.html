@@ -1,0 +1,75 @@
+<div class="process-forms dialog-item active">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form_info" class="forms-content js_processtypeform" style="max-height: 500px;">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee; ">
+					<div class="entity-info clearfix">
+						
+						<div class="control-group col-6">
+							<label class="control-label">显示位置：</label>
+							<div class="controls">
+								<span class="show_val">{{#ifCond sid "==" "1"}}左侧{{else}}{{#ifCond sid "==" "2"}}中间{{else}}右侧{{/ifCond}}{{/ifCond}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块编码：</label>
+							<div class="controls">
+								<span class="show_val">{{columncode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">序号：</label>
+							<div class="controls">
+								<span class="show_val">{{seqno}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模块名称：</label>
+							<div class="controls">
+							<span class="show_val">{{columnname}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">模版编码：</label>
+							<div class="controls">
+							<span class="show_val">{{templatecode}}</span>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label">模块链接地址：</label>
+							<div class="controls">
+								<span class="show_val">{{columnurl}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">查询条件：</label>
+							<div class="controls">
+								<span class="show_val">{{condition}}</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">排序字段：</label>
+							<div class="controls">
+								<span class="show_val">{{columnsort}}</span>
+							</div>
+						</div>
+						 
+						<div class="control-group col-12">
+							<label class="control-label">更多链接地址：</label>
+							<div class="controls">
+								<span class="show_val">{{moreurl}}</span>
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

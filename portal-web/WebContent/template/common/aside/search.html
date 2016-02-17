@@ -1,0 +1,21 @@
+<ul class="menu-group">
+	<li>
+		<div class="menu-head">
+			<i class="menu-icon icon-list"></i>搜索
+		</div>
+		<ul class="menu-group-sub j_all_flowMenu">
+			<li class="{{#ifCond type "==" "all"}}active{{/ifCond}}" data-type="all" data-href="search/all/{{keyword}}"><a> 
+				<span class="fr badge j_unread">3</span><span class="j_type-name">全部</span>
+			</a></li>
+			<li class="{{#ifCond type "==" "process"}}active{{/ifCond}}" data-href="search/process/{{keyword}}">
+				<a> <span class="fr badge j_newComment"></span>
+				<span class="j_type-name">公文</span>
+			</a>
+			</li>
+			<li class="{{#ifCond type "==" "file"}}active{{/ifCond}}" data-href="search/file/{{keyword}}">
+				<a><span class="fr badge j_newComment"></span>
+				<span class="j_type-name pwd-toggle">文档</span></a>
+			</li>
+		</ul>
+	</li>
+</ul>

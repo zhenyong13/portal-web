@@ -1,0 +1,624 @@
+    <div id="dashboards-container" class="main jscroll dashboards-container">
+        <div class="jscroll-content">
+            <div class="col-7 sorts-moudle" id="moudle1" data-sid="1">
+                <!--TODO 填充模板-->
+            </div>
+            <div class="col-5">
+                <div class="portal-right-inner sorts-moudle" id="moudle2" data-sid="2">
+                <!--TODO 填充模板-->
+<!-- 日程 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <li id="mainline-clone" class="entitybox-toggle" data-module="mainline" data-id=""><img
+                src="images/1.png"><span class="j_mainline_name portal-goal-info ellipsis"></span><span
+                class="goal-chart"></span></li>
+        <li id="task-clone" class="j_task-item">
+            <div class="j_e-list-inner e-list-inner e-list-inner entitybox-toggle" data-module="task" data-id=""><span
+                    class="mark mark-normal"><i></i></span><span class="sn-link"></span><span
+                    class="title j_name ellipsis" data-module="task"></span>
+
+                <div class="right"><span class="comment-count"></span><span class="user ellipsis"></span><span
+                        class="date"></span></div>
+                <div class="shortcut"><span class="watch">关注</span><span class="finish"><i
+                        class="icon-todo"></i>标记未完成</span><span class="share" data-entity="employee" data-multi="true">共享</span>
+                </div>
+            </div>
+        </li>
+        <li id="task-create-clone">
+            <div class="e-list-inner"><span class="mark mark-normal"><i></i></span><span class="sn-link">1</span><input
+                    type="text" class="title" placeholder="一句话描述任务..."></div>
+        </li>
+        <dl id="blog-clone" class="j_portal-blog-item portal-blog-item clearfix">
+            <dt class="avatar"><img src="images/avatar.png"></dt>
+            <dd class="blog-box">
+                <div class="blog-header"><span><a class="user  ellipsis usercard-toggle "></a></span><span
+                        class="time"></span><span class="new hide">NEW</span></div>
+                <div class="j_blog-body blog-body"></div>
+                <div class="js_blogallfiles">
+                    <div class="js_blogfiles entity-container attachment" data-url="/base/upload/{id}.json"></div>
+                    <div class="js_blogimgs"></div>
+                </div>
+                <div class="j_blog-coord blog-coord hide"><i class="icon-map-marker" title="地理位置"></i><span
+                        class="blog-address gps-address"></span><a class="blog-map-toggle gps-map hide">地图展示</a></div>
+                <div class="j_blog-detail blog-detail"><p class="j_mainline-count "></p>
+
+                    <p class="j_task-count "></p>
+
+                    <p class="j_customer-count "></p>
+
+                    <p class="j_document-count "></p>
+
+                    <p class="j_workflow-count "></p></div>
+                <div class="ta-r italic c-999"><span class="create-time"></span></div>
+            </dd>
+        </dl>
+        <div id="blog-atta-image-clone" class="js_blog_atta_image hide"><span></span></div>
+        <li id="customer-clone" class="j_portal_item">
+            <div class="e-list-inner entitybox-toggle" data-module="customer" data-id=""><span
+                    class="j_name title ellipsis "></span>
+
+                <div class="right"><span class="comment-count"></span><span class="user ellipsis"></span><span
+                        class="date"></span></div>
+                <div class="shortcut"><span class="watch">关注</span><span class="share" data-entity="employee"
+                                                                         data-multi="true">共享</span></div>
+            </div>
+        </li>
+        <li id="document-clone" class="j_portal_item">
+            <div class="e-list-inner entitybox-toggle" data-module="document" data-id=""><span class="doc-icon"><i></i></span><span
+                    class="j_name title ellipsis "></span>
+
+                <div class="right"><span class="comment-count"></span><span class="user ellipsis"></span><span
+                        class="date"></span></div>
+                <div class="shortcut"><span class="watch">关注</span><span class="share" data-entity="employee"
+                                                                         data-multi="true">共享</span></div>
+            </div>
+        </li>
+        <li id="workflow-clone" class="j_portal_item">
+            <div class="e-list-inner entitybox-toggle" data-module="workflow" data-id=""><span
+                    class="j_name title ellipsis"></span>
+
+                <div class="right"><span class="comment-count"></span><span class="user ellipsis"></span><span
+                        class="date"></span></div>
+                <div class="shortcut"><span class="watch">关注</span><span class="share" data-entity="employee"
+                                                                         data-multi="true">共享</span></div>
+            </div>
+        </li>
+        <li id="calendar-clone">
+            <div class="j_agenda-entity e-list-inner" data-module="agenda" data-id=""><span
+                    class="j_name title ellipsis"></span>
+
+                <div class="right"><span class="user ellipsis"></span><span class="date"></span></div>
+            </div>
+        </li>
+    </div>
+
+	<script id="moudle-template" type="text/x-handlebars-template">
+		<div class="j_portal-col portal-col {{templateid}}" data-id="{{id}}" data-isshow="{{isshow}}"></div>
+	</script>
+    
+    <script id="wfs-template" type="text/x-handlebars-template">
+                    <div class="j_portal-col-head portal-col-head">
+                        <ul class="j_portal-col-nav portal-col-nav">
+                            <li class="workflow-tab"><a data-type="mine" class="mine active">我的待办公文</a></li>
+                            <li class="workflow-tab"><a data-type="subordinates" class="subordinates">下属待办公文</a></li>
+                        </ul>
+                        <a class="j_btn-refresh btn-refresh pull-right hide"><i class="icon-refresh" id="refresh_new_process"></i></a>
+                    </div>
+                    <div class="portal-col-body">
+                        <div id="workflow-loading-my" class="loading_small hide"><span>正在加载数据，请稍后...</span></div>
+                        <ul id="workflow-list" class="j_e-list e-list e-list workflow-list">
+                            {{#if taskTodo.mytasks.rows.length}}
+                            {{#each taskTodo.mytasks.rows}}
+                            <li class="j_portal_item" >
+                                <div class="e-list-inner entitybox-toggle">
+                                    <span class="j_name title ellipsis" data-module="showProcess"  title="{{taskname}}" lang="{{taskcode}}" data-taskname="{{taskname}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" data-processtype="{{processtype}}" data-processcode="{{processcode}}">【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span>
+
+                                    <div class="right"><span class="comment-count"></span>
+                                        <span class="user ellipsis">{{duration}}</span>
+                                        <span class="date">{{starttime}}</span>
+                                    </div>
+                                    <div class="shortcut">
+                                    	<span class="remind-toggle" vel="{{processinstcode}}" data-taskcode="{{taskcode}}" data-id="{{processinstcode}}">提醒</span>
+                                        <span class="watch" watched="{{watched}}" data-id="{{processinstcode}}">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+                                        <span class="share selector-toggle" data-entity="employee" data-multi="true"
+                                              data-id="{{processinstcode}}" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">共享</span>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                            {{else}}
+                            <div class="no-result">暂无待办公文</div>
+                            {{/if}}
+                        </ul>
+                        <ul id="sub-workflow-list" class="j_e-list e-list e-list hide">
+                            {{#if taskTodo.subordinatestasks.rows.length}}
+                            {{#each taskTodo.subordinatestasks.rows}}
+                            <li class="j_portal_item" data-id="{{processinstcode}}">
+                                <div class="e-list-inner entitybox-toggle">
+                                    <span class="j_name title ellipsis"  title="{{taskname}}" lang="{{taskcode}}" data-type="sub-todo" data-taskname="{{taskname}}" data-processname="{{processname}}" data-id="{{processinstcode}}" data-taskcode="{{taskcode}}" processtype="{{processtype}}" data-module="showProcess" >【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span>
+
+                                    <div class="right">
+                                        <span class="user ellipsis">{{assigneename}}</span>
+                                    	<span class="comment-count">{{duration}}</span>
+                                        <span class="date">{{starttime}}</span>
+                                    </div>
+                                    <div class="shortcut">
+                                        <span class="remind-toggle" vel="{{processinstcode}}" data-taskcode="{{taskcode}}" data-id="{{processinstcode}}">提醒</span>
+                                        <span class="watch" watched="{{watched}}" data-id="{{processinstcode}}">{{#if watched}}取消关注{{else}}关注{{/if}}</span>
+                                        <span class="share selector-toggle" data-entity="employee" data-multi="true" data-id="{{processinstcode}}" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">共享</span>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                            {{else}}
+                            <div class="no-result">暂无下属待办公文</div>
+                            {{/if}}
+                            </ul>
+                    </div>
+                    <div class="portal-col-foot">
+                        <div class="portal-option-btns text-center">
+                            <a id="workflow-create" class="btn btn-sm" data-module="creatProcess"><i
+                                    class="icon-upload-alt glyphicon"></i>发起公文（流程）</a>
+                            <a class="btn btn-sm" data-href="#process">进入公文管理</a>
+                        </div>
+                    </div>
+	</script>
+	
+	<script id="projects-template" type="text/x-handlebars-template">
+                    <div class="j_portal-col-head portal-col-head">
+                        <ul class="j_portal-col-nav portal-col-nav">
+                            <li class="mainline-tab"><a class="mine active" data-type="mine"
+                                                        data-module="mainline">我的项目</a>
+                            </li>
+                            <li class="mainline-tab"><a data-type="subordinates" class="subordinates"
+                                                        data-module="mainline">下属项目</a></li>
+                        </ul>
+                        <a class="j_btn-refresh btn-refresh pull-right hide"><i class="icon-refresh"></i></a></div>
+                    <div class="portal-col-body portal-goal">
+                        <ul id="mainline-list" class="j_e-list portal-goal-list clearfix">
+                        
+
+
+<!--<li id="6993659983185315419" class="entitybox-toggle" data-module="mainline" data-id="6993659983185315419">
+<img src="images/1.png">
+<span class="j_mainline_name portal-goal-info ellipsis" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="就想创建一个目标">就想创建一个项目</span>
+<span class="goal-chart circliful" data-percent="0" data-text="0%" data-dimension="60" data-width="1" data-fgcolor="#ee7600" data-bgcolor="#fff" style="width: 60px;">
+	<span class="circle-text" style="line-height: 60px; font-size: 15px;">10%</span>
+	<canvas width="60" height="60" style="width: 60px; height: 60px;"></canvas>
+</span>
+</li>
+-->
+                           
+                           
+                           
+                            <div id="j_portal-goal-add" class="j_portal-goal-add portal-goal-add text-center">
+                            <i  class="icon-plus-thin"></i><span>新建项目</span></div>
+                            
+                            <div id="mainline-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span></div>
+                           
+                            <div class="portal-goal-option">
+                            <a id="mainline-create" class="btn btn-sm btn-block j_portal-goal-add">
+                            <i  class="icon-plus-thin glyphicon"></i>新建项目</a>
+                            <a id="mainline-more" href="/mainlines"   class="router btn btn-sm btn-block">
+                            <i  class="icon-ellipsis glyphicon"></i>更多项目</a></div>
+                        </ul>
+                        
+                        <ul id="sub-mainline-list" class="j_e-list portal-goal-list clearfix hide">
+                            <div class="hide no-result">下属无项目数据</div>
+                            <div id="sub-mainline-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                            </div>
+                            <div class="portal-goal-option"><a id="mainline-create"
+                                                               class="btn btn-sm btn-block j_portal-goal-add"><i
+                                    class="icon-plus-thin glyphicon"></i>新建项目</a><a id="mainline-more"
+                                                                                    href="/mainlines"
+                                                                                    class="router btn btn-sm btn-block"><i
+                                    class="icon-ellipsis glyphicon"></i>更多项目</a></div>
+                        </ul>
+                    </div>
+	</script>
+	
+	<script id="tasks-template" type="text/x-handlebars-template">
+                    <div class="j_portal-col-head portal-col-head portal-col-head-hasicon"><span
+                            class="portal-col-icon task"><i></i></span>
+                        <ul class="j_portal-col-nav portal-col-nav">
+                            <li class="task-tab"><a class="mine active" data-type="mine" data-module="task">今明任务</a></li>
+                            <li class="task-tab"><a data-type="subordinates" class="subordinates" data-module="task">下属今天任务</a></li>
+                        </ul>
+                        <a class="j_btn-refresh  btn-refresh pull-right hide"><i class="icon-refresh"></i></a></div>
+                    <div class="portal-col-body">
+                        <div id="task-list">
+                            <ul id="today-task-list" group="today"
+                                class="j_e-list  j_task-list task-list e-list ui-sortable">
+                                <div data-group="today" class="notask">今天还没有事项安排，点击这里或下面的“<b class="group-add">+</b>”添加一条新事项
+                                </div>
+                                <div id="today-task-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                                </div>
+                            </ul>
+                            <div class="task-lead">明天任务</div>
+                            <ul id="tomorrow-task-list" group="tomorrow"
+                                class="j_e-list  j_task-list  e-list e-list ui-sortable">
+                                <div data-group="tomorrow" class="notask">明天还没有事项安排，点击这里或下面的“<b
+                                        class="group-add">+</b>”添加一条新事项
+                                </div>
+                                <div id="tomorrow-task-loading" class="loading_small hide">
+                                    <span>正在加载数据，请稍后...</span></div>
+                            </ul>
+                        </div>
+                        <div id="sub-task-list" class="hide">
+                            <ul id="sub-today-task-list" class="j_e-list  j_task-list  e-list e-list ui-sortable">
+                                <div class="hide no-result">下属无今天任务</div>
+                                <div id="sub-today-task-loading" class="loading_small hide">
+                                    <span>正在加载数据，请稍后...</span></div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="portal-col-foot">
+                        <div class="portal-option-btns text-center"><a id="task-create" class="btn btn-sm"><i
+                                class="icon-plus-thin glyphicon"></i>新建任务</a><a id="task-more"
+                                                                                class="router btn  btn-sm task-more"
+                                                                                href="/tasks">进入任务协作</a></div>
+                    </div>
+	</script>
+	
+	<script id="diarys-template" type="text/x-handlebars-template">
+                    <div class="j_portal-col-head portal-col-head portal-col-head-hasicon"><span
+                            class="portal-col-icon blog"><i></i></span>
+                        <ul class="j_portal-col-nav portal-col-nav">
+                            <li class="blog-tab"><a data-type="unRead" data-module="blog"
+                                                    class="active unRead">未读日报</a></li>
+                            <li class="blog-tab"><a data-type="subordinates" class="subordinates"
+                                                    data-module="blog">下属昨日工作成效</a></li>
+                        </ul>
+                        <a class="j_btn-refresh btn-refresh pull-right hide"><i class="icon-refresh"></i></a></div>
+                    <div id="blog-list" class="j_e-list portal-col-body">
+                        <div class="no-result">无未读日报</div>
+                        <div id="blog-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span></div>
+                    </div>
+                    <div id="sub-blog-list" class="j_e-list portal-col-body  hide">
+                        <div class="hide no-result">无下属工作成效</div>
+                        <div id="sub-blog-loading" class="loading_small"><span>正在加载数据，请稍后...</span></div>
+                    </div>
+                    <div class="hide blogs-more">更多...</div>
+                    <div class="portal-col-foot">
+                        <div class="portal-option-btns text-center"><a class="btn btn-sm" id="blog-create"><i
+                                class="icon-edit glyphicon"></i>写日报</a><a class="router btn btn-sm"
+                                                                          href="/blog/4522889269382076526/people"
+                                                                          id="other-blog">进入他人日报</a></div>
+                    </div>
+	</script>
+	
+	<script id="notices-template" type="text/x-handlebars-template">
+                        <div id="dynamicinfo" class="dynamicinfo-pane">
+                            <div id="placard" class="right-panel placard">
+                                <div class="portal-col-head"><h3>公司公告</h3><a class="placard-unreaders"
+                                                                             title="点击查看未查看过公司动态的人">(未阅人员)</a><a
+                                        class="placard-history-btn" title="点击查看历史公告">历史</a><a
+                                        class="placard-submit hide" title="发布">发布</a><a class="placard-add"
+                                                                                        title="新建">+</a><a
+                                        class="placard-change hide" title="保存">保存</a></div>
+                                <div class="portal-col-body">
+                                    <div class="placard-edit"><textarea id="placard-textarea" name="placard.content"
+                                                                        class="autosize portal-notice-content"
+                                                                        maxlength="3900"
+                                                                        placeholder="点击这里直接发布公告"></textarea></div>
+                                    <div class="placard-history hide">
+                                        <div class="placard-historys"></div>
+                                        <div class="placard-page-btn"><a id="placard-next"
+                                                                         class="placard-next-disable"
+                                                                         title="下一页">下一页</a><a
+                                                id="placard-pre" class="placard-pre-disable" title="上一页">上一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="unreaders-list" class="unreaders-list  hide"></div>
+                            <div id="placard-history-box-clone" class="placard-history-box hide"><span
+                                    class="placard-history-content ellipsis"></span><span
+                                    class="placard-history-date"></span><a
+                                    class="placard-history-user usercard-toggle"></a></div>
+                            <div id="placard-history-card" class="placard-history-card hide">
+                                <div class="caption"><a class="user usercard-toggle"></a><span
+                                        class="date"></span><a class="close">×</a></div>
+                                <div class="content"></div>
+                            </div>
+                        </div>
+	</script>
+	
+	<script id="customers-template" type="text/x-handlebars-template">
+                        <div class="j_portal-col-head portal-col-head">
+                            <ul class="j_portal-col-nav portal-col-nav">
+                                <li title="未读和未读反馈的客户" class="customer-tab"><a data-type="update"
+                                                                               data-module="customer"
+                                                                               class="update active">有更新客户</a></li>
+                                <li class="customer-tab"><a data-type="subordinates" class="subordinates"
+                                                            data-module="customer">下属客户</a></li>
+                            </ul>
+                            <a class="j_btn-refresh  btn-refresh pull-right hide"><i class="icon-refresh"></i></a>
+                        </div>
+                        <div class="portal-col-body">
+                            <ul id="customer-list" class="j_e-list e-list e-list customer-list">
+                                <div class="no-result">无更新客户数据</div>
+                                <div id="customer-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                                </div>
+                            </ul>
+                            <ul id="sub-customer-list" class="j_e-list e-list e-list customer-list  hide">
+                                <div class="no-result hide">无下属客户数据</div>
+                                <div id="sub-customer-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="portal-col-foot">
+                            <div class="portal-option-btns text-center"><a id="customer-create" class="btn btn-sm"
+                                                                           data-type="customer-create"><i
+                                    class="icon-plus-thin glyphicon"></i>新建客户</a><a class="btn router btn-sm"
+                                                                                    href="/crms/customer"
+                                                                                    data-type="customer-more">进入客户库</a>
+                            </div>
+                        </div>
+	</script>
+	
+	<script id="documents-template" type="text/x-handlebars-template">
+                        <div class="j_portal-col-head portal-col-head">
+                            <ul class="j_portal-col-nav portal-col-nav">
+                                <li title="未读和未读反馈的文档" class="document-tab"><a data-type="update"
+                                                                               data-module="document"
+                                                                               class="update active">有更新文档</a></li>
+                                <li class="document-tab"><a data-type="subordinates" class="subordinates"
+                                                            data-module="document"> 下属文档库</a></li>
+                            </ul>
+                            <a class="j_btn-refresh btn-refresh pull-right hide"><i class="icon-refresh"></i></a>
+                        </div>
+                        <div class="portal-col-body">
+                            <ul id="document-list" class="j_e-list  e-list e-list doc-list">
+                                <div class="no-result">无更新文档数据</div>
+                                <div id="document-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                                </div>
+                            </ul>
+                            <ul id="sub-document-list" class="j_e-list e-list e-list doc-list  hide">
+                                <div class="no-result hide">无下属文档数据</div>
+                                <div id="sub-document-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="portal-col-foot">
+                            <div class="portal-option-btns text-center"><a id="document-create" class="btn btn-sm"
+                                                                           data-type="document-create"><i
+                                    class="icon-upload-alt glyphicon"></i>上传文档</a><a class="btn router btn-sm"
+                                                                                     href="/documents"
+                                                                                     data-type="document-more">进入文档库</a>
+                            </div>
+                        </div>
+	</script>
+<script id="calendar-template" type="text/x-handlebars-template">
+<div class="portal-col-body">
+    <div id="calendar-datatime" class="partal-timepicker">
+        <div class="datepicker" style="height: 100%;">
+     <div class="datepicker-days" style="display: block; height: 100%;">
+         <table class="table-condensed table-full">
+             <thead>
+             <tr class="head-opt">
+                 <th class="prev"><i class="icon-arrow-left"></i></th>
+                 <th colspan="5" class="datepicker-switch"><span
+                         class="switch-month">五月</span><span
+                         class="switch-year">2015</span></th>
+                 <th class="next"><i class="icon-arrow-right"></i></th>
+             </tr>
+             <tr>
+                 <td class="dow">一</td>
+                 <td class="dow">二</td>
+                 <td class="dow">三</td>
+                 <td class="dow">四</td>
+                 <td class="dow">五</td>
+                 <td class="dow">六</td>
+                 <td class="dow">日</td>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <td id="20150427" class="27D 4M 2015Y disabled"></td>
+                 <td id="20150428" class="28D 4M 2015Y disabled"></td>
+                 <td id="20150429" class="29D 4M 2015Y disabled"></td>
+                 <td id="20150430" class="30D 4M 2015Y disabled"></td>
+                 <td id="20150501" class="1D 5M 2015Y">
+                     <div>1</div>
+                 </td>
+                 <td id="20150502" class="2D 5M 2015Y holiday">
+                     <div>2</div>
+                 </td>
+                 <td id="20150503" class="3D 5M 2015Y holiday">
+                     <div>3</div>
+                 </td>
+             </tr>
+             <tr>
+                 <td id="20150504" class="4D 5M 2015Y">
+                     <div>4</div>
+                 </td>
+                 <td id="20150505" class="5D 5M 2015Y">
+                     <div>5</div>
+                 </td>
+                 <td id="20150506" class="6D 5M 2015Y">
+                     <div>6</div>
+                 </td>
+                 <td id="20150507" class="7D 5M 2015Y">
+                     <div>7</div>
+                 </td>
+                 <td id="20150508" class="8D 5M 2015Y">
+                     <div>8</div>
+                 </td>
+                 <td id="20150509" class="9D 5M 2015Y holiday">
+                     <div>9</div>
+                 </td>
+                 <td id="20150510" class="10D 5M 2015Y holiday">
+                     <div>10</div>
+                 </td>
+             </tr>
+             <tr>
+                 <td id="20150511" class="11D 5M 2015Y">
+                     <div>11</div>
+                 </td>
+                 <td id="20150512" class="12D 5M 2015Y">
+                     <div>12</div>
+                 </td>
+                 <td id="20150513" class="13D 5M 2015Y">
+                     <div>13</div>
+                 </td>
+                 <td id="20150514" class="14D 5M 2015Y">
+                     <div>14</div>
+                 </td>
+                 <td id="20150515" class="15D 5M 2015Y">
+                     <div>15</div>
+                 </td>
+                 <td id="20150516" class="16D 5M 2015Y holiday">
+                     <div>16</div>
+                 </td>
+                 <td id="20150517" class="17D 5M 2015Y holiday">
+                     <div>17</div>
+                 </td>
+             </tr>
+             <tr>
+                 <td id="20150518" class="18D 5M 2015Y today">
+                     <div>18</div>
+                 </td>
+                 <td id="20150519" class="19D 5M 2015Y">
+                     <div>19</div>
+                 </td>
+                 <td id="20150520" class="20D 5M 2015Y">
+                     <div>20</div>
+                 </td>
+                 <td id="20150521" class="21D 5M 2015Y">
+                     <div>21</div>
+                 </td>
+                 <td id="20150522" class="22D 5M 2015Y">
+                     <div>22</div>
+                 </td>
+                 <td id="20150523" class="23D 5M 2015Y holiday">
+                     <div>23</div>
+                 </td>
+                 <td id="20150524" class="24D 5M 2015Y holiday">
+                     <div>24</div>
+                 </td>
+             </tr>
+             <tr>
+                 <td id="20150525" class="25D 5M 2015Y">
+                     <div>25</div>
+                 </td>
+                 <td id="20150526" class="26D 5M 2015Y">
+                     <div>26</div>
+                 </td>
+                 <td id="20150527" class="27D 5M 2015Y">
+                     <div>27</div>
+                 </td>
+                 <td id="20150528" class="28D 5M 2015Y">
+                     <div>28</div>
+                 </td>
+                 <td id="20150529" class="29D 5M 2015Y">
+                     <div>29</div>
+                 </td>
+                 <td id="20150530" class="30D 5M 2015Y holiday">
+                     <div>30</div>
+                 </td>
+                 <td id="20150531" class="31D 5M 2015Y holiday">
+                     <div>31</div>
+                 </td>
+             </tr>
+             </tbody>
+             <tfoot style="display: none;">
+             <tr>
+                 <td colspan="7" class="foot-buttons"><span
+                         class="foot-today">今天</span><span
+                         class="foot-tomorrow">明天</span><span
+                         class="foot-future">即将</span><span
+                         class="foot-memo">备忘</span></td>
+             </tr>
+             </tfoot>
+         </table>
+     </div>
+     <div class="datepicker-months" style="height: 100%;">
+         <table class="table-condensed table-full">
+             <thead>
+             <tr class="head-opt">
+                 <th class="prev"><i class="icon-arrow-left"></i></th>
+                 <th colspan="5" class="datepicker-switch">2015</th>
+                 <th class="next"><i class="icon-arrow-right"></i></th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <td colspan="7"><span class="month">一月</span><span
+                         class="month">二月</span><span class="month">三月</span><span
+                         class="month">四月</span><span class="month">五月</span><span
+                         class="month">六月</span><span class="month">七月</span><span
+                         class="month">八月</span><span class="month">九月</span><span
+                         class="month">十月</span><span class="month">十一月</span><span
+                         class="month">十二月</span></td>
+             </tr>
+             </tbody>
+             <tfoot style="display: none;">
+             <tr>
+                 <td colspan="7" class="foot-buttons"><span
+                         class="foot-today">今天</span><span
+                         class="foot-tomorrow">明天</span><span
+                         class="foot-future">即将</span><span
+                         class="foot-memo">备忘</span></td>
+             </tr>
+             </tfoot>
+         </table>
+     </div>
+     <div class="datepicker-years" style="height: 100%;">
+         <table class="table-condensed table-full">
+             <thead>
+             <tr class="head-opt">
+                 <th class="prev"><i class="icon-arrow-left"></i></th>
+                 <th colspan="5" class="datepicker-switch">2015</th>
+                 <th class="next"><i class="icon-arrow-right"></i></th>
+             </tr>
+             </thead>
+             <tbody>
+             <tr>
+                 <td colspan="7"><span class="year old">2010</span><span
+                         class="year old">2011</span><span
+                         class="year old">2012</span><span
+                         class="year old">2013</span><span
+                         class="year old">2014</span><span
+                         class="year active">2015</span><span
+                         class="year new">2016</span><span
+                         class="year new">2017</span><span
+                         class="year new">2018</span><span
+                         class="year new">2019</span><span
+                         class="year new">2020</span><span
+                         class="year new">2021</span></td>
+             </tr>
+             </tbody>
+             <tfoot style="display: none;">
+                        <tr>
+                            <td colspan="7" class="foot-buttons"><span
+                                    class="foot-today">今天</span><span
+                                    class="foot-tomorrow">明天</span><span
+                                    class="foot-future">即将</span><span
+                                    class="foot-memo">备忘</span></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <ul id="calendar-list" class="j_e-list e-list e-list calendar-list">
+            <div class="no-result">无日程数据(双击日期数字新建日程)</div>
+            <div id="calendar-loading" class="loading_small hide"><span>正在加载数据，请稍后...</span>
+            </div>
+        </ul>
+        <ul id="sub-calendar-list" class="j_e-list e-list e-list  hide">
+            <div class="hide no-result">无下属日程</div>
+            <div id="sub-calendar-loading" class="loading_small"><span>正在加载数据，请稍后...</span>
+            </div>
+        </ul>
+    </div>
+    <div class="portal-col-foot">
+        <div class="portal-option-btns text-center"><a id="calendar-create" class="btn btn-sm "><i
+                class="icon-stack-2 glyphicon"></i>新建日程</a><a class="btn btn-sm router"
+                                                              href="/calendar">进入日程</a></div>
+    </div>
+</script>

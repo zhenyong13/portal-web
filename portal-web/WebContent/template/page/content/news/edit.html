@@ -1,0 +1,104 @@
+<!-- <div class="e-title"><a title="关闭" id="btn-close" class="fr close">×</a>
+<i class="imgcon img-profile"></i><h5>新增</h5></div> -->
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>标题：</label>
+							<div class="controls">
+								<input type="text" id="title" class="form-control required" style="width:89%" value="{{title}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+								<input type="hidden" id="uuid" class="form-control" value="{{uuid}}"/>
+								<input type="hidden" id="creator" class="form-control" value="{{creator}}"/>
+								<input type="hidden" id="createtime" class="form-control" value="{{createtime}}"/>
+								<input type="hidden" id="issuecode" class="form-control" value="{{issuecode}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>来源：</label>
+							<div class="controls">
+								<input type="text" id="source" class="form-control required" value="{{source}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">置顶：</label>
+							<div class="controls">
+								<select id="topshow"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>新闻分类：</label>
+							<div class="controls">
+								<select id="newstype"></select>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>状态：</label>
+							<div class="controls">
+								<select id="status"></select>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">图片：</label>
+							<div class="controls">
+							<div class="upload-btn-wrap acl-hide html5">
+								<a class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+									<i class="icon-upload-alt"></i> 上传图片
+								</a>
+								<span id="newsImg-showfiles" data-code="maindoc" style="display:block;">
+									{{#if img}}
+										<span class="file-show" data-name="{{img}}" data-code="{{img}}">
+										<a  class="filename_view js_file_view" data-file-id="{{code}}">{{img}}</a>
+										<a href="{{../../baseUrl}}{{img}}" target="_blank" class="file_view fa fa-download"></a>
+										<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>
+										</span>
+									{{/if}}
+								</span>
+							</div>
+							<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="newsImgUpload" name="maindoc" class="js_new_img_upload" accept="" multiple="multiple"/>
+							</div>
+						</div>
+						
+						<div class="control-group col-12">
+							<label class="control-label">附件：</label>
+							<div class="controls">
+							<div class="upload-btn-wrap acl-hide html5">
+								<a class="btn btn-xs btn-info" style="position: relative; z-index: 0;">
+									<i class="icon-upload-alt"></i> 上传附件
+								</a>
+								<span id="feedbackUpload-showfiles" data-code="maindoc" style="display:block;">
+									{{#each attachment}}
+										<span class="file-show" data-name="{{name}}" data-code="{{code}}">
+										<a  class="filename_view js_file_view" data-file-id="{{code}}" >{{name}}</a>
+										<a href="{{../../baseUrl}}{{code}}" target="_blank" class="file_view fa fa-download"></a>
+										{{#if editable}}<button type="button" data-fileid="{{code}}"  class="close_file file_remove_file js_del_file" title="删除">×</button>{{/if}}
+										</span>
+									{{/each}}
+								</span>
+							</div>
+							<input style="font-size: 1px;top:12px;  left: 107px;  cursor: pointer; opacity: 0; position: absolute; width: 12%; height: 33%;" type="file" id="feedbackUpload" name="maindoc" class="js_file_upload" accept="" multiple="multiple"/>
+							</div>
+						</div>
+
+						<div class="control-group col-12">
+							<label class="control-label"><span class="red">*</span>新闻内容：</label>
+						</div>
+						<div id="feedbackContent" class="control-group col-12">
+							 <script id="feedbackEditor_{{uuid}}" type="text/plain"></script>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px;width: 100%;float: left;margin-bottom: 20px;">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

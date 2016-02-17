@@ -1,0 +1,42 @@
+{
+    "data": {
+        "pageSize": 10, 
+        "pageNo": 2, 
+        "total": 100, 
+        "rows": [
+            {
+                "id": 1, 
+                "groupcode": "23423", 
+                "usercode": "134123423", 
+                "username": "群组用户", 
+                "isadmin": "",
+                firstchar:"A"
+            },
+             {
+                "id": 1, 
+                "groupcode": "", 
+                "usercode": "13657", 
+                "username": "顺枯干", 
+                "isadmin": "",
+                firstchar:"A"
+            }, {
+                "id": 23, 
+                "groupcode": "123", 
+                "usercode": "123", 
+                "username": "顶替", 
+                "isadmin": "",
+                firstchar:"D"
+            },
+             {
+                "id": 4, 
+                "groupcode": "3121", 
+                "usercode": "5674", 
+                "username": "茜要", 
+                "isadmin": "",
+                firstchar:"F"
+            }
+        ], 
+        "msg": "", 
+        "rc": 1
+    }
+}

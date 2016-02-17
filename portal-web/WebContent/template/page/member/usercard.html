@@ -1,0 +1,94 @@
+<div class="modal-content">
+	<div class="modal-body">
+		<div id="noauthority-profile">
+			<div class="panel-body nopd">
+				<div class="usersummary">
+					<div id="userSummary-info" class="usersummary">
+						<div class="clearfix usersummary-top">
+							<div class="avatar-info ps-r fl">
+								<div>
+									<a class="avatar"><img src="{{userinfo.avatarcode}}" class="media-object"></a>
+								</div>
+								<div class="avatar-wechat-container">
+									<a class="upload-toggle ta-c hide">更换头像</a>
+									<!-- <a class="btn-wechat router wechat-toggle">发微信</a> -->
+								</div>
+							</div>
+							<div class="profile-info">
+								<span class="link-modify fr">
+									<a href="/profile" class="btn btn-xs btn-success mr-5 profile-update router hide" title="修改个人信息">
+									<i class="icon-pencil glyphicon"></i>修改</a></span>
+								<span class="name">{{userinfo.username}}</span>
+								<span class="sex c-999 ml-10">{{#ifCond userinfo.sex "==" "male"}}男{{/ifCond}}{{#ifCond userinfo.sex "==" "female"}}女{{/ifCond}}</span>
+								<span class="department ds-b c-999">{{userinfo.orgname}}（{{userinfo.workno}}）</span>
+								<span class="follow-btns">
+									
+								<span class="approved hide" title="已关注，点击取消关注"><i class="icon-ok"></i> 已关注 |<a
+										class="btn-unfollow-cancle"> 取消</a></span>
+								<span class="unapproved hide" title="已发送关注申请">已申请关注</span>
+								<span class="none btn-follow-add hide" title="点击添加关注">
+								<i class="icon-plus"></i> 添加关注</span></span>
+								<div class="ds-ib-w">
+									<span class="email ellipsis">{{userinfo.email}}</span><a
+										class="pwd-toggle change-password ml-5 hide">修改密码</a>
+								</div>
+							</div>
+						</div>
+						<ul class="profile-detail clearfix js_profiledetail">
+							<li><label>手机：</label><span class="span ellipsis mobile">{{userinfo.mobileno}}</span></li>
+							<li><label>电话：</label><span class="span ellipsis telephone">{{userinfo.officephone}}</span></li>
+							<li><label>上级：</label><span class="span ellipsis superior">{{userinfo.leader}}</span></li>
+							<li><label>职级：</label><span class="span ellipsis rank">{{userinfo.positionlevel}}</span></li>
+							<li><label>职位：</label><span class="span ellipsis status">{{userinfo.userlevel}}</span></li>
+							<li><label>职务：</label><span class="span ellipsis role" title="系统管理员">{{userinfo.userrank}}</span></li>
+						</ul>
+						<ul class="statistic statistic-themeB clearfix ta-c j_followEach">
+							<li data-placement="top" data-toggle="tooltip"
+								class="followCount" title="" style="display: none;"
+								data-original-title="他关注的人"><i>0</i><span>关注</span></li>
+								
+							<li data-placement="top" data-toggle="tooltip" class="fansCount"
+								title="" style="display: none;" data-original-title="关注他的人"><i>0</i><span>被关注</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip"
+								class="subordinateCount" title="" style="display: none;"
+								data-original-title="他的下属"><i>0</i><span>下属</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip" class="taskCount"
+								title="" data-original-title="他创建的任务"
+								aria-describedby="tooltip488590"><i>{{userstatis.projectnum}}</i><span>项目</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip" class="blogCount"
+								title="" data-original-title="他的日报"><i>{{userstatis.reportnum}}</i><span>日报</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip"
+								class="documentCount" title="" style="display: none;"
+								data-original-title="他上传的文档"><i>{{userstatis.processnum}}</i><span>文档</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip"
+								class="customerCount" title="" data-original-title="他负责的客户"><i>{{userstatis.customernum}}</i><span>客户</span></li>
+							<!-- data-href="#process/sub-todo/{{userinfo.usercode}}" -->
+							<li data-placement="top" data-toggle="tooltip"  class="flowCount" 
+								title="" data-original-title="他提交的公文" ><i >{{userstatis.processnum}}</i><span>公文</span></li>
+							
+							<li data-placement="top" data-toggle="tooltip"
+								class="reportCount" title="" style="display: none;"
+								data-original-title="他创建的报告"><i>0</i><span>报告</span></li>
+						</ul>
+						<div class="login-info">
+							<a class="btn-attendance locus-toggle fr hide"
+								user-id="4523312831837269379" user-name="zhanghs"><i
+								class="icon-map-marker mr-3"></i>考勤轨迹</a><span>最近登录：<i
+								class="last-login">{{logintime}}</i></span><span>状态：<i
+								class="login-count">{{state}}</i></span>
+						</div>
+					</div>
+				</div>
+				<div id="visitInfo"></div>
+			</div>
+		</div>
+		<!-- <p class="hint">
+			您当前不具有对<a class="noauthority-username">zhanghs</a>工作的查看权限！请点击右上的“添加关注”，待对方同意后，您即可查看。
+		</p> -->
+	</div>
+</div>

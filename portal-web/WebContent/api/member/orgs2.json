@@ -1,0 +1,47 @@
+{
+    "data": {
+        "pageSize": 10, 
+        "pageNo": 2, 
+        "total": 100, 
+        "rows": [
+            {
+                "id": 211, 
+                "orgcode": "org-501", 
+                "orgname": "广州设计院", 
+                "parentcode": "", 
+                "parentname": "", 
+                "orgtype": "", 
+                "orglevel": ""
+            },
+             {
+                "id": 2111, 
+                "orgcode": "org-5112", 
+                "orgname": "项目部", 
+                "parentcode": "org-501", 
+                "parentname": "", 
+                "orgtype": "", 
+                "orglevel": ""
+            },
+             {
+                "id": 3111, 
+                "orgcode": "org-51123", 
+                "orgname": "项目部3", 
+                "parentcode": "org-501", 
+                "parentname": "", 
+                "orgtype": "", 
+                "orglevel": ""
+            },
+             {
+                "id": 413, 
+                "orgcode": "org-5212", 
+                "orgname": "可部", 
+                "parentcode": "org-501", 
+                "parentname": "", 
+                "orgtype": "", 
+                "orglevel": ""
+            }
+        ]
+    }, 
+    "msg": "", 
+    "rc": 1
+}

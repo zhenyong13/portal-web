@@ -1,0 +1,263 @@
+
+<div class="cooperative-work-div">
+
+<!-- 左边 -->
+<div id="leftModule"></div>
+
+<div id="rightOutter">
+	<!-- 右左 -->
+	<div id="middleModule"></div>
+	
+	<!-- 右右 -->
+	<div id="rightModule"></div>
+</div>	
+
+<div class="bottom-top center all-clear">
+    <img src="images/sb_logo.png">
+	<div><a>广州地铁设计研究院有限公司 Copyright 2005-2012 粤ICP备12080986号</a></div>
+</div>	
+</div>
+
+
+<!-- 新闻中心 -->
+<script id="newscenter-template" type="text/x-handlebars-template">
+<div class="newsBox">
+
+<div id="imageSwiper" class="imageSwiper">
+	<ul>
+		{{#each columnList.imagenews}}
+			<li>
+				<a href="#{{newsurl}}">
+				<img class="news-img-size" src="{{../baseurl}}download?filecode={{img}}" >
+				<span class="newsImg_tl">{{title}}</span>
+				</a>
+			</li>
+		{{/each}}
+    </ul>
+    
+	<div id="swiperPrev"></div>
+	<div id="swiperNext"></div>
+
+	<div class="slideBar"></div>
+</div> 
+
+<div class="newsRht">
+	<div class="newListbox">
+		{{#each columnList.rows}}
+			{{#if topshow}}
+				<div class="news-title-font"><a href="#newsdetail/{{newstype}}/{{id}}">{{title}}</a></div>
+			{{/if}}
+		{{/each}}
+		 <ul>
+			{{#each columnList.rows}}
+				{{#ifCond topshow "==" false}}
+				<li>
+					<img src="images/dateway/cycle.png" class="gat_ioc_img">
+					<a class="gat_cont_a" href="#newsdetail/{{newstype}}/{{id}}">{{title}}</a>
+					<a class="gat_news_time">{{dateformat publishtime 'yyyy-MM-dd'}}</a>
+				</li>
+				{{/ifCond}}
+			{{/each}}
+		</ul>
+	</div>
+</div>
+
+</div>
+</script>
+
+<!-- 代办事项 -->
+<script id="todoitems-template" type="text/x-handlebars-template">
+<div class="m_box">
+{{#each columnList.rows}}
+<li data-id="{{processinstcode}}" class="processitems" data-taskname="{{taskname}}" data-type="my-todo" data-processname="{{processname}}" data-module="showProcess" data-processcode="{{processcode}}" data-taskcode="{{taskcode}}">
+	<img src="images/dateway/cycle.png" class="gat_ioc_img">
+	<a class="gat_cont_a" href="javascript:void(0)" >【<span class="process-font-weight">{{processname}}</span>{{#if taskname}}-{{taskname}}{{/if}}】{{#if title}}-{{title}}{{/if}}</span></a>
+	{{#if createtime}}<a class="gat_news_time">{{dateformat createtime 'yyyy-MM-dd'}}</a>{{/if}}
+	<a class="gat_news_time">{{duration}}</a>
+</li>
+{{/each}}
+</div>
+</script>
+
+
+<!-- 未读邮件 -->
+<script id="todoemail-template" type="text/x-handlebars-template">
+<div class="m_box">
+{{#each columnList.rows}}
+<div>
+	<img src="images/dateway/letter_icon.png" class="gat_ioc_img">
+	<a class="gat_cont_a" href="{{infourl}}">{{infoname}}</a>
+	{{#if urgent}}<img class="news_jj_img" src="images/dateway/news_ji.png">{{/if}}
+	{{#if publishtime}}<a class="gat_news_time">{{dateformat publishtime 'yyyy-MM-dd'}}</a>{{/if}}
+</div>
+{{/each}}
+</div>
+</script>
+
+</div>
+</script>
+<!-- 规范文档 -->
+<script id="specification-template" type="text/x-handlebars-template">
+<div class="middle-half">
+<div class="cooperative-por">
+<ul class="specification-ul">
+	<li class="all-clear">
+		{{#each columnList.rows}}
+		<div class="specification-img-div">
+			<span class="specification-img-span">
+				<img alt="{{name}}" src="images/dateway/folder.png">
+			</span>
+			<span>{{name}}</span>
+		</div>
+		{{/each}}
+	</li>
+</ul>
+</div>
+</div>
+</script>
+
+<!-- 左边 -->
+<!-- 友情链接 -->
+<script id="friendlylink-template" type="text/x-handlebars-template">
+<div class="friendly-link">
+<ul>
+{{#each columnList.rows}}
+	{{#ifCond ishow "==" "1"}}
+	<li><a href="{{linkd}}" title="{{name}}" target="_blank">{{name}}</a></li>
+	{{/ifCond}}
+{{/each}}
+</ul>
+</div>
+</script>
+
+<!-- 协同办公 -->
+<script id="synergism-template" type="text/x-handlebars-template">
+<div class="cooperative-por">
+		{{#each columnList.rows}}
+			{{#ifCond ishow "==" "1"}}
+			<div class="cooperative-img-div {{#if isClose}}grey{{/if}}">
+				<a href="{{../../baseurl}}{{linkd}}" >
+				<span class="cooperative-img-span">
+					<img alt="{{name}}" src="{{../../baseurl}}download?filecode={{icon}}">
+				</span>
+				<span>{{name}}</span>
+				</a>
+			</div>
+		{{/ifCond}}
+		{{/each}}
+		
+
+		{{#ifCond columnList.rows.length ">=" "11"}}
+		<div class="cooperative-img-div">
+			<a href="#moreSn">
+			<img src="images/dateway/ic_15.png">
+			<span >更多</span>
+			</a>
+		</div>
+		{{/ifCond}}
+</div>
+</script>
+<!-- 右边 -->
+<!-- 通知公告 -->
+<script id="noticelist-template" type="text/x-handlebars-template">
+<div class="notice-solid">
+
+{{#each columnList.rows}}
+	{{#ifCond topshow "==" true}}
+		<div class="notice-div">
+			<div class="nt_con"><a  href="#noticedetail/{{id}}">{{content}}</a></div>	
+	 	   <div class="nt_info">
+				<span class="nt_name">{{username}}</span>
+				<span class="nt_time">{{createtime}}</span>
+			</div>
+		</div>
+	{{/ifCond}}
+{{/each}}
+
+<div class="linebox"></div> 
+
+{{#each columnList.rows}}
+	{{#ifCond @index "<=" "2"}}
+		{{#ifCond topshow "=="false}}
+			{{#ifCond @index "!=" "0"}} 
+				<div class="linebox"></div>
+			{{/ifCond}}
+			<div class="notice-div">
+				<div class="nt_con"><a  href="#noticedetail/{{id}}">{{content}}</a></div>	
+	 	  	 <div class="nt_info">
+					<span class="nt_name">{{username}}</span>
+					<span class="nt_time">{{createtime}}</span>
+				</div>
+			</div>
+		{{/ifCond}}
+	{{/ifCond}}
+{{/each}}
+</div>
+</script>
+
+<!--会议公告 -->
+<script id="meetinglist-template" type="text/x-handlebars-template">
+<div class="meeting-solid">
+<ul>
+{{#each columnList.rows}}
+	<li><a href="#meetingdetail/{{id}}">{{meetname}}</a></li>
+{{/each}}
+</ul>
+</div>
+</script>
+<!-- 专题策划 -->
+<script id="topicplanlist-template" type="text/x-handlebars-template">
+<div class="meeting-solid">
+{{#each columnList.rows}}
+<div class="topic-div">
+	<a href="#" title="{{name}}"><img src="{{imgurl}}"></a>
+</div>
+{{/each}}
+</div>
+</script>
+<!-- 生日活动模块 -->
+<script id="birthdaylist-template" type="text/x-handlebars-template">
+<div class="meeting-solid" id="meetingBox">
+	<div class="mb_container">
+		<div class="mb_innr" style="float:left;overflow:hidden;">
+		{{#each columnList.rows}}
+			<div class="birthday-div">
+					<img src="{{../baseurl}}download?filecode={{avatarcode}}" class="birthday-toggle" usercode={{usercode}} style="cursor: pointer;">
+					<img src="images/dateway/cake.png" width="18" height="18" class="cake"><span title="{{username}}" >{{username}}</span>
+			</div>
+		{{/each}}
+		</div>
+	</div>
+</div>
+</script>
+
+<!-- 左侧框架大模块  -->	
+<script id="leftModule-template" type="text/x-handlebars-template">
+<div class="webindex-synergism j-{{columncode}}">
+	<div class="m_tl">
+		<h2>{{columnname}}</h2>
+	</div>
+</div> 
+</script>		
+ 
+<!-- 中间框架大模块  -->	 
+<script id="middleModule-template" type="text/x-handlebars-template">
+<div class="door_heig j-{{columncode}}">
+	<div class="m_tl tl_{{columncode}}">
+		<i></i>
+       	<h2>{{columnname}}</h2>
+		<a href="{{moreurl}}" class="right_more">&gt;&gt;</a>
+	</div>
+</div>		 
+</script>
+	
+<!-- 右间框架大模块  -->	 
+<script id="rightModule-template" type="text/x-handlebars-template">
+<div class="right-div j-{{columncode}}">
+	<div class="m_tl tl_{{columncode}}">
+		<i></i>
+		<h2>{{columnname}}</h2>
+       	<a href="{{moreurl}}" class="right_more">&gt;&gt;</a>
+	</div>
+</div>
+</script>			 

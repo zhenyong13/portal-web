@@ -1,0 +1,35 @@
+﻿
+        <div class="jscroll-content">
+			<div class="gat_big">
+				<div class="news_all">
+					<div class="com_news form-category-hd">
+						<div class="com_news_til"><span><a class="com_news_til" href="#index">门户首页>></a></span><span><a id="top_menu" class="com_news_til" href="#noticemore">公告列表</a>>></span><span id="current_title" class="a_color">公告详情</span></div>
+					 </div>
+				</div>
+				<div>
+	
+					<div id="info_detail" class="mom_title" style="width:100%;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- 左侧导航-->
+<script id="more-info-left-menu-template" type="text/x-handlebars-template">
+{{#each menuList}}
+  <div {{#if isdefault}}class="dh_img"{{/if}}><a href="#newsmore/{{dictcode}}">{{dictname}}</a></div>
+{{/each}}
+</script>
+<script id="more-info-detail-template" type="text/x-handlebars-template">
+<div class="mom_news_title">{{title}}</div>
+<div class="mom_news_por">
+	<span>作者：</span>
+	<span>{{publisher}} &nbsp;&nbsp;&nbsp;&nbsp;</span>
+	<span>来源：</span>
+	<span>{{source}} &nbsp;&nbsp;&nbsp;&nbsp;</span>	
+	<span>时间：</span>
+	<span>{{createtime}}</span>
+</div>
+<div class="mom_news_cont">{{#outputhtml content}} {{/outputhtml}}</div>
+</script>

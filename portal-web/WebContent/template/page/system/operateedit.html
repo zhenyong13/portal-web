@@ -1,0 +1,165 @@
+<div class="process-forms">
+	<div class="jscroll">
+		<div class="forms-body">
+			<div id="module_form" class="forms-content js_processtypeform">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>工号：</label>
+							<div class="controls">
+								<input type="text" id="workno" class="form-control required" value="{{workno}}"/>
+								<input type="hidden" id="tid" class="form-control" value="{{id}}"/>
+								<input type="hidden" id="avatarcode" value="{{avatarcode}}"/>
+								<input type="hidden" id="signfilecode" value="{{signfilecode}}"/>
+							</div>
+						</div>
+						
+						
+						<div class="control-group col-3">
+							 
+							<div class="controls">
+								<button class="btn btn-info" type="button" style="width: 50px; height: 25px;padding: 0;"><i class="icon-upload-alt"></i>头像</button>
+								<input id="avatarcodeUpload" data-id="avatarcode" data-params='{"filetype":"avatar","realfolder":"avatars","foldercode":"avatars"}' style="top:8px;  left: 50px;  cursor: pointer; opacity: 0; position: absolute; width: 27%;" type="file" name="fileupload" multiple="multiple"  class="js_fileupload_"/>
+								<img id="avatarcodeimg" style="height: 30px;  width: 30px; margin-left: 10px;  border-radius: 50%;" src="{{#if avatarcode}}{{baseurl}}{{avatarcode}}{{else}}images/avatar.png{{/if}}">
+							</div>
+						</div>
+						
+						<div class="control-group col-3">
+								<button class="btn btn-info" type="button"  style="width: 50px; height: 25px;padding: 0;"><i class="icon-upload-alt"></i>签名</button>
+								<input id="signfilecodeUpload" data-id="signfilecode" data-params='{"filetype":"usersign","realfolder":"usersign","foldercode":"usersign"}'  style="top:10px;  left: 5px;  cursor: pointer; opacity: 0; position: absolute; width: 27%;" type="file" name="fileupload" multiple="multiple"  class="js_fileupload_"/>
+								<img id="signfilecodeimg" style="height: 30px;  width: 60px; margin-left: 10px; border-radius: 50%;" src="{{#if signfilecode}}{{baseurl}}{{signfilecode}}{{else}}images/sign.gif{{/if}}">
+						</div>
+						
+						{{#if id}}
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>用户编码：</label>
+							<div class="controls">
+								<input type="text" id="usercode" class="form-control required" value="{{usercode}}"/>
+							</div>
+						</div>
+						{{/if}}
+						<div class="control-group col-6">
+							<label class="control-label"><span class="red">*</span>用户名称：</label>
+							<div class="controls">
+								<input type="text" id="username" class="form-control required" value="{{username}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">所属组织：</label>
+							<div class="controls">
+								 <input type="text" id="parentname" class="form-control" value="{{orgname}}" readonly="readonly"/>
+								 <input type="hidden" id="parentcode" value="{{orgcode}}"/>
+								 <a class="icon-search js_search_dept" style="position: relative;position: relative;left: -20px;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>
+						 
+						<div class="control-group col-6">
+							<label class="control-label">性别：</label>
+							<div class="controls">
+								<select id="sex" class="form-control">
+									<option value="male" {{#ifCond sex "==" "male"}}selected{{/ifCond}}>男</option>
+									<option value="female" {{#ifCond sex "==" "female"}}selected{{/ifCond}}>女</option>
+								</select>
+							</div>
+							
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">上级领导：</label>
+							<div class="controls">
+								<input type="hidden" id="userleader" class="form-control" value="{{leadercode}}"/>
+								<div class="typeahead-wrapper" style="border: 0px solid #a3adba">
+									<div class="remind-user">
+										<input id="leader_man" data-code="" type="text" class="control-input typeahead search" value="{{leaderman}}"
+											data-entity="employee" data-multi="true" style="width:205px !important;height:30px" placeholder="输入姓名">
+										<div id="typeahead-div" class="tt-suggestion border-dropdown" style="width:205px;margin:28px 0 0 0px;border: 0px solid #a3adba">
+											<div class="loading_small employee" style="display: none;">正在加载数据...</div>
+											<div id="searchListL" class="userselectlist">
+												 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">拼音：</label>
+							<div class="controls">
+								<input type="text" id="pinyin" alt="/[A-Za-z]{1,}/" class="form-control pattern" value="{{pinyin}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职务：</label>
+							<div class="controls">
+								<input type="text" id="userrank" class="form-control" value="{{userrank}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职位：</label>
+							<div class="controls">
+								<input type="text" id="userlevel" class="form-control" value="{{userlevel}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">职位级别：</label>
+							<div class="controls">
+								<input type="text" id="positionlevel" class="form-control" value="{{positionlevel}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">手机号码：</label>
+							<div class="controls">
+								<input type="text" id="mobileno" class="form-control " value="{{mobileno}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">邮箱：</label>
+							<div class="controls">
+								<input type="text" id="email" class="form-control email" value="{{email}}"/>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label">分管组织：</label>
+							<div class="controls">
+								 <input type="text" id="extorgname" class="form-control" value="{{extorgname}}" readonly="readonly"/>
+								 <input type="hidden" id="extorgcode" value="{{extorgcode}}"/>
+								 <a class="icon-search js_search_dept_checkbox" style="position: relative;position: relative;left: -20px;"></a>
+								<!-- <span class="selected_dept_show"></span> -->
+							</div>
+						</div>
+						<!-- <div class="control-group col-12">
+							<label class="control-label">角色：</label>
+							<div class="controls">
+								 <a class="icon-plus js_search_role" style="margin-right: 10px;position: relative;"></a>
+								 <span class="selected_role_show"></span>
+							</div>
+						</div> -->
+						<div class="control-group col-12">
+							<label class="control-label">地址：</label>
+							<div class="controls">
+								<input type="text" id="address" class="form-control" style="width:600px" value="{{address}}"/>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label">用户简介：</label>
+							<div class="controls">
+								<textarea class="form-control" style="width:600px; height:50px" id="userdesc">{{userdesc}}</textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="submit" class="btn btn-sm btn-primary js_form_submit" style="margin-right: 6px;">确定</a>
+						<a id="cancel" class="btn btn-sm js_form_cancel">取消</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="sel-personshow-template" type="text/x-handlebars-template">
+{{#each persons}}
+	 <span class="file-show" style="margin-left:10px;" data-code="{{code}}"><a id="{{code}}" data-name="{{name}}">{{name}}</a> <a class="close_file js_close_dept file_remove_file" title="删除">×</a></span>
+{{/each}}
+</script>

@@ -1,0 +1,65 @@
+ 
+    	<div class="js_custom_category" style="display:none;padding-top:1px;"></div>
+        <div id="formmanagelist" class="j_managelist_scroll scrollwrapper formmanage-wrapper toolkit-panel" style="height:100%;">
+        	
+            <div class="toolkit toolkit-lg toolkit-bar clearfix">
+                <ul class="toolkit-list  fl js_formtab">
+                    {{#each typelist}}
+                    	<li class="toolkit-item toolkit-item-tab {{#if @index}}{{else}}active{{/if}}" data-formtype="{{code}}" data-parentcode="{{pcode}}">
+                    	<a><i class="{{iconclass}}"></i>{{name}}
+                    	{{#ifCond code "==" "form-default"}}
+                    		{{else}}
+                    		{{#if @index}}
+                    			<button type="button" data-id="{{id}}" data-typecode="{{code}}" data-typename="{{name}}" data-parentcode="{{pcode}}" data-sortorder="{{sortorder}}" data-status="{{status}}" data-iconclass="{{iconclass}}" style="position: relative;top: 16px;left: 8px;display: none;font-size: 14px;"  class="close js_edit_type" title="编辑">≡</button>	
+                    			{{#if values.length}}{{else}}
+                    			<button type="button" data-id="{{id}}" style="position: relative;top: 16px;left: 8px; display: none;font-size: 14px;"  class="close js_del_type" title="删除">×</button>
+                    			{{/if}}
+                    		{{else}}
+                    			<button type="button" data-id="{{id}}" data-typecode="{{code}}" data-typename="{{name}}" data-parentcode="{{pcode}}" data-sortorder="{{sortorder}}" data-status="{{status}}" data-iconclass="{{iconclass}}" style="position: relative;top: 16px;left: 8px; font-size: 14px;"  class="close js_edit_type" title="编辑">≡</button>	
+                    			{{#if values.length}}
+                    			{{else}}
+                    			<button type="button" data-id="{{id}}" style="position: relative;top: 16px;left: 8px;font-size: 14px;"  class="close js_del_type" title="删除">×</button>
+                    			{{/if}}
+                    			<!-- <i class="fa fa-trash-o"></i>	
+                    			<i class="fa fa-times"></i>	 -->
+                    		{{/if}}
+                    	{{/ifCond}}
+                    	</a>
+                    	</li>
+                    {{/each}}
+                </ul>
+                <ul class="toolkit-list fr j_toolList">
+                    <!-- <li class="toolkit-item search search-right formSearch js_searchform">
+                    <input type="text" id="companyformsearch-keywords" style="width: 140px;padding-left: 2px;" class="form-control js_searchkeyword">
+                    <i class="icon-search" title="表单搜索"></i>
+                    </li> -->
+                    <li><a class="toolkit-item btn btn-sm btn-warning js_newcategory"><i
+                            class="icon-plus-thin glyphicon"></i>新建分类</a></li>
+                    <li><a class="toolkit-item btn btn-sm btn-success js_buildNewForm"><i
+                            class="icon-plus-thin glyphicon"></i>新建表单</a></li>
+                </ul>
+            </div>
+            <!-- 二级分类 -->
+               {{#each typelist}}
+               	{{#if values.length}} 
+            <div  id="type_{{code}}" class="toolkit toolkit-bar show_div_second {{#ifCond @index "==" "0"}}{{else}}hide{{/ifCond}} clearfix" style="margin-left: 20px; min-height: 40px">
+                <ul class="toolkit-list fl js_formtab">
+                    {{#each values}}
+                    	<li class="toolkit-item toolkit-item-tab" data-formtype="{{typecode}}">
+                    	<a style="line-height: 40px;font-size:12px"><i class="{{iconclass}}"></i>{{typename}}
+                    			<button type="button" data-id="{{id}}" data-typecode="{{typecode}}" data-typename="{{typename}}" data-parentcode="{{parentcode}}" data-sortorder="{{sortorder}}" data-status="{{status}}" data-iconclass="{{iconclass}}" style="position: relative;top: 16px;left: 8px; display: none;font-size: 14px;"  class="close js_edit_type" title="编辑">≡</button>
+                    			<button type="button" data-id="{{id}}" style="position: relative;top: 16px;left: 8px; display: none;font-size: 14px;"  class="close js_del_type" title="删除">×</button>	
+                    	</a>
+                    	</li>
+                    {{/each}}
+                </ul>
+            </div>
+               {{/if}}
+               {{/each}}
+            <div class="forms-list-wrap jscroll " >
+                <div class="js_forms bg-white ph-10">
+                    <div id="formlist-loading" class="loading_small"><span>正在加载数据，请稍后...</span></div>
+                    <div class="form-list-wrap  js_companyforms"></div>
+                </div>
+            </div>
+		</div>

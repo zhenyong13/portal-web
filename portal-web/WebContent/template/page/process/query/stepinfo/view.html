@@ -1,0 +1,187 @@
+<div class="process-forms dialog-item active">
+	<div class="forms-body-wrap jscroll" style="top:0px;">
+		<div class="forms-body">
+			<div class="forms-content">
+				<div class="form-category-bd" style="border-bottom: 1px solid #eee;">
+					<div class="entity-info clearfix">
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>环节编码：</label>
+							<div class="controls">
+								<span class="show_val">{{step.stepcode}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>环节名称：</label>
+							<div class="controls">
+								<span class="show_val">{{step.stepname}}</span>
+							</div>
+						</div>
+						
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>序号：</label>
+							<div class="controls">
+								<span class="show_val">{{step.seqno}}</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>选择类型：</label>
+							
+							<div class="controls">
+								<span class="show_val"> 
+								{{#ifCond step.selecttype "==" "radio"}}非会签{{/ifCond}}
+								{{#ifCond step.selecttype "==" "checkbox"}}会签{{/ifCond}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-6" style="height:44px;">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>处理表单：</label>
+							
+							<div class="controls">
+								<span class="show_val"> 
+									{{step.formcode}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-6">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>是否撤回：</label>
+							<div class="controls">
+								<span class="show_val"> 
+									{{#if step.canmoveback}}是{{else}}否{{/if}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-6" style="height:44px;">
+							<label class="control-label" style="width:120px;"><span style="color:red;">*</span>打印表单：</label>
+							<div class="controls">
+							<span class="show_val"> 
+									{{step.printform}}
+								</span>
+								</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">环节描述：</label>
+							<div class="controls">
+								<span class="show_val"> 
+									{{step.stepdesc}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+							<label class="control-label" style="width:120px;">扩展属性：</label>
+							<div class="controls">
+								<span class="show_val"> 
+									{{step.custom}}
+								</span>
+							</div>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>处理结果</legend>
+									<div class="col-6">
+										<label class="control-label" style="width: 110px;"><span style="color:red;">*</span>名称：</label>
+										<div class="controls">
+										<span class="show_val"> 
+									{{step.result.name}}
+								</span></div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否可编辑：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.result.editable}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.result.isshow}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否必填：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.result.required}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;"><span style="color:red;"></span>值来源：</label>
+										<div class="controls">
+										<span class="show_val"> 
+												{{step.result.valuesource}} 
+											</span>
+										</div>
+									</div>
+								</fieldset>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>流程意见</legend>
+									<div class="col-6">
+										<label class="control-label" style="width: 110px;"><span style="color:red;">*</span>名称：</label>
+										<div class="controls">
+										<span class="show_val"> 
+												{{step.opinion.name}}
+											</span></div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否可编辑：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.opinion.editable}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.opinion.isshow}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否必填：</label>
+										<div class="controls">
+												<span class="show_val"> 
+												{{#if step.opinion.required}}是{{else}}否{{/if}}
+											</span>
+										</div>
+									</div>
+									<div class="col-12">
+										<label class="control-label" style="width:110px;"><span style="color:red;"></span>值来源：</label>
+										<div class="controls">
+										<span class="show_val"> 
+												{{step.opinion.valuesource}}
+											</span>
+										</div>
+									</div>
+								</fieldset>
+						</div>
+						<div class="control-group col-12">
+								<fieldset class="control-group col-12" style=" width:760px;  line-height: 27px; border: 1px solid #eee;">
+									<legend>下一环节</legend>
+									<div class="col-6">
+										<label class="control-label" style="width:110px;"><span style="color:red;">*</span>是否显示：</label>
+										<span class="show_val"> 
+												{{#if step.shownextstep}}是{{else}}否{{/if}}
+											</span>
+									</div>
+								</fieldset>
+						</div>
+						
+					</div>
+				</div>
+				<div style="height:31px;margin-top: 4px">
+					<div class="controls" style="float:right;">
+						<a id="cancel" class="btn btn-sm js_form_cancel">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
